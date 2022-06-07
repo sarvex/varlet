@@ -15043,6 +15043,7 @@ var Space = defineComponent({
       children = flatten(children);
       var lastIndex = children.length - 1;
       var spacers = children.map((child, index) => {
+        var width = direction === "row" ? void 0 : "100%";
         var margin = "0";
         if (direction === "row") {
           if (justify === "start" || justify === "center" || justify === "end") {
@@ -15069,7 +15070,7 @@ var Space = defineComponent({
         return createVNode("div", {
           "style": {
             margin,
-            width: "100%"
+            width
           }
         }, [child]);
       });
@@ -17553,9 +17554,9 @@ var skeleton = "";
 var SkeletonSfc = "";
 var slider = "";
 var SliderSfc = "";
-var SnackbarSfc = "";
 var snackbar = "";
 var coreSfc = "";
+var SnackbarSfc = "";
 var space = "";
 var step = "";
 var StepSfc = "";
