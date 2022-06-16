@@ -1945,17 +1945,18 @@ function render$U(_ctx, _cache) {
   return openBlock(), createBlock(Teleport, {
     to: "body",
     disabled: _ctx.disabled
-  }, [createElementVNode("div", {
-    class: normalizeClass(_ctx.classes(_ctx.n(), [_ctx.show, _ctx.n("--active")])),
+  }, [createElementVNode("div", mergeProps({
+    class: _ctx.classes(_ctx.n(), [_ctx.show, _ctx.n("--active")]),
     ref: "backTopEl",
-    style: normalizeStyle({
+    style: {
       right: _ctx.toSizeUnit(_ctx.right),
       bottom: _ctx.toSizeUnit(_ctx.bottom)
-    }),
+    }
+  }, _ctx.$attrs, {
     onClick: _cache[0] || (_cache[0] = withModifiers(function() {
       return _ctx.click && _ctx.click(...arguments);
     }, ["stop"]))
-  }, [renderSlot(_ctx.$slots, "default", {}, () => [createVNode(_component_var_button, {
+  }), [renderSlot(_ctx.$slots, "default", {}, () => [createVNode(_component_var_button, {
     type: "primary",
     round: "",
     "var-back-top-cover": ""
@@ -1964,7 +1965,7 @@ function render$U(_ctx, _cache) {
       name: "chevron-up"
     })]),
     _: 1
-  })])], 6)], 8, ["disabled"]);
+  })])], 16)], 8, ["disabled"]);
 }
 var BackTop = defineComponent({
   render: render$U,
@@ -1973,6 +1974,7 @@ var BackTop = defineComponent({
     VarButton: Button,
     VarIcon: Icon
   },
+  inheritAttrs: false,
   props: props$O,
   setup(props2) {
     var show = ref(false);
