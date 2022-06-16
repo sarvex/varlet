@@ -13655,6 +13655,7 @@ function render$f(_ctx, _cache) {
     onClose: _ctx.handleBlur
   }, {
     menu: withCtx(() => [createElementVNode("div", {
+      ref: "menuEl",
       class: normalizeClass(_ctx.n("scroller"))
     }, [renderSlot(_ctx.$slots, "default")], 2)]),
     default: withCtx(() => [createElementVNode("div", {
@@ -13759,6 +13760,7 @@ var Select = defineComponent({
       validate: v,
       resetValidation
     } = useValidation();
+    var menuEl = ref(null);
     var computeLabel = () => {
       var {
         multiple: multiple2,
@@ -13846,6 +13848,7 @@ var Select = defineComponent({
       isFocus.value = true;
       call(onFocus);
       validateWithTrigger("onFocus");
+      detectBoundary();
     };
     var handleBlur = () => {
       var {
@@ -13949,6 +13952,7 @@ var Select = defineComponent({
       wrapWidth.value = getWrapWidth();
       offsetY.value = getOffsetY() + toPxNum(props2.offsetY);
       isFocus.value = true;
+      detectBoundary();
     };
     var blur = () => {
       isFocus.value = false;
@@ -13957,6 +13961,27 @@ var Select = defineComponent({
     var reset = () => {
       call(props2["onUpdate:modelValue"], props2.multiple ? [] : void 0);
       resetValidation();
+    };
+    var detectBoundary = () => {
+      var {
+        body
+      } = document;
+      nextTick(() => {
+        var _menuEl$value, _menuEl$value2;
+        var {
+          offsetTop: menuOffsetTop,
+          offsetHeight: menuOffsetHeight
+        } = (_menuEl$value = menuEl.value) == null ? void 0 : _menuEl$value.parentElement;
+        var menuOffsetBottom = body.scrollHeight - menuOffsetHeight - menuOffsetTop;
+        var scrollerOffsetTop = body.offsetTop;
+        var scrollerOffsetBottom = body.scrollHeight - body.offsetHeight - body.offsetTop;
+        var top = menuOffsetTop - scrollerOffsetTop;
+        var bottom = menuOffsetBottom - scrollerOffsetBottom;
+        if (top < 0)
+          offsetY.value = getOffsetY();
+        if (bottom < 0)
+          offsetY.value -= ((_menuEl$value2 = menuEl.value) == null ? void 0 : _menuEl$value2.parentElement).offsetHeight - getOffsetY();
+      });
     };
     watch(() => props2.multiple, () => {
       var {
@@ -13990,6 +14015,7 @@ var Select = defineComponent({
       formDisabled: form == null ? void 0 : form.disabled,
       label,
       labels,
+      menuEl,
       n: n$h,
       classes: classes$d,
       computePlaceholderState,
