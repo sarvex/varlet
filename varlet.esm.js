@@ -6,10 +6,10 @@ var context = {
 };
 reactive(context);
 var Context = reactive(context);
-var toNumber = (val) => {
+var toNumber$1 = (val) => {
   if (val == null)
     return 0;
-  if (isString(val)) {
+  if (isString$1(val)) {
     val = parseFloat(val);
     val = Number.isNaN(val) ? 0 : val;
     return val;
@@ -30,7 +30,7 @@ var isHTMLSupportVideo = (val) => {
   }
   return val.startsWith("data:video") || /\.(mp4|webm|ogg)$/.test(val);
 };
-var isString = (val) => typeof val === "string";
+var isString$1 = (val) => typeof val === "string";
 var isBool = (val) => typeof val === "boolean";
 var isNumber = (val) => typeof val === "number";
 var isPlainObject = (val) => Object.prototype.toString.call(val) === "[object Object]";
@@ -241,11 +241,11 @@ function getAllParentScroller(el) {
   }
   return allParentScroller;
 }
-var isRem = (value) => isString(value) && value.endsWith("rem");
-var isPx = (value) => isString(value) && value.endsWith("px") || isNumber(value);
-var isPercent = (value) => isString(value) && value.endsWith("%");
-var isVw = (value) => isString(value) && value.endsWith("vw");
-var isVh = (value) => isString(value) && value.endsWith("vh");
+var isRem = (value) => isString$1(value) && value.endsWith("rem");
+var isPx = (value) => isString$1(value) && value.endsWith("px") || isNumber(value);
+var isPercent = (value) => isString$1(value) && value.endsWith("%");
+var isVw = (value) => isString$1(value) && value.endsWith("vw");
+var isVh = (value) => isString$1(value) && value.endsWith("vh");
 var toPxNum = (value) => {
   if (isNumber(value)) {
     return value;
@@ -264,8 +264,8 @@ var toPxNum = (value) => {
     var rootFontSize = window.getComputedStyle(document.documentElement).fontSize;
     return num * parseFloat(rootFontSize);
   }
-  if (isString(value)) {
-    return toNumber(value);
+  if (isString$1(value)) {
+    return toNumber$1(value);
   }
   return 0;
 };
@@ -1169,7 +1169,7 @@ var Icon = defineComponent({
         var {
           transition
         } = props2;
-        if (oldName == null || toNumber(transition) === 0) {
+        if (oldName == null || toNumber$1(transition) === 0) {
           nextName.value = newName;
           return;
         }
@@ -1178,7 +1178,7 @@ var Icon = defineComponent({
         setTimeout(() => {
           oldName != null && (nextName.value = newName);
           shrinking.value = false;
-        }, toNumber(transition));
+        }, toNumber$1(transition));
       });
       return function handleNameChange2(_x, _x2) {
         return _ref.apply(this, arguments);
@@ -1193,7 +1193,7 @@ var Icon = defineComponent({
       nextName,
       shrinking,
       isURL,
-      toNumber,
+      toNumber: toNumber$1,
       toSizeUnit
     };
   }
@@ -2004,7 +2004,7 @@ var BackTop = defineComponent({
       var {
         target: target2
       } = props2;
-      if (isString(target2)) {
+      if (isString$1(target2)) {
         var el = document.querySelector(props2.target);
         if (!el) {
           throw Error("[Varlet] BackTop: target element cannot found");
@@ -2036,6 +2036,20 @@ var BackTop = defineComponent({
 });
 BackTop.install = function(app) {
   app.component(BackTop.name, BackTop);
+};
+const isString = (val) => typeof val === "string";
+const isBoolean = (val) => typeof val === "boolean";
+const toNumber = (val) => {
+  if (val == null)
+    return 0;
+  if (isString(val)) {
+    val = parseFloat(val);
+    val = Number.isNaN(val) ? 0 : val;
+    return val;
+  }
+  if (isBoolean(val))
+    return Number(val);
+  return val;
 };
 function typeValidator$4(type) {
   return ["default", "primary", "info", "success", "warning", "danger"].includes(type);
@@ -3629,8 +3643,8 @@ var Col = defineComponent({
       left: 0,
       right: 0
     });
-    var span = computed(() => toNumber(props2.span));
-    var offset = computed(() => toNumber(props2.offset));
+    var span = computed(() => toNumber$1(props2.span));
+    var offset = computed(() => toNumber$1(props2.offset));
     var {
       row: row2,
       bindRow
@@ -3665,7 +3679,7 @@ var Col = defineComponent({
       n: n$N,
       classes: classes$D,
       padding,
-      toNumber,
+      toNumber: toNumber$1,
       toSizeUnit,
       getSize,
       span,
@@ -4046,7 +4060,7 @@ var Countdown = defineComponent({
       } = props2;
       var now = Date.now();
       if (!endTime.value)
-        endTime.value = now + toNumber(time);
+        endTime.value = now + toNumber$1(time);
       var durationTime = endTime.value - now;
       if (durationTime < 0)
         durationTime = 0;
@@ -4063,7 +4077,7 @@ var Countdown = defineComponent({
       if (isStart.value)
         return;
       isStart.value = true;
-      endTime.value = Date.now() + (pauseTime.value || toNumber(props2.time));
+      endTime.value = Date.now() + (pauseTime.value || toNumber$1(props2.time));
       countdown();
     };
     var pause = () => {
@@ -6559,7 +6573,7 @@ var Counter = defineComponent({
       var {
         min: min2
       } = props2;
-      call(props2["onUpdate:modelValue"], min2 != null ? toNumber(min2) : 0);
+      call(props2["onUpdate:modelValue"], min2 != null ? toNumber$1(min2) : 0);
       resetValidation();
     };
     var counterProvider = {
@@ -6572,14 +6586,14 @@ var Counter = defineComponent({
         max: max2,
         modelValue
       } = props2;
-      return max2 != null && toNumber(modelValue) >= toNumber(max2);
+      return max2 != null && toNumber$1(modelValue) >= toNumber$1(max2);
     });
     var isMin = computed(() => {
       var {
         min: min2,
         modelValue
       } = props2;
-      return min2 != null && toNumber(modelValue) <= toNumber(min2);
+      return min2 != null && toNumber$1(modelValue) <= toNumber$1(min2);
     });
     var normalizeValue = (value) => {
       var {
@@ -6587,16 +6601,16 @@ var Counter = defineComponent({
         max: max2,
         min: min2
       } = props2;
-      var num = toNumber(value);
-      if (max2 != null && num > toNumber(max2)) {
-        num = toNumber(max2);
+      var num = toNumber$1(value);
+      if (max2 != null && num > toNumber$1(max2)) {
+        num = toNumber$1(max2);
       }
-      if (min2 != null && num < toNumber(min2)) {
-        num = toNumber(min2);
+      if (min2 != null && num < toNumber$1(min2)) {
+        num = toNumber$1(min2);
       }
       value = String(num);
       if (decimalLength != null) {
-        value = num.toFixed(toNumber(decimalLength));
+        value = num.toFixed(toNumber$1(decimalLength));
       }
       return value;
     };
@@ -6609,7 +6623,7 @@ var Counter = defineComponent({
         value
       } = event.target;
       var normalizedValue = normalizeValue(value);
-      lazyChange ? call(onBeforeChange, toNumber(normalizedValue), change) : setNormalizedValue(normalizedValue);
+      lazyChange ? call(onBeforeChange, toNumber$1(normalizedValue), change) : setNormalizedValue(normalizedValue);
       validateWithTrigger("onInputChange");
     };
     var decrement = () => {
@@ -6630,9 +6644,9 @@ var Counter = defineComponent({
       if (isMin.value) {
         return;
       }
-      var value = new Decimal(toNumber(modelValue)).minus(new Decimal(toNumber(step2))).toString();
+      var value = new Decimal(toNumber$1(modelValue)).minus(new Decimal(toNumber$1(step2))).toString();
       var normalizedValue = normalizeValue(value);
-      var normalizedValueNum = toNumber(normalizedValue);
+      var normalizedValueNum = toNumber$1(normalizedValue);
       call(onDecrement, normalizedValueNum);
       if (lazyChange) {
         call(onBeforeChange, normalizedValueNum, change);
@@ -6659,9 +6673,9 @@ var Counter = defineComponent({
       if (isMax.value) {
         return;
       }
-      var value = new Decimal(toNumber(modelValue)).plus(new Decimal(toNumber(step2))).toString();
+      var value = new Decimal(toNumber$1(modelValue)).plus(new Decimal(toNumber$1(step2))).toString();
       var normalizedValue = normalizeValue(value);
-      var normalizedValueNum = toNumber(normalizedValue);
+      var normalizedValueNum = toNumber$1(normalizedValue);
       call(onIncrement, normalizedValueNum);
       if (lazyChange) {
         call(onBeforeChange, normalizedValueNum, change);
@@ -6716,7 +6730,7 @@ var Counter = defineComponent({
     };
     var setNormalizedValue = (normalizedValue) => {
       inputValue.value = normalizedValue;
-      var normalizedValueNum = toNumber(normalizedValue);
+      var normalizedValueNum = toNumber$1(normalizedValue);
       call(props2["onUpdate:modelValue"], normalizedValueNum);
     };
     var change = (value) => {
@@ -6726,7 +6740,7 @@ var Counter = defineComponent({
     call(bindForm, counterProvider);
     watch(() => props2.modelValue, (newValue) => {
       setNormalizedValue(normalizeValue(String(newValue)));
-      call(props2.onChange, toNumber(newValue));
+      call(props2.onChange, toNumber$1(newValue));
     });
     setNormalizedValue(normalizeValue(String(props2.modelValue)));
     return {
@@ -6749,7 +6763,7 @@ var Counter = defineComponent({
       releaseDecrement,
       releaseIncrement,
       toSizeUnit,
-      toNumber
+      toNumber: toNumber$1
     };
   }
 });
@@ -7356,7 +7370,7 @@ var PanelHeader = defineComponent({
         previewYear
       } = date;
       if (type === "month")
-        return toNumber(previewYear) + forwardOrBackNum.value;
+        return toNumber$1(previewYear) + forwardOrBackNum.value;
       var monthName = (_pack$value$datePicke = pack.value.datePickerMonthDict) == null ? void 0 : _pack$value$datePicke[previewMonth.index].name;
       return pack.value.lang === "zh-CN" ? previewYear + " " + monthName : monthName + " " + previewYear;
     });
@@ -7615,9 +7629,9 @@ var MonthPickerPanel = defineComponent({
         }
       } = props2;
       if (max2)
-        panelBtnDisabled.right = !dayjs("" + (toNumber(year) + 1)).isSameOrBefore(dayjs(max2), "year");
+        panelBtnDisabled.right = !dayjs("" + (toNumber$1(year) + 1)).isSameOrBefore(dayjs(max2), "year");
       if (min2)
-        panelBtnDisabled.left = !dayjs("" + (toNumber(year) - 1)).isSameOrAfter(dayjs(min2), "year");
+        panelBtnDisabled.left = !dayjs("" + (toNumber$1(year) - 1)).isSameOrAfter(dayjs(min2), "year");
     }, {
       immediate: true
     });
@@ -7685,10 +7699,10 @@ var YearPickerPanel = defineComponent({
       } = props2;
       if (!preview)
         return list2;
-      var yearRange = [toNumber(preview) + 100, toNumber(preview) - 100];
+      var yearRange = [toNumber$1(preview) + 100, toNumber$1(preview) - 100];
       if (max2) {
         var formatMax = dayjs(max2).format("YYYY-MM-D");
-        var year = toNumber(formatMax.split("-")[0]);
+        var year = toNumber$1(formatMax.split("-")[0]);
         if (year < yearRange[0] && year > yearRange[1])
           yearRange = [year, yearRange[1]];
         if (year <= yearRange[1])
@@ -7696,7 +7710,7 @@ var YearPickerPanel = defineComponent({
       }
       if (min2) {
         var formatMin = dayjs(min2).format("YYYY-MM-D");
-        var _year = toNumber(formatMin.split("-")[0]);
+        var _year = toNumber$1(formatMin.split("-")[0]);
         if (_year < yearRange[0] && _year > yearRange[1])
           yearRange = [yearRange[0], _year];
         if (_year >= yearRange[0])
@@ -7721,7 +7735,7 @@ var YearPickerPanel = defineComponent({
       classes: classes$z,
       yearList,
       chooseYear,
-      toNumber
+      toNumber: toNumber$1
     };
   }
 });
@@ -7876,11 +7890,11 @@ var DayPickerPanel = defineComponent({
         }
       } = props2;
       if (max2) {
-        var date = previewYear + "-" + (toNumber(previewMonth.index) + 1);
+        var date = previewYear + "-" + (toNumber$1(previewMonth.index) + 1);
         panelBtnDisabled.right = !dayjs(date).isSameOrBefore(dayjs(max2), "month");
       }
       if (min2) {
-        var _date = previewYear + "-" + (toNumber(previewMonth.index) - 1);
+        var _date = previewYear + "-" + (toNumber$1(previewMonth.index) - 1);
         panelBtnDisabled.left = !dayjs(_date).isSameOrAfter(dayjs(min2), "month");
       }
     };
@@ -7951,7 +7965,7 @@ var DayPickerPanel = defineComponent({
       var dayExist = () => {
         if (range || multiple)
           return shouldChoose(val);
-        return toNumber(chooseDay2) === day && isSame.value;
+        return toNumber$1(chooseDay2) === day && isSame.value;
       };
       var computeDisabled = () => {
         if (!inRange(day))
@@ -7966,10 +7980,10 @@ var DayPickerPanel = defineComponent({
           return true;
         if (range || multiple)
           return !shouldChoose(val);
-        return !isSame.value || toNumber(chooseDay2) !== day;
+        return !isSame.value || toNumber$1(chooseDay2) !== day;
       };
       var computeOutline = () => {
-        if (!(isCurrent.value && toNumber(currentDay) === day && props2.componentProps.showCurrent))
+        if (!(isCurrent.value && toNumber$1(currentDay) === day && props2.componentProps.showCurrent))
           return false;
         if ((range || multiple || isSame.value) && disabled)
           return true;
@@ -8330,7 +8344,7 @@ var DatePicker = defineComponent({
         return chooseYear.value > previewYear.value;
       if (dateType === "month")
         return date.index < chooseMonth.value.index;
-      return isSameMonth.value ? date < toNumber(chooseDay.value) : chooseMonth.value.index > previewMonth.value.index;
+      return isSameMonth.value ? date < toNumber$1(chooseDay.value) : chooseMonth.value.index > previewMonth.value.index;
     };
     var getChooseDay = (day) => {
       var {
@@ -8387,18 +8401,18 @@ var DatePicker = defineComponent({
     var checkPreview = (type, checkType2) => {
       var changeValue = checkType2 === "prev" ? -1 : 1;
       if (type === "year") {
-        previewYear.value = "" + (toNumber(previewYear.value) + changeValue);
+        previewYear.value = "" + (toNumber$1(previewYear.value) + changeValue);
       } else {
-        var checkIndex = toNumber(previewMonth.value.index) + changeValue;
+        var checkIndex = toNumber$1(previewMonth.value.index) + changeValue;
         if (checkIndex < 1) {
-          previewYear.value = "" + (toNumber(previewYear.value) - 1);
+          previewYear.value = "" + (toNumber$1(previewYear.value) - 1);
           checkIndex = 12;
         }
         if (checkIndex > 12) {
-          previewYear.value = "" + (toNumber(previewYear.value) + 1);
+          previewYear.value = "" + (toNumber$1(previewYear.value) + 1);
           checkIndex = 1;
         }
-        previewMonth.value = MONTH_LIST.find((month) => toNumber(month.index) === checkIndex);
+        previewMonth.value = MONTH_LIST.find((month) => toNumber$1(month.index) === checkIndex);
       }
     };
     var checkValue = () => {
@@ -8752,7 +8766,7 @@ function Dialog(options) {
   }
   return new Promise((resolve) => {
     Dialog.close();
-    var dialogOptions = isString(options) || isNumber(options) ? {
+    var dialogOptions = isString$1(options) || isNumber(options) ? {
       message: String(options)
     } : options;
     var reactiveDialogOptions = reactive(dialogOptions);
@@ -8875,7 +8889,7 @@ var Divider = defineComponent({
       };
       if (isBool(inset) || inset === 0)
         return _extends$5({}, baseStyle);
-      var _inset = toNumber(inset);
+      var _inset = toNumber$1(inset);
       var absInsetWithUnit = Math.abs(_inset) + (inset + "").replace(_inset + "", "");
       return vertical ? _extends$5({}, baseStyle, {
         height: "calc(80% - " + toSizeUnit(absInsetWithUnit) + ")"
@@ -9618,7 +9632,7 @@ var Swipe = defineComponent({
       });
     };
     var initialIndex = () => {
-      index.value = boundaryIndex(toNumber(props2.initialIndex));
+      index.value = boundaryIndex(toNumber$1(props2.initialIndex));
     };
     var startAutoplay = () => {
       var {
@@ -9631,7 +9645,7 @@ var Swipe = defineComponent({
       timer = window.setTimeout(() => {
         next();
         startAutoplay();
-      }, toNumber(autoplay));
+      }, toNumber$1(autoplay));
     };
     var stopAutoplay = () => {
       timer && clearTimeout(timer);
@@ -9810,7 +9824,7 @@ var Swipe = defineComponent({
       prev,
       to,
       resize,
-      toNumber
+      toNumber: toNumber$1
     };
   }
 });
@@ -10068,7 +10082,7 @@ var VarImagePreview = defineComponent({
       target
     });
     var zoomIn = () => {
-      scale.value = toNumber(props2.zoom);
+      scale.value = toNumber$1(props2.zoom);
       canSwipe.value = false;
       prevTouch = null;
       window.setTimeout(() => {
@@ -10130,7 +10144,7 @@ var VarImagePreview = defineComponent({
         height: offsetHeight,
         imageRadio: naturalHeight / naturalWidth,
         rootRadio: offsetHeight / offsetWidth,
-        zoom: toNumber(props2.zoom)
+        zoom: toNumber$1(props2.zoom)
       };
     };
     var getLimitX = (target) => {
@@ -10226,7 +10240,7 @@ function ImagePreview(options) {
     return;
   }
   ImagePreview.close();
-  var imagePreviewOptions = isString(options) ? {
+  var imagePreviewOptions = isString$1(options) ? {
     images: [options]
   } : isArray(options) ? {
     images: options
@@ -10439,7 +10453,7 @@ var Sticky = defineComponent({
       fixedWrapperHeight,
       enableCSSMode,
       enableFixedMode,
-      toNumber
+      toNumber: toNumber$1
     };
   }
 });
@@ -10729,7 +10743,7 @@ var IndexBar = defineComponent({
           left,
           top,
           animation: easeInOutCubic,
-          duration: toNumber(props2.duration)
+          duration: toNumber$1(props2.duration)
         });
         nextTickFrame(() => {
           clickedName.value = "";
@@ -10769,7 +10783,7 @@ var IndexBar = defineComponent({
       active,
       zIndex,
       anchorNameList,
-      toNumber,
+      toNumber: toNumber$1,
       scrollTo: scrollTo$1,
       anchorClick
     };
@@ -11797,20 +11811,20 @@ var Pagination = defineComponent({
     var simpleValue = ref("1");
     var isHideEllipsisHead = ref(false);
     var isHideEllipsisTail = ref(false);
-    var current = ref(toNumber(props2.current) || 1);
-    var size = ref(toNumber(props2.size) || 10);
+    var current = ref(toNumber$1(props2.current) || 1);
+    var size = ref(toNumber$1(props2.size) || 10);
     var pageList = ref([]);
     var activePosition = computed(() => Math.ceil(props2.maxPagerCount / 2));
-    var pageCount = computed(() => Math.ceil(toNumber(props2.total) / toNumber(size.value)));
+    var pageCount = computed(() => Math.ceil(toNumber$1(props2.total) / toNumber$1(size.value)));
     var range = computed(() => {
       var start = size.value * (current.value - 1) + 1;
-      var end = Math.min(size.value * current.value, toNumber(props2.total));
+      var end = Math.min(size.value * current.value, toNumber$1(props2.total));
       return [start, end];
     });
     var totalText = computed(() => {
       if (!props2.showTotal)
         return "";
-      return props2.showTotal(toNumber(props2.total), range.value);
+      return props2.showTotal(toNumber$1(props2.total), range.value);
     });
     var isHideEllipsis = (item, index) => {
       if (isNumber(item))
@@ -11855,7 +11869,7 @@ var Pagination = defineComponent({
     var setPage = (type, value, event) => {
       event.target.blur();
       if (isValidatePage(value)) {
-        var valueNum = toNumber(value);
+        var valueNum = toNumber$1(value);
         if (valueNum > pageCount.value) {
           valueNum = pageCount.value;
           simpleValue.value = "" + valueNum;
@@ -11870,8 +11884,8 @@ var Pagination = defineComponent({
     };
     watch([() => props2.current, () => props2.size], (_ref) => {
       var [newCurrent, newSize] = _ref;
-      current.value = toNumber(newCurrent) || 1;
-      size.value = toNumber(newSize || 10);
+      current.value = toNumber$1(newCurrent) || 1;
+      size.value = toNumber$1(newSize || 10);
     });
     watch([current, size], (_ref2, _ref3) => {
       var _props$onUpdateCurre, _props$onUpdateSize;
@@ -11887,7 +11901,7 @@ var Pagination = defineComponent({
         total,
         onChange
       } = props2;
-      var oldCount = Math.ceil(toNumber(total) / toNumber(oldSize));
+      var oldCount = Math.ceil(toNumber$1(total) / toNumber$1(oldSize));
       var rEllipseSign = pageCount.value - (maxPagerCount - activePosition.value) - 1;
       simpleValue.value = "" + newCurrent;
       if (pageCount.value - 2 > maxPagerCount) {
@@ -11952,7 +11966,7 @@ var Pagination = defineComponent({
       showMenu,
       clickSize,
       setPage,
-      toNumber
+      toNumber: toNumber$1
     };
   }
 });
@@ -12588,7 +12602,7 @@ var Progress = defineComponent({
   props: props$j,
   setup(props2) {
     var linearProps = computed(() => {
-      var value = toNumber(props2.value);
+      var value = toNumber$1(props2.value);
       var width = value > 100 ? 100 : value;
       var roundValue = value > 100 ? 100 : Math.round(value);
       return {
@@ -12603,7 +12617,7 @@ var Progress = defineComponent({
         value
       } = props2;
       var viewBox = "0 0 " + toPxNum(size) + " " + toPxNum(size);
-      var roundValue = toNumber(value) > 100 ? 100 : Math.round(toNumber(value));
+      var roundValue = toNumber$1(value) > 100 ? 100 : Math.round(toNumber$1(value));
       var radius = (toPxNum(size) - toPxNum(lineWidth)) / 2;
       var perimeter = 2 * Math.PI * radius;
       var strokeDasharray = roundValue / 100 * perimeter + ", " + perimeter;
@@ -12799,7 +12813,7 @@ var PullRefresh = defineComponent({
           distance.value = CONTROL_POSITION;
           setTimeout(() => {
             isEnd.value = false;
-          }, toNumber(props2.animationDuration));
+          }, toNumber$1(props2.animationDuration));
         }
       });
       return function touchEnd2() {
@@ -12811,7 +12825,7 @@ var PullRefresh = defineComponent({
         refreshStatus.value = "default";
         iconName.value = "arrow-down";
         isEnd.value = false;
-      }, toNumber(props2.animationDuration));
+      }, toNumber$1(props2.animationDuration));
     };
     watch(() => props2.modelValue, (newValue) => {
       if (newValue === false) {
@@ -12821,7 +12835,7 @@ var PullRefresh = defineComponent({
         setTimeout(() => {
           distance.value = CONTROL_POSITION;
           reset();
-        }, toNumber(props2.successDuration));
+        }, toNumber$1(props2.successDuration));
       }
     });
     onMounted(() => {
@@ -13340,7 +13354,7 @@ var Rate = defineComponent({
       } = props2;
       return {
         color: transformValue(val).color,
-        marginRight: val !== toNumber(count) ? toSizeUnit(gap) : 0,
+        marginRight: val !== toNumber$1(count) ? toSizeUnit(gap) : 0,
         width: toSizeUnit(size),
         height: toSizeUnit(size),
         borderRadius: "50%"
@@ -13383,14 +13397,14 @@ var Rate = defineComponent({
         iconColor = disabledColor;
       else if (color)
         iconColor = color;
-      if (index <= toNumber(modelValue)) {
+      if (index <= toNumber$1(modelValue)) {
         return {
           type: "full",
           score: index,
           color: iconColor
         };
       }
-      if (half && index <= toNumber(modelValue) + 0.5) {
+      if (half && index <= toNumber$1(modelValue) + 0.5) {
         return {
           type: "half",
           score: index,
@@ -13413,7 +13427,7 @@ var Rate = defineComponent({
       }
       call(props2["onUpdate:modelValue"], score);
     };
-    var validate = () => v(props2.rules, toNumber(props2.modelValue));
+    var validate = () => v(props2.rules, toNumber$1(props2.modelValue));
     var validateWithTrigger = () => nextTick(() => vt(["onChange"], "onChange", props2.rules, props2.modelValue));
     var handleClick = (score, event) => {
       var {
@@ -13450,7 +13464,7 @@ var Rate = defineComponent({
       validate,
       resetValidation,
       toSizeUnit,
-      toNumber,
+      toNumber: toNumber$1,
       n: n$j
     };
   }
@@ -14153,7 +14167,7 @@ var Skeleton = defineComponent({
       n: n$g,
       classes: classes$c,
       toSizeUnit,
-      toNumber
+      toNumber: toNumber$1
     };
   }
 });
@@ -14349,7 +14363,7 @@ var Slider = defineComponent({
       [Thumbs.First]: getThumbProps(),
       [Thumbs.Second]: getThumbProps()
     });
-    var unitWidth = computed(() => maxWidth.value / 100 * toNumber(props2.step));
+    var unitWidth = computed(() => maxWidth.value / 100 * toNumber$1(props2.step));
     var thumbList = computed(() => {
       var list2 = [{
         value: props2.modelValue,
@@ -14407,7 +14421,7 @@ var Slider = defineComponent({
         modelValue,
         onChange
       } = props2;
-      var stepNumber = toNumber(step2);
+      var stepNumber = toNumber$1(step2);
       var roundDistance = Math.round(moveDistance / unitWidth.value);
       var curValue = roundDistance * stepNumber;
       var prevValue = thumbsProps[type].percentValue;
@@ -14480,7 +14494,7 @@ var Slider = defineComponent({
       end(type);
     };
     var stepValidator = () => {
-      var stepNumber = toNumber(props2.step);
+      var stepNumber = toNumber$1(props2.step);
       if (isNaN(stepNumber)) {
         console.warn('[Varlet] Slider: type of prop "step" should be Number');
         return false;
@@ -14519,7 +14533,7 @@ var Slider = defineComponent({
         modelValue = props2.modelValue;
       }
       if (step2 === void 0) {
-        step2 = toNumber(props2.step);
+        step2 = toNumber$1(props2.step);
       }
       if (props2.range && isArray(modelValue)) {
         thumbsProps[Thumbs.First].percentValue = modelValue[0] / step2;
@@ -14534,7 +14548,7 @@ var Slider = defineComponent({
       var [modelValue, step2] = _ref;
       if (!stepValidator() || !valueValidator() || isScroll.value)
         return;
-      setProps(modelValue, toNumber(step2));
+      setProps(modelValue, toNumber$1(step2));
     });
     watch(maxWidth, () => setProps());
     onMounted(() => {
@@ -14564,7 +14578,7 @@ var Slider = defineComponent({
       thumbsProps,
       thumbList,
       multiplySizeUnit,
-      toNumber,
+      toNumber: toNumber$1,
       getRippleSize,
       showLabel,
       start,
@@ -14879,7 +14893,7 @@ var TransitionGroupHost = {
   }
 };
 var Snackbar = function(options) {
-  var snackOptions = isString(options) || isNumber(options) ? {
+  var snackOptions = isString$1(options) || isNumber(options) ? {
     content: String(options)
   } : options;
   var reactiveSnackOptions = reactive(_extends({}, defaultOption, snackOptions));
@@ -14946,14 +14960,14 @@ Snackbar.clear = function() {
 Snackbar.Component = VarSnackbar;
 function opened(element) {
   var id = element.getAttribute("data-id");
-  var option2 = uniqSnackbarOptions.find((option3) => option3.id === toNumber(id));
+  var option2 = uniqSnackbarOptions.find((option3) => option3.id === toNumber$1(id));
   if (option2)
     option2.reactiveSnackOptions.onOpened == null ? void 0 : option2.reactiveSnackOptions.onOpened();
 }
 function removeUniqOption(element) {
   element.parentElement && element.parentElement.classList.remove("var-pointer-auto");
   var id = element.getAttribute("data-id");
-  var option2 = uniqSnackbarOptions.find((option3) => option3.id === toNumber(id));
+  var option2 = uniqSnackbarOptions.find((option3) => option3.id === toNumber$1(id));
   if (option2) {
     option2.animationEnd = true;
     option2.reactiveSnackOptions.onClosed == null ? void 0 : option2.reactiveSnackOptions.onClosed();
@@ -14990,7 +15004,7 @@ VarSnackbar.install = function(app) {
 };
 var internalSizeValidator = (size) => ["mini", "small", "normal", "large"].includes(size);
 var sizeValidator = (size) => {
-  return internalSizeValidator(size) || isArray(size) || isNumber(size) || isString(size);
+  return internalSizeValidator(size) || isArray(size) || isNumber(size) || isString$1(size);
 };
 var justifyValidator = (justify) => {
   return ["start", "end", "center", "space-around", "space-between"].includes(justify);
@@ -16284,19 +16298,19 @@ var props$1 = {
 };
 var notConvert = (format, ampm) => format === "24hr" || ampm === "am";
 var convertHour = (format, ampm, hour) => {
-  var index = hoursAmpm.findIndex((hourAmpm) => toNumber(hourAmpm) === toNumber(hour));
+  var index = hoursAmpm.findIndex((hourAmpm) => toNumber$1(hourAmpm) === toNumber$1(hour));
   var getHour = notConvert(format, ampm) ? hour : hours24[index];
   return {
     hourStr: getHour,
-    hourNum: toNumber(getHour)
+    hourNum: toNumber$1(getHour)
   };
 };
 var getNumberTime = (time) => {
   var [hour, minute, second] = time.split(":");
   return {
-    hour: toNumber(hour),
-    minute: toNumber(minute),
-    second: toNumber(second)
+    hour: toNumber$1(hour),
+    minute: toNumber$1(minute),
+    second: toNumber$1(second)
   };
 };
 var getIsDisableMinute = (values) => {
@@ -16485,7 +16499,7 @@ var Clock = defineComponent({
     var disableHour = ref([]);
     var disable24HourIndex = ref([]);
     var handStyle = computed(() => ({
-      transform: "rotate(" + toNumber(props2.rad) + "deg)",
+      transform: "rotate(" + toNumber$1(props2.rad) + "deg)",
       height: props2.isInner && props2.type === "hour" ? "calc(50% - 40px)" : "calc(50% - 4px)",
       backgroundColor: getHandleColor(),
       borderColor: getHandleColor()
@@ -16506,11 +16520,11 @@ var Clock = defineComponent({
       time = (_time = time) != null ? _time : props2.type === "minute" ? props2.time.minute : props2.time.second;
       var disableMethod = props2.type === "minute" ? getIsDisableMinute : getIsDisableSecond;
       var values = {
-        time: toNumber(time),
+        time: toNumber$1(time),
         format: props2.format,
         ampm: props2.ampm,
         hour: props2.time.hour,
-        minute: toNumber(props2.time.minute),
+        minute: toNumber$1(props2.time.minute),
         max: props2.max,
         min: props2.min,
         allowedTime: props2.allowedTime,
@@ -16635,16 +16649,16 @@ var Clock = defineComponent({
         var {
           hour: maxHour
         } = getNumberTime(max2);
-        var disableAmpmHours = hoursAmpm.filter((hour) => toNumber(hour) > maxHour);
-        var disable24Hours = hours24.filter((hour) => toNumber(hour) > maxHour);
+        var disableAmpmHours = hoursAmpm.filter((hour) => toNumber$1(hour) > maxHour);
+        var disable24Hours = hours24.filter((hour) => toNumber$1(hour) > maxHour);
         disableHour.value = [...disableAmpmHours, ...disable24Hours];
       }
       if (!max2 && min2) {
         var {
           hour: minHour
         } = getNumberTime(min2);
-        var _disableAmpmHours = hoursAmpm.filter((hour) => toNumber(hour) < minHour);
-        var _disable24Hours = hours24.filter((hour) => toNumber(hour) < minHour);
+        var _disableAmpmHours = hoursAmpm.filter((hour) => toNumber$1(hour) < minHour);
+        var _disable24Hours = hours24.filter((hour) => toNumber$1(hour) < minHour);
         disableHour.value = [..._disableAmpmHours, ..._disable24Hours];
       }
       if (max2 && min2) {
@@ -16654,16 +16668,16 @@ var Clock = defineComponent({
         var {
           hour: _minHour
         } = getNumberTime(min2);
-        var _disableAmpmHours2 = hoursAmpm.filter((hour) => toNumber(hour) < _minHour || toNumber(hour) > _maxHour);
-        var _disable24Hours2 = hours24.filter((hour) => toNumber(hour) < _minHour || toNumber(hour) > _maxHour);
+        var _disableAmpmHours2 = hoursAmpm.filter((hour) => toNumber$1(hour) < _minHour || toNumber$1(hour) > _maxHour);
+        var _disable24Hours2 = hours24.filter((hour) => toNumber$1(hour) < _minHour || toNumber$1(hour) > _maxHour);
         disableHour.value = [..._disableAmpmHours2, ..._disable24Hours2];
       }
       if (allowedTime != null && allowedTime.hours) {
         var {
           hours
         } = allowedTime;
-        var _disableAmpmHours3 = hoursAmpm.filter((hour) => !hours(toNumber(hour)));
-        var _disable24Hours3 = hours24.filter((hour) => !hours(toNumber(hour)));
+        var _disableAmpmHours3 = hoursAmpm.filter((hour) => !hours(toNumber$1(hour)));
+        var _disable24Hours3 = hours24.filter((hour) => !hours(toNumber$1(hour)));
         disableHour.value = [.../* @__PURE__ */ new Set([...disableHour.value, ..._disableAmpmHours3, ..._disable24Hours3])];
       }
       disable24HourIndex.value = disableHour.value.map((hour) => hours24.findIndex((hour24) => hour === hour24)).filter((hour) => hour >= 0);
@@ -16823,7 +16837,7 @@ var TimePicker = defineComponent({
       var {
         disableHour
       } = inner.value;
-      var index = hoursAmpm.findIndex((hour) => toNumber(hour) === toNumber(time.value.hour));
+      var index = hoursAmpm.findIndex((hour) => toNumber$1(hour) === toNumber$1(time.value.hour));
       var hours = ampm2 === "am" ? hoursAmpm : hours24;
       var realignmentHours = [...hours.slice(index), ...hours.slice(0, index)];
       return realignmentHours.find((hour, index2) => {
@@ -16933,7 +16947,7 @@ var TimePicker = defineComponent({
         format: props2.format,
         ampm: ampm.value,
         hour: time.value.hour,
-        minute: toNumber(time.value.minute),
+        minute: toNumber$1(time.value.minute),
         max: props2.max,
         min: props2.min,
         disableHour,
@@ -17006,9 +17020,9 @@ var TimePicker = defineComponent({
         var formatHour24 = dayjs().hour(hour).format("HH");
         var formatMinute = dayjs().minute(minute).format("mm");
         var formatSecond = dayjs().second(second).format("ss");
-        hourRad.value = (formatHour12 === "12" ? 0 : toNumber(formatHour12)) * 30;
-        minuteRad.value = toNumber(formatMinute) * 6;
-        secondRad.value = toNumber(formatSecond) * 6;
+        hourRad.value = (formatHour12 === "12" ? 0 : toNumber$1(formatHour12)) * 30;
+        minuteRad.value = toNumber$1(formatMinute) * 6;
+        secondRad.value = toNumber$1(formatSecond) * 6;
         time.value = getTime(value);
         if (props2.format !== "24hr") {
           ampm.value = ("" + hour).padStart(2, "0") === formatHour24 && hours24.includes(formatHour24) ? "pm" : "am";
@@ -17302,11 +17316,11 @@ var Uploader = defineComponent({
       var {
         url
       } = varFile;
-      if (isString(url) && isHTMLSupportImage(url)) {
+      if (isString$1(url) && isHTMLSupportImage(url)) {
         ImagePreview(url);
         return;
       }
-      if (isString(url) && isHTMLSupportVideo(url)) {
+      if (isString$1(url) && isHTMLSupportVideo(url)) {
         currentPreview.value = varFile;
         showPreview.value = true;
       }
@@ -17370,7 +17384,7 @@ var Uploader = defineComponent({
         }
         var getValidSizeVarFile = (varFiles2) => {
           return varFiles2.filter((varFile) => {
-            if (varFile.file.size > toNumber(maxsize)) {
+            if (varFile.file.size > toNumber$1(maxsize)) {
               call(onOversize, reactive(varFile));
               return false;
             }
@@ -17378,7 +17392,7 @@ var Uploader = defineComponent({
           });
         };
         var getValidLengthVarFiles = (varFiles2) => {
-          var limit = Math.min(varFiles2.length, toNumber(maxlength) - modelValue.length);
+          var limit = Math.min(varFiles2.length, toNumber$1(maxlength) - modelValue.length);
           return varFiles2.slice(0, limit);
         };
         var files2 = getFiles(event);
