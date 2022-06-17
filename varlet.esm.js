@@ -800,14 +800,20 @@ function unmounted(el) {
   document.removeEventListener("touchcancel", el._ripple.removeRipple);
 }
 function updated$1(el, binding) {
-  var _binding$value3, _binding$value$touchm2, _binding$value4;
-  if (el._ripple.tasker) {
-    el._ripple.removeRipple();
+  var _binding$value$touchm2, _binding$value3, _binding$value4, _binding$value5, _el$_ripple, _el$_ripple2, _el$_ripple3;
+  var newBinding = {
+    touchmoveForbid: (_binding$value$touchm2 = (_binding$value3 = binding.value) == null ? void 0 : _binding$value3.touchmoveForbid) != null ? _binding$value$touchm2 : Context.touchmoveForbid,
+    color: (_binding$value4 = binding.value) == null ? void 0 : _binding$value4.color,
+    disabled: (_binding$value5 = binding.value) == null ? void 0 : _binding$value5.disabled
+  };
+  var diff2 = newBinding.touchmoveForbid !== ((_el$_ripple = el._ripple) == null ? void 0 : _el$_ripple.touchmoveForbid) || newBinding.color !== ((_el$_ripple2 = el._ripple) == null ? void 0 : _el$_ripple2.color) || newBinding.disabled !== ((_el$_ripple3 = el._ripple) == null ? void 0 : _el$_ripple3.disabled);
+  if (diff2) {
+    var _el$_ripple4, _el$_ripple5;
+    el._ripple = _extends$d({
+      tasker: (_el$_ripple4 = el._ripple) == null ? void 0 : _el$_ripple4.tasker,
+      removeRipple: (_el$_ripple5 = el._ripple) == null ? void 0 : _el$_ripple5.removeRipple
+    }, newBinding);
   }
-  el._ripple = _extends$d({}, el._ripple, (_binding$value3 = binding.value) != null ? _binding$value3 : {}, {
-    touchmoveForbid: (_binding$value$touchm2 = (_binding$value4 = binding.value) == null ? void 0 : _binding$value4.touchmoveForbid) != null ? _binding$value$touchm2 : Context.touchmoveForbid,
-    tasker: null
-  });
 }
 var Ripple = {
   mounted: mounted$1,
