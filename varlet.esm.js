@@ -13975,13 +13975,9 @@ var Select = defineComponent({
           offsetHeight: menuOffsetHeight
         } = (_menuEl$value = menuEl.value) == null ? void 0 : _menuEl$value.parentElement;
         var menuOffsetBottom = body.scrollHeight - menuOffsetHeight - menuOffsetTop;
-        var scrollerOffsetTop = body.offsetTop;
-        var scrollerOffsetBottom = body.scrollHeight - body.offsetHeight - body.offsetTop;
-        var top = menuOffsetTop - scrollerOffsetTop;
-        var bottom = menuOffsetBottom - scrollerOffsetBottom;
-        if (top < 0)
+        if (menuOffsetTop < 0)
           offsetY.value = getOffsetY();
-        if (bottom < 0)
+        if (menuOffsetBottom < 0)
           offsetY.value -= ((_menuEl$value2 = menuEl.value) == null ? void 0 : _menuEl$value2.parentElement).offsetHeight - getOffsetY();
       });
     };
