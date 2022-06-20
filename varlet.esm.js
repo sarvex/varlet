@@ -31,7 +31,7 @@ const toNumber = (val) => {
     return Number(val);
   return val;
 };
-const removeItem$1 = (arr, item) => {
+const removeItem = (arr, item) => {
   if (arr.length) {
     const index = arr.indexOf(item);
     if (index > -1) {
@@ -406,7 +406,7 @@ function useAtChildrenCounter(key) {
     sortInstances();
   };
   var clear2 = (instance) => {
-    removeItem$1(instances, instance);
+    removeItem(instances, instance);
   };
   provide(key, {
     collect,
@@ -448,7 +448,7 @@ function useChildren(key) {
     childProviders.push(childProvider);
   };
   var clear2 = (childProvider) => {
-    removeItem$1(childProviders, childProvider);
+    removeItem(childProviders, childProvider);
   };
   var bindChildren = (parentProvider) => {
     provide(key, _extends$e({
@@ -1195,14 +1195,6 @@ var isHTMLSupportVideo = (val) => {
     return false;
   }
   return val.startsWith("data:video") || /\.(mp4|webm|ogg)$/.test(val);
-};
-var removeItem = (arr, item) => {
-  if (arr.length) {
-    var index = arr.indexOf(item);
-    if (index > -1) {
-      return arr.splice(index, 1);
-    }
-  }
 };
 var createCache = (max2) => {
   var cache = [];
@@ -9183,7 +9175,7 @@ function _add() {
   return _add.apply(this, arguments);
 }
 function clear(el) {
-  removeItem$1(lazyElements, el);
+  removeItem(lazyElements, el);
   lazyElements.length === 0 && unbindEvents();
 }
 function diff(el, binding) {
