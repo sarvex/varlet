@@ -14277,8 +14277,8 @@ function render$d(_ctx, _cache) {
         left: item.value + "%",
         zIndex: _ctx.thumbsProps[item.enumValue].active ? 1 : void 0
       }),
-      onTouchstart: ($event) => _ctx.start($event, item.enumValue),
-      onTouchmove: ($event) => _ctx.move($event, item.enumValue),
+      onTouchstart: withModifiers(($event) => _ctx.start($event, item.enumValue), ["stop"]),
+      onTouchmove: withModifiers(($event) => _ctx.move($event, item.enumValue), ["stop"]),
       onTouchend: ($event) => _ctx.end(item.enumValue),
       onTouchcancel: ($event) => _ctx.end(item.enumValue)
     }, [renderSlot(_ctx.$slots, "button", {
