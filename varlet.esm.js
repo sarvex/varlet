@@ -13968,17 +13968,19 @@ var Select = defineComponent({
       var {
         body
       } = document;
+      var bodyScrollHeight = body.scrollHeight;
       nextTick(() => {
-        var _menuEl$value, _menuEl$value2;
+        var _menuEl$value;
         var {
-          offsetTop: menuOffsetTop,
           offsetHeight: menuOffsetHeight
         } = (_menuEl$value = menuEl.value) == null ? void 0 : _menuEl$value.parentElement;
-        var menuOffsetBottom = body.scrollHeight - menuOffsetHeight - menuOffsetTop;
-        if (menuOffsetTop < 0)
+        var wrapOffsetTop = getTop$1(wrapEl.value);
+        if (wrapOffsetTop + offsetY.value < 0) {
           offsetY.value = getOffsetY();
-        if (menuOffsetBottom < 0)
-          offsetY.value -= ((_menuEl$value2 = menuEl.value) == null ? void 0 : _menuEl$value2.parentElement).offsetHeight - getOffsetY();
+        }
+        if (menuOffsetHeight + wrapOffsetTop + offsetY.value > bodyScrollHeight) {
+          offsetY.value -= menuOffsetHeight - getOffsetY();
+        }
       });
     };
     watch(() => props2.multiple, () => {
