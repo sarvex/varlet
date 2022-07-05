@@ -10880,7 +10880,7 @@ function render$q(_ctx, _cache) {
   var _component_var_form_details = resolveComponent("var-form-details");
   return openBlock(), createElementBlock("div", {
     class: normalizeClass(_ctx.classes(_ctx.n(), "var--box", [_ctx.disabled, _ctx.n("--disabled")])),
-    onClick: _cache[8] || (_cache[8] = function() {
+    onClick: _cache[10] || (_cache[10] = function() {
       return _ctx.handleClick && _ctx.handleClick(...arguments);
     })
   }, [createElementVNode("div", {
@@ -10922,6 +10922,9 @@ function render$q(_ctx, _cache) {
     }),
     onChange: _cache[3] || (_cache[3] = function() {
       return _ctx.handleChange && _ctx.handleChange(...arguments);
+    }),
+    onTouchstart: _cache[4] || (_cache[4] = function() {
+      return _ctx.handleTouchstart && _ctx.handleTouchstart(...arguments);
     })
   }, "\n        ", 46, _hoisted_1$9)) : (openBlock(), createElementBlock("input", {
     key: 2,
@@ -10937,17 +10940,20 @@ function render$q(_ctx, _cache) {
       color: _ctx.textColor,
       caretColor: !_ctx.errorMessage ? _ctx.focusColor : void 0
     }),
-    onFocus: _cache[4] || (_cache[4] = function() {
+    onFocus: _cache[5] || (_cache[5] = function() {
       return _ctx.handleFocus && _ctx.handleFocus(...arguments);
     }),
-    onBlur: _cache[5] || (_cache[5] = function() {
+    onBlur: _cache[6] || (_cache[6] = function() {
       return _ctx.handleBlur && _ctx.handleBlur(...arguments);
     }),
-    onInput: _cache[6] || (_cache[6] = function() {
+    onInput: _cache[7] || (_cache[7] = function() {
       return _ctx.handleInput && _ctx.handleInput(...arguments);
     }),
-    onChange: _cache[7] || (_cache[7] = function() {
+    onChange: _cache[8] || (_cache[8] = function() {
       return _ctx.handleChange && _ctx.handleChange(...arguments);
+    }),
+    onTouchstart: _cache[9] || (_cache[9] = function() {
+      return _ctx.handleTouchstart && _ctx.handleTouchstart(...arguments);
     })
   }, null, 46, _hoisted_2$5)), createElementVNode("label", {
     class: normalizeClass(_ctx.classes("var--ellipsis", [_ctx.isFocus, _ctx.n("--focus")], [_ctx.errorMessage, _ctx.n("--error")], [_ctx.textarea, _ctx.n("textarea-placeholder"), _ctx.n("placeholder")], _ctx.computePlaceholderState(), [!_ctx.hint, _ctx.n("--placeholder-non-hint")])),
@@ -11089,6 +11095,16 @@ var Input = defineComponent({
       validateWithTrigger("onClick");
     };
     var withTrim = (value) => props2.modelModifiers.trim ? value.trim() : value;
+    var handleTouchstart = (e) => {
+      var {
+        disabled,
+        readonly
+      } = props2;
+      if (form != null && form.disabled.value || form != null && form.readonly.value || disabled || readonly) {
+        return;
+      }
+      e.stopPropagation();
+    };
     var reset = () => {
       call(props2["onUpdate:modelValue"], "");
       resetValidation();
@@ -11129,6 +11145,7 @@ var Input = defineComponent({
       handleChange,
       handleClear,
       handleClick,
+      handleTouchstart,
       validate,
       resetValidation,
       reset,
