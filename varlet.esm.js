@@ -14116,7 +14116,8 @@ function render$e(_ctx, _cache) {
     })
   }, [createElementVNode("div", {
     class: normalizeClass(_ctx.n("--animation"))
-  }, null, 2)], 6)) : createCommentVNode("v-if", true), createElementVNode("div", {
+  }, null, 2)], 6)) : createCommentVNode("v-if", true), _ctx.avatar || _ctx.title || _ctx.toNumber(_ctx.rows) > 0 ? (openBlock(), createElementBlock("div", {
+    key: 1,
     class: normalizeClass(_ctx.n("article"))
   }, [_ctx.avatar ? (openBlock(), createElementBlock("div", {
     key: 0,
@@ -14127,7 +14128,8 @@ function render$e(_ctx, _cache) {
     })
   }, [createElementVNode("div", {
     class: normalizeClass(_ctx.n("--animation"))
-  }, null, 2)], 6)) : createCommentVNode("v-if", true), createElementVNode("div", {
+  }, null, 2)], 6)) : createCommentVNode("v-if", true), _ctx.title || _ctx.toNumber(_ctx.rows) > 0 ? (openBlock(), createElementBlock("div", {
+    key: 1,
     class: normalizeClass(_ctx.n("section"))
   }, [_ctx.title ? (openBlock(), createElementBlock("div", {
     key: 0,
@@ -14147,7 +14149,7 @@ function render$e(_ctx, _cache) {
     }, [createElementVNode("div", {
       class: normalizeClass(_ctx.n("--animation"))
     }, null, 2)], 6);
-  }), 128))], 2)], 2)], 2)) : createCommentVNode("v-if", true), _ctx.loading && _ctx.fullscreen ? (openBlock(), createElementBlock("div", {
+  }), 128))], 2)) : createCommentVNode("v-if", true)], 2)) : createCommentVNode("v-if", true)], 2)) : createCommentVNode("v-if", true), _ctx.loading && _ctx.fullscreen ? (openBlock(), createElementBlock("div", {
     key: 2,
     class: normalizeClass(_ctx.n("fullscreen")),
     style: normalizeStyle({
