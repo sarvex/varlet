@@ -3908,13 +3908,19 @@ var CollapseItem = defineComponent({
     var closePanel = () => {
       if (!contentEl.value)
         return;
-      contentEl.value.style.height = 0 + "px";
+      var {
+        offsetHeight
+      } = contentEl.value;
+      contentEl.value.style.height = offsetHeight + "px";
+      requestAnimationFrame(() => {
+        contentEl.value.style.height = 0 + "px";
+      });
     };
     var transitionend = () => {
       if (!isShow.value) {
         show.value = false;
-        contentEl.value.style.height = "";
       }
+      contentEl.value.style.height = "";
     };
     var collapseItemProvider = {
       index,
