@@ -3850,6 +3850,9 @@ function render$I(_ctx, _cache) {
     ref: "contentEl",
     onTransitionend: _cache[1] || (_cache[1] = function() {
       return _ctx.transitionend && _ctx.transitionend(...arguments);
+    }),
+    onTransitionstart: _cache[2] || (_cache[2] = function() {
+      return _ctx.start && _ctx.start(...arguments);
     })
   }, [createElementVNode("div", {
     class: normalizeClass(_ctx.n("content-wrap"))
@@ -3868,6 +3871,7 @@ var CollapseItem = defineComponent({
       collapse,
       bindCollapse
     } = useCollapse();
+    var isInitToTrigger = true;
     var contentEl = ref(null);
     var show = ref(false);
     var isShow = ref(false);
@@ -3902,8 +3906,17 @@ var CollapseItem = defineComponent({
         contentEl.value.style.height = 0 + "px";
         requestAnimationFrame(() => {
           contentEl.value.style.height = offsetHeight + "px";
+          if (!isInitToTrigger)
+            return;
+          nextTickFrame(() => {
+            if (isInitToTrigger)
+              transitionend();
+          });
         });
       });
+    };
+    var start = () => {
+      isInitToTrigger = false;
     };
     var closePanel = () => {
       if (!contentEl.value)
@@ -3936,6 +3949,7 @@ var CollapseItem = defineComponent({
     });
     return {
       n: n$L,
+      start,
       classes: classes$C,
       show,
       isShow,
