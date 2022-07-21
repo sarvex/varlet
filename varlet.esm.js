@@ -12778,8 +12778,8 @@ var PullRefresh = defineComponent({
     var controlStyle = computed(() => ({
       transform: "translate3d(0px, " + distance.value + "px, 0px) translate(-50%, 0)",
       transition: isEnd.value ? "transform " + props2.animationDuration + "ms" : void 0,
-      background: props2.successBgColor || props2.bgColor,
-      color: props2.successColor || props2.color
+      background: isSuccess.value ? props2.successBgColor : props2.bgColor,
+      color: isSuccess.value ? props2.successColor : props2.color
     }));
     var isSuccess = computed(() => refreshStatus.value === "success");
     var changeIcon = () => {
