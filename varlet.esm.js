@@ -7278,6 +7278,9 @@ var props$z = {
     type: Boolean,
     default: true
   },
+  onPreview: {
+    type: Function
+  },
   onChange: {
     type: Function
   },
@@ -8375,6 +8378,7 @@ var DatePicker = defineComponent({
         range,
         multiple,
         onChange,
+        onPreview,
         "onUpdate:modelValue": updateModelValue
       } = props2;
       reverse.value = getReverse("month", month);
@@ -8390,6 +8394,7 @@ var DatePicker = defineComponent({
         }
       } else {
         previewMonth.value = month;
+        call(onPreview, toNumber(previewYear.value), toNumber(previewMonth.value.index));
       }
       isMonthPanel.value = false;
     };
@@ -8397,6 +8402,7 @@ var DatePicker = defineComponent({
       previewYear.value = "" + year;
       isYearPanel.value = false;
       isMonthPanel.value = true;
+      call(props2.onPreview, toNumber(previewYear.value), toNumber(previewMonth.value.index));
     };
     var checkPreview = (type, checkType2) => {
       var changeValue = checkType2 === "prev" ? -1 : 1;
@@ -8414,6 +8420,7 @@ var DatePicker = defineComponent({
         }
         previewMonth.value = MONTH_LIST.find((month) => toNumber(month.index) === checkIndex);
       }
+      call(props2.onPreview, toNumber(previewYear.value), toNumber(previewMonth.value.index));
     };
     var checkValue = () => {
       if ((props2.multiple || props2.range) && !isArray(props2.modelValue)) {
