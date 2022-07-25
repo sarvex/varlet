@@ -8070,8 +8070,8 @@ function render$B(_ctx, _cache) {
     class: normalizeClass(_ctx.classes(_ctx.n("title-year"), [_ctx.isYearPanel, _ctx.n("title-year--active")])),
     onClick: _cache[0] || (_cache[0] = ($event) => _ctx.clickEl("year"))
   }, [renderSlot(_ctx.$slots, "year", {
-    year: _ctx.previewYear
-  }, () => [createTextVNode(toDisplayString(_ctx.previewYear), 1)])], 2), createElementVNode("div", {
+    year: _ctx.chooseYear
+  }, () => [createTextVNode(toDisplayString(_ctx.chooseYear), 1)])], 2), createElementVNode("div", {
     class: normalizeClass(_ctx.classes(_ctx.n("title-date"), [!_ctx.isYearPanel, _ctx.n("title-date--active")], [_ctx.range, _ctx.n("title-date--range")])),
     onClick: _cache[1] || (_cache[1] = ($event) => _ctx.clickEl("date"))
   }, [createVNode(Transition, {
