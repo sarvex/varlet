@@ -1188,7 +1188,7 @@ var isHTMLSupportImage = (val) => {
   if (val == null) {
     return false;
   }
-  return val.startsWith("data:image") || /\.(png|jpg|gif|jpeg|svg)$/.test(val);
+  return val.startsWith("data:image") || /\.(png|jpg|gif|jpeg|svg|webp)$/.test(val);
 };
 var isHTMLSupportVideo = (val) => {
   if (val == null) {
