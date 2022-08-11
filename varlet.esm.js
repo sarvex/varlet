@@ -11965,7 +11965,7 @@ var Pagination = defineComponent({
         }
       }
       pageList.value = list2;
-      if (oldCurrent !== void 0)
+      if (oldCurrent !== void 0 && pageCount.value > 0)
         onChange == null ? void 0 : onChange(newCurrent, newSize);
       (_props$onUpdateCurre = props2["onUpdate:current"]) == null ? void 0 : _props$onUpdateCurre.call(props2, newCurrent);
       (_props$onUpdateSize = props2["onUpdate:size"]) == null ? void 0 : _props$onUpdateSize.call(props2, newSize);
