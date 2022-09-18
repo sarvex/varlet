@@ -14367,8 +14367,8 @@ const ia = ae({
 });
 var Dt = [];
 function Da(e) {
-  e === void 0 && (e = {}), Dt.forEach((r) => document.documentElement.style.removeProperty(r)), Dt.length = 0;
-  var n = il(e);
+  Dt.forEach((r) => document.documentElement.style.removeProperty(r)), Dt.length = 0;
+  var n = il(e != null ? e : {});
   Object.entries(n).forEach((r) => {
     var [a, t] = r;
     document.documentElement.style.setProperty(a, t), Dt.push(a);
