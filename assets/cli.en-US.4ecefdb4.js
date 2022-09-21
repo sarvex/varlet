@@ -55,7 +55,7 @@ varlet-cli test -wa
 #`),e("span",{class:"bash"}," Options"),t(`
 -n
 --name
-  \u7EC4\u4EF6\u540D
+  project name
 -s
 --sfc
   Generate sfc-style component
