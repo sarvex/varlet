@@ -38,7 +38,7 @@ var Ki = (e) => e == null ? !1 : e.startsWith("data:image") || /\.(png|jpg|gif|j
     }
   };
 }, Zi = (e) => e, Ji = (e) => Math.pow(e, 3), al = (e) => e < 0.5 ? Ji(e * 2) / 2 : 1 - Ji((1 - e) * 2) / 2, vt = (e, n) => e == null ? n : e, tl = () => typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : self, fr = function(e, n, r) {
-  if (e === void 0 && (e = ""), r === void 0 && (r = ""), e.length >= n || n <= 0)
+  if (e === void 0 && (e = ""), r === void 0 && (r = ""), e.length >= n)
     return e;
   var a = n - e.length, t = Math.floor(a / r.length);
   return r.repeat(t) + r.slice(0, a % r.length) + e;
