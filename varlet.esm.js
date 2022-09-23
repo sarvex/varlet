@@ -1734,7 +1734,9 @@ const xe = ae({
   props: Au,
   setup(e) {
     var n = E(!1), r = (i) => {
-      e.autoLoading && (n.value = !0, Promise.resolve(i).finally(() => {
+      e.autoLoading && (n.value = !0, Promise.resolve(i).then(() => {
+        n.value = !1;
+      }).catch(() => {
         n.value = !1;
       }));
     }, a = (i) => {
