@@ -2513,18 +2513,18 @@ function md(e, n) {
           },
           [q(e.$slots, "extra")],
           2
-        )) : Z("v-if", !0), e.$slots.content && !e.isRow ? (w(), M(
+        )) : Z("v-if", !0), e.$slots["floating-content"] && !e.isRow ? (w(), M(
           "div",
           {
             key: 1,
-            class: m(e.n("content")),
+            class: m(e.n("floating-content")),
             style: K({
               height: e.contentHeight,
               opacity: e.opacity,
               transition: "opacity " + e.floatingDuration * 2 + "ms"
             })
           },
-          [q(e.$slots, "content")],
+          [q(e.$slots, "floating-content")],
           6
         )) : Z("v-if", !0)],
         2
