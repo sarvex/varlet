@@ -10741,7 +10741,7 @@ function $p(e, n) {
     [Ce((w(), M(
       "li",
       {
-        class: m(e.classes(e.n("item"), e.n("prev"), [e.current <= 1 || e.disabled, e.n("item--disabled")], [e.simple, e.n("item--hover"), "var-elevation--2"])),
+        class: m(e.classes(e.n("item"), e.n("prev"), [e.current <= 1 || e.disabled, e.n("item--disabled")], [e.simple, e.n("item--simple"), "var-elevation--2"])),
         onClick: n[0] || (n[0] = (l) => e.clickItem("prev"))
       },
       [q(e.$slots, "prev", {}, () => [ee(r, {
@@ -10807,7 +10807,7 @@ function $p(e, n) {
     )), Ce((w(), M(
       "li",
       {
-        class: m(e.classes(e.n("item"), e.n("next"), [e.current >= e.pageCount || e.disabled, e.n("item--disabled")], [e.simple, e.n("item--hover"), "var-elevation--2"])),
+        class: m(e.classes(e.n("item"), e.n("next"), [e.current >= e.pageCount || e.disabled, e.n("item--disabled")], [e.simple, e.n("item--simple"), "var-elevation--2"])),
         onClick: n[4] || (n[4] = (l) => e.clickItem("next"))
       },
       [q(e.$slots, "next", {}, () => [ee(r, {
