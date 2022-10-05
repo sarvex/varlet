@@ -1,4 +1,4 @@
-import { reactive as Ne, ref as E, onMounted as Fe, onUnmounted as xn, onActivated as bi, onDeactivated as wi, getCurrentInstance as Aa, provide as Jo, computed as W, inject as Qo, nextTick as Pe, createApp as Is, onBeforeUnmount as Si, h as xo, isVNode as Ci, watch as ne, onBeforeMount as Ns, defineComponent as ae, createVNode as ee, Teleport as st, Transition as He, withDirectives as Ce, vShow as za, mergeProps as Te, openBlock as w, createBlock as me, resolveDynamicComponent as ut, normalizeClass as m, normalizeStyle as K, resolveComponent as re, resolveDirective as je, withCtx as ce, createElementVNode as A, renderSlot as q, toDisplayString as J, createElementBlock as M, Fragment as Oe, renderList as Ie, createCommentVNode as Z, onUpdated as ki, createTextVNode as he, pushScopeId as _o, popScopeId as el, withModifiers as Vn, normalizeProps as nl, guardReactiveProps as Ds, vModelText as Bs, toRefs as As, withKeys as ji, toRaw as Gi, TransitionGroup as zs, Comment as Fs } from "vue";
+import { reactive as Ne, ref as E, onMounted as Fe, onUnmounted as xn, onActivated as bi, onDeactivated as wi, getCurrentInstance as Aa, provide as Jo, computed as W, inject as Qo, nextTick as Oe, createApp as Is, onBeforeUnmount as Si, h as xo, isVNode as Ci, watch as ne, onBeforeMount as Ns, defineComponent as ae, createVNode as ee, Teleport as st, Transition as He, withDirectives as Ce, vShow as za, mergeProps as Ee, openBlock as w, createBlock as me, resolveDynamicComponent as ut, normalizeClass as m, normalizeStyle as K, resolveComponent as re, resolveDirective as je, withCtx as ce, createElementVNode as A, renderSlot as q, toDisplayString as J, createElementBlock as M, Fragment as Te, renderList as Ie, createCommentVNode as Z, onUpdated as ki, createTextVNode as he, pushScopeId as _o, popScopeId as el, withModifiers as Vn, normalizeProps as nl, guardReactiveProps as Ds, vModelText as Bs, toRefs as As, withKeys as ji, toRaw as Gi, TransitionGroup as zs, Comment as Fs } from "vue";
 var rl = {
   locks: {},
   zIndex: 2e3,
@@ -303,9 +303,9 @@ function yn(e) {
     instances: t
   } = n, i = Aa();
   Fe(() => {
-    Pe().then(() => r(i));
+    Oe().then(() => r(i));
   }), xn(() => {
-    Pe().then(() => a(i));
+    Oe().then(() => a(i));
   });
   var o = W(() => t.indexOf(i));
   return {
@@ -687,7 +687,7 @@ const mn = ae({
         }, f),
         onClick: o
       }, null);
-    }, s = () => ee("div", Te({
+    }, s = () => ee("div", Ee({
       class: Vt(Wa("content"), "var-elevation--3", Wa("--" + e.position)),
       style: {
         zIndex: t.value
@@ -822,7 +822,7 @@ const $e = ae({
           n.value = i;
           return;
         }
-        r.value = !0, yield Pe(), setTimeout(() => {
+        r.value = !0, yield Oe(), setTimeout(() => {
           o != null && (n.value = i), r.value = !1;
         }, L(l));
       });
@@ -1142,7 +1142,7 @@ function bu(e, n) {
   var r = re("var-icon"), a = re("var-popup"), t = je("ripple");
   return w(), me(
     a,
-    Te({
+    Ee({
       class: e.n("popup-radius"),
       position: "bottom",
       overlay: e.overlay,
@@ -1164,7 +1164,7 @@ function bu(e, n) {
     {
       default: ce(() => [A(
         "div",
-        Te({
+        Ee({
           class: e.classes(e.n(), "var--box")
         }, e.$attrs),
         [q(e.$slots, "title", {}, () => [A(
@@ -1175,7 +1175,7 @@ function bu(e, n) {
           J(e.dt(e.title, e.pack.actionSheetTitle)),
           3
         )]), q(e.$slots, "actions", {}, () => [(w(!0), M(
-          Oe,
+          Te,
           null,
           Ie(e.actions, (i) => Ce((w(), M(
             "div",
@@ -1294,7 +1294,7 @@ rr.install = function(e) {
 cr.close = () => {
   if (Fn != null) {
     var e = Fn;
-    Fn = null, Pe().then(() => {
+    Fn = null, Oe().then(() => {
       e.show = !1;
     });
   }
@@ -1512,10 +1512,10 @@ function Nu(e, n) {
         )],
         2
       )) : Z("v-if", !0), (w(!0), M(
-        Oe,
+        Te,
         null,
         Ie(e.loadingTypeDict, (r, a) => (w(), M(
-          Oe,
+          Te,
           {
             key: a
           },
@@ -1526,7 +1526,7 @@ function Nu(e, n) {
               class: m(e.classes(e.n(a), e.n(a + "--" + e.size)))
             },
             [(w(!0), M(
-              Oe,
+              Te,
               null,
               Ie(r, (t) => (w(), M(
                 "div",
@@ -1801,7 +1801,7 @@ function Hu(e, n) {
     },
     [A(
       "div",
-      Te({
+      Ee({
         class: e.classes(e.n(), [e.show, e.n("--active")]),
         ref: "backTopEl",
         style: {
@@ -1937,7 +1937,7 @@ function Zu(e, n) {
     }, {
       default: ce(() => [Ce(A(
         "span",
-        Te(e.$attrs, {
+        Ee(e.$attrs, {
           class: e.classes(e.n("content"), ...e.contentClass),
           style: {
             background: e.color
@@ -2098,7 +2098,7 @@ function nd(e, n) {
     },
     [q(e.$slots, "default"), e.$slots.fab ? (w(), me(
       r,
-      Te({
+      Ee({
         key: 0,
         class: e.classes(e.n("fab"), [e.length % 2, e.n("--fab-right"), e.n("--fab-center")]),
         "var-bottom-navigation__fab": "",
@@ -2271,7 +2271,7 @@ function ld(e, n) {
       active: e.active === e.index || e.active === e.name
     }), e.badge ? (w(), me(
       a,
-      Te({
+      Ee({
         key: 1
       }, e.badgeProps, {
         class: e.n("badge"),
@@ -2286,7 +2286,7 @@ function ld(e, n) {
         class: m(e.n("label"))
       },
       [e.$slots.default ? Z("v-if", !0) : (w(), M(
-        Oe,
+        Te,
         {
           key: 0
         },
@@ -2623,7 +2623,7 @@ const Ir = ae({
       N(e["onUpdate:floating"], !1);
     };
     return ne(() => e.floating, (k) => {
-      c.value || Pe(() => {
+      c.value || Oe(() => {
         k ? I() : S();
       });
     }, {
@@ -3026,7 +3026,7 @@ const ir = ae({
       validate: f,
       resetValidation: v
     } = bn(), c = (S) => {
-      Pe(() => {
+      Oe(() => {
         var {
           validateTrigger: B,
           rules: k,
@@ -3184,7 +3184,7 @@ const Nr = ae({
       validate: u,
       resetValidation: d
     } = bn(), f = W(() => l.value), v = (B) => {
-      Pe(() => {
+      Oe(() => {
         var {
           validateTrigger: k,
           rules: D,
@@ -3317,7 +3317,7 @@ function Ld(e, n) {
   }, {
     default: ce(() => [A(
       "span",
-      Te({
+      Ee({
         class: e.classes(e.n(), "var--box", ...e.contentClass),
         style: e.chipStyles
       }, e.$attrs),
@@ -3620,7 +3620,7 @@ const Br = ae({
       offset: i,
       updateItem: s
     };
-    return a(v), ne(() => n.value, () => Pe().then(f)), ne(() => e.modelValue, () => Pe().then(f)), {
+    return a(v), ne(() => n.value, () => Oe().then(f)), ne(() => e.modelValue, () => Oe().then(f)), {
       n: qd
     };
   }
@@ -3750,7 +3750,7 @@ const Ar = ae({
     }, c = (g) => {
       e.disabled || g || d(e.name || n.value, !l.value);
     }, p = () => {
-      !i.value || (i.value.style.height = "", o.value = !0, Pe(() => {
+      !i.value || (i.value.style.height = "", o.value = !0, Oe(() => {
         var {
           offsetHeight: g
         } = i.value;
@@ -5056,7 +5056,7 @@ function _v(e, n) {
     },
     [A(
       "div",
-      Te({
+      Ee({
         class: e.classes(e.n("controller"), "var-elevation--2", [e.disabled || e.formDisabled, e.n("--disabled")], [e.errorMessage, e.n("--error")]),
         style: {
           background: e.color ? e.color : void 0
@@ -5160,7 +5160,7 @@ const Fr = ae({
       readonly: v,
       disabled: c
     } = l != null ? l : {}, p = () => d(e.rules, e.modelValue), b = (V) => {
-      Pe(() => {
+      Oe(() => {
         var {
           validateTrigger: z,
           rules: X,
@@ -5861,13 +5861,13 @@ function Sf(e, n) {
           default: ce(() => [(w(), M("ul", {
             key: e.panelKey
           }, [(w(!0), M(
-            Oe,
+            Te,
             null,
             Ie(e.MONTH_LIST, (t) => (w(), M("li", {
               key: t.index
             }, [ee(
               a,
-              Te({
+              Ee({
                 type: "primary",
                 "var-month-picker-cover": "",
                 ripple: !1
@@ -6034,7 +6034,7 @@ function Tf(e, n) {
       class: m(e.n())
     },
     [(w(!0), M(
-      Oe,
+      Te,
       null,
       Ie(e.yearList, (r) => (w(), M(
         "li",
@@ -6169,7 +6169,7 @@ function Ef(e, n) {
               class: m(e.n("head"))
             },
             [(w(!0), M(
-              Oe,
+              Te,
               null,
               Ie(e.sortWeekList, (t) => (w(), M(
                 "li",
@@ -6188,13 +6188,13 @@ function Ef(e, n) {
               class: m(e.n("body"))
             },
             [(w(!0), M(
-              Oe,
+              Te,
               null,
               Ie(e.days, (t, i) => (w(), M("li", {
                 key: i
               }, [ee(
                 a,
-                Te({
+                Ee({
                   type: "primary",
                   "var-day-picker-cover": "",
                   round: "",
@@ -6468,7 +6468,7 @@ function Nf(e, n) {
               }, () => [he(
                 J(e.getDateTitle),
                 1
-              )]) : q(e.$slots, "date", nl(Te({
+              )]) : q(e.$slots, "date", nl(Ee({
                 key: 2
               }, e.slotProps)), () => [he(
                 J(e.getDateTitle),
@@ -6883,7 +6883,7 @@ function Ff(e, n) {
     {
       default: ce(() => [A(
         "div",
-        Te({
+        Ee({
           class: e.classes("var--box", e.n(), e.dialogClass),
           style: e.dialogStyle
         }, e.$attrs),
@@ -7077,7 +7077,7 @@ mr.install = function(e) {
 mr.close = () => {
   if (Ln != null) {
     var e = Ln;
-    Ln = null, Pe().then(() => {
+    Ln = null, Oe().then(() => {
       e.show = !1;
     });
   }
@@ -7719,7 +7719,7 @@ function wc(e, n) {
         class: m(e.classes(e.n("indicators"), [e.vertical, e.n("--indicators-vertical")]))
       },
       [(w(!0), M(
-        Oe,
+        Te,
         null,
         Ie(e.length, (r, a) => (w(), M(
           "div",
@@ -8033,7 +8033,7 @@ function Vc(e, n) {
     {
       default: ce(() => [ee(
         a,
-        Te({
+        Ee({
           class: e.n("swipe"),
           "var-image-preview-cover": "",
           touchable: e.canSwipe,
@@ -8044,7 +8044,7 @@ function Vc(e, n) {
         }, e.$attrs),
         {
           default: ce(() => [(w(!0), M(
-            Oe,
+            Te,
             null,
             Ie(e.images, (o) => (w(), me(
               r,
@@ -8302,7 +8302,7 @@ function Jn(e) {
 Jn.close = () => {
   if (Rn != null) {
     var e = Rn;
-    Rn = null, Pe().then(() => {
+    Rn = null, Oe().then(() => {
       e.show = !1;
     });
   }
@@ -8503,7 +8503,7 @@ function Rc(e, n) {
     {
       default: ce(() => [A(
         "div",
-        Te({
+        Ee({
           class: e.n()
         }, e.$attrs),
         [q(e.$slots, "default", {}, () => [he(
@@ -8646,7 +8646,7 @@ function jc(e, n) {
         })
       },
       [(w(!0), M(
-        Oe,
+        Te,
         null,
         Ie(e.anchorNameList, (r) => (w(), M(
           "li",
@@ -9060,7 +9060,7 @@ const dr = ae({
       validate: u,
       resetValidation: d
     } = bn(), f = (P) => {
-      Pe(() => {
+      Oe(() => {
         var {
           validateTrigger: $,
           rules: O,
@@ -9306,7 +9306,7 @@ const jr = ae({
       return Math.floor(s) - Me(e.offset) <= l;
     }, o = /* @__PURE__ */ function() {
       var l = _c(function* () {
-        yield Pe();
+        yield Oe();
         var {
           loading: s,
           finished: u,
@@ -10782,7 +10782,7 @@ function $p(e, n) {
       )])],
       2
     )) : (w(!0), M(
-      Oe,
+      Te,
       {
         key: 1
       },
@@ -10831,7 +10831,7 @@ function $p(e, n) {
         },
         {
           menu: ce(() => [(w(!0), M(
-            Oe,
+            Te,
             null,
             Ie(e.sizeOption, (l, s) => Ce((w(), me(
               t,
@@ -11100,7 +11100,7 @@ function Ip(e, n) {
   var r = re("var-button");
   return w(), me(
     ut(e.dynamic ? "var-popup" : e.Transition),
-    Te(e.dynamic ? {
+    Ee(e.dynamic ? {
       onOpen: e.onOpen,
       onOpened: e.onOpened,
       onClose: e.onClose,
@@ -11119,7 +11119,7 @@ function Ip(e, n) {
     {
       default: ce(() => [A(
         "div",
-        Te({
+        Ee({
           class: e.n()
         }, e.$attrs),
         [A(
@@ -11181,7 +11181,7 @@ function Ip(e, n) {
             })
           },
           [(w(!0), M(
-            Oe,
+            Te,
             null,
             Ie(e.scrollColumns, (a) => (w(), M(
               "div",
@@ -11206,7 +11206,7 @@ function Ip(e, n) {
                   onTransitionend: (t) => e.handleTransitionend(a)
                 },
                 [(w(!0), M(
-                  Oe,
+                  Te,
                   null,
                   Ie(a.column.texts, (t) => (w(), M(
                     "div",
@@ -11486,7 +11486,7 @@ gr.install = function(e) {
 gr.close = () => {
   if (Xe != null) {
     var e = Xe;
-    Xe = null, Pe().then(() => {
+    Xe = null, Oe().then(() => {
       e.show = !1;
     });
   }
@@ -11522,6 +11522,9 @@ var Dp = {
     type: Boolean,
     default: !1
   },
+  labelClass: {
+    type: String
+  },
   size: {
     type: [Number, String],
     default: 40
@@ -11552,12 +11555,12 @@ function Rp(e, n) {
       },
       [A(
         "div",
-        Te({
-          class: e.n("linear-block"),
-          style: {
+        {
+          class: m(e.n("linear-block")),
+          style: K({
             height: e.toSizeUnit(e.lineWidth)
-          }
-        }, e.$attrs),
+          })
+        },
         [e.track ? (w(), M(
           "div",
           {
@@ -11581,18 +11584,18 @@ function Rp(e, n) {
           null,
           6
         )],
-        16
+        6
       ), e.label ? (w(), M(
         "div",
-        Te({
+        {
           key: 0,
-          class: e.n("linear-label")
-        }, e.$attrs),
+          class: m(e.classes(e.n("linear-label"), [e.labelClass, e.labelClass]))
+        },
         [q(e.$slots, "default", {}, () => [he(
           J(e.linearProps.roundValue),
           1
         )])],
-        16
+        2
       )) : Z("v-if", !0)],
       2
     )) : Z("v-if", !0), e.mode === "circle" ? (w(), M(
@@ -11654,15 +11657,15 @@ function Rp(e, n) {
         zp
       )), e.label ? (w(), M(
         "div",
-        Te({
+        {
           key: 0,
-          class: e.n("circle-label")
-        }, e.$attrs),
+          class: m(e.classes(e.n("circle-label"), [e.labelClass, e.labelClass]))
+        },
         [q(e.$slots, "default", {}, () => [he(
           J(e.circleProps.roundValue),
           1
         )])],
-        16
+        2
       )) : Z("v-if", !0)],
       6
     )) : Z("v-if", !0)],
@@ -11672,7 +11675,6 @@ function Rp(e, n) {
 const Kr = ae({
   render: Rp,
   name: "VarProgress",
-  inheritAttrs: !1,
   props: Dp,
   setup(e) {
     var n = W(() => {
@@ -11974,7 +11976,7 @@ function Jp(e, n) {
     },
     [A(
       "div",
-      Te({
+      Ee({
         class: e.n(),
         onClick: n[0] || (n[0] = function() {
           return e.handleClick && e.handleClick(...arguments);
@@ -12064,7 +12066,7 @@ const Zr = ae({
       validate: d,
       resetValidation: f
     } = bn(), v = (h) => {
-      Pe(() => {
+      Oe(() => {
         var {
           validateTrigger: I,
           rules: S,
@@ -12209,7 +12211,7 @@ const Jr = ae({
       validate: l,
       resetValidation: s
     } = bn(), u = W(() => i.value), d = (y) => {
-      Pe(() => {
+      Oe(() => {
         var {
           validateTrigger: T,
           rules: C,
@@ -12328,7 +12330,7 @@ function th(e, n) {
         class: m(e.n())
       },
       [(w(!0), M(
-        Oe,
+        Te,
         null,
         Ie(e.toNumber(e.count), (i) => Ce((w(), M(
           "div",
@@ -12444,7 +12446,7 @@ const Qr = ae({
         T.offsetX <= Math.floor(C / 2) && (y -= 0.5);
       }
       N(e["onUpdate:modelValue"], y);
-    }, f = () => i(e.rules, L(e.modelValue)), v = () => Pe(() => t(["onChange"], "onChange", e.rules, e.modelValue)), c = (y, T) => {
+    }, f = () => i(e.rules, L(e.modelValue)), v = () => Oe(() => t(["onChange"], "onChange", e.rules, e.modelValue)), c = (y, T) => {
       var {
         readonly: C,
         disabled: g,
@@ -12724,7 +12726,7 @@ function hh(e, n) {
                   class: m(e.n("chips"))
                 },
                 [(w(!0), M(
-                  Oe,
+                  Te,
                   null,
                   Ie(e.labels, (o) => (w(), me(
                     r,
@@ -12883,7 +12885,7 @@ const _r = ae({
       }
       !U && !Un(H) && (i.value = S(H)), !U && Un(H) && (i.value = "");
     }, h = (U) => {
-      Pe(() => {
+      Oe(() => {
         var {
           validateTrigger: H,
           rules: Q,
@@ -13185,7 +13187,7 @@ function wh(e, n) {
             )],
             6
           )) : Z("v-if", !0), (w(!0), M(
-            Oe,
+            Te,
             null,
             Ie(e.toNumber(e.rows), (r, a) => (w(), M(
               "div",
@@ -13330,10 +13332,10 @@ function ci() {
 var {
   n: kh,
   classes: $h
-} = _("slider"), Ee;
+} = _("slider"), Pe;
 (function(e) {
   e.First = "1", e.Second = "2";
-})(Ee || (Ee = {}));
+})(Pe || (Pe = {}));
 var Th = ["onTouchstart", "onTouchmove", "onTouchend", "onTouchcancel"];
 function Oh(e, n) {
   var r = re("var-form-details");
@@ -13382,7 +13384,7 @@ function Oh(e, n) {
         )],
         2
       ), (w(!0), M(
-        Oe,
+        Te,
         null,
         Ie(e.thumbList, (a) => (w(), M(
           "div",
@@ -13482,20 +13484,20 @@ const na = ae({
       currentLeft: 0,
       active: !1,
       percentValue: 0
-    }), u = () => Pe(() => t(["onChange"], "onChange", e.rules, e.modelValue)), d = E(null), f = E(0), v = E(!1), c = Ne({
-      [Ee.First]: s(),
-      [Ee.Second]: s()
+    }), u = () => Oe(() => t(["onChange"], "onChange", e.rules, e.modelValue)), d = E(null), f = E(0), v = E(!1), c = Ne({
+      [Pe.First]: s(),
+      [Pe.Second]: s()
     }), p = W(() => f.value / 100 * L(e.step)), b = W(() => {
       var V = [{
         value: e.modelValue,
-        enumValue: Ee.First
+        enumValue: Pe.First
       }];
       return e.range && Se(e.modelValue) && (V = [{
         value: e.modelValue[0],
-        enumValue: Ee.First
+        enumValue: Pe.First
       }, {
         value: e.modelValue[1],
-        enumValue: Ee.Second
+        enumValue: Pe.Second
       }]), V;
     }), y = (V) => {
       var z;
@@ -13521,15 +13523,15 @@ const na = ae({
         modelValue: U,
         onChange: H
       } = e, Q = L(se), ie = Math.round(V / p.value), oe = ie * Q, ve = c[z].percentValue;
-      if (c[z].percentValue = oe / Q, F && Se(U) && (X = z === Ee.First ? [oe, U[1]] : [U[0], oe]), ve !== oe) {
+      if (c[z].percentValue = oe / Q, F && Se(U) && (X = z === Pe.First ? [oe, U[1]] : [U[0], oe]), ve !== oe) {
         var be = F ? X : oe;
         N(H, be), N(e["onUpdate:modelValue"], be), u();
       }
     }, S = (V) => {
       if (!e.range)
-        return Ee.First;
-      var z = c[Ee.First].percentValue * p.value, X = c[Ee.Second].percentValue * p.value, se = Math.abs(V - z), F = Math.abs(V - X);
-      return se <= F ? Ee.First : Ee.Second;
+        return Pe.First;
+      var z = c[Pe.First].percentValue * p.value, X = c[Pe.Second].percentValue * p.value, se = Math.abs(V - z), F = Math.abs(V - X);
+      return se <= F ? Pe.First : Pe.Second;
     }, B = (V, z) => {
       f.value || (f.value = d.value.offsetWidth), !(g.value || h.value) && (N(e.onStart), v.value = !0, c[z].startPosition = V.touches[0].clientX);
     }, k = (V, z) => {
@@ -13547,7 +13549,7 @@ const na = ae({
         var F = [];
         c[V].currentLeft = c[V].percentValue * p.value, c[V].active = !1;
         var U = c[V].percentValue;
-        z && Se(X) && (F = V === Ee.First ? [U, X[1]] : [X[0], U]), N(se, z ? F : U), v.value = !1;
+        z && Se(X) && (F = V === Pe.First ? [U, X[1]] : [X[0], U]), N(se, z ? F : U), v.value = !1;
       }
     }, P = (V) => {
       if (!(g.value || h.value) && !V.target.closest(".var-slider__thumb")) {
@@ -13564,7 +13566,7 @@ const na = ae({
       } = e;
       return V && !Se(z) ? (console.error('[Varlet] Slider: "modelValue" should be an Array'), !1) : !V && Se(z) ? (console.error('[Varlet] Slider: "modelValue" should be a Number'), !1) : V && Se(z) && z.length < 2 ? (console.error('[Varlet] Slider: "modelValue" should have two value'), !1) : !0;
     }, R = function(V, z) {
-      V === void 0 && (V = e.modelValue), z === void 0 && (z = L(e.step)), e.range && Se(V) ? (c[Ee.First].percentValue = V[0] / z, c[Ee.First].currentLeft = c[Ee.First].percentValue * p.value, c[Ee.Second].percentValue = V[1] / z, c[Ee.Second].currentLeft = c[Ee.Second].percentValue * p.value) : Qe(V) && (c[Ee.First].currentLeft = V / z * p.value);
+      V === void 0 && (V = e.modelValue), z === void 0 && (z = L(e.step)), e.range && Se(V) ? (c[Pe.First].percentValue = V[0] / z, c[Pe.First].currentLeft = c[Pe.First].percentValue * p.value, c[Pe.Second].percentValue = V[1] / z, c[Pe.Second].currentLeft = c[Pe.Second].percentValue * p.value) : Qe(V) && (c[Pe.First].currentLeft = V / z * p.value);
     };
     ne([() => e.modelValue, () => e.step], (V) => {
       var [z, X] = V;
@@ -13583,7 +13585,7 @@ const na = ae({
     return N(n, G), {
       n: kh,
       classes: $h,
-      Thumbs: Ee,
+      Thumbs: Pe,
       sliderEl: d,
       getFillStyle: C,
       isDisabled: g,
@@ -13822,7 +13824,7 @@ function Bh(e, n) {
       {
         default: ce(() => [ee(
           r,
-          Te(e.$props, {
+          Ee(e.$props, {
             class: e.n("transition")
           }),
           {
@@ -13912,7 +13914,7 @@ var Ui = ["loading", "success", "warning", "info", "error"], Ho = 0, pi = !1, hi
         var l = wa ? "relative" : "absolute", s = Da({
           position: l
         }, Hh(t.position));
-        return ee(ps, Te(t, {
+        return ee(ps, Ee(t, {
           key: a,
           style: s,
           "data-id": a,
@@ -13921,7 +13923,7 @@ var Ui = ["loading", "success", "warning", "info", "error"], Ho = 0, pi = !1, hi
           "onUpdate:show": (u) => t.show = u
         }), null);
       }), n = on.zIndex;
-      return ee(zs, Te(Fh, {
+      return ee(zs, Ee(Fh, {
         style: {
           zIndex: n
         },
@@ -14057,7 +14059,7 @@ const aa = ae({
         var h = [];
         return g.forEach((I) => {
           if (I.type !== Fs) {
-            if (I.type === Oe && Se(I.children)) {
+            if (I.type === Te && Se(I.children)) {
               I.children.forEach((S) => {
                 h.push(S);
               });
@@ -14531,7 +14533,7 @@ const la = ae({
       validateWithTrigger: t,
       validate: i,
       resetValidation: o
-    } = bn(), l = () => i(e.rules, e.modelValue), s = () => Pe(() => t(["onChange"], "onChange", e.rules, e.modelValue)), u = W(() => {
+    } = bn(), l = () => i(e.rules, e.modelValue), s = () => Oe(() => t(["onChange"], "onChange", e.rules, e.modelValue)), u = W(() => {
       var {
         size: p,
         modelValue: b,
@@ -14979,7 +14981,7 @@ function Mg(e, n) {
     {
       default: ce(() => [A(
         "div",
-        Te({
+        Ee({
           class: e.classes(e.n(), "var--box", e.n("--item-" + e.itemDirection), e.n("--layout-" + e.layoutDirection + "-padding"), [e.elevation, "var-elevation--4"], [e.fixedBottom, e.n("--fixed-bottom")], [e.safeArea, e.n("--safe-area")]),
           style: {
             background: e.color
@@ -15491,7 +15493,7 @@ function py(e, n) {
       null,
       6
     ), (w(!0), M(
-      Oe,
+      Te,
       null,
       Ie(e.timeScales, (r, a) => (w(), M(
         "div",
@@ -15512,7 +15514,7 @@ function py(e, n) {
         ref: "inner"
       },
       [(w(!0), M(
-        Oe,
+        Te,
         null,
         Ie(e.hours24, (r, a) => (w(), M(
           "div",
@@ -16162,7 +16164,7 @@ function Ny(e, n) {
         class: m(e.n("file-list"))
       },
       [(w(!0), M(
-        Oe,
+        Te,
         null,
         Ie(e.files, (o) => Ce((w(), M(
           "div",
@@ -16453,7 +16455,7 @@ const ma = ae({
       getError: S,
       getLoading: B
     }, D = (Y) => {
-      Pe(() => {
+      Oe(() => {
         var {
           validateTrigger: G,
           rules: V,
