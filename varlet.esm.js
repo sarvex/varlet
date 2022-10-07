@@ -3405,6 +3405,10 @@ var Rd = {
     type: [String, Number],
     default: 0
   },
+  direction: {
+    type: String,
+    default: "row"
+  },
   onClick: {
     type: Function
   },
@@ -3460,6 +3464,7 @@ function Hd(e, n) {
     {
       class: m(e.classes(e.n(), "var--box", [e.span >= 0, e.n("--span-" + e.span)], [e.offset, e.n("--offset-" + e.offset)], ...e.getSize("xs", e.xs), ...e.getSize("sm", e.sm), ...e.getSize("md", e.md), ...e.getSize("lg", e.lg), ...e.getSize("xl", e.xl))),
       style: K({
+        flexDirection: e.direction,
         paddingLeft: e.toSizeUnit(e.padding.left),
         paddingRight: e.toSizeUnit(e.padding.right)
       }),
@@ -12503,6 +12508,10 @@ var lh = {
   },
   onClick: {
     type: Function
+  },
+  direction: {
+    type: String,
+    default: "row"
   }
 }, {
   n: sh,
