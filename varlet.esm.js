@@ -6796,6 +6796,9 @@ var zf = ni({
     type: Boolean,
     default: !1
   },
+  width: {
+    type: [Number, String]
+  },
   title: {
     type: String
   },
@@ -6850,9 +6853,6 @@ var zf = ni({
   },
   dialogStyle: {
     type: Object
-  },
-  dialogWidth: {
-    type: [Number, String]
   }
 }, Ze(La, [
   "overlay",
@@ -6908,9 +6908,9 @@ function Rf(e, n) {
         "div",
         Ve({
           class: e.classes("var--box", e.n(), e.dialogClass),
-          style: ri({}, e.dialogStyle, {
-            width: e.toSizeUnit(e.dialogWidth)
-          })
+          style: ri({
+            width: e.toSizeUnit(e.width)
+          }, e.dialogStyle)
         }, e.$attrs),
         [A(
           "div",
