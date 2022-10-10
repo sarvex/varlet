@@ -21,5 +21,7 @@ pnpm add postcss-px-to-viewport -D
 npm i @varlet/touch-emulator
 `),s("span",{class:"hljs-meta"},"#"),s("span",{class:"bash"}," yarn"),e(`
 yarn add @varlet/touch-emulator
+`),s("span",{class:"hljs-meta"},"#"),s("span",{class:"bash"}," pnpm"),e(`
+pnpm add @varlet/touch-emulator
 `)])],-1),w=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-keyword"},"import"),e(),s("span",{class:"hljs-string"},"'@varlet/touch-emulator'"),e(`
 `)])],-1);function y(k,A,B,C,S,V){const t=l("var-site-code-example");return c(),p("div",i,[h,u,s("div",m,[_,o(t,{"playground-ignore":""},{default:a(()=>[v]),_:1}),o(t,{"playground-ignore":""},{default:a(()=>[j]),_:1})]),s("div",g,[b,f,o(t,{"playground-ignore":""},{default:a(()=>[x]),_:1}),o(t,{"playground-ignore":""},{default:a(()=>[w]),_:1})])])}const N=n(d,[["render",y]]);export{N as default};
