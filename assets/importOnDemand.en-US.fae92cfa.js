@@ -9,7 +9,7 @@ createApp().use(Button)
 `)]),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"script"),n(">")]),n(`
 
 `),s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"template"),n(">")]),n(`
-  `),s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"var-button"),n(">")]),n("Say hello"),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"var-button"),n(">")]),n(`
+  `),s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"var-button"),n(">")]),n("Say Hello"),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"var-button"),n(">")]),n(`
 `),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"template"),n(">")]),n(`
 `)])],-1),y={class:"card"},f=s("h3",null,"Automatic Import",-1),k=s("p",null,[n("via plugin "),s("a",{href:"https://github.com/antfu/unplugin-vue-components"},"unplugin-vue-components"),n(" and "),s("a",{href:"https://github.com/antfu/unplugin-auto-import"},"unplugin-auto-import"),n(" Implement components to automatically import on demand")],-1),w=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-meta"},"#"),s("span",{class:"bash"}," install plugin"),n(`
 `),s("span",{class:"hljs-meta"},`
@@ -70,9 +70,9 @@ pnpm add unplugin-vue-components unplugin-auto-import -D
 `)]),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"script"),n(">")]),n(`
 
 `),s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"template"),n(">")]),n(`
-  `),s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"var-button"),n(" @"),s("span",{class:"hljs-attr"},"click"),n("="),s("span",{class:"hljs-string"},'"handleClick"'),n(">")]),n("Say hello"),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"var-button"),n(">")]),n(`
+  `),s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"var-button"),n(" @"),s("span",{class:"hljs-attr"},"click"),n("="),s("span",{class:"hljs-string"},'"handleClick"'),n(">")]),n("Say Hello"),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"var-button"),n(">")]),n(`
 `),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"template"),n(">")]),n(`
-`)])],-1),q=s("p",null,"Automatic introduction",-1),M=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"script"),n(),s("span",{class:"hljs-attr"},"setup"),n(">")]),s("span",{class:"javascript"},[n(`
+`)])],-1),H=s("p",null,"Automatic introduction",-1),q=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"script"),n(),s("span",{class:"hljs-attr"},"setup"),n(">")]),s("span",{class:"javascript"},[n(`
 `),s("span",{class:"hljs-function"},[s("span",{class:"hljs-keyword"},"function"),n(),s("span",{class:"hljs-title"},"handleClick"),n("("),s("span",{class:"hljs-params"}),n(") ")]),n(`{
   Snackbar(`),s("span",{class:"hljs-string"},"'Hello!'"),n(`)
 }
@@ -81,4 +81,4 @@ pnpm add unplugin-vue-components unplugin-auto-import -D
 `),s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"template"),n(">")]),n(`
   `),s("span",{class:"hljs-tag"},[n("<"),s("span",{class:"hljs-name"},"var-button"),n(" @"),s("span",{class:"hljs-attr"},"click"),n("="),s("span",{class:"hljs-string"},'"handleClick"'),n(">")]),n("Say Hello"),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"var-button"),n(">")]),n(`
 `),s("span",{class:"hljs-tag"},[n("</"),s("span",{class:"hljs-name"},"template"),n(">")]),n(`
-`)])],-1);function O($,E,H,N,T,z){const a=o("var-site-code-example");return c(),p("div",i,[h,u,s("div",d,[j,m,l(a,{"playground-ignore":""},{default:t(()=>[g]),_:1}),_,l(a,{"playground-ignore":""},{default:t(()=>[v]),_:1})]),s("div",y,[f,k,l(a,{"playground-ignore":""},{default:t(()=>[w]),_:1}),b,l(a,{"playground-ignore":""},{default:t(()=>[I]),_:1}),x,l(a,{"playground-ignore":""},{default:t(()=>[V]),_:1}),C,B,l(a,null,{default:t(()=>[S]),_:1})]),s("div",R,[U,A,l(a,{"playground-ignore":""},{default:t(()=>[D]),_:1}),q,l(a,{"playground-ignore":""},{default:t(()=>[M]),_:1})])])}const P=e(r,[["render",O]]);export{P as default};
+`)])],-1);function M(O,$,E,N,T,z){const a=o("var-site-code-example");return c(),p("div",i,[h,u,s("div",d,[j,m,l(a,{"playground-ignore":""},{default:t(()=>[g]),_:1}),_,l(a,{"playground-ignore":""},{default:t(()=>[v]),_:1})]),s("div",y,[f,k,l(a,{"playground-ignore":""},{default:t(()=>[w]),_:1}),b,l(a,{"playground-ignore":""},{default:t(()=>[I]),_:1}),x,l(a,{"playground-ignore":""},{default:t(()=>[V]),_:1}),C,B,l(a,null,{default:t(()=>[S]),_:1})]),s("div",R,[U,A,l(a,{"playground-ignore":""},{default:t(()=>[D]),_:1}),H,l(a,{"playground-ignore":""},{default:t(()=>[q]),_:1})])])}const P=e(r,[["render",M]]);export{P as default};
