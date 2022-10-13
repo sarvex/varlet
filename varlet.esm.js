@@ -7488,6 +7488,9 @@ var uc = {
   alt: {
     type: String
   },
+  title: {
+    type: String
+  },
   width: {
     type: [String, Number]
   },
@@ -7528,7 +7531,7 @@ var uc = {
 }, {
   n: dc,
   classes: vc
-} = _("image"), fc = ["alt", "lazy-error", "lazy-loading"], cc = ["alt", "src"];
+} = _("image"), fc = ["alt", "title", "lazy-error", "lazy-loading"], cc = ["alt", "title", "src"];
 function mc(e, n) {
   var r = je("lazy"), a = je("ripple");
   return Ce((w(), M(
@@ -7547,6 +7550,7 @@ function mc(e, n) {
         key: 0,
         class: m(e.n("image")),
         alt: e.alt,
+        title: e.title,
         "lazy-error": e.error,
         "lazy-loading": e.loading,
         style: K({
@@ -7571,6 +7575,7 @@ function mc(e, n) {
         key: 1,
         class: m(e.n("image")),
         alt: e.alt,
+        title: e.title,
         style: K({
           objectFit: e.fit
         }),
