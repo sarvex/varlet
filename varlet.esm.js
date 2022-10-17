@@ -7127,6 +7127,10 @@ var Uf = {
   dashed: {
     type: Boolean,
     default: !1
+  },
+  hairline: {
+    type: Boolean,
+    default: !1
   }
 };
 function Or() {
@@ -7147,7 +7151,7 @@ function Hf(e, n) {
   return w(), M(
     "div",
     {
-      class: m(e.classes(e.n(), "var--box", [e.vertical, e.n("--vertical")], [e.withText, e.n("--with-text")], [e.isInset, e.n("--inset")], [e.dashed, e.n("--dashed")])),
+      class: m(e.classes(e.n(), "var--box", [e.vertical, e.n("--vertical")], [e.withText, e.n("--with-text")], [e.isInset, e.n("--inset")], [e.dashed, e.n("--dashed")], [e.hairline, e.n("--hairline")])),
       style: K(e.style)
     },
     [q(e.$slots, "default", {}, () => [e.description ? (w(), M(
