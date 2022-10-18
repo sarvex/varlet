@@ -2145,7 +2145,7 @@ const Vr = ae({
     }), p = () => {
       !Qe(t.value) || (t.value < 0 ? N(e["onUpdate:active"], 0) : t.value > s.value - 1 && N(e["onUpdate:active"], s.value - 1));
     }, b = (k) => {
-      e.onBeforeChange ? y(k) : T(k);
+      t.value !== k && (e.onBeforeChange ? y(k) : T(k));
     }, y = (k) => {
       Promise.resolve(N(e.onBeforeChange, k)).then((D) => D && T(k));
     }, T = (k) => {
