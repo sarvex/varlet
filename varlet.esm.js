@@ -12802,7 +12802,9 @@ function yh(e, n) {
                 gh,
                 J(e.label),
                 1
-              )), ee(
+              )), q(e.$slots, "arrow-icon", {
+                focus: e.isFocus
+              }, () => [ee(
                 a,
                 {
                   class: m(e.classes(e.n("arrow"), [e.isFocus, e.n("--arrow-rotate")])),
@@ -12813,7 +12815,7 @@ function yh(e, n) {
                 null,
                 8,
                 ["class"]
-              )],
+              )])],
               6
             ), A(
               "label",
