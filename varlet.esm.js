@@ -13432,7 +13432,7 @@ function Ph(e, n) {
             onTouchcancel: (t) => e.end(a.enumValue)
           },
           [q(e.$slots, "button", {
-            currentValue: a.value
+            currentValue: a.text
           }, () => [z(
             "div",
             {
