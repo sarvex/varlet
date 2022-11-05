@@ -202,10 +202,6 @@ bindForm?.(apis)
 
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"style"),s(">")]),a("span",{class:"css"},[s(`
 `),a("span",{class:"hljs-selector-class"},".var-custom-form-component"),s(` {
-  `),a("span",{class:"hljs-attribute"},"transition"),s(": all ."),a("span",{class:"hljs-number"},"25s"),s(`;
-}
-
-`),a("span",{class:"hljs-selector-class"},".var-custom-form-component"),a("span",{class:"hljs-selector-pseudo"},":hover"),s(` {
   `),a("span",{class:"hljs-attribute"},"cursor"),s(`: pointer;
 }
 
