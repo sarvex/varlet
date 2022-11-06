@@ -5102,7 +5102,7 @@ function rf(e, n) {
     [z(
       "div",
       Me({
-        class: e.classes(e.n("controller"), "var-elevation--2", [e.disabled || e.formDisabled, e.n("--disabled")], [e.errorMessage, e.n("--error")]),
+        class: e.classes(e.n("controller"), "var-elevation--2", [e.disabled || e.formDisabled, e.n("--disabled")]),
         style: {
           background: e.color ? e.color : void 0
         }
