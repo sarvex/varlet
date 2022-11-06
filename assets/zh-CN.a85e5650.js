@@ -10,7 +10,7 @@ import{_ as c,p as e,f as r,h as p,M as a,q as n,S as t,as as h,P as s}from"./vu
   `),a("span",{class:"hljs-attr"},"range"),s(": "),a("span",{class:"hljs-number"},"10"),s(`,
   `),a("span",{class:"hljs-attr"},"count"),s(": "),a("span",{class:"hljs-number"},"0"),s(`,
   `),a("span",{class:"hljs-attr"},"group"),s(`: [],
-  `),a("span",{class:"hljs-attr"},"score"),s(":"),a("span",{class:"hljs-number"},"0"),s(`,
+  `),a("span",{class:"hljs-attr"},"score"),s(": "),a("span",{class:"hljs-number"},"0"),s(`,
   `),a("span",{class:"hljs-attr"},"like"),s(`: [],
   `),a("span",{class:"hljs-attr"},"files"),s(`: []
 })
