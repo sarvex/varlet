@@ -5102,7 +5102,7 @@ function rf(e, n) {
     [z(
       "div",
       Me({
-        class: e.classes(e.n("controller"), "var-elevation--2", [e.disabled || e.formDisabled, e.n("--disabled")]),
+        class: e.classes(e.n("controller"), "var-elevation--2", [e.disabled || e.formDisabled, e.n("--disabled")], [e.errorMessage, e.n("--error")]),
         style: {
           background: e.color ? e.color : void 0
         }
@@ -5112,7 +5112,7 @@ function rf(e, n) {
         {
           "var-counter-cover": "",
           name: "minus",
-          class: m(e.classes(e.n("decrement-button"), [!e.decrementButton, e.n("--hidden")], [e.disabled || e.formDisabled, e.n("--text-disabled") + " " + e.n("--not-allowed")])),
+          class: m(e.classes(e.n("decrement-button"), [!e.decrementButton, e.n("--hidden")], [e.disabled || e.formDisabled, e.n("--not-allowed")])),
           style: K({
             width: e.toSizeUnit(e.buttonSize),
             height: e.toSizeUnit(e.buttonSize)
@@ -5130,7 +5130,7 @@ function rf(e, n) {
       }]]), Ce(z(
         "input",
         {
-          class: m(e.classes(e.n("input"), [e.disabled || e.formDisabled, e.n("--text-disabled") + " " + e.n("--not-allowed")])),
+          class: m(e.classes(e.n("input"), [e.disabled || e.formDisabled, e.n("--not-allowed")])),
           style: K({
             width: e.toSizeUnit(e.inputWidth),
             fontSize: e.toSizeUnit(e.inputTextSize)
@@ -5151,7 +5151,7 @@ function rf(e, n) {
         {
           "var-counter-cover": "",
           name: "plus",
-          class: m(e.classes(e.n("increment-button"), [!e.incrementButton, e.n("--hidden")], [e.disabled || e.formDisabled, e.n("--text-disabled") + " " + e.n("--not-allowed")])),
+          class: m(e.classes(e.n("increment-button"), [!e.incrementButton, e.n("--hidden")], [e.disabled || e.formDisabled, e.n("--not-allowed")])),
           style: K({
             width: e.toSizeUnit(e.buttonSize),
             height: e.toSizeUnit(e.buttonSize)
