@@ -14545,7 +14545,7 @@ function cg(e, n) {
     [z(
       "div",
       {
-        class: m(e.classes(e.n("block"), [e.disabled || e.formDisabled, e.n("--disable")])),
+        class: m(e.classes(e.n("block"), [e.disabled || e.formDisabled, e.n("--disabled")])),
         onClick: n[0] || (n[0] = function() {
           return e.switchActive && e.switchActive(...arguments);
         }),
