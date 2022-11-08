@@ -14647,7 +14647,7 @@ const la = te({
           height: Xe(p, 0.72),
           width: Xe(p, 1.9),
           borderRadius: Xe(p, 2 / 3),
-          filter: y === h || a != null && a.value ? "opacity(.6)" : "brightness(.6)",
+          filter: y === h || a != null && a.value ? void 0 : "brightness(.6)",
           backgroundColor: y === h ? b : T
         },
         switch: {
