@@ -48,7 +48,7 @@ import{_ as c,p as e,f as p,h as d,M as a,q as n,S as t,P as s,as as h}from"./vu
     `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-badge"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-space"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),q={class:"card"},A=a("h3",null,"\u662F\u5426\u663E\u793A\u5FBD\u6807",-1),E=a("p",null,[s("\u901A\u8FC7 "),a("code",null,"hidden"),s(" \u5C5E\u6027\u8BBE\u7F6E\u662F\u5426\u663E\u793A\u5FBD\u6807\u3002")],-1),I=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
+`)])],-1),q={class:"card"},A=a("h3",null,"\u9690\u85CF\u5FBD\u6807",-1),E=a("p",null,[s("\u901A\u8FC7 "),a("code",null,"hidden"),s(" \u5C5E\u6027\u63A7\u5236\u662F\u5426\u9690\u85CF\u5FBD\u6807\u3002")],-1),I=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
 
 `),a("span",{class:"hljs-keyword"},"const"),s(" hidden = ref("),a("span",{class:"hljs-literal"},"false"),s(`)
