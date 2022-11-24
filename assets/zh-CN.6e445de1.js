@@ -83,16 +83,19 @@ import{_ as e,p as c,f as h,h as d,M as s,q as l,S as n,P as a,as as p}from"./vu
     `),s("span",{class:"hljs-attr"},"src"),a("="),s("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),a(`
   />`)]),a(`
 `),s("span",{class:"hljs-tag"},[a("</"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
-`)])],-1),q={class:"card"},A=s("h3",null,"\u4F7F\u7528\u672C\u5730\u8DEF\u5F84",-1),P=s("p",null,[a("\u5728 "),s("code",null,".vue"),a(" \u6587\u4EF6\u4E2D\uFF0C"),s("code",null,"Vue\u7EC4\u4EF6"),a(" \u4E0D\u4F1A\u5982\u540C\u539F\u751F img \u4E00\u6837\u88AB\u6784\u5EFA\u5DE5\u5177\u81EA\u52A8\u5904\u7406\u6A21\u5757\u8BF7\u6C42\uFF0C\u6240\u4EE5\u9700\u8981\u624B\u52A8\u5BFC\u5165\u56FE\u7247\u8D44\u6E90\u3002 \u4E0B\u9762\u662F\u4E0D\u540C\u6784\u5EFA\u5DE5\u5177\u7684\u4F7F\u7528\u65B9\u5F0F\u3002")],-1),S=s("h4",null,"Vite",-1),I=s("p",null,[a("\u4F7F\u7528 "),s("a",{href:"https://github.com/vitejs/vite/tree/main/packages/plugin-vue#asset-url-handling"},"plugin-vue"),a(" \u81EA\u52A8\u9884\u5904\u7406")],-1),L=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-keyword"},"import"),a(" vue "),s("span",{class:"hljs-keyword"},"from"),a(),s("span",{class:"hljs-string"},"'@vitejs/plugin-vue'"),a(`
+`)])],-1),q={class:"card"},A=s("h3",null,"\u4F7F\u7528\u672C\u5730\u8DEF\u5F84",-1),P=s("p",null,[a("\u5728 "),s("code",null,".vue"),a(" \u6587\u4EF6\u4E2D\uFF0C"),s("code",null,"Vue\u7EC4\u4EF6"),a(" \u4E0D\u4F1A\u5982\u540C\u539F\u751F img \u4E00\u6837\u88AB\u6784\u5EFA\u5DE5\u5177\u81EA\u52A8\u5904\u7406\u6A21\u5757\u8BF7\u6C42\uFF0C\u6240\u4EE5\u9700\u8981\u624B\u52A8\u5BFC\u5165\u56FE\u7247\u8D44\u6E90\u3002 \u4E0B\u9762\u662F\u4E0D\u540C\u6784\u5EFA\u5DE5\u5177\u7684\u4F7F\u7528\u65B9\u5F0F\u3002")],-1),S=s("h4",null,"Vite",-1),I=s("p",null,[a("\u63A8\u8350\u4F7F\u7528 "),s("a",{href:"https://github.com/vitejs/vite/tree/main/packages/plugin-vue#asset-url-handling"},"@vitejs/plugin-vue"),a(" \u8FDB\u884C\u8DEF\u5F84\u9884\u5904\u7406")],-1),L=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-comment"},"// vite.config.js"),a(`
+`),s("span",{class:"hljs-keyword"},"import"),a(" vue "),s("span",{class:"hljs-keyword"},"from"),a(),s("span",{class:"hljs-string"},"'@vitejs/plugin-vue'"),a(`
 
 `),s("span",{class:"hljs-keyword"},"export"),a(),s("span",{class:"hljs-keyword"},"default"),a(` defineConfig({
-  `),s("span",{class:"hljs-attr"},"plugins"),a(`: [vue({
-    `),s("span",{class:"hljs-attr"},"template"),a(`:{
-      `),s("span",{class:"hljs-attr"},"transformAssetUrls"),a(`:{
-        `),s("span",{class:"hljs-string"},"'var-image'"),a(": ["),s("span",{class:"hljs-string"},"'src'"),a(`]
+  `),s("span",{class:"hljs-attr"},"plugins"),a(`: [
+    vue({
+      `),s("span",{class:"hljs-attr"},"template"),a(`: {
+        `),s("span",{class:"hljs-attr"},"transformAssetUrls"),a(`: {
+          `),s("span",{class:"hljs-string"},"'var-image'"),a(": ["),s("span",{class:"hljs-string"},"'src'"),a(`]
+        }
       }
-    }
-  })],
+    })
+  ],
 })
 `)])],-1),M=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
   `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-image"),a(),s("span",{class:"hljs-attr"},"src"),a("="),s("span",{class:"hljs-string"},'"../../assets/logo.png"'),a("/>")]),a(`

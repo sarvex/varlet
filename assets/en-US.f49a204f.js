@@ -82,16 +82,19 @@ import{_ as n,p as c,f as d,h,M as s,q as l,S as e,P as a,as as r}from"./vue-rou
     `),s("span",{class:"hljs-attr"},"src"),a("="),s("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),a(`
   />`)]),a(`
 `),s("span",{class:"hljs-tag"},[a("</"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
-`)])],-1),T={class:"card"},A=s("h3",null,"Use local paths",-1),B=s("p",null,[a("In the file "),s("code",null,".vue"),a(", the "),s("code",null,"Vue component"),a(" will not be automatically processed by the build tool like the native img module, so you need to import the image resources manually. Here\u2019s how the different build tools are used.")],-1),C=s("h4",null,"Vite",-1),L=s("p",null,[a("Automatic preprocessing with "),s("a",{href:"https://github.com/vitejs/vite/tree/main/packages/plugin-vue#asset-url-handling"},"plugin-vue")],-1),N=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-keyword"},"import"),a(" vue "),s("span",{class:"hljs-keyword"},"from"),a(),s("span",{class:"hljs-string"},"'@vitejs/plugin-vue'"),a(`
+`)])],-1),T={class:"card"},A=s("h3",null,"Use local paths",-1),B=s("p",null,[a("In the file "),s("code",null,".vue"),a(", the "),s("code",null,"Vue component"),a(" will not be automatically processed by the build tool like the native img module, so you need to import the image resources manually. Here\u2019s how the different build tools are used.")],-1),C=s("h4",null,"Vite",-1),L=s("p",null,[a("Automatic preprocessing with "),s("a",{href:"https://github.com/vitejs/vite/tree/main/packages/plugin-vue#asset-url-handling"},"@vitejs/plugin-vue")],-1),N=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-comment"},"// vite.config.js"),a(`
+`),s("span",{class:"hljs-keyword"},"import"),a(" vue "),s("span",{class:"hljs-keyword"},"from"),a(),s("span",{class:"hljs-string"},"'@vitejs/plugin-vue'"),a(`
 
 `),s("span",{class:"hljs-keyword"},"export"),a(),s("span",{class:"hljs-keyword"},"default"),a(` defineConfig({
-  `),s("span",{class:"hljs-attr"},"plugins"),a(`: [vue({
-    `),s("span",{class:"hljs-attr"},"template"),a(`:{
-      `),s("span",{class:"hljs-attr"},"transformAssetUrls"),a(`:{
-        `),s("span",{class:"hljs-string"},"'var-image'"),a(": ["),s("span",{class:"hljs-string"},"'src'"),a(`]
+  `),s("span",{class:"hljs-attr"},"plugins"),a(`: [
+    vue({
+      `),s("span",{class:"hljs-attr"},"template"),a(`: {
+        `),s("span",{class:"hljs-attr"},"transformAssetUrls"),a(`: {
+          `),s("span",{class:"hljs-string"},"'var-image'"),a(": ["),s("span",{class:"hljs-string"},"'src'"),a(`]
+        }
       }
-    }
-  })],
+    })
+  ],
 })
 `)])],-1),P=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
   `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-image"),a(),s("span",{class:"hljs-attr"},"src"),a("="),s("span",{class:"hljs-string"},'"../../assets/logo.png"'),a("/>")]),a(`
