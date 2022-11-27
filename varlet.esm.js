@@ -1658,8 +1658,7 @@ var Uu = {
     default: !1
   },
   loadingRadius: {
-    type: [Number, String],
-    default: 12
+    type: [Number, String]
   },
   loadingType: xe(Hn, "type"),
   loadingSize: xe(Hn, "size"),
