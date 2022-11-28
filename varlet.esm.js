@@ -9278,10 +9278,6 @@ var lm = {
   textColor: {
     type: String
   },
-  defaultStyle: {
-    type: Boolean,
-    default: !1
-  },
   onClick: {
     type: Function
   }
