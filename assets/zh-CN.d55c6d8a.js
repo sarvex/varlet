@@ -12,7 +12,7 @@ import{_ as e,p as c,f as d,h as r,M as a,q as l,S as n,as as o,P as s}from"./vu
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-space"),s(),a("span",{class:"hljs-attr"},":size"),s("="),a("span",{class:"hljs-string"},'"[10, 10]"'),s(">")]),s(`
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-link"),s(` 
       `),a("span",{class:"hljs-attr"},"type"),s("="),a("span",{class:"hljs-string"},'"primary"'),s(` 
-      `),a("span",{class:"hljs-attr"},"href"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/#/zh-CN/index"'),s(` 
+      `),a("span",{class:"hljs-attr"},"href"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/#/zh-CN/home"'),s(` 
       `),a("span",{class:"hljs-attr"},"target"),s("="),a("span",{class:"hljs-string"},'"_blank"'),s(`
     >`)]),s(`
       href \u94FE\u63A5
@@ -38,7 +38,7 @@ import{_ as e,p as c,f as d,h as r,M as a,q as l,S as n,as as o,P as s}from"./vu
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
 `)])],-1),$={class:"card"},B=a("h3",null,"\u9ED8\u8BA4\u63D2\u69FD",-1),P=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-link"),s(`
-    `),a("span",{class:"hljs-attr"},"href"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/#/zh-CN/index"'),s(`
+    `),a("span",{class:"hljs-attr"},"href"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/#/zh-CN/home"'),s(`
     `),a("span",{class:"hljs-attr"},"target"),s("="),a("span",{class:"hljs-string"},'"_blank"'),s(`
     `),a("span",{class:"hljs-attr"},"underline"),s("="),a("span",{class:"hljs-string"},'"none"'),s(`
   >`)]),s(`
