@@ -6,7 +6,6 @@
     <var-menu
       v-model:show="show"
       ref="fabRef"
-      :disabled="disabled"
       :class="classes(n(), n(`--${fabLocation}`), [disabled, n('--disabled')])"
       :trigger="trigger"
       :placement="actionsLocation"
@@ -17,7 +16,14 @@
       @close="close"
       @closed="closed"
     >
-      <var-button :class="n('--fab')" :disabled="disabled" :color="fabColor" var-floating-actions-button-cover round>
+      <var-button
+        :class="n('--fab')"
+        :disabled="disabled"
+        :color="fabColor"
+        var-floating-actions-button-cover
+        round
+        @click.stop="handleMenuClick"
+      >
         <Transition name="var-floating-actions-button-fade">
           <slot :name="show ? 'active-icon' : 'inactive-icon'">
             <var-icon :color="fabIconColor" :size="fabIconSize" :name="show ? activeIcon : inactiveIcon" />
@@ -81,7 +87,7 @@ export default defineComponent({
   emits: ['onUpdate:show', 'click', 'open', 'opened', 'close', 'closed', 'onOverlayClick', 'onActionClick'],
   setup(props) {
     const show: Ref<boolean> = ref(false)
-    const fabRef: Ref<HTMLElement | null> = ref(null)
+    const fabRef: Ref<null | typeof VarMenu> = ref(null)
     const fabStyle = reactive<{
       transform?: string
     }>({
@@ -95,6 +101,10 @@ export default defineComponent({
       marginLeft?: string
       flexDirection: string
     }>({ flexDirection: 'column' })
+
+    function handleMenuClick() {
+      show.value = !show.value
+    }
 
     function open() {
       call(props.onOpen)
@@ -162,7 +172,6 @@ export default defineComponent({
     watch(
       () => show.value,
       (newValue) => {
-        console.log('show.value', newValue)
         call(props['onUpdate:show'], newValue)
       },
       { immediate: true }
@@ -171,6 +180,7 @@ export default defineComponent({
     return {
       actionStyle,
       actionsStyle,
+      handleMenuClick,
       close,
       closed,
       classes,
