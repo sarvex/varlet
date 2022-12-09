@@ -5,7 +5,7 @@ var fl = {
   touchmoveForbid: !0
 };
 Ne(fl);
-const tn = Ne(fl), qe = (e) => typeof e == "string", Ht = (e) => typeof e == "boolean", je = (e) => typeof e == "number", Ni = (e) => Object.prototype.toString.call(e) === "[object Object]", Js = (e) => typeof e == "object" && e !== null, Se = (e) => Array.isArray(e), Qs = (e) => e ? /^(http)|(\.*\/)/.test(e) : !1, Hn = (e) => e == null || e === "" || Array.isArray(e) && !e.length, z = (e) => e == null ? 0 : qe(e) ? (e = parseFloat(e), e = Number.isNaN(e) ? 0 : e, e) : Ht(e) ? Number(e) : e, gt = (e, n) => {
+const tn = Ne(fl), qe = (e) => typeof e == "string", Ht = (e) => typeof e == "boolean", je = (e) => typeof e == "number", Ni = (e) => Object.prototype.toString.call(e) === "[object Object]", Js = (e) => typeof e == "object" && e !== null, Ce = (e) => Array.isArray(e), Qs = (e) => e ? /^(http)|(\.*\/)/.test(e) : !1, Hn = (e) => e == null || e === "" || Array.isArray(e) && !e.length, z = (e) => e == null ? 0 : qe(e) ? (e = parseFloat(e), e = Number.isNaN(e) ? 0 : e, e) : Ht(e) ? Number(e) : e, gt = (e, n) => {
   if (e.length) {
     const r = e.indexOf(n);
     if (r > -1)
@@ -135,12 +135,12 @@ var pl = (e) => qe(e) && e.endsWith("rem"), tu = (e) => qe(e) && e.endsWith("px"
     return n * parseFloat(r);
   }
   return qe(e) ? z(e) : 0;
-}, Ce = (e) => {
+}, be = (e) => {
   if (e != null)
     return iu(e) || hl(e) || gl(e) || pl(e) || ou(e) || lu(e) ? e : Ie(e) + "px";
 }, Ze = function(e, n) {
   if (n === void 0 && (n = 1), e != null) {
-    var r = Ce(e), a = r.match(/(vh|%|rem|px|vw)$/)[0];
+    var r = be(e), a = r.match(/(vh|%|rem|px|vw)$/)[0];
     return "" + parseFloat(r) * n + a;
   }
 };
@@ -352,7 +352,7 @@ function bl(e) {
 function cn() {
   var e = M(""), n = /* @__PURE__ */ function() {
     var t = lo(function* (i, o, l) {
-      if (!Se(i) || !i.length)
+      if (!Ce(i) || !i.length)
         return !0;
       var s = yield Promise.all(i.map((u) => u(o, l)));
       return !s.some((u) => u !== !0 ? (e.value = String(u), !0) : !1);
@@ -399,7 +399,7 @@ function ee(e) {
     for (var i = arguments.length, o = new Array(i), l = 0; l < i; l++)
       o[l] = arguments[l];
     return o.map((s) => {
-      if (Se(s)) {
+      if (Ce(s)) {
         var [u, d, v = null] = s;
         return u ? d : v;
       }
@@ -843,7 +843,7 @@ const Te = _({
       shrinking: r,
       isURL: Qs,
       toNumber: z,
-      toSizeUnit: Ce
+      toSizeUnit: be
     };
   }
 });
@@ -1878,7 +1878,7 @@ const Br = _({
       disabled: a,
       show: n,
       backTopEl: r,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       n: nd,
       classes: rd,
       click: i
@@ -2622,7 +2622,7 @@ const Lr = _({
             left: $,
             top: O
           } = n.value.getBoundingClientRect();
-          a.value = Ce(B), t.value = Ce(V), i.value = a.value, o.value = t.value, l.value = Ce(O), s.value = Ce($), u.value = "fixed", T = l.value, S = s.value, p.value = !0, yield Tn(), l.value = "0", s.value = "0", i.value = "100vw", o.value = "100vh", v.value = "auto", f.value = "1", d.value = "auto", b.value = !0;
+          a.value = be(B), t.value = be(V), i.value = a.value, o.value = t.value, l.value = be(O), s.value = be($), u.value = "fixed", T = l.value, S = s.value, p.value = !0, yield Tn(), l.value = "0", s.value = "0", i.value = "100vw", o.value = "100vh", v.value = "auto", f.value = "1", d.value = "auto", b.value = !0;
         }), e.ripple ? Od : 0);
       });
       return function() {
@@ -2644,7 +2644,7 @@ const Lr = _({
     }), {
       n: $d,
       classes: Td,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       card: n,
       cardFloater: r,
       holderWidth: a,
@@ -3570,7 +3570,7 @@ const Rr = _({
       classes: iv,
       padding: n,
       toNumber: z,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       getSize: l,
       span: r,
       offset: a
@@ -3634,7 +3634,7 @@ const Ur = _({
       length: n,
       collapseItem: r,
       bindCollapseItem: a
-    } = lv(), t = Y(() => e.modelValue), i = Y(() => e.offset), o = () => !e.accordion && !Se(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be an Array'), !1) : e.accordion && Se(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be a String or Number'), !1) : !0, l = (m, p) => o() ? p ? e.accordion ? m : [...e.modelValue, m] : e.accordion ? null : e.modelValue.filter((b) => b !== m) : null, s = (m, p) => {
+    } = lv(), t = Y(() => e.modelValue), i = Y(() => e.offset), o = () => !e.accordion && !Ce(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be an Array'), !1) : e.accordion && Ce(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be a String or Number'), !1) : !0, l = (m, p) => o() ? p ? e.accordion ? m : [...e.modelValue, m] : e.accordion ? null : e.modelValue.filter((b) => b !== m) : null, s = (m, p) => {
       var b = l(m, p);
       N(e["onUpdate:modelValue"], b), N(e.onChange, b);
     }, u = () => {
@@ -3809,7 +3809,7 @@ const Yr = _({
       offset: u,
       updateItem: d
     } = r, v = Y(() => e.name), f = (g, y) => {
-      s.value === void 0 || g && Se(s.value) || y === l.value || (l.value = y, m(!0));
+      s.value === void 0 || g && Ce(s.value) || y === l.value || (l.value = y, m(!0));
     }, m = (g) => {
       e.disabled || g || d(e.name || n.value, !l.value);
     }, p = () => {
@@ -5280,8 +5280,8 @@ const Hr = _({
         onBeforeChange: ie
       } = e;
       if (!(m != null && m.value || f != null && f.value || L || Z || H || !K) && !g.value) {
-        var le = new qn(z(U)).minus(new qn(z(F))).toString(), de = y(le), be = z(de);
-        N(Q, be), I ? N(ie, be, j) : (W(de), b("onDecrement"));
+        var le = new qn(z(U)).minus(new qn(z(F))).toString(), de = y(le), we = z(de);
+        N(Q, we), I ? N(ie, we, j) : (W(de), b("onDecrement"));
       }
     }, A = () => {
       var {
@@ -5296,8 +5296,8 @@ const Hr = _({
         onBeforeChange: ie
       } = e;
       if (!(m != null && m.value || f != null && f.value || L || Z || H || !K) && !S.value) {
-        var le = new qn(z(U)).plus(new qn(z(F))).toString(), de = y(le), be = z(de);
-        N(Q, be), I ? N(ie, be, j) : (W(de), b("onIncrement"));
+        var le = new qn(z(U)).plus(new qn(z(F))).toString(), de = y(le), we = z(de);
+        N(Q, we), I ? N(ie, we, j) : (W(de), b("onIncrement"));
       }
     }, C = () => {
       var {
@@ -5355,7 +5355,7 @@ const Hr = _({
       pressIncrement: B,
       releaseDecrement: V,
       releaseIncrement: $,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       toNumber: z
     };
   }
@@ -5438,15 +5438,15 @@ var Ri = function(n) {
     x: r.$x,
     $offset: r.$offset
   });
-}, we = Mf;
-we.l = ft;
-we.i = Ri;
-we.w = If;
+}, Se = Mf;
+Se.l = ft;
+Se.i = Ri;
+Se.w = If;
 var Nf = function(n) {
   var r = n.date, a = n.utc;
   if (r === null)
     return new Date(NaN);
-  if (we.u(r))
+  if (Se.u(r))
     return new Date();
   if (r instanceof Date)
     return new Date(r);
@@ -5469,7 +5469,7 @@ var Nf = function(n) {
     var a = this.$d;
     this.$y = a.getFullYear(), this.$M = a.getMonth(), this.$D = a.getDate(), this.$W = a.getDay(), this.$H = a.getHours(), this.$m = a.getMinutes(), this.$s = a.getSeconds(), this.$ms = a.getMilliseconds();
   }, n.$utils = function() {
-    return we;
+    return Se;
   }, n.isValid = function() {
     return this.$d.toString() !== ko;
   }, n.isSame = function(a, t) {
@@ -5480,18 +5480,18 @@ var Nf = function(n) {
   }, n.isBefore = function(a, t) {
     return this.endOf(t) < re(a);
   }, n.$g = function(a, t, i) {
-    return we.u(a) ? this[t] : this.set(i, a);
+    return Se.u(a) ? this[t] : this.set(i, a);
   }, n.unix = function() {
     return Math.floor(this.valueOf() / 1e3);
   }, n.valueOf = function() {
     return this.$d.getTime();
   }, n.startOf = function(a, t) {
-    var i = this, o = we.u(t) ? !0 : t, l = we.p(a), s = function(T, S) {
-      var g = we.w(i.$u ? Date.UTC(i.$y, S, T) : new Date(i.$y, S, T), i);
+    var i = this, o = Se.u(t) ? !0 : t, l = Se.p(a), s = function(T, S) {
+      var g = Se.w(i.$u ? Date.UTC(i.$y, S, T) : new Date(i.$y, S, T), i);
       return o ? g : g.endOf(Fn);
     }, u = function(T, S) {
       var g = [0, 0, 0, 0], y = [23, 59, 59, 999];
-      return we.w(i.toDate()[T].apply(
+      return Se.w(i.toDate()[T].apply(
         i.toDate("s"),
         (o ? g : y).slice(S)
       ), i);
@@ -5520,7 +5520,7 @@ var Nf = function(n) {
   }, n.endOf = function(a) {
     return this.startOf(a, !1);
   }, n.$set = function(a, t) {
-    var i, o = we.p(a), l = "set" + (this.$u ? "UTC" : ""), s = (i = {}, i[Fn] = l + "Date", i[Ir] = l + "Date", i[hn] = l + "Month", i[Rn] = l + "FullYear", i[Mr] = l + "Hours", i[Er] = l + "Minutes", i[Pr] = l + "Seconds", i[Fi] = l + "Milliseconds", i)[o], u = o === Fn ? this.$D + (t - this.$W) : t;
+    var i, o = Se.p(a), l = "set" + (this.$u ? "UTC" : ""), s = (i = {}, i[Fn] = l + "Date", i[Ir] = l + "Date", i[hn] = l + "Month", i[Rn] = l + "FullYear", i[Mr] = l + "Hours", i[Er] = l + "Minutes", i[Pr] = l + "Seconds", i[Fi] = l + "Milliseconds", i)[o], u = o === Fn ? this.$D + (t - this.$W) : t;
     if (o === hn || o === Rn) {
       var d = this.clone().set(Ir, 1);
       d.$d[s](u), d.init(), this.$d = d.set(Ir, Math.min(this.$D, d.daysInMonth())).$d;
@@ -5530,13 +5530,13 @@ var Nf = function(n) {
   }, n.set = function(a, t) {
     return this.clone().$set(a, t);
   }, n.get = function(a) {
-    return this[we.p(a)]();
+    return this[Se.p(a)]();
   }, n.add = function(a, t) {
     var i = this, o;
     a = Number(a);
-    var l = we.p(t), s = function(f) {
+    var l = Se.p(t), s = function(f) {
       var m = re(i);
-      return we.w(m.date(m.date() + Math.round(f * a)), i);
+      return Se.w(m.date(m.date() + Math.round(f * a)), i);
     };
     if (l === hn)
       return this.set(hn, this.$M + a);
@@ -5547,17 +5547,17 @@ var Nf = function(n) {
     if (l === at)
       return s(7);
     var u = (o = {}, o[Er] = Lt, o[Mr] = Co, o[Pr] = ka, o)[l] || 1, d = this.$d.getTime() + a * u;
-    return we.w(d, this);
+    return Se.w(d, this);
   }, n.subtract = function(a, t) {
     return this.add(a * -1, t);
   }, n.format = function(a) {
     var t = this, i = this.$locale();
     if (!this.isValid())
       return i.invalidDate || ko;
-    var o = a || Sf, l = we.z(this), s = this.$H, u = this.$m, d = this.$M, v = i.weekdays, f = i.months, m = i.meridiem, p = function(g, y, E, k) {
+    var o = a || Sf, l = Se.z(this), s = this.$H, u = this.$m, d = this.$M, v = i.weekdays, f = i.months, m = i.meridiem, p = function(g, y, E, k) {
       return g && (g[y] || g(t, o)) || E[y].slice(0, k);
     }, b = function(g) {
-      return we.s(s % 12 || 12, g, "0");
+      return Se.s(s % 12 || 12, g, "0");
     }, w = m || function(S, g, y) {
       var E = S < 12 ? "AM" : "PM";
       return y ? E.toLowerCase() : E;
@@ -5565,26 +5565,26 @@ var Nf = function(n) {
       YY: String(this.$y).slice(-2),
       YYYY: this.$y,
       M: d + 1,
-      MM: we.s(d + 1, 2, "0"),
+      MM: Se.s(d + 1, 2, "0"),
       MMM: p(i.monthsShort, d, f, 3),
       MMMM: p(f, d),
       D: this.$D,
-      DD: we.s(this.$D, 2, "0"),
+      DD: Se.s(this.$D, 2, "0"),
       d: String(this.$W),
       dd: p(i.weekdaysMin, this.$W, v, 2),
       ddd: p(i.weekdaysShort, this.$W, v, 3),
       dddd: v[this.$W],
       H: String(s),
-      HH: we.s(s, 2, "0"),
+      HH: Se.s(s, 2, "0"),
       h: b(1),
       hh: b(2),
       a: w(s, u, !0),
       A: w(s, u, !1),
       m: String(u),
-      mm: we.s(u, 2, "0"),
+      mm: Se.s(u, 2, "0"),
       s: String(this.$s),
-      ss: we.s(this.$s, 2, "0"),
-      SSS: we.s(this.$ms, 3, "0"),
+      ss: Se.s(this.$s, 2, "0"),
+      SSS: Se.s(this.$ms, 3, "0"),
       Z: l
     };
     return o.replace(kf, function(S, g) {
@@ -5593,8 +5593,8 @@ var Nf = function(n) {
   }, n.utcOffset = function() {
     return -Math.round(this.$d.getTimezoneOffset() / 15) * 15;
   }, n.diff = function(a, t, i) {
-    var o, l = we.p(t), s = re(a), u = (s.utcOffset() - this.utcOffset()) * Lt, d = this - s, v = we.m(this, s);
-    return v = (o = {}, o[Rn] = v / 12, o[hn] = v, o[_l] = v / 3, o[at] = (d - u) / wf, o[Fn] = (d - u) / bf, o[Mr] = d / Co, o[Er] = d / Lt, o[Pr] = d / ka, o)[l] || d, i ? v : we.a(v);
+    var o, l = Se.p(t), s = re(a), u = (s.utcOffset() - this.utcOffset()) * Lt, d = this - s, v = Se.m(this, s);
+    return v = (o = {}, o[Rn] = v / 12, o[hn] = v, o[_l] = v / 3, o[at] = (d - u) / wf, o[Fn] = (d - u) / bf, o[Mr] = d / Co, o[Er] = d / Lt, o[Pr] = d / ka, o)[l] || d, i ? v : Se.a(v);
   }, n.daysInMonth = function() {
     return this.endOf(hn).$D;
   }, n.$locale = function() {
@@ -5605,7 +5605,7 @@ var Nf = function(n) {
     var i = this.clone(), o = ft(a, t, !0);
     return o && (i.$L = o), i;
   }, n.clone = function() {
-    return we.w(this.$d, this);
+    return Se.w(this.$d, this);
   }, n.toDate = function() {
     return new Date(this.valueOf());
   }, n.toJSON = function() {
@@ -6724,7 +6724,7 @@ const jr = _({
     }, le = (oe, pe) => {
       var ce = pe === "month" ? S : g, ge = pe === "month" ? "YYYY-MM" : "YYYY-MM-DD", ye = ce.value.map((Ke) => re(Ke).format(ge)), Be = ye.findIndex((Ke) => Ke === oe);
       Be === -1 ? ye.push(oe) : ye.splice(Be, 1), N(e["onUpdate:modelValue"], ye), N(e.onChange, ye);
-    }, de = (oe, pe) => !m.value || !f.value ? !1 : Z.value ? oe === "month" ? pe.index < f.value.index : H.value ? pe < z(p.value) : f.value.index > b.value.index : m.value > w.value, be = (oe) => {
+    }, de = (oe, pe) => !m.value || !f.value ? !1 : Z.value ? oe === "month" ? pe.index < f.value.index : H.value ? pe < z(p.value) : f.value.index > b.value.index : m.value > w.value, we = (oe) => {
       var {
         readonly: pe,
         range: ce,
@@ -6764,7 +6764,7 @@ const jr = _({
         ge < 1 && (w.value = "" + (z(w.value) - 1), ge = 12), ge > 12 && (w.value = "" + (z(w.value) + 1), ge = 1), b.value = tt.find((ye) => z(ye.index) === ge);
       }
       N(e.onPreview, z(w.value), z(b.value.index));
-    }, on = () => (e.multiple || e.range) && !Se(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be an Array'), !1) : !e.multiple && !e.range && Se(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be a String'), !1) : !0, Dt = (oe) => Se(oe) ? !1 : oe === "Invalid Date" ? (console.error('[Varlet] DatePicker: "modelValue" is an Invalid Date'), !0) : !1, Fs = (oe, pe) => {
+    }, on = () => (e.multiple || e.range) && !Ce(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be an Array'), !1) : !e.multiple && !e.range && Ce(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be a String'), !1) : !0, Dt = (oe) => Ce(oe) ? !1 : oe === "Invalid Date" ? (console.error('[Varlet] DatePicker: "modelValue" is an Invalid Date'), !0) : !1, Fs = (oe, pe) => {
       var ce = pe === "month" ? y : E, ge = pe === "month" ? "YYYY-MM" : "YYYY-MM-D", ye = oe.map((ln) => re(ln).format(ge)).slice(0, 2), Be = ce.value.some((ln) => Dt(ln));
       if (!Be) {
         ce.value = ye;
@@ -6786,11 +6786,11 @@ const jr = _({
     return ae(() => e.modelValue, (oe) => {
       if (!(!on() || Dt(oe) || !oe))
         if (e.range) {
-          if (!Se(oe))
+          if (!Ce(oe))
             return;
           v.value = oe.length !== 1, Fs(oe, e.type);
         } else if (e.multiple) {
-          if (!Se(oe))
+          if (!Ce(oe))
             return;
           Rs(oe, e.type);
         } else
@@ -6822,7 +6822,7 @@ const jr = _({
       handleTouchstart: I,
       handleTouchmove: U,
       handleTouchend: Q,
-      getChooseDay: be,
+      getChooseDay: we,
       getChooseMonth: Fe,
       getChooseYear: Qe,
       checkPreview: Ee
@@ -7111,7 +7111,7 @@ const cr = _({
       handleClickOverlay: t,
       confirm: i,
       cancel: o,
-      toSizeUnit: Ce
+      toSizeUnit: be
     };
   }
 });
@@ -7241,10 +7241,10 @@ const Gr = _({
         return Nr({}, d);
       var v = z(l), f = Math.abs(v) + (l + "").replace(v + "", "");
       return s ? Nr({}, d, {
-        height: "calc(80% - " + Ce(f) + ")"
+        height: "calc(80% - " + be(f) + ")"
       }) : Nr({}, d, {
-        width: "calc(100% - " + Ce(f) + ")",
-        left: v > 0 ? Ce(f) : Ce(0)
+        width: "calc(100% - " + be(f) + ")",
+        left: v > 0 ? be(f) : be(0)
       });
     }), o = () => {
       a.withText = Boolean(r.default) || Boolean(e.description);
@@ -7685,7 +7685,7 @@ const qr = _({
     return {
       n: Tc,
       classes: Oc,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       handleLoad: n,
       handleError: r
     };
@@ -7904,8 +7904,8 @@ const Kn = _({
         var {
           clientX: Q,
           clientY: ie
-        } = I.touches[0], le = Math.abs(Q - m), de = Math.abs(ie - p), be = $(le, de), Fe = U ? "vertical" : "horizontal";
-        if (be === Fe) {
+        } = I.touches[0], le = Math.abs(Q - m), de = Math.abs(ie - p), we = $(le, de), Fe = U ? "vertical" : "horizontal";
+        if (we === Fe) {
           I.preventDefault();
           var Qe = w !== void 0 ? Q - w : 0, Ee = T !== void 0 ? ie - T : 0;
           w = Q, T = ie, i.value += U ? Ee : Qe, g();
@@ -8369,7 +8369,7 @@ function nr(e) {
     nr.close();
     var n = qe(e) ? {
       images: [e]
-    } : Se(e) ? {
+    } : Ce(e) ? {
       images: e
     } : e, r = Ne(n);
     r.teleport = "body", Wn = r;
@@ -9346,7 +9346,7 @@ const Zr = _({
       tag: n,
       linkProps: r,
       handleClick: a,
-      toSizeUnit: Ce
+      toSizeUnit: be
     };
   }
 });
@@ -9557,6 +9557,9 @@ var Tm = {
   },
   height: {
     type: [Number, String]
+  },
+  top: {
+    type: [Number, String]
   }
 }, {
   classes: Om,
@@ -9572,8 +9575,9 @@ const Vm = _({
         zIndex: tn.zIndex + 10,
         width: e.value + "%",
         opacity: e.opacity,
-        height: Ce(e.height),
-        backgroundColor: e.error ? e.errorColor : e.color
+        height: be(e.height),
+        backgroundColor: e.error ? e.errorColor : e.color,
+        top: be(e.top)
       }
     }, null);
   }
@@ -9960,8 +9964,8 @@ function np(e) {
     }
     if (C)
       for (var I = p ? 3 : 1, F = function(le) {
-        var de = y.find(function(be) {
-          var Fe = A.get(be);
+        var de = y.find(function(we) {
+          var Fe = A.get(we);
           if (Fe)
             return Fe.slice(0, le).every(function(Qe) {
               return Qe;
@@ -11591,7 +11595,7 @@ const hr = _({
     }, S = ($) => {
       $.scrolling = !1, A($);
     }, g = ($) => $.map((O, R) => {
-      var W, j = Se(O) ? {
+      var W, j = Ce(O) ? {
         texts: O
       } : O, L = {
         id: Qo++,
@@ -11612,7 +11616,7 @@ const hr = _({
       var O = [];
       return E(O, $, 0, !0), O;
     }, E = function($, O, R, W) {
-      if (W === void 0 && (W = !1), Se(O) && O.length) {
+      if (W === void 0 && (W = !1), Ce(O) && O.length) {
         var j, L = W && (j = e.cascadeInitialIndexes[$.length]) != null ? j : 0, Z = {
           id: Qo++,
           prevY: void 0,
@@ -11706,7 +11710,7 @@ var xe;
 function Cr(e) {
   return new Promise((n) => {
     Cr.close();
-    var r = Se(e) ? {
+    var r = Ce(e) ? {
       columns: e
     } : e, a = Ne(r);
     a.dynamic = !0, a.teleport = "body", xe = a;
@@ -11969,7 +11973,7 @@ const _r = _({
     return {
       n: ih,
       classes: oh,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       multiplySizeUnit: Ze,
       linearProps: n,
       circleProps: r
@@ -12672,7 +12676,7 @@ const aa = _({
       } = e;
       return {
         color: u(w).color,
-        marginRight: w !== z(T) ? Ce(S) : 0
+        marginRight: w !== z(T) ? be(S) : 0
       };
     }, s = (w) => {
       var {
@@ -12740,7 +12744,7 @@ const aa = _({
       reset: p,
       validate: v,
       resetValidation: o,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       toNumber: z,
       n: Ba
     };
@@ -13029,19 +13033,19 @@ const ta = _({
       var {
         imageSize: a
       } = e;
-      return "calc(" + (a ? Ce(a) : "var(--result-image-size)") + " * 0.9)";
+      return "calc(" + (a ? be(a) : "var(--result-image-size)") + " * 0.9)";
     }), r = Y(() => {
       var {
         imageSize: a
       } = e;
-      return "calc(" + (a ? Ce(e.imageSize) : "var(--result-image-size)") + " * 0.05)";
+      return "calc(" + (a ? be(e.imageSize) : "var(--result-image-size)") + " * 0.05)";
     });
     return {
       n: fg,
       classes: cg,
       toNumber: z,
       toPxNum: Ie,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       circleSize: n,
       borderSize: r
     };
@@ -13515,10 +13519,10 @@ const oa = _({
         onChange: le
       } = e;
       if (!(d != null && d.disabled.value || d != null && d.readonly.value || U || Q)) {
-        var de = ie ? f.filter((be) => {
+        var de = ie ? f.filter((we) => {
           var {
             selected: Fe
-          } = be;
+          } = we;
           return Fe.value;
         }).map(E) : E(F);
         N(e["onUpdate:modelValue"], de), N(le, de), y("onChange"), !ie && (r.value = !1);
@@ -13549,14 +13553,14 @@ const oa = _({
         onClose: le
       } = e;
       if (!(d != null && d.disabled.value || d != null && d.readonly.value || U || Q)) {
-        var de = ie, be = f.find((Qe) => {
+        var de = ie, we = f.find((Qe) => {
           var {
             label: Ee
           } = Qe;
           return Ee.value === F;
         }), Fe = de.filter((Qe) => {
           var Ee;
-          return Qe !== ((Ee = be.value.value) != null ? Ee : be.label.value);
+          return Qe !== ((Ee = we.value.value) != null ? Ee : we.label.value);
         });
         N(e["onUpdate:modelValue"], Fe), N(le, Fe), y("onClose");
       }
@@ -13583,7 +13587,7 @@ const oa = _({
         multiple: F,
         modelValue: U
       } = e;
-      if (F && !Se(U))
+      if (F && !Ce(U))
         throw Error("The modelValue must be an array when multiple is true");
     }), ae(() => e.modelValue, j, {
       deep: !0
@@ -13818,7 +13822,7 @@ const la = _({
     return {
       n: Pg,
       classes: Eg,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       toNumber: z
     };
   }
@@ -14056,7 +14060,7 @@ const sa = _({
         modelValue: H,
         range: K
       } = e, I = [];
-      return K && Se(H) ? I = [{
+      return K && Ce(H) ? I = [{
         value: E(H[0]),
         enumValue: Me.First,
         text: k(H[0])
@@ -14074,7 +14078,7 @@ const sa = _({
         activeColor: H,
         range: K,
         modelValue: I
-      } = e, F = K && Se(I) ? E(Math.min(I[0], I[1])) : 0, U = K && Se(I) ? E(Math.max(I[0], I[1])) - F : E(I);
+      } = e, F = K && Ce(I) ? E(Math.min(I[0], I[1])) : 0, U = K && Ce(I) ? E(Math.max(I[0], I[1])) - F : E(I);
       return {
         width: U + "%",
         left: F + "%",
@@ -14100,8 +14104,8 @@ const sa = _({
         modelValue: Q,
         onChange: ie,
         min: le
-      } = e, de = z(F), be = Math.round(H / b.value), Fe = be * de + z(le), Qe = m[K].percentValue * de + z(le);
-      if (m[K].percentValue = be, U && Se(Q) && (I = K === Me.First ? [Fe, Q[1]] : [Q[0], Fe]), Qe !== Fe) {
+      } = e, de = z(F), we = Math.round(H / b.value), Fe = we * de + z(le), Qe = m[K].percentValue * de + z(le);
+      if (m[K].percentValue = we, U && Ce(Q) && (I = K === Me.First ? [Fe, Q[1]] : [Q[0], Fe]), Qe !== Fe) {
         var Ee = U ? I.map((on) => k(on)) : k(Fe);
         N(ie, Ee), N(e["onUpdate:modelValue"], Ee), u();
       }
@@ -14129,7 +14133,7 @@ const sa = _({
         var ie = [];
         m[H].currentLeft = m[H].percentValue * b.value, m[H].active = !1;
         var le = m[H].percentValue * z(U) + z(Q);
-        K && Se(I) && (ie = H === Me.First ? [le, I[1]] : [I[0], le]), N(F, K ? ie : le), f.value = !1;
+        K && Ce(I) && (ie = H === Me.First ? [le, I[1]] : [I[0], le]), N(F, K ? ie : le), f.value = !1;
       }
     }, O = (H) => {
       if (!(S.value || g.value) && !H.target.closest("." + el("thumb"))) {
@@ -14144,7 +14148,7 @@ const sa = _({
         range: H,
         modelValue: K
       } = e;
-      return H && !Se(K) ? (console.error('[Varlet] Slider: "modelValue" should be an Array'), !1) : !H && Se(K) ? (console.error('[Varlet] Slider: "modelValue" should be a Number'), !1) : H && Se(K) && K.length < 2 ? (console.error('[Varlet] Slider: "modelValue" should have two value'), !1) : !0;
+      return H && !Ce(K) ? (console.error('[Varlet] Slider: "modelValue" should be an Array'), !1) : !H && Ce(K) ? (console.error('[Varlet] Slider: "modelValue" should be a Number'), !1) : H && Ce(K) && K.length < 2 ? (console.error('[Varlet] Slider: "modelValue" should have two value'), !1) : !0;
     }, j = function(H, K) {
       H === void 0 && (H = e.modelValue), K === void 0 && (K = z(e.step));
       var I = (F) => {
@@ -14154,7 +14158,7 @@ const sa = _({
         } = e;
         return F < z(U) ? 0 : F > z(Q) ? p.value / K : (F - z(U)) / K;
       };
-      e.range && Se(H) ? (m[Me.First].percentValue = I(H[0]), m[Me.First].currentLeft = m[Me.First].percentValue * b.value, m[Me.Second].percentValue = I(H[1]), m[Me.Second].currentLeft = m[Me.Second].percentValue * b.value) : je(H) && (m[Me.First].currentLeft = I(H) * b.value);
+      e.range && Ce(H) ? (m[Me.First].percentValue = I(H[0]), m[Me.First].currentLeft = m[Me.First].percentValue * b.value, m[Me.Second].percentValue = I(H[1]), m[Me.Second].currentLeft = m[Me.Second].percentValue * b.value) : je(H) && (m[Me.First].currentLeft = I(H) * b.value);
     }, L = () => {
       var H = e.range ? [0, 0] : 0;
       N(e["onUpdate:modelValue"], H), o();
@@ -14590,7 +14594,7 @@ function xg(e) {
 ua.install = function(e) {
   e.component(ua.name, ua);
 };
-var Ps = (e) => ["mini", "small", "normal", "large"].includes(e), _g = (e) => Ps(e) || Se(e) || je(e) || qe(e), ey = (e) => ["start", "end", "center", "space-around", "space-between"].includes(e), ny = {
+var Ps = (e) => ["mini", "small", "normal", "large"].includes(e), _g = (e) => Ps(e) || Ce(e) || je(e) || qe(e), ey = (e) => ["start", "end", "center", "space-around", "space-between"].includes(e), ny = {
   align: {
     type: String
   },
@@ -14631,7 +14635,7 @@ const da = _({
   setup(e, n) {
     var {
       slots: r
-    } = n, a = (i, o) => o ? ay[i] : Se(i) ? i.map(Ie) : [Ie(i), Ie(i)], t = (i) => i === "start" || i === "end" ? "flex-" + i : i;
+    } = n, a = (i, o) => o ? ay[i] : Ce(i) ? i.map(Ie) : [Ie(i), Ie(i)], t = (i) => i === "start" || i === "end" ? "flex-" + i : i;
     return () => {
       var i, {
         inline: o,
@@ -14644,7 +14648,7 @@ const da = _({
         var y = [];
         return g.forEach((E) => {
           if (E.type !== Zs) {
-            if (E.type === Oe && Se(E.children)) {
+            if (E.type === Oe && Ce(E.children)) {
               E.children.forEach((k) => {
                 y.push(k);
               });
@@ -15456,7 +15460,7 @@ const ga = _({
   },
   setup() {
     return {
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       n: Iy,
       classes: Ny
     };
@@ -15690,7 +15694,7 @@ const ya = _({
       scrollable: i,
       scrollerEl: o,
       Transition: Re,
-      toSizeUnit: Ce,
+      toSizeUnit: be,
       n: zy,
       classes: Ly,
       resize: k
@@ -16566,8 +16570,8 @@ const wa = _({
       o.value = B(I, F);
       var ie = Math.round(U / 30) * 30 + 90, le = $(ie), de = t.value ? sn[le] : Je[le];
       if (Q.includes(de) || (t.value = e.format === "24hr" ? B(I, F) : !1), t.value === o.value) {
-        var be = t.value || m.value === "pm" ? Je[le] : sn[le];
-        p.value = Q.includes(be), !p.value && (u.value = ie, l.value = !0);
+        var we = t.value || m.value === "pm" ? Je[le] : sn[le];
+        p.value = Q.includes(we), !p.value && (u.value = ie, l.value = !0);
       }
     }, W = (I) => {
       var {
@@ -16610,9 +16614,9 @@ const wa = _({
           rangeXMin: ie,
           rangeXMax: le,
           rangeYMin: de,
-          rangeYMax: be
+          rangeYMax: we
         } = O();
-        S.x = [ie, le], S.y = [de, be];
+        S.x = [ie, le], S.y = [de, we];
       }
     }, Z = (I) => {
       if (I.preventDefault(), !e.readonly) {
@@ -16640,8 +16644,8 @@ const wa = _({
           hour: F,
           minute: U,
           second: Q
-        } = en(I), ie = re().hour(F).format("hh"), le = re().hour(F).format("HH"), de = re().minute(U).format("mm"), be = re().second(Q).format("ss");
-        u.value = (ie === "12" ? 0 : z(ie)) * 30, d.value = z(de) * 6, v.value = z(be) * 6, w.value = V(I), e.format !== "24hr" && (m.value = gr("" + F, 2, "0") === le && Je.includes(le) ? "pm" : "am"), t.value = e.format === "24hr" && Je.includes(le);
+        } = en(I), ie = re().hour(F).format("hh"), le = re().hour(F).format("HH"), de = re().minute(U).format("mm"), we = re().second(Q).format("ss");
+        u.value = (ie === "12" ? 0 : z(ie)) * 30, d.value = z(de) * 6, v.value = z(we) * 6, w.value = V(I), e.format !== "24hr" && (m.value = gr("" + F, 2, "0") === le && Je.includes(le) ? "pm" : "am"), t.value = e.format === "24hr" && Je.includes(le);
       }
     }, {
       immediate: !0
@@ -17035,7 +17039,7 @@ const Sa = _({
             return Ee.slice(0, on);
           }, le = b(j), de = le.map(p);
           de = L != null ? Q(de) : de, de = Z != null ? ie(de) : de;
-          var be = yield Promise.all(T(de)), Fe = yield Promise.all(S(be)), Qe = Fe.filter((Ee) => {
+          var we = yield Promise.all(T(de)), Fe = yield Promise.all(S(we)), Qe = Fe.filter((Ee) => {
             var {
               valid: on
             } = Ee;
