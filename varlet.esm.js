@@ -10976,8 +10976,7 @@ function xp(e) {
   return typeof e == "function" || Object.prototype.toString.call(e) === "[object Object]" && !bt(e);
 }
 var {
-  n: xo,
-  classes: _p
+  n: xo
 } = ne("overlay");
 const Qr = Q({
   name: "VarOverlay",
@@ -10996,7 +10995,7 @@ const Qr = Q({
     };
     $t(() => e.show, () => e.lockScroll);
     var l = () => ee("div", Ve({
-      class: _p(xo()),
+      class: xo(),
       style: {
         zIndex: t.value - 1
       }
@@ -11007,7 +11006,7 @@ const Qr = Q({
         show: u
       } = e;
       return ee(Le, {
-        name: xo("$-fade")
+        name: xo("--fade")
       }, {
         default: () => [u && l()]
       });
@@ -11032,7 +11031,7 @@ const Qr = Q({
 Qr.install = function(e) {
   e.component(Qr.name, Qr);
 };
-var eh = {
+var _p = {
   current: {
     type: [Number, String]
   },
@@ -11081,10 +11080,10 @@ var eh = {
     type: Function
   }
 }, {
-  n: nh,
-  classes: rh
-} = ne("pagination"), ah = ["item-mode", "onClick"];
-function th(e, n) {
+  n: eh,
+  classes: nh
+} = ne("pagination"), rh = ["item-mode", "onClick"];
+function ah(e, n) {
   var r = te("var-icon"), a = te("var-input"), t = te("var-cell"), i = te("var-menu"), o = Ge("ripple");
   return h(), P(
     "ul",
@@ -11152,7 +11151,7 @@ function th(e, n) {
           1
         )],
         10,
-        ah
+        rh
       )), [[o, {
         disabled: e.disabled
       }]])),
@@ -11274,7 +11273,7 @@ function th(e, n) {
   );
 }
 const xr = Q({
-  render: th,
+  render: ah,
   name: "VarPagination",
   components: {
     VarMenu: xn,
@@ -11285,7 +11284,7 @@ const xr = Q({
   directives: {
     Ripple: Ue
   },
-  props: eh,
+  props: _p,
   setup(e) {
     var n = M(!1), r = M(""), a = M("1"), t = M(!1), i = M(!1), o = M(z(e.current) || 1), l = M(z(e.size) || 10), s = M([]), u = Y(() => Math.ceil(e.maxPagerCount / 2)), d = Y(() => Math.ceil(z(e.total) / z(l.value))), v = Y(() => {
       var y = l.value * (o.value - 1) + 1, E = Math.min(l.value * o.value, z(e.total));
@@ -11350,8 +11349,8 @@ const xr = Q({
     }, {
       immediate: !0
     }), {
-      n: nh,
-      classes: rh,
+      n: eh,
+      classes: nh,
       pack: Ye,
       current: o,
       menuVisible: n,
@@ -11384,7 +11383,7 @@ function $i() {
     return e;
   }, $i.apply(this, arguments);
 }
-var ih = $i({
+var th = $i({
   columns: {
     type: Array,
     default: () => []
@@ -11446,10 +11445,10 @@ var ih = $i({
     default: (e) => e
   }
 }, _e(Ka, ["show", "onUpdate:show", "closeOnClickOverlay", "teleport", "onOpen", "onClose", "onOpened", "onClosed", "onClickOverlay", "onRouteChange"])), {
-  n: oh,
-  classes: lh
-} = ne("picker"), _o = 300, sh = 15, el = 0, uh = ["onTouchstart", "onTouchmove", "onTouchend"], dh = ["onTransitionend"];
-function vh(e, n) {
+  n: ih,
+  classes: oh
+} = ne("picker"), _o = 300, lh = 15, el = 0, sh = ["onTouchstart", "onTouchmove", "onTouchend"], uh = ["onTransitionend"];
+function dh(e, n) {
   var r = te("var-button");
   return h(), me(
     Pa(e.dynamic ? e.n("$-popup") : e.Transition),
@@ -11583,10 +11582,10 @@ function vh(e, n) {
                   128
                 ))],
                 46,
-                dh
+                uh
               )],
               42,
-              uh
+              sh
             ))),
             128
           )), D(
@@ -11621,14 +11620,14 @@ function vh(e, n) {
   );
 }
 const pr = Q({
-  render: vh,
+  render: dh,
   name: "VarPicker",
   components: {
     VarButton: nn,
     VarPopup: yn
   },
   inheritAttrs: !1,
-  props: ih,
+  props: th,
   setup(e) {
     var n = M([]), r = Y(() => Ie(e.optionHeight)), a = Y(() => Ie(e.optionCount)), t = Y(() => a.value * r.value / 2 - r.value / 2), i = Y(() => a.value * r.value), o = [], l = ($, O) => {
       O.scrollEl = $;
@@ -11670,7 +11669,7 @@ const pr = Q({
       }
     }, T = ($, O) => {
       O.touching = !1, O.scrolling = !0, O.prevY = void 0;
-      var R = O.translate - O.momentumPrevY, W = performance.now() - O.momentumTime, j = Math.abs(R) >= sh && W <= _o;
+      var R = O.translate - O.momentumPrevY, W = performance.now() - O.momentumTime, j = Math.abs(R) >= lh && W <= _o;
       j && p(O, R, W), O.index = v(O), m(O, O.index, j ? 1e3 : 200);
     }, S = ($) => {
       $.scrolling = !1, A($);
@@ -11765,8 +11764,8 @@ const pr = Q({
       immediate: !0,
       deep: !0
     }), {
-      n: oh,
-      classes: lh,
+      n: ih,
+      classes: oh,
       pack: Ye,
       optionHeight: r,
       optionCount: a,
@@ -11844,14 +11843,14 @@ Sr.close = () => {
     });
   }
 };
-function fh(e) {
+function vh(e) {
   return ["linear", "circle"].includes(e);
 }
-var ch = {
+var fh = {
   mode: {
     type: String,
     default: "linear",
-    validator: fh
+    validator: vh
   },
   lineWidth: {
     type: [Number, String],
@@ -11891,10 +11890,10 @@ var ch = {
     default: !0
   }
 }, {
-  n: mh,
-  classes: ph
-} = ne("progress"), hh = ["viewBox"], gh = ["cx", "cy", "r", "stroke-width"], yh = ["cx", "cy", "r", "stroke-width"];
-function bh(e, n) {
+  n: ch,
+  classes: mh
+} = ne("progress"), ph = ["viewBox"], hh = ["cx", "cy", "r", "stroke-width"], gh = ["cx", "cy", "r", "stroke-width"];
+function yh(e, n) {
   return h(), P(
     "div",
     {
@@ -11987,7 +11986,7 @@ function bh(e, n) {
           },
           null,
           14,
-          gh
+          hh
         )) : J("v-if", !0), D(
           "circle",
           {
@@ -12004,10 +12003,10 @@ function bh(e, n) {
           },
           null,
           14,
-          yh
+          gh
         )],
         14,
-        hh
+        ph
       )), e.label ? (h(), P(
         "div",
         {
@@ -12026,9 +12025,9 @@ function bh(e, n) {
   );
 }
 const _r = Q({
-  render: bh,
+  render: yh,
   name: "VarProgress",
-  props: ch,
+  props: fh,
   setup(e) {
     var n = Y(() => {
       var a = z(e.value), t = a > 100 ? 100 : a, i = a > 100 ? 100 : Math.round(a);
@@ -12051,8 +12050,8 @@ const _r = Q({
       };
     });
     return {
-      n: mh,
-      classes: ph,
+      n: ch,
+      classes: mh,
       toSizeUnit: be,
       multiplySizeUnit: Ze,
       linearProps: n,
@@ -12063,7 +12062,7 @@ const _r = Q({
 _r.install = function(e) {
   e.component(_r.name, _r);
 };
-var wh = {
+var bh = {
   modelValue: {
     type: Boolean
   },
@@ -12107,7 +12106,7 @@ function nl(e, n, r, a, t, i, o) {
   }
   l.done ? n(s) : Promise.resolve(s).then(a, t);
 }
-function Sh(e) {
+function wh(e) {
   return function() {
     var n = this, r = arguments;
     return new Promise(function(a, t) {
@@ -12123,10 +12122,10 @@ function Sh(e) {
   };
 }
 var {
-  n: Ch,
-  classes: kh
+  n: Sh,
+  classes: Ch
 } = ne("pull-refresh"), Na = 100, Da = -50, rl = 150;
-function $h(e, n) {
+function kh(e, n) {
   var r = te("var-icon");
   return h(), P(
     "div",
@@ -12170,12 +12169,12 @@ function $h(e, n) {
   );
 }
 const ea = Q({
-  render: $h,
+  render: kh,
   name: "VarPullRefresh",
   components: {
     VarIcon: Te
   },
-  props: wh,
+  props: bh,
   setup(e) {
     var n, r, a = M(null), t = M(0), i = M(Da), o = M("arrow-down"), l = M("default"), s = M(!1), u = M(!0), d = Y(() => l.value !== "loading" && l.value !== "success" && !e.disabled), v = Y(() => ({
       transform: "translate3d(0px, " + i.value + "px, 0px) translate(-50%, 0)",
@@ -12196,7 +12195,7 @@ const ea = Q({
         i.value = y >= Na ? Na : y, i.value >= Na * 0.2 ? (u.value = !1, o.value = "refresh", r = m()) : o.value = "arrow-down";
       }
     }, w = /* @__PURE__ */ function() {
-      var S = Sh(function* () {
+      var S = wh(function* () {
         if (!!d.value)
           if (s.value = !0, i.value >= Na * 0.2) {
             var g;
@@ -12221,8 +12220,8 @@ const ea = Q({
     }), Fe(() => {
       n = Ea(a.value);
     }), {
-      n: Ch,
-      classes: kh,
+      n: Sh,
+      classes: Ch,
       iconHasChanged: u,
       ICON_TRANSITION: rl,
       refreshStatus: l,
@@ -12239,7 +12238,7 @@ const ea = Q({
 ea.install = function(e) {
   e.component(ea.name, ea);
 };
-var Th = {
+var $h = {
   modelValue: {
     type: [String, Number, Boolean, Object, Array],
     default: !1
@@ -12290,7 +12289,7 @@ var Th = {
     type: Function
   }
 }, Os = Symbol("RADIO_GROUP_BIND_RADIO_KEY"), Vs = Symbol("RADIO_GROUP_COUNT_RADIO_KEY");
-function Oh() {
+function Th() {
   var {
     bindChildren: e,
     childProviders: n
@@ -12303,7 +12302,7 @@ function Oh() {
     bindRadios: e
   };
 }
-function Vh() {
+function Oh() {
   var {
     bindParent: e,
     parentProvider: n
@@ -12317,10 +12316,10 @@ function Vh() {
   };
 }
 var {
-  n: Ph,
-  classes: Eh
+  n: Vh,
+  classes: Ph
 } = ne("radio");
-function Mh(e, n) {
+function Eh(e, n) {
   var r = te("var-icon"), a = te("var-form-details"), t = Ge("ripple");
   return h(), P(
     "div",
@@ -12395,7 +12394,7 @@ function Mh(e, n) {
   );
 }
 const na = Q({
-  render: Mh,
+  render: Eh,
   name: "VarRadio",
   directives: {
     Ripple: Ue
@@ -12405,12 +12404,12 @@ const na = Q({
     VarFormDetails: He
   },
   inheritAttrs: !1,
-  props: Th,
+  props: $h,
   setup(e) {
     var n = M(!1), r = Y(() => n.value === e.checkedValue), a = M(!1), {
       radioGroup: t,
       bindRadioGroup: i
-    } = Vh(), {
+    } = Oh(), {
       form: o,
       bindForm: l
     } = mn(), {
@@ -12475,8 +12474,8 @@ const na = Q({
       radioGroupErrorMessage: t == null ? void 0 : t.errorMessage,
       formDisabled: o == null ? void 0 : o.disabled,
       formReadonly: o == null ? void 0 : o.readonly,
-      n: Ph,
-      classes: Eh,
+      n: Vh,
+      classes: Ph,
       handleClick: p,
       toggle: S,
       reset: w,
@@ -12488,10 +12487,10 @@ const na = Q({
 na.install = function(e) {
   e.component(na.name, na);
 };
-function Ih(e) {
+function Mh(e) {
   return ["horizontal", "vertical"].includes(e);
 }
-var Nh = {
+var Ih = {
   modelValue: {
     type: [String, Number, Boolean, Object, Array],
     default: void 0
@@ -12499,7 +12498,7 @@ var Nh = {
   direction: {
     type: String,
     default: "horizontal",
-    validator: Ih
+    validator: Mh
   },
   validateTrigger: {
     type: Array,
@@ -12515,10 +12514,10 @@ var Nh = {
     type: Function
   }
 }, {
-  n: Dh,
-  classes: Bh
+  n: Nh,
+  classes: Dh
 } = ne("radio-group");
-function Ah(e, n) {
+function Bh(e, n) {
   var r = te("var-form-details");
   return h(), P(
     "div",
@@ -12545,18 +12544,18 @@ function Ah(e, n) {
   );
 }
 const ra = Q({
-  render: Ah,
+  render: Bh,
   name: "VarRadioGroup",
   components: {
     VarFormDetails: He
   },
-  props: Nh,
+  props: Ih,
   setup(e) {
     var {
       length: n,
       radios: r,
       bindRadios: a
-    } = Oh(), {
+    } = Th(), {
       bindForm: t
     } = mn(), {
       errorMessage: i,
@@ -12592,8 +12591,8 @@ const ra = Q({
     };
     return N(t, b), a(b), {
       errorMessage: i,
-      n: Dh,
-      classes: Bh,
+      n: Nh,
+      classes: Dh,
       reset: p,
       validate: m,
       resetValidation: s
@@ -12603,7 +12602,7 @@ const ra = Q({
 ra.install = function(e) {
   e.component(ra.name, ra);
 };
-var zh = {
+var Ah = {
   modelValue: {
     type: [String, Number],
     default: 0
@@ -12669,8 +12668,8 @@ var zh = {
   }
 }, {
   n: Ba
-} = ne("rate"), Lh = ["onClick"];
-function Fh(e, n) {
+} = ne("rate"), zh = ["onClick"];
+function Lh(e, n) {
   var r = te("var-icon"), a = te("var-form-details"), t = Ge("ripple");
   return h(), P(
     "div",
@@ -12710,7 +12709,7 @@ function Fh(e, n) {
             ["class", "namespace", "name", "style"]
           )],
           14,
-          Lh
+          zh
         )), [[t, {
           disabled: e.formReadonly || e.readonly || e.formDisabled || e.disabled || !e.ripple
         }]])),
@@ -12730,7 +12729,7 @@ function Fh(e, n) {
   );
 }
 const aa = Q({
-  render: Fh,
+  render: Lh,
   name: "VarRate",
   components: {
     VarIcon: Te,
@@ -12739,7 +12738,7 @@ const aa = Q({
   directives: {
     Ripple: Ue
   },
-  props: zh,
+  props: Ah,
   setup(e) {
     var {
       form: n,
@@ -12833,17 +12832,17 @@ const aa = Q({
 aa.install = function(e) {
   e.component(aa.name, aa);
 };
-function Rh(e) {
+function Fh(e) {
   return ["info", "success", "warning", "error", "question", "empty"].includes(e);
 }
-var Uh = {
+var Rh = {
   imageSize: {
     type: [String, Number]
   },
   type: {
     type: String,
     default: "success",
-    validator: Rh
+    validator: Fh
   },
   title: {
     type: String
@@ -12855,62 +12854,62 @@ var Uh = {
     type: Boolean,
     default: !0
   }
-}, Yh = (e) => (Cr(""), e = e(), kr(), e), Wh = {
+}, Uh = (e) => (Cr(""), e = e(), kr(), e), Yh = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "2 3.6 20 20"
-}, Hh = /* @__PURE__ */ Yh(() => /* @__PURE__ */ D(
+}, Wh = /* @__PURE__ */ Uh(() => /* @__PURE__ */ D(
   "path",
   {
     d: "M11,9H13V7H11M11,20H13V11H11V20Z"
   },
   null,
   -1
-)), jh = [Hh];
-function Gh(e, n) {
-  return h(), P("svg", Wh, jh);
+)), Hh = [Wh];
+function jh(e, n) {
+  return h(), P("svg", Yh, Hh);
 }
-const qh = Q({
-  render: Gh
+const Gh = Q({
+  render: jh
 });
-var Xh = (e) => (Cr(""), e = e(), kr(), e), Kh = {
+var qh = (e) => (Cr(""), e = e(), kr(), e), Xh = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "2 2 20 20"
-}, Zh = /* @__PURE__ */ Xh(() => /* @__PURE__ */ D(
+}, Kh = /* @__PURE__ */ qh(() => /* @__PURE__ */ D(
   "path",
   {
     d: "M19,3V5H19V19M17,8.4L13.4,12L17,15.6L15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4Z"
   },
   null,
   -1
-)), Jh = [Zh];
-function Qh(e, n) {
-  return h(), P("svg", Kh, Jh);
+)), Zh = [Kh];
+function Jh(e, n) {
+  return h(), P("svg", Xh, Zh);
 }
-const xh = Q({
-  render: Qh
+const Qh = Q({
+  render: Jh
 });
-var _h = (e) => (Cr(""), e = e(), kr(), e), eg = {
+var xh = (e) => (Cr(""), e = e(), kr(), e), _h = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "-6 -4 35 35"
-}, ng = /* @__PURE__ */ _h(() => /* @__PURE__ */ D(
+}, eg = /* @__PURE__ */ xh(() => /* @__PURE__ */ D(
   "path",
   {
     d: "M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61M1,11"
   },
   null,
   -1
-)), rg = [ng];
-function ag(e, n) {
-  return h(), P("svg", eg, rg);
+)), ng = [eg];
+function rg(e, n) {
+  return h(), P("svg", _h, ng);
 }
-const tg = Q({
-  render: ag
+const ag = Q({
+  render: rg
 });
 var {
-  n: ig,
-  classes: og
+  n: tg,
+  classes: ig
 } = ne("result");
-function lg(e, n) {
+function og(e, n) {
   return h(), P(
     Oe,
     null,
@@ -12977,8 +12976,8 @@ function lg(e, n) {
     64
   );
 }
-const sg = Q({
-  render: lg,
+const lg = Q({
+  render: og,
   props: {
     animation: {
       type: Boolean
@@ -12989,32 +12988,32 @@ const sg = Q({
   },
   setup() {
     return {
-      n: ig,
-      classes: og,
+      n: tg,
+      classes: ig,
       toNumber: z
     };
   }
 });
-var ug = (e) => (Cr(""), e = e(), kr(), e), dg = {
+var sg = (e) => (Cr(""), e = e(), kr(), e), ug = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "-3 -3 30 30"
-}, vg = /* @__PURE__ */ ug(() => /* @__PURE__ */ D(
+}, dg = /* @__PURE__ */ sg(() => /* @__PURE__ */ D(
   "path",
   {
     d: "M10,19H13V22H10V19M12,2C17.35,2.22 19.68,7.62 16.5,11.67C15.67,12.67 14.33,13.33 13.67,14.17C13,15 13,16 13,17H10C10,15.33 10,13.92 10.67,12.92C11.33,11.92 12.67,11.33 13.5,10.67C15.92,8.43 15.32,5.26 12,5A3,3 0 0,0 9,8H6A6,6 0 0,1 12,2Z"
   },
   null,
   -1
-)), fg = [vg];
-function cg(e, n) {
-  return h(), P("svg", dg, fg);
+)), vg = [dg];
+function fg(e, n) {
+  return h(), P("svg", ug, vg);
 }
-const mg = Q({
-  render: cg
+const cg = Q({
+  render: fg
 });
-var pg = (e) => (Cr(""), e = e(), kr(), e), hg = {
+var mg = (e) => (Cr(""), e = e(), kr(), e), pg = {
   viewBox: "-4 -4 32 32"
-}, gg = /* @__PURE__ */ pg(() => /* @__PURE__ */ D(
+}, hg = /* @__PURE__ */ mg(() => /* @__PURE__ */ D(
   "path",
   {
     fill: "currentColor",
@@ -13022,18 +13021,18 @@ var pg = (e) => (Cr(""), e = e(), kr(), e), hg = {
   },
   null,
   -1
-)), yg = [gg];
-function bg(e, n) {
-  return h(), P("svg", hg, yg);
+)), gg = [hg];
+function yg(e, n) {
+  return h(), P("svg", pg, gg);
 }
-const wg = Q({
-  render: bg
+const bg = Q({
+  render: yg
 });
 var {
-  n: Sg,
-  classes: Cg
+  n: wg,
+  classes: Sg
 } = ne("result");
-function kg(e, n) {
+function Cg(e, n) {
   return h(), P(
     "div",
     {
@@ -13097,17 +13096,17 @@ function kg(e, n) {
   );
 }
 const ta = Q({
-  render: kg,
+  render: Cg,
   name: "VarResult",
   components: {
-    Info: qh,
-    Success: sg,
-    Warning: tg,
-    Error: xh,
-    Question: mg,
-    Empty: wg
+    Info: Gh,
+    Success: lg,
+    Warning: ag,
+    Error: Qh,
+    Question: cg,
+    Empty: bg
   },
-  props: Uh,
+  props: Rh,
   setup(e) {
     var n = Y(() => {
       var {
@@ -13121,8 +13120,8 @@ const ta = Q({
       return "calc(" + (a ? be(e.imageSize) : "var(--result-image-size)") + " * 0.05)";
     });
     return {
-      n: Sg,
-      classes: Cg,
+      n: wg,
+      classes: Sg,
       toNumber: z,
       toPxNum: Ie,
       toSizeUnit: be,
@@ -13134,13 +13133,13 @@ const ta = Q({
 ta.install = function(e) {
   e.component(ta.name, ta);
 };
-function $g(e) {
+function kg(e) {
   return ["flex-start", "flex-end", "center", "space-between", "space-around"].includes(e);
 }
-function Tg(e) {
+function $g(e) {
   return ["flex-start", "center", "flex-end"].includes(e);
 }
-var Og = {
+var Tg = {
   gutter: {
     type: [String, Number],
     default: 0
@@ -13148,21 +13147,21 @@ var Og = {
   justify: {
     type: String,
     default: "flex-start",
-    validator: $g
+    validator: kg
   },
   align: {
     type: String,
     default: "flex-start",
-    validator: Tg
+    validator: $g
   },
   onClick: {
     type: Function
   }
 }, {
-  n: Vg,
-  classes: Pg
+  n: Og,
+  classes: Vg
 } = ne("row");
-function Eg(e, n) {
+function Pg(e, n) {
   return h(), P(
     "div",
     {
@@ -13181,9 +13180,9 @@ function Eg(e, n) {
   );
 }
 const ia = Q({
-  render: Eg,
+  render: Pg,
   name: "VarRow",
-  props: Og,
+  props: Tg,
   setup(e) {
     var {
       cols: n,
@@ -13203,8 +13202,8 @@ const ia = Q({
       computePadding: i
     };
     return ae(() => a.value, i), ae(() => e.gutter, i), r(o), {
-      n: Vg,
-      classes: Pg,
+      n: Og,
+      classes: Vg,
       average: t
     };
   }
@@ -13212,10 +13211,10 @@ const ia = Q({
 ia.install = function(e) {
   e.component(ia.name, ia);
 };
-function Mg(e) {
+function Eg(e) {
   return ["left", "right", "center"].includes(e);
 }
-var Ig = {
+var Mg = {
   modelValue: {
     default: void 0
   },
@@ -13270,7 +13269,7 @@ var Ig = {
   textAlign: {
     type: String,
     default: "left",
-    validator: Mg
+    validator: Eg
   },
   validateTrigger: {
     type: Array,
@@ -13302,13 +13301,13 @@ var Ig = {
   }
 }, {
   n: Ht,
-  classes: Ng
-} = ne("select"), Dg = {
+  classes: Ig
+} = ne("select"), Ng = {
   key: 0
-}, Bg = {
+}, Dg = {
   key: 1
 };
-function Ag(e, n) {
+function Bg(e, n) {
   var r = te("var-chip"), a = te("var-icon"), t = te("var-menu"), i = te("var-form-details");
   return h(), P(
     "div",
@@ -13373,7 +13372,7 @@ function Ag(e, n) {
                   color: e.textColor
                 })
               },
-              [e.multiple ? (h(), P("div", Dg, [e.chip ? (h(), P(
+              [e.multiple ? (h(), P("div", Ng, [e.chip ? (h(), P(
                 "div",
                 {
                   key: 0,
@@ -13418,7 +13417,7 @@ function Ag(e, n) {
                 3
               ))])) : (h(), P(
                 "span",
-                Bg,
+                Dg,
                 _(e.label),
                 1
               )), G(e.$slots, "arrow-icon", {
@@ -13508,7 +13507,7 @@ function Ag(e, n) {
   );
 }
 const oa = Q({
-  render: Ag,
+  render: Bg,
   name: "VarSelect",
   components: {
     VarIcon: Te,
@@ -13516,7 +13515,7 @@ const oa = Q({
     VarChip: dr,
     VarFormDetails: He
   },
-  props: Ig,
+  props: Mg,
   setup(e) {
     var n = M(null), r = M(!1), a = Y(() => e.multiple), t = Y(() => e.focusColor), i = M(""), o = M([]), l = M("0px"), s = M(0), {
       bindForm: u,
@@ -13692,7 +13691,7 @@ const oa = Q({
       labels: o,
       menuEl: S,
       n: Ht,
-      classes: Ng,
+      classes: Ig,
       computePlaceholderState: A,
       handleFocus: B,
       handleBlur: V,
@@ -13710,7 +13709,7 @@ const oa = Q({
 oa.install = function(e) {
   e.component(oa.name, oa);
 };
-var zg = {
+var Ag = {
   loading: {
     type: Boolean,
     default: !0
@@ -13753,10 +13752,10 @@ var zg = {
     default: () => []
   }
 }, {
-  n: Lg,
-  classes: Fg
+  n: zg,
+  classes: Lg
 } = ne("skeleton");
-function Rg(e, n) {
+function Fg(e, n) {
   return h(), P(
     "div",
     {
@@ -13895,13 +13894,13 @@ function Rg(e, n) {
   );
 }
 const la = Q({
-  render: Rg,
+  render: Fg,
   name: "VarSkeleton",
-  props: zg,
+  props: Ag,
   setup() {
     return {
-      n: Lg,
-      classes: Fg,
+      n: zg,
+      classes: Lg,
       toSizeUnit: be,
       toNumber: z
     };
@@ -13910,10 +13909,10 @@ const la = Q({
 la.install = function(e) {
   e.component(la.name, la);
 };
-function Ug(e) {
+function Rg(e) {
   return ["always", "normal", "never"].includes(e);
 }
-var Yg = {
+var Ug = {
   modelValue: {
     type: [Number, Array],
     default: 0
@@ -13929,7 +13928,7 @@ var Yg = {
   labelVisible: {
     type: String,
     default: "normal",
-    validator: Ug
+    validator: Rg
   },
   activeColor: {
     type: String
@@ -13985,13 +13984,13 @@ var Yg = {
   }
 }, {
   n: al,
-  classes: Wg
+  classes: Yg
 } = ne("slider"), Me;
 (function(e) {
   e.First = "1", e.Second = "2";
 })(Me || (Me = {}));
-var Hg = ["onTouchstart", "onTouchmove", "onTouchend", "onTouchcancel"];
-function jg(e, n) {
+var Wg = ["onTouchstart", "onTouchmove", "onTouchend", "onTouchcancel"];
+function Hg(e, n) {
   var r = te("var-form-details");
   return h(), P(
     "div",
@@ -14092,7 +14091,7 @@ function jg(e, n) {
             6
           )])],
           46,
-          Hg
+          Wg
         ))),
         128
       ))],
@@ -14112,12 +14111,12 @@ function jg(e, n) {
   );
 }
 const sa = Q({
-  render: jg,
+  render: Hg,
   name: "VarSlider",
   components: {
     VarFormDetails: He
   },
-  props: Yg,
+  props: Ug,
   setup(e) {
     var {
       bindForm: n,
@@ -14254,7 +14253,7 @@ const sa = Q({
       !R() || !W() || (v.value = d.value.offsetWidth);
     }), {
       n: al,
-      classes: Wg,
+      classes: Yg,
       Thumbs: Me,
       sliderEl: d,
       getFillStyle: T,
@@ -14285,22 +14284,22 @@ function Ti() {
     return e;
   }, Ti.apply(this, arguments);
 }
-function Gg(e) {
+function jg(e) {
   var n = ["top", "center", "bottom"];
   return n.includes(e);
 }
-function qg(e) {
+function Gg(e) {
   return Ji.includes(e);
 }
 var Ps = {
   type: {
     type: String,
-    validator: qg
+    validator: Gg
   },
   position: {
     type: String,
     default: "top",
-    validator: Gg
+    validator: jg
   },
   content: {
     type: String
@@ -14365,16 +14364,16 @@ var Ps = {
     type: String
   }
 }, {
-  n: Xg,
-  classes: Kg
-} = ne("snackbar"), Zg = {
+  n: qg,
+  classes: Xg
+} = ne("snackbar"), Kg = {
   success: "checkbox-marked-circle",
   warning: "warning",
   info: "information",
   error: "error",
   loading: ""
 };
-function Jg(e, n) {
+function Zg(e, n) {
   var r = te("var-icon"), a = te("var-loading");
   return ke((h(), P(
     "div",
@@ -14438,7 +14437,7 @@ function Jg(e, n) {
   )), [[Xa, e.show]]);
 }
 const Es = Q({
-  render: Jg,
+  render: Zg,
   name: "VarSnackbarCore",
   components: {
     VarLoading: kn,
@@ -14450,7 +14449,7 @@ const Es = Q({
       zIndex: r
     } = Za(() => e.show, 1);
     $t(() => e.show, () => e.lockScroll);
-    var a = Y(() => e.type === "loading" || e.forbidClick), t = Y(() => e.type ? Zg[e.type] : ""), i = () => {
+    var a = Y(() => e.type === "loading" || e.forbidClick), t = Y(() => e.type ? Kg[e.type] : ""), i = () => {
       n.value = setTimeout(() => {
         var o;
         e.type !== "loading" && ((o = e["onUpdate:show"]) == null || o.call(e, !1));
@@ -14464,8 +14463,8 @@ const Es = Q({
       e.show && (e.onOpen == null || e.onOpen(), i());
     }), {
       SNACKBAR_TYPE: Ji,
-      n: Xg,
-      classes: Kg,
+      n: qg,
+      classes: Xg,
       zIndex: r,
       iconName: t,
       isForbidClick: a
@@ -14473,9 +14472,9 @@ const Es = Q({
   }
 });
 var {
-  n: Qg
+  n: Jg
 } = ne("snackbar");
-function xg(e, n) {
+function Qg(e, n) {
   var r = te("var-snackbar-core");
   return h(), me(
     qa,
@@ -14517,7 +14516,7 @@ function xg(e, n) {
   );
 }
 const ua = Q({
-  render: xg,
+  render: Qg,
   name: "VarSnackbar",
   components: {
     VarSnackbarCore: Es
@@ -14528,7 +14527,7 @@ const ua = Q({
       disabled: e
     } = Fi();
     return {
-      n: Qg,
+      n: Jg,
       disabled: e
     };
   }
@@ -14543,10 +14542,10 @@ function Ha() {
     return e;
   }, Ha.apply(this, arguments);
 }
-function _g(e) {
+function xg(e) {
   return typeof e == "function" || Object.prototype.toString.call(e) === "[object Object]" && !bt(e);
 }
-var Ji = ["loading", "success", "warning", "info", "error"], tl = 0, Oi = !1, Vi, Va = !1, dn = Ne([]), ey = {
+var Ji = ["loading", "success", "warning", "info", "error"], tl = 0, Oi = !1, Vi, Va = !1, dn = Ne([]), _g = {
   type: void 0,
   content: "",
   position: "top",
@@ -14566,11 +14565,11 @@ var Ji = ["loading", "success", "warning", "info", "error"], tl = 0, Oi = !1, Vi
   },
   onClosed: () => {
   }
-}, ny = {
+}, ey = {
   name: "var-snackbar-fade",
   tag: "div",
   class: "var-transition-group"
-}, ry = {
+}, ny = {
   setup() {
     return () => {
       var e = dn.map((r) => {
@@ -14582,7 +14581,7 @@ var Ji = ["loading", "success", "warning", "info", "error"], tl = 0, Oi = !1, Vi
         t.forbidClick || t.type === "loading" ? o.classList.add("var-pointer-auto") : o.classList.remove("var-pointer-auto"), Va && (t.position = "top");
         var l = Va ? "relative" : "absolute", s = Ha({
           position: l
-        }, ly(t.position));
+        }, oy(t.position));
         return ee(Es, Ve(t, {
           key: a,
           style: s,
@@ -14592,13 +14591,13 @@ var Ji = ["loading", "success", "warning", "info", "error"], tl = 0, Oi = !1, Vi
           "onUpdate:show": (u) => t.show = u
         }), null);
       }), n = tn.zIndex;
-      return ee(Js, Ve(ny, {
+      return ee(Js, Ve(ey, {
         style: {
           zIndex: n
         },
-        onAfterEnter: ay,
-        onAfterLeave: ty
-      }), _g(e) ? e : {
+        onAfterEnter: ry,
+        onAfterLeave: ay
+      }), xg(e) ? e : {
         default: () => [e]
       });
     };
@@ -14606,8 +14605,8 @@ var Ji = ["loading", "success", "warning", "info", "error"], tl = 0, Oi = !1, Vi
 }, Dn = function(e) {
   var n = qe(e) || je(e) ? {
     content: String(e)
-  } : e, r = Ne(Ha({}, ey, n));
-  r.show = !0, Oi || (Oi = !0, Vi = Ma(ry).unmountInstance);
+  } : e, r = Ne(Ha({}, _g, n));
+  r.show = !0, Oi || (Oi = !0, Vi = Ma(ny).unmountInstance);
   var {
     length: a
   } = dn, t = {
@@ -14615,10 +14614,10 @@ var Ji = ["loading", "success", "warning", "info", "error"], tl = 0, Oi = !1, Vi
     reactiveSnackOptions: r
   };
   if (a === 0 || Va)
-    iy(t);
+    ty(t);
   else {
     var i = "update-" + tl;
-    oy(r, i);
+    iy(r, i);
   }
   return {
     clear() {
@@ -14646,25 +14645,25 @@ Dn.clear = function() {
   });
 };
 Dn.Component = ua;
-function ay(e) {
+function ry(e) {
   var n = e.getAttribute("data-id"), r = dn.find((a) => a.id === z(n));
   r && (r.reactiveSnackOptions.onOpened == null || r.reactiveSnackOptions.onOpened());
 }
-function ty(e) {
+function ay(e) {
   e.parentElement && e.parentElement.classList.remove("var-pointer-auto");
   var n = e.getAttribute("data-id"), r = dn.find((t) => t.id === z(n));
   r && (r.animationEnd = !0, r.reactiveSnackOptions.onClosed == null || r.reactiveSnackOptions.onClosed());
   var a = dn.every((t) => t.animationEnd);
   a && (Vi == null || Vi(), dn = Ne([]), Oi = !1);
 }
-function iy(e) {
+function ty(e) {
   dn.push(e);
 }
-function oy(e, n) {
+function iy(e, n) {
   var [r] = dn;
   r.reactiveSnackOptions = Ha({}, r.reactiveSnackOptions, e), r._update = n;
 }
-function ly(e) {
+function oy(e) {
   return e === void 0 && (e = "top"), e === "bottom" ? {
     [e]: "5%"
   } : {
@@ -14674,14 +14673,14 @@ function ly(e) {
 ua.install = function(e) {
   e.component(ua.name, ua);
 };
-var Ms = (e) => ["mini", "small", "normal", "large"].includes(e), sy = (e) => Ms(e) || Ce(e) || je(e) || qe(e), uy = (e) => ["start", "end", "center", "space-around", "space-between"].includes(e), dy = {
+var Ms = (e) => ["mini", "small", "normal", "large"].includes(e), ly = (e) => Ms(e) || Ce(e) || je(e) || qe(e), sy = (e) => ["start", "end", "center", "space-around", "space-between"].includes(e), uy = {
   align: {
     type: String
   },
   size: {
     type: [String, Number, Array],
     default: "normal",
-    validator: sy
+    validator: ly
   },
   wrap: {
     type: Boolean,
@@ -14694,7 +14693,7 @@ var Ms = (e) => ["mini", "small", "normal", "large"].includes(e), sy = (e) => Ms
   justify: {
     type: String,
     default: "start",
-    validator: uy
+    validator: sy
   },
   inline: {
     type: Boolean,
@@ -14702,8 +14701,8 @@ var Ms = (e) => ["mini", "small", "normal", "large"].includes(e), sy = (e) => Ms
   }
 }, {
   n: jt,
-  classes: vy
-} = ne("space"), fy = {
+  classes: dy
+} = ne("space"), vy = {
   mini: [4, 4],
   small: [6, 6],
   normal: [8, 12],
@@ -14711,11 +14710,11 @@ var Ms = (e) => ["mini", "small", "normal", "large"].includes(e), sy = (e) => Ms
 };
 const da = Q({
   name: "VarSpace",
-  props: dy,
+  props: uy,
   setup(e, n) {
     var {
       slots: r
-    } = n, a = (i, o) => o ? fy[i] : Ce(i) ? i.map(Ie) : [Ie(i), Ie(i)], t = (i) => i === "start" || i === "end" ? "flex-" + i : i;
+    } = n, a = (i, o) => o ? vy[i] : Ce(i) ? i.map(Ie) : [Ie(i), Ie(i)], t = (i) => i === "start" || i === "end" ? "flex-" + i : i;
     return () => {
       var i, {
         inline: o,
@@ -14748,7 +14747,7 @@ const da = Q({
         }, [g]);
       });
       return ee("div", {
-        class: vy(jt(), jt("$--box"), [o, jt("--inline")]),
+        class: dy(jt(), jt("$--box"), [o, jt("--inline")]),
         style: {
           flexDirection: d,
           justifyContent: t(l),
@@ -14763,7 +14762,7 @@ const da = Q({
 da.install = function(e) {
   e.component(da.name, da);
 };
-var cy = {
+var fy = {
   activeIcon: {
     type: String,
     default: "check"
@@ -14775,7 +14774,7 @@ var cy = {
     type: String
   }
 }, Is = Symbol("STEPS_BIND_STEP_KEY"), Ns = Symbol("STEPS_COUNT_STEP_KEY");
-function my() {
+function cy() {
   var {
     bindChildren: e,
     childProviders: n
@@ -14788,7 +14787,7 @@ function my() {
     bindStep: e
   };
 }
-function py() {
+function my() {
   var {
     parentProvider: e,
     bindParent: n
@@ -14804,12 +14803,12 @@ function py() {
   };
 }
 var {
-  n: hy,
-  classes: gy
-} = ne("step"), yy = {
+  n: py,
+  classes: hy
+} = ne("step"), gy = {
   key: 3
 };
-function by(e, n) {
+function yy(e, n) {
   var r = te("var-icon");
   return h(), P(
     "div",
@@ -14873,7 +14872,7 @@ function by(e, n) {
             ["class", "name"]
           )) : (h(), P(
             "span",
-            yy,
+            gy,
             _(e.index + 1),
             1
           ))],
@@ -14908,18 +14907,18 @@ function by(e, n) {
   );
 }
 const va = Q({
-  render: by,
+  render: yy,
   name: "VarStep",
   components: {
     VarIcon: Te
   },
-  props: cy,
+  props: fy,
   setup() {
     var e = M(null), n = M(""), r = M(!1), {
       index: a,
       steps: t,
       bindSteps: i
-    } = py(), {
+    } = my(), {
       active: o,
       length: l,
       activeColor: s,
@@ -14937,8 +14936,8 @@ const va = Q({
         n.value = "0 -" + S + "px";
       }
     }), {
-      n: hy,
-      classes: gy,
+      n: py,
+      classes: hy,
       main: e,
       index: a,
       isActive: m,
@@ -14956,10 +14955,10 @@ const va = Q({
 va.install = function(e) {
   e.component(va.name, va);
 };
-function wy(e) {
+function by(e) {
   return ["horizontal", "vertical"].includes(e);
 }
-var Sy = {
+var wy = {
   active: {
     type: [String, Number],
     default: 0
@@ -14967,7 +14966,7 @@ var Sy = {
   direction: {
     type: String,
     default: "horizontal",
-    validator: wy
+    validator: by
   },
   activeColor: {
     type: String
@@ -14979,9 +14978,9 @@ var Sy = {
     type: Function
   }
 }, {
-  n: Cy
+  n: Sy
 } = ne("steps");
-function ky(e, n) {
+function Cy(e, n) {
   return h(), P(
     "div",
     {
@@ -14995,14 +14994,14 @@ function ky(e, n) {
   );
 }
 const fa = Q({
-  render: ky,
+  render: Cy,
   name: "VarSteps",
-  props: Sy,
+  props: wy,
   setup(e) {
     var n = Y(() => e.active), r = Y(() => e.activeColor), a = Y(() => e.inactiveColor), t = Y(() => e.direction), {
       length: i,
       bindStep: o
-    } = my(), l = (u) => {
+    } = cy(), l = (u) => {
       N(e.onClickStep, u);
     }, s = {
       active: n,
@@ -15013,7 +15012,7 @@ const fa = Q({
       clickStep: l
     };
     return o(s), {
-      n: Cy
+      n: Sy
     };
   }
 });
@@ -15021,7 +15020,7 @@ fa.install = function(e) {
   e.component(fa.name, fa);
 };
 var {
-  n: $y
+  n: ky
 } = ne("style-provider");
 const ca = Q({
   name: "VarStyleProvider",
@@ -15040,7 +15039,7 @@ const ca = Q({
       slots: r
     } = n;
     return () => cl(e.tag, {
-      class: $y(),
+      class: ky(),
       style: Sl(e.styleVars)
     }, N(r.default));
   }
@@ -15061,7 +15060,7 @@ ca.install = function(e) {
 ja.install = function(e) {
   e.component(ca.name, ca);
 };
-var Ty = {
+var $y = {
   modelValue: {
     default: !1
   },
@@ -15112,10 +15111,10 @@ var Ty = {
     type: Function
   }
 }, {
-  n: Oy,
-  classes: Vy
+  n: Ty,
+  classes: Oy
 } = ne("switch");
-function Py(e, n) {
+function Vy(e, n) {
   var r = te("var-loading"), a = te("var-form-details"), t = Ge("ripple");
   return h(), P(
     "div",
@@ -15182,7 +15181,7 @@ function Py(e, n) {
   );
 }
 const ma = Q({
-  render: Py,
+  render: Vy,
   name: "VarSwitch",
   components: {
     VarLoading: kn,
@@ -15191,7 +15190,7 @@ const ma = Q({
   directives: {
     Ripple: Ue
   },
-  props: Ty,
+  props: $y,
   setup(e) {
     var {
       bindForm: n,
@@ -15264,8 +15263,8 @@ const ma = Q({
       resetValidation: o
     };
     return N(n, m), {
-      n: Oy,
-      classes: Vy,
+      n: Ty,
+      classes: Oy,
       switchActive: v,
       radius: d,
       styleComputed: u,
@@ -15278,7 +15277,7 @@ const ma = Q({
 ma.install = function(e) {
   e.component(ma.name, ma);
 };
-var Ey = {
+var Py = {
   name: {
     type: [String, Number]
   },
@@ -15290,7 +15289,7 @@ var Ey = {
     type: Function
   }
 }, Ds = Symbol("TABS_BIND_TAB_KEY"), Bs = Symbol("TABS_COUNT_TAB_KEY");
-function My() {
+function Ey() {
   var {
     childProviders: e,
     bindChildren: n
@@ -15303,7 +15302,7 @@ function My() {
     bindTabList: n
   };
 }
-function Iy() {
+function My() {
   var {
     parentProvider: e,
     bindParent: n
@@ -15320,9 +15319,9 @@ function Iy() {
 }
 var {
   n: tt,
-  classes: Ny
+  classes: Iy
 } = ne("tab");
-function Dy(e, n) {
+function Ny(e, n) {
   var r = Ge("ripple");
   return ke((h(), P(
     "div",
@@ -15343,18 +15342,18 @@ function Dy(e, n) {
   }]]);
 }
 const pa = Q({
-  render: Dy,
+  render: Ny,
   name: "VarTab",
   directives: {
     Ripple: Ue
   },
-  props: Ey,
+  props: Py,
   setup(e) {
     var n = M(null), r = Y(() => e.name), a = Y(() => e.disabled), t = Y(() => n.value), {
       index: i,
       tabs: o,
       bindTabs: l
-    } = Iy(), {
+    } = My(), {
       onTabClick: s,
       active: u,
       activeColor: d,
@@ -15391,7 +15390,7 @@ const pa = Q({
     };
     return ae(() => e.name, p), ae(() => e.disabled, p), {
       n: tt,
-      classes: Ny,
+      classes: Iy,
       tabEl: n,
       active: u,
       activeColor: d,
@@ -15407,7 +15406,7 @@ pa.install = function(e) {
   e.component(pa.name, pa);
 };
 var As = Symbol("TABS_ITEMS_BIND_TAB_ITEM_KEY"), zs = Symbol("TABS_ITEMS_COUNT_TAB_ITEM_KEY");
-function By() {
+function Dy() {
   var {
     bindChildren: e,
     childProviders: n
@@ -15420,7 +15419,7 @@ function By() {
     bindTabItem: e
   };
 }
-function Ay() {
+function By() {
   var {
     parentProvider: e,
     bindParent: n
@@ -15435,15 +15434,15 @@ function Ay() {
     bindTabsItems: n
   };
 }
-var zy = {
+var Ay = {
   name: {
     type: [String, Number]
   }
 }, {
-  n: Ly,
-  classes: Fy
+  n: zy,
+  classes: Ly
 } = ne("tab-item");
-function Ry(e, n) {
+function Fy(e, n) {
   var r = te("var-swipe-item");
   return h(), me(
     r,
@@ -15462,17 +15461,17 @@ function Ry(e, n) {
   );
 }
 const ha = Q({
-  render: Ry,
+  render: Fy,
   name: "VarTabItem",
   components: {
     VarSwipeItem: Zn
   },
-  props: zy,
+  props: Ay,
   setup(e) {
     var n = M(!1), r = M(!1), a = Y(() => e.name), {
       index: t,
       bindTabsItems: i
-    } = Ay(), o = (s) => {
+    } = By(), o = (s) => {
       !r.value && s && (r.value = !0), n.value = s;
     }, l = {
       index: t,
@@ -15480,8 +15479,8 @@ const ha = Q({
       setCurrent: o
     };
     return i(l), {
-      n: Ly,
-      classes: Fy,
+      n: zy,
+      classes: Ly,
       current: n,
       initSlot: r
     };
@@ -15491,10 +15490,10 @@ ha.install = function(e) {
   e.component(ha.name, ha);
 };
 var {
-  n: Uy,
-  classes: Yy
+  n: Ry,
+  classes: Uy
 } = ne("table");
-function Wy(e, n) {
+function Yy(e, n) {
   return h(), P(
     "div",
     {
@@ -15530,7 +15529,7 @@ function Wy(e, n) {
   );
 }
 const ga = Q({
-  render: Wy,
+  render: Yy,
   name: "VarTable",
   props: {
     fullWidth: {
@@ -15541,8 +15540,8 @@ const ga = Q({
   setup() {
     return {
       toSizeUnit: be,
-      n: Uy,
-      classes: Yy
+      n: Ry,
+      classes: Uy
     };
   }
 });
@@ -15552,7 +15551,7 @@ ga.install = function(e) {
 function il(e) {
   return ["horizontal", "vertical"].includes(e);
 }
-var Hy = {
+var Wy = {
   active: {
     type: [String, Number],
     default: 0
@@ -15621,7 +15620,7 @@ function ol(e, n, r, a, t, i, o) {
   }
   l.done ? n(s) : Promise.resolve(s).then(a, t);
 }
-function jy(e) {
+function Hy(e) {
   return function() {
     var n = this, r = arguments;
     return new Promise(function(a, t) {
@@ -15637,10 +15636,10 @@ function jy(e) {
   };
 }
 var {
-  n: Gy,
-  classes: qy
+  n: jy,
+  classes: Gy
 } = ne("tabs");
-function Xy(e, n) {
+function qy(e, n) {
   return h(), me(
     Pa(e.sticky ? e.n("$-sticky") : e.Transition),
     {
@@ -15686,19 +15685,19 @@ function Xy(e, n) {
   );
 }
 const ya = Q({
-  render: Xy,
+  render: qy,
   name: "VarTabs",
   components: {
     VarSticky: Jn
   },
   inheritAttrs: !1,
-  props: Hy,
+  props: Wy,
   setup(e) {
     var n = M("0px"), r = M("0px"), a = M("0px"), t = M("0px"), i = M(!1), o = M(null), l = Y(() => e.active), s = Y(() => e.activeColor), u = Y(() => e.inactiveColor), d = Y(() => e.disabledColor), v = Y(() => e.itemDirection), {
       tabList: f,
       bindTabList: m,
       length: p
-    } = My(), b = (C) => {
+    } = Ey(), b = (C) => {
       var B, V = (B = C.name.value) != null ? B : C.index.value, {
         active: $,
         onChange: O,
@@ -15764,7 +15763,7 @@ const ya = Q({
       resize: k,
       onTabClick: b
     };
-    return m(A), ae(() => p.value, /* @__PURE__ */ jy(function* () {
+    return m(A), ae(() => p.value, /* @__PURE__ */ Hy(function* () {
       yield Tn(), k();
     })), ae(() => e.active, k), Fe(() => window.addEventListener("resize", k)), rr(() => window.removeEventListener("resize", k)), {
       indicatorWidth: n,
@@ -15775,8 +15774,8 @@ const ya = Q({
       scrollerEl: o,
       Transition: Le,
       toSizeUnit: be,
-      n: Gy,
-      classes: qy,
+      n: jy,
+      classes: Gy,
       resize: k
     };
   }
@@ -15784,7 +15783,7 @@ const ya = Q({
 ya.install = function(e) {
   e.component(ya.name, ya);
 };
-var Ky = {
+var Xy = {
   active: {
     type: [String, Number],
     default: 0
@@ -15810,7 +15809,7 @@ function ll(e, n, r, a, t, i, o) {
   }
   l.done ? n(s) : Promise.resolve(s).then(a, t);
 }
-function Zy(e) {
+function Ky(e) {
   return function() {
     var n = this, r = arguments;
     return new Promise(function(a, t) {
@@ -15826,9 +15825,9 @@ function Zy(e) {
   };
 }
 var {
-  n: Jy
+  n: Zy
 } = ne("tabs-items");
-function Qy(e, n) {
+function Jy(e, n) {
   var r = te("var-swipe");
   return h(), me(
     r,
@@ -15849,18 +15848,18 @@ function Qy(e, n) {
   );
 }
 const ba = Q({
-  render: Qy,
+  render: Jy,
   name: "VarTabsItems",
   components: {
     VarSwipe: Kn
   },
-  props: Ky,
+  props: Xy,
   setup(e) {
     var n = M(null), {
       tabItemList: r,
       bindTabItem: a,
       length: t
-    } = By(), i = (f) => r.find((m) => {
+    } = Dy(), i = (f) => r.find((m) => {
       var {
         name: p
       } = m;
@@ -15887,11 +15886,11 @@ const ba = Q({
       }), b = (m = p.name.value) != null ? m : p.index.value;
       N(e["onUpdate:active"], b);
     }, d = () => n.value, v = {};
-    return a(v), ae(() => e.active, s), ae(() => t.value, /* @__PURE__ */ Zy(function* () {
+    return a(v), ae(() => e.active, s), ae(() => t.value, /* @__PURE__ */ Ky(function* () {
       yield Tn(), s(e.active);
     })), {
       swipe: n,
-      n: Jy,
+      n: Zy,
       handleSwipeChange: u,
       getSwipe: d
     };
@@ -15900,61 +15899,61 @@ const ba = Q({
 ba.install = function(e) {
   e.component(ba.name, ba);
 };
-const xy = {
+const Qy = {
   "--action-sheet-background": "#1e1e1e",
   "--action-sheet-title-color": "#aaa",
   "--action-sheet-action-item-color": "#fff"
-}, _y = {
+}, xy = {
   "--badge-default-color": "#555"
-}, e0 = {
+}, _y = {
   "--button-default-color": "#303030"
-}, n0 = {
+}, e0 = {
   "--card-background": "#303030",
   "--card-title-color": "#ffffff",
   "--card-subtitle-color": "#aaaaaa",
   "--card-description-color": "#aaaaaa"
-}, r0 = {
+}, n0 = {
   "--cell-description-color": "#aaa",
   "--cell-border-color": "#545454"
-}, a0 = {
+}, r0 = {
   "--checkbox-unchecked-color": "#fff"
-}, t0 = {
+}, a0 = {
   "--chip-default-color": "#555"
-}, i0 = {
+}, t0 = {
   "--collapse-background": "#303030",
   "--collapse-text-color": "#fff",
   "--collapse-border-top": "thin solid rgba(255, 255, 255, 0.12)"
-}, o0 = {
+}, i0 = {
   "--date-picker-main-color": "#fff",
   "--date-picker-body-background-color": "#303030",
   "--day-picker-head-item-color": "#aaaaaa"
-}, l0 = {
+}, o0 = {
   "--dialog-background": "#1e1e1e",
   "--dialog-message-color": "#bbb"
-}, s0 = {
+}, l0 = {
   "--divider-color": "rgba(255, 255, 255, 0.2)",
   "--divider-text-color": "#aaa"
-}, u0 = {
+}, s0 = {
   "--input-input-text-color": "#fff",
   "--input-blur-color": "rgb(255, 255, 255, .7)"
-}, d0 = {
+}, u0 = {
   "--pagination-list-bg-color": "#303030",
   "--pagination-hover-bg-color": "#25293a",
   "--pagination-list-active-bg-color": "#25293a",
   "--pagination-list-active-color": "#4a7afe",
   "--pagination-item-background": "#303030"
-}, v0 = {
+}, d0 = {
   "--picker-background": "#1e1e1e",
   "--picker-cancel-button-text-color": "#aaa",
   "--picker-picked-border": "1px solid rgba(255, 255, 255, 0.12)",
   "--picker-mask-background-image": "linear-gradient(180deg, hsla(0, 0%, 12%, 0.9), hsla(0, 0%, 12%, 0.4)), linear-gradient(0deg, hsla(0, 0%, 12%, 0.9), hsla(0, 0%, 12%, 0.4))"
-}, f0 = {
+}, v0 = {
   "--popup-content-background-color": "#1e1e1e"
-}, c0 = {
+}, f0 = {
   "--pull-refresh-background": "#303030"
-}, m0 = {
+}, c0 = {
   "--radio-unchecked-color": "#fff"
-}, p0 = {
+}, m0 = {
   "--result-background": "#303030",
   "--result-title-color": "#ffffff",
   "--result-description-color": "#aaaaaa",
@@ -15962,52 +15961,52 @@ const xy = {
   "--result-question-border-color": "rgba(151,194,216,0.3)",
   "--result-empty-color": "#adadad",
   "--result-empty-border-color": "rgba(232,229,229,0.3)"
-}, h0 = {
+}, p0 = {
   "--select-select-text-color": "#fff",
   "--select-blur-color": "rgb(255, 255, 255, .7)",
   "--select-scroller-background": "#303030"
-}, g0 = {
+}, h0 = {
   "--skeleton-card-background-color": "hsla(0,0%,100%,.12)",
   "--skeleton-animation-background": `linear-gradient(
         90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.05),hsla(0,0%,100%,0))
       `,
   "--skeleton-avatar-background-color": "hsla(0,0%,100%,.12)",
   "--skeleton-title-background-color": "hsla(0,0%,100%,.12)"
-}, y0 = {
+}, g0 = {
   "--step-content-color": "rgba(255, 255, 255, .38)",
   "--step-content-active-color": "#fff",
   "--step-line-background": "#fff"
-}, b0 = {
+}, y0 = {
   "--switch-track-background": "#727272",
   "--switch-handle-background": "#727272"
-}, w0 = {
+}, b0 = {
   "--tab-inactive-color": "rgba(255, 255, 255, .65)"
-}, S0 = {
+}, w0 = {
   "--table-background": "#303030",
   "--table-thead-th-text-color": "rgba(255, 255, 255, 0.6)",
   "--table-tbody-tr-hover-background": "#4c4b4b",
   "--table-thead-border-bottom": "thin solid rgba(255, 255, 255, 0.12)",
   "--table-tbody-tr-border-bottom": "thin solid rgba(255, 255, 255, 0.12)"
-}, C0 = {
+}, S0 = {
   "--time-picker-clock-container-background": "#545454",
   "--time-picker-body-background": "#303030",
   "--time-picker-clock-item-disable-color": "#aaaaaa"
-}, k0 = {
+}, C0 = {
   "--uploader-action-background": "#303030",
   "--uploader-action-icon-color": "#fff",
   "--uploader-file-name-background": "#303030",
   "--uploader-file-name-color": "#aaa",
   "--uploader-file-cover-background": "#303030"
-}, $0 = {
+}, k0 = {
   "--tabs-background": "#1e1e1e"
-}, T0 = {
+}, $0 = {
   "--app-bar-color": "#272727"
-}, O0 = {
+}, T0 = {
   "--bottom-navigation-background-color": "#272727",
   "--bottom-navigation-border-color": "#444"
-}, V0 = {
+}, O0 = {
   "--bottom-navigation-item-active-background-color": "#272727"
-}, P0 = {
+}, V0 = {
   "--menu-background-color": "#272727"
 };
 function Pi() {
@@ -16020,7 +16019,7 @@ function Pi() {
     return e;
   }, Pi.apply(this, arguments);
 }
-const E0 = Pi({
+const P0 = Pi({
   "--color-body": "#1e1e1e",
   "--color-text": "#fff",
   "--color-primary": "#4a7afe",
@@ -16030,14 +16029,14 @@ const E0 = Pi({
   "--color-danger": "#ef5350",
   "--color-disabled": "#404040",
   "--color-text-disabled": "#757575"
-}, e0, r0, n0, C0, o0, g0, $0, w0, f0, l0, xy, t0, _y, k0, i0, c0, b0, y0, d0, S0, u0, h0, m0, a0, s0, v0, T0, O0, V0, P0, p0);
+}, _y, n0, e0, S0, i0, h0, k0, b0, v0, o0, Qy, a0, xy, C0, t0, f0, y0, g0, u0, w0, s0, p0, c0, r0, l0, d0, $0, T0, O0, V0, m0);
 var Ei = {
-  dark: E0
+  dark: P0
 }, sn = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], Je = ["00", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"], sl = ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"];
-function M0(e) {
+function E0(e) {
   return ["ampm", "24hr"].includes(e);
 }
-var I0 = {
+var M0 = {
   modelValue: {
     type: String
   },
@@ -16054,7 +16053,7 @@ var I0 = {
   format: {
     type: String,
     default: "ampm",
-    validator: M0
+    validator: E0
   },
   allowedTime: {
     type: Object
@@ -16178,10 +16177,10 @@ var I0 = {
   }
   return (n = e.allowedTime) != null && n.seconds && (p = (r = e.allowedTime) == null ? void 0 : r.seconds(a)), m || p;
 }, {
-  n: N0,
-  classes: D0
+  n: I0,
+  classes: N0
 } = ne("time-picker");
-function B0(e, n) {
+function D0(e, n) {
   return h(), P(
     "div",
     {
@@ -16236,8 +16235,8 @@ function B0(e, n) {
     2
   );
 }
-const A0 = Q({
-  render: B0,
+const B0 = Q({
+  render: D0,
   name: "Clock",
   props: {
     isInner: {
@@ -16417,8 +16416,8 @@ const A0 = Q({
     }, {
       immediate: !0
     }), {
-      n: N0,
-      classes: D0,
+      n: I0,
+      classes: N0,
       hours24: Je,
       timeScales: s,
       inner: a,
@@ -16433,17 +16432,17 @@ const A0 = Q({
   }
 });
 var {
-  n: z0,
-  classes: L0
-} = ne("time-picker"), F0 = (e) => (Cr(""), e = e(), kr(), e), R0 = /* @__PURE__ */ F0(() => /* @__PURE__ */ D(
+  n: A0,
+  classes: z0
+} = ne("time-picker"), L0 = (e) => (Cr(""), e = e(), kr(), e), F0 = /* @__PURE__ */ L0(() => /* @__PURE__ */ D(
   "span",
   null,
   ":",
   -1
-)), U0 = {
+)), R0 = {
   key: 0
 };
-function Y0(e, n) {
+function U0(e, n) {
   var r = te("clock");
   return h(), P(
     "div",
@@ -16472,7 +16471,7 @@ function Y0(e, n) {
           },
           _(e.time.hour),
           3
-        ), R0, D(
+        ), F0, D(
           "div",
           {
             class: c(e.classes(e.n("title-btn"), [e.type === "minute", e.n("title-btn--active")])),
@@ -16480,7 +16479,7 @@ function Y0(e, n) {
           },
           _(e.time.minute),
           3
-        ), e.useSeconds ? (h(), P("span", U0, ":")) : J("v-if", !0), e.useSeconds ? (h(), P(
+        ), e.useSeconds ? (h(), P("span", R0, ":")) : J("v-if", !0), e.useSeconds ? (h(), P(
           "div",
           {
             key: 1,
@@ -16580,12 +16579,12 @@ function Y0(e, n) {
   );
 }
 const wa = Q({
-  render: Y0,
+  render: U0,
   name: "VarTimePicker",
   components: {
-    Clock: A0
+    Clock: B0
   },
-  props: I0,
+  props: M0,
   setup(e) {
     var n = M(null), r = M(null), a = M(null), t = M(!1), i = M(!1), o = M(!1), l = M(!1), s = M(!1), u = M(void 0), d = M(0), v = M(0), f = M("hour"), m = M("am"), p = M(!1), b = M(!1), w = M({
       hour: "00",
@@ -16730,8 +16729,8 @@ const wa = Q({
     }, {
       immediate: !0
     }), {
-      n: z0,
-      classes: L0,
+      n: A0,
+      classes: z0,
       getRad: g,
       time: w,
       container: n,
@@ -16753,7 +16752,7 @@ const wa = Q({
 wa.install = function(e) {
   e.component(wa.name, wa);
 };
-var W0 = {
+var Y0 = {
   modelValue: {
     type: Array,
     default: () => []
@@ -16851,10 +16850,10 @@ function dl(e) {
   };
 }
 var {
-  n: H0,
-  classes: j0
-} = ne("uploader"), G0 = 0, q0 = ["onClick"], X0 = ["onClick"], K0 = ["src", "alt"], Z0 = ["multiple", "accept", "capture", "disabled"], J0 = ["src"];
-function Q0(e, n) {
+  n: W0,
+  classes: H0
+} = ne("uploader"), j0 = 0, G0 = ["onClick"], q0 = ["onClick"], X0 = ["src", "alt"], K0 = ["multiple", "accept", "capture", "disabled"], Z0 = ["src"];
+function J0(e, n) {
   var r = te("var-icon"), a = te("var-form-details"), t = te("var-popup"), i = Ge("ripple");
   return h(), P(
     "div",
@@ -16902,7 +16901,7 @@ function Q0(e, n) {
               ["class"]
             )],
             10,
-            X0
+            q0
           )) : J("v-if", !0), o.cover ? (h(), P(
             "img",
             {
@@ -16916,7 +16915,7 @@ function Q0(e, n) {
             },
             null,
             14,
-            K0
+            X0
           )) : J("v-if", !0), D(
             "div",
             {
@@ -16926,7 +16925,7 @@ function Q0(e, n) {
             2
           )],
           10,
-          q0
+          G0
         )), [[i, {
           disabled: e.disabled || e.formDisabled || e.readonly || e.formReadonly || !e.ripple
         }]])),
@@ -16956,7 +16955,7 @@ function Q0(e, n) {
           },
           null,
           42,
-          Z0
+          K0
         ), G(e.$slots, "default", {}, () => [ee(
           r,
           {
@@ -17010,7 +17009,7 @@ function Q0(e, n) {
             },
             null,
             10,
-            J0
+            Z0
           )) : J("v-if", !0)];
         }),
         _: 1
@@ -17022,7 +17021,7 @@ function Q0(e, n) {
   );
 }
 const Sa = Q({
-  render: Q0,
+  render: J0,
   name: "VarUploader",
   directives: {
     Ripple: Ue
@@ -17032,7 +17031,7 @@ const Sa = Q({
     VarPopup: yn,
     VarFormDetails: He
   },
-  props: W0,
+  props: Y0,
   setup(e) {
     var n = M(null), r = M(!1), a = M(null), t = Y(() => {
       var {
@@ -17075,7 +17074,7 @@ const Sa = Q({
         qe(H) && to(H) && (a.value = W, r.value = !0);
       }
     }, p = (W) => ({
-      id: G0++,
+      id: j0++,
       url: "",
       cover: "",
       name: W.name,
@@ -17178,8 +17177,8 @@ const Sa = Q({
     }, {
       deep: !0
     }), {
-      n: H0,
-      classes: j0,
+      n: W0,
+      classes: H0,
       input: n,
       files: v,
       showPreview: r,
@@ -17206,11 +17205,11 @@ const Sa = Q({
 Sa.install = function(e) {
   e.component(Sa.name, Sa);
 };
-function x0(e) {
+function Q0(e) {
   gr.install && e.use(gr), Nr.install && e.use(Nr), Dr.install && e.use(Dr), lr.install && e.use(lr), Br.install && e.use(Br), Ar.install && e.use(Ar), nn.install && e.use(nn), zr.install && e.use(zr), sr.install && e.use(sr), ur.install && e.use(ur), Lr.install && e.use(Lr), dr.install && e.use(dr), Fr.install && e.use(Fr), Rr.install && e.use(Rr), Ur.install && e.use(Ur), tn.install && e.use(tn), Yr.install && e.use(Yr), Wr.install && e.use(Wr), Hr.install && e.use(Hr), yr.install && e.use(yr), jr.install && e.use(jr), Xn.install && e.use(Xn), He.install && e.use(He), Te.install && e.use(Te), Gr.install && e.use(Gr), er.install && e.use(er), qr.install && e.use(qr), Xr.install && e.use(Xr), mr.install && e.use(mr), gt.install && e.use(gt), Kr.install && e.use(Kr), Zr.install && e.use(Zr), kn.install && e.use(kn), Ua.install && e.use(Ua), xt.install && e.use(xt), xn.install && e.use(xn), Jr.install && e.use(Jr), Qr.install && e.use(Qr), xr.install && e.use(xr), Sr.install && e.use(Sr), yn.install && e.use(yn), _r.install && e.use(_r), ea.install && e.use(ea), na.install && e.use(na), ra.install && e.use(ra), aa.install && e.use(aa), ta.install && e.use(ta), Ue.install && e.use(Ue), ia.install && e.use(ia), oa.install && e.use(oa), la.install && e.use(la), sa.install && e.use(sa), Dn.install && e.use(Dn), da.install && e.use(da), va.install && e.use(va), fa.install && e.use(fa), Jn.install && e.use(Jn), ja.install && e.use(ja), Kn.install && e.use(Kn), Zn.install && e.use(Zn), ma.install && e.use(ma), pa.install && e.use(pa), ha.install && e.use(ha), ga.install && e.use(ga), ya.install && e.use(ya), ba.install && e.use(ba), Ei.install && e.use(Ei), wa.install && e.use(wa), Sa.install && e.use(Sa);
 }
-const eb = {
-  install: x0,
+const _0 = {
+  install: Q0,
   ActionSheet: gr,
   AppBar: Nr,
   BackTop: Dr,
@@ -17351,6 +17350,6 @@ export {
   Ei as Themes,
   wa as TimePicker,
   Sa as Uploader,
-  eb as default,
-  x0 as install
+  _0 as default,
+  Q0 as install
 };
