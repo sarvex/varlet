@@ -10634,7 +10634,7 @@ const _n = Q({
       var {
         width: y,
         height: D
-      } = getComputedStyle(n.value);
+      } = window.getComputedStyle(n.value);
       u = {
         width: ze(y),
         height: ze(D)
