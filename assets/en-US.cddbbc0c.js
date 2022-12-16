@@ -4,26 +4,23 @@ import{_ as l,p as n,f as c,h as r,M as t,q as e,S as d,aq as o,P as s}from"./vu
     `),t("span",{class:"hljs-attr"},"description"),s("="),t("span",{class:"hljs-string"},'"The way she came into the place I knew right then and there.There was something different about this girl.The way she moved her hair her face her lines.Divinity in motion as she stalked the room.I could feel the aura of her presence.Every head turned feeling passion and lust.The girl was persuasive the girl I could not trust.The girl was bad.The girl was dangerous."'),s(`
   />`)]),s(`
 `),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),u={class:"card"},f=t("h3",null,"Show Subtitle",-1),v=t("pre",{class:"hljs"},[t("code",null,[s(`
-`),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),u={class:"card"},f=t("h3",null,"Show Subtitle",-1),v=t("pre",{class:"hljs"},[t("code",null,[t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-card"),s(`
     `),t("span",{class:"hljs-attr"},"title"),s("="),t("span",{class:"hljs-string"},'"Dangerous"'),s(`
     `),t("span",{class:"hljs-attr"},"subtitle"),s("="),t("span",{class:"hljs-string"},'"The girl was dangerous"'),s(`
     `),t("span",{class:"hljs-attr"},"description"),s("="),t("span",{class:"hljs-string"},'"The way she came into the place I knew right then and there.There was something different about this girl.The way she moved her hair her face her lines.Divinity in motion as she stalked the room.I could feel the aura of her presence.Every head turned feeling passion and lust.The girl was persuasive the girl I could not trust.The girl was bad.The girl was dangerous."'),s(`
   />`)]),s(`
 `),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),b={class:"card"},_=t("h3",null,"Outline",-1),w=t("pre",{class:"hljs"},[t("code",null,[s(`
-`),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),b={class:"card"},_=t("h3",null,"Outline",-1),w=t("pre",{class:"hljs"},[t("code",null,[t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-card"),s(`
     `),t("span",{class:"hljs-attr"},"outline"),s(`
-    `),t("span",{class:"hljs-attr"},"elevation"),s("="),t("span",{class:"hljs-string"},'"0"'),s(`
+    `),t("span",{class:"hljs-attr"},":elevation"),s("="),t("span",{class:"hljs-string"},'"0"'),s(`
     `),t("span",{class:"hljs-attr"},"title"),s("="),t("span",{class:"hljs-string"},'"Dangerous"'),s(`
     `),t("span",{class:"hljs-attr"},"subtitle"),s("="),t("span",{class:"hljs-string"},'"The girl was dangerous"'),s(`
     `),t("span",{class:"hljs-attr"},"description"),s("="),t("span",{class:"hljs-string"},'"The way she came into the place I knew right then and there.There was something different about this girl.The way she moved her hair her face her lines.Divinity in motion as she stalked the room.I could feel the aura of her presence.Every head turned feeling passion and lust.The girl was persuasive the girl I could not trust.The girl was bad.The girl was dangerous."'),s(`
   />`)]),s(`
 `),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),T={class:"card"},y=t("h3",null,"Show Image",-1),x=t("pre",{class:"hljs"},[t("code",null,[s(`
-`),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),T={class:"card"},y=t("h3",null,"Show Image",-1),x=t("pre",{class:"hljs"},[t("code",null,[t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-card"),s(),t("span",{class:"hljs-attr"},"title"),s("="),t("span",{class:"hljs-string"},'"Dangerous"'),s(),t("span",{class:"hljs-attr"},"subtitle"),s("="),t("span",{class:"hljs-string"},'"The girl was dangerous"'),s(),t("span",{class:"hljs-attr"},"src"),s("="),t("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s("/>")]),s(`
 `),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
 `)])],-1),I={class:"card"},k=t("h3",null,"Horizontal",-1),C=t("pre",{class:"hljs"},[t("code",null,[t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`

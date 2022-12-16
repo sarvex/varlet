@@ -4,19 +4,17 @@ import{_ as c,p as e,f as n,h as o,M as t,q as d,S as l,aq as r,P as s}from"./vu
     `),t("span",{class:"hljs-attr"},"description"),s("="),t("span",{class:"hljs-string"},'"\u5982\u679C\u534E\u4F57\u518D\u4E16,\u5D07\u6D0B\u90FD\u88AB\u533B\u6CBB,\u5916\u90A6\u6765\u5B66\u6C49\u5B57,\u6FC0\u53D1\u6211\u6C11\u65CF\u610F\u8BC6\u3002\u9A6C\u94B1\u5B50\u3001\u51B3\u660E\u5B50\u3001\u82CD\u8033\u5B50\uFF0C\u8FD8\u6709\u83B2\u5B50\uFF1B\u9EC4\u836F\u5B50\u3001\u82E6\u8C46\u5B50\u3001\u5DDD\u695D\u5B50\uFF0C\u6211\u8981\u9762\u5B50\u3002\u7528\u6211\u7684\u65B9\u5F0F\uFF0C\u6539\u5199\u4E00\u90E8\u5386\u53F2\u3002\u6CA1\u4EC0\u4E48\u522B\u7684\u4E8B\uFF0C\u8DDF\u7740\u6211\u5FF5\u51E0\u4E2A\u5B57\u3002\u5C71\u836F\u5F53\u5F52\u67B8\u675E GO\uFF0C\u5C71\u836F \u5F53\u5F52 \u67B8\u675E GO\uFF0C\u770B\u6211\u6293\u4E00\u628A\u4E2D\u836F\uFF0C\u670D\u4E0B\u4E00\u5E16\u9A84\u50B2~"'),s(`
   />`)]),s(`
 `),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),u={class:"card"},_=t("h3",null,"\u663E\u793A\u526F\u6807\u9898",-1),v=t("pre",{class:"hljs"},[t("code",null,[s(`
-`),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),u={class:"card"},_=t("h3",null,"\u663E\u793A\u526F\u6807\u9898",-1),v=t("pre",{class:"hljs"},[t("code",null,[t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-card"),s(`
     `),t("span",{class:"hljs-attr"},"title"),s("="),t("span",{class:"hljs-string"},'"\u672C\u8349\u7EB2\u76EE"'),s(`
     `),t("span",{class:"hljs-attr"},"subtitle"),s("="),t("span",{class:"hljs-string"},'"\u6211\u8868\u60C5\u60A0\u54C9 \u8DF3\u4E2A\u5927\u6982"'),s(`
     `),t("span",{class:"hljs-attr"},"description"),s("="),t("span",{class:"hljs-string"},'"\u5982\u679C\u534E\u4F57\u518D\u4E16,\u5D07\u6D0B\u90FD\u88AB\u533B\u6CBB,\u5916\u90A6\u6765\u5B66\u6C49\u5B57,\u6FC0\u53D1\u6211\u6C11\u65CF\u610F\u8BC6\u3002\u9A6C\u94B1\u5B50\u3001\u51B3\u660E\u5B50\u3001\u82CD\u8033\u5B50\uFF0C\u8FD8\u6709\u83B2\u5B50\uFF1B\u9EC4\u836F\u5B50\u3001\u82E6\u8C46\u5B50\u3001\u5DDD\u695D\u5B50\uFF0C\u6211\u8981\u9762\u5B50\u3002\u7528\u6211\u7684\u65B9\u5F0F\uFF0C\u6539\u5199\u4E00\u90E8\u5386\u53F2\u3002\u6CA1\u4EC0\u4E48\u522B\u7684\u4E8B\uFF0C\u8DDF\u7740\u6211\u5FF5\u51E0\u4E2A\u5B57\u3002\u5C71\u836F\u5F53\u5F52\u67B8\u675E GO\uFF0C\u5C71\u836F \u5F53\u5F52 \u67B8\u675E GO\uFF0C\u770B\u6211\u6293\u4E00\u628A\u4E2D\u836F\uFF0C\u670D\u4E0B\u4E00\u5E16\u9A84\u50B2~"'),s(`
   />`)]),s(`
 `),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),b={class:"card"},x=t("h3",null,"\u8F6E\u5ED3",-1),f=t("pre",{class:"hljs"},[t("code",null,[s(`
-`),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),b={class:"card"},x=t("h3",null,"\u5916\u8FB9\u6846",-1),f=t("pre",{class:"hljs"},[t("code",null,[t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-card"),s(`
     `),t("span",{class:"hljs-attr"},"outline"),s(`
-    `),t("span",{class:"hljs-attr"},"elevation"),s("="),t("span",{class:"hljs-string"},'"0"'),s(`
+    `),t("span",{class:"hljs-attr"},":elevation"),s("="),t("span",{class:"hljs-string"},'"0"'),s(`
     `),t("span",{class:"hljs-attr"},"title"),s("="),t("span",{class:"hljs-string"},'"\u672C\u8349\u7EB2\u76EE"'),s(`
     `),t("span",{class:"hljs-attr"},"subtitle"),s("="),t("span",{class:"hljs-string"},'"\u6211\u8868\u60C5\u60A0\u54C9 \u8DF3\u4E2A\u5927\u6982"'),s(`
     `),t("span",{class:"hljs-attr"},"description"),s("="),t("span",{class:"hljs-string"},'"\u5982\u679C\u534E\u4F57\u518D\u4E16,\u5D07\u6D0B\u90FD\u88AB\u533B\u6CBB,\u5916\u90A6\u6765\u5B66\u6C49\u5B57,\u6FC0\u53D1\u6211\u6C11\u65CF\u610F\u8BC6\u3002\u9A6C\u94B1\u5B50\u3001\u51B3\u660E\u5B50\u3001\u82CD\u8033\u5B50\uFF0C\u8FD8\u6709\u83B2\u5B50\uFF1B\u9EC4\u836F\u5B50\u3001\u82E6\u8C46\u5B50\u3001\u5DDD\u695D\u5B50\uFF0C\u6211\u8981\u9762\u5B50\u3002\u7528\u6211\u7684\u65B9\u5F0F\uFF0C\u6539\u5199\u4E00\u90E8\u5386\u53F2\u3002\u6CA1\u4EC0\u4E48\u522B\u7684\u4E8B\uFF0C\u8DDF\u7740\u6211\u5FF5\u51E0\u4E2A\u5B57\u3002\u5C71\u836F\u5F53\u5F52\u67B8\u675E GO\uFF0C\u5C71\u836F \u5F53\u5F52 \u67B8\u675E GO\uFF0C\u770B\u6211\u6293\u4E00\u628A\u4E2D\u836F\uFF0C\u670D\u4E0B\u4E00\u5E16\u9A84\u50B2~"'),s(`
@@ -36,7 +34,7 @@ import{_ as c,p as e,f as n,h as o,M as t,q as d,S as l,aq as r,P as s}from"./vu
     `),t("span",{class:"hljs-attr"},"subtitle"),s("="),t("span",{class:"hljs-string"},'"\u5982\u679C\u534E\u4F57\u518D\u4E16,\u5D07\u6D0B\u90FD\u88AB\u533B\u6CBB,\u5916\u90A6\u6765\u5B66\u6C49\u5B57,\u6FC0\u53D1\u6211\u6C11\u65CF\u610F\u8BC6\u3002\u9A6C\u94B1\u5B50\u3001\u51B3\u660E\u5B50\u3001\u82CD\u8033\u5B50\uFF0C\u8FD8\u6709\u83B2\u5B50\uFF1B\u9EC4\u836F\u5B50\u3001\u82E6\u8C46\u5B50\u3001\u5DDD\u695D\u5B50\uFF0C\u6211\u8981\u9762\u5B50\u3002\u7528\u6211\u7684\u65B9\u5F0F\uFF0C\u6539\u5199\u4E00\u90E8\u5386\u53F2\u3002\u6CA1\u4EC0\u4E48\u522B\u7684\u4E8B\uFF0C\u8DDF\u7740\u6211\u5FF5\u51E0\u4E2A\u5B57\u3002\u5C71\u836F\u5F53\u5F52\u67B8\u675E GO\uFF0C\u5C71\u836F \u5F53\u5F52 \u67B8\u675E GO\uFF0C\u770B\u6211\u6293\u4E00\u628A\u4E2D\u836F\uFF0C\u670D\u4E0B\u4E00\u5E16\u9A84\u50B2~"'),s(`
     `),t("span",{class:"hljs-attr"},"src"),s("="),t("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(`
     `),t("span",{class:"hljs-attr"},"layout"),s("="),t("span",{class:"hljs-string"},'"row"'),s(`
-  \\>`)]),s(`
+  >`)]),s(`
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(" #"),t("span",{class:"hljs-attr"},"extra"),s(">")]),s(`
       `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-button"),s(),t("span",{class:"hljs-attr"},"text"),s(),t("span",{class:"hljs-attr"},"round"),s(">")]),s(`
         `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-icon"),s(),t("span",{class:"hljs-attr"},"name"),s("="),t("span",{class:"hljs-string"},'"star"'),s(" />")]),s(`
