@@ -2378,6 +2378,10 @@ var $d = {
   imageWidth: {
     type: [String, Number]
   },
+  outline: {
+    type: Boolean,
+    default: !1
+  },
   layout: {
     type: String,
     default: "column"
@@ -2450,7 +2454,7 @@ function Md(e, n) {
     "div",
     {
       ref: "card",
-      class: c(e.classes(e.n(), [e.isRow, e.n("--layout-row")], [e.elevation, e.n("$-elevation--" + e.elevation), e.n("$-elevation--1")])),
+      class: c(e.classes(e.n(), [e.isRow, e.n("--layout-row")], [e.outline, e.n("--outline")], [e.elevation, e.n("$-elevation--" + e.elevation), e.n("$-elevation--1")])),
       style: K({
         zIndex: e.floated ? e.zIndex : void 0
       }),
@@ -15930,6 +15934,7 @@ const Jy = {
 }, _y = {
   "--card-background": "#303030",
   "--card-title-color": "#ffffff",
+  "--card-outline-color": "rgba(255, 255, 255, 0.2)",
   "--card-subtitle-color": "#aaaaaa",
   "--card-description-color": "#aaaaaa"
 }, e0 = {
