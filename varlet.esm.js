@@ -12601,12 +12601,8 @@ var Fh = {
   rules: {
     type: Array
   },
-  onChange: {
-    type: Function
-  },
-  "onUpdate:modelValue": {
-    type: Function
-  }
+  onChange: le(),
+  "onUpdate:modelValue": le()
 }, {
   n: Aa
 } = ne("rate"), Uh = ["onClick"];
@@ -13095,9 +13091,7 @@ var Eg = {
     default: "flex-start",
     validator: Pg
   },
-  onClick: {
-    type: Function
-  }
+  onClick: le()
 }, {
   n: Mg,
   classes: Ig
