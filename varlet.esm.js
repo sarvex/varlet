@@ -9277,9 +9277,7 @@ var Cm = {
   textColor: {
     type: String
   },
-  onClick: {
-    type: Function
-  }
+  onClick: ge()
 }, {
   n: km,
   classes: $m
@@ -9374,15 +9372,9 @@ var Om = {
   errorText: {
     type: String
   },
-  onLoad: {
-    type: Function
-  },
-  "onUpdate:loading": {
-    type: Function
-  },
-  "onUpdate:error": {
-    type: Function
-  }
+  onLoad: ge(),
+  "onUpdate:loading": ge(),
+  "onUpdate:error": ge()
 };
 function Ro(e, n, r, a, t, i, o) {
   try {
