@@ -2375,7 +2375,6 @@ var Pd = {
     type: Boolean,
     default: !1
   },
-  "onUpdate:floating": Y(),
   floatingDuration: {
     type: Number,
     default: 250
@@ -2399,7 +2398,8 @@ var Pd = {
     type: Boolean,
     default: !1
   },
-  onClick: Y()
+  onClick: Y(),
+  "onUpdate:floating": Y()
 };
 function go(e, n, r, a, t, i, o) {
   try {
