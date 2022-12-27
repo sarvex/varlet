@@ -15645,7 +15645,7 @@ function d0(e, n) {
     Da(e.sticky ? e.n("$-sticky") : e.Transition),
     {
       ref: e.sticky ? "stickyComponent" : void 0,
-      "css-mode": e.stickyCssMode,
+      "css-mode": e.sticky ? e.stickyCssMode : void 0,
       "offset-top": e.sticky ? e.offsetTop : void 0,
       "z-index": e.sticky ? e.stickyZIndex : void 0
     },
@@ -15775,7 +15775,7 @@ const ka = _({
       onTabClick: w
     };
     return h(z), te(() => g.value, /* @__PURE__ */ fl(function* () {
-      yield Vn(), yield B();
+      yield Vn(), B();
     })), te(() => e.active, B), Ue(() => window.addEventListener("resize", B)), tr(() => window.removeEventListener("resize", B)), {
       stickyComponent: f,
       indicatorWidth: n,
