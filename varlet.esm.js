@@ -16903,7 +16903,7 @@ function mb(e, n) {
                 zIndex: e.zIndex,
                 background: e.color
               }),
-              class: m(e.classes(e.n("tooltip"), [e.defaultStyle, e.n("--tooltip-background-color") + " var-elevation--3"], "" + e.n("--" + e.type), "" + e.n("--margin-" + e.placement))),
+              class: m(e.classes(e.n("tooltip"), [e.defaultStyle, "" + e.n("--tooltip-background-color")], "" + e.n("--" + e.type), "" + e.n("--margin-" + e.placement))),
               onClick: n[0] || (n[0] = Pn(() => {
               }, ["stop"])),
               onMouseenter: n[1] || (n[1] = function() {
