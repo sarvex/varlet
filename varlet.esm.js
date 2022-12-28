@@ -16913,7 +16913,7 @@ function mb(e, n) {
                 return e.handlePopoverMouseleave && e.handlePopoverMouseleave(...arguments);
               })
             },
-            [G(e.$slots, "tooltip", {}, () => [he(
+            [G(e.$slots, "content", {}, () => [he(
               ne(e.content),
               1
             )])],
