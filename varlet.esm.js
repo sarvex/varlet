@@ -16890,6 +16890,9 @@ function mb(e, n) {
             {
               ref: "popover",
               class: m(e.n("tooltip")),
+              style: X({
+                zIndex: e.zIndex
+              }),
               onClick: n[0] || (n[0] = Pn(() => {
               }, ["stop"])),
               onMouseenter: n[1] || (n[1] = function() {
@@ -16903,7 +16906,6 @@ function mb(e, n) {
               "div",
               {
                 style: X({
-                  zIndex: e.zIndex,
                   background: e.color
                 }),
                 class: m(e.classes(e.n("content-container"), e.n("--" + e.type), e.n("--margin-" + e.placement)))
@@ -16914,7 +16916,7 @@ function mb(e, n) {
               )])],
               6
             )],
-            34
+            38
           ), [[za, e.show]])]),
           _: 3
         },
