@@ -10767,16 +10767,16 @@ function Ns(e) {
       placement: S,
       skidding: D,
       distance: V
-    } = T();
+    } = T(), z = [Ct({}, Np, {
+      enabled: a.value
+    }), Ct({}, Ap, {
+      options: {
+        offset: [D, V]
+      }
+    })];
     return {
       placement: S,
-      modifiers: [Ct({}, Np, {
-        enabled: a.value
-      }), Ct({}, Ap, {
-        options: {
-          offset: [D, V]
-        }
-      })]
+      modifiers: z
     };
   }, b = () => {
     i.setOptions($());
@@ -16908,7 +16908,7 @@ function mb(e, n) {
                 style: X({
                   background: e.color
                 }),
-                class: m(e.classes(e.n("content-container"), e.n("--" + e.type), e.n("--margin-" + e.placement)))
+                class: m(e.classes(e.n("content-container"), e.n("--" + e.type)))
               },
               [G(e.$slots, "content", {}, () => [he(
                 ne(e.content),
