@@ -99,9 +99,9 @@ import{_ as e,p as c,f as o,h as d,M as t,q as l,S as n,P as s,aq as p}from"./vu
 `),t("span",{class:"hljs-keyword"},"import"),s(" { Snackbar } "),t("span",{class:"hljs-keyword"},"from"),s(),t("span",{class:"hljs-string"},"'@varlet/ui'"),s(`
 
 `),t("span",{class:"hljs-keyword"},"const"),s(" open = "),t("span",{class:"hljs-function"},"() =>"),s(" Snackbar.info("),t("span",{class:"hljs-string"},"'open'"),s(`)
-`),t("span",{class:"hljs-keyword"},"const"),s(" opened = "),t("span",{class:"hljs-function"},"() =>"),s(" Snackbar.info("),t("span",{class:"hljs-string"},"'opened'"),s(`)
-`),t("span",{class:"hljs-keyword"},"const"),s(" close = "),t("span",{class:"hljs-function"},"() =>"),s(" Snackbar.info("),t("span",{class:"hljs-string"},"'close'"),s(`)
-`),t("span",{class:"hljs-keyword"},"const"),s(" closed = "),t("span",{class:"hljs-function"},"() =>"),s(" Snackbar.info("),t("span",{class:"hljs-string"},"'closed'"),s(`)
+`),t("span",{class:"hljs-keyword"},"const"),s(" opened = "),t("span",{class:"hljs-function"},"() =>"),s(" Snackbar.success("),t("span",{class:"hljs-string"},"'opened'"),s(`)
+`),t("span",{class:"hljs-keyword"},"const"),s(" close = "),t("span",{class:"hljs-function"},"() =>"),s(" Snackbar.warning("),t("span",{class:"hljs-string"},"'close'"),s(`)
+`),t("span",{class:"hljs-keyword"},"const"),s(" closed = "),t("span",{class:"hljs-function"},"() =>"),s(" Snackbar.error("),t("span",{class:"hljs-string"},"'closed'"),s(`)
 `)]),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"script"),s(">")]),s(`
 
 `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
