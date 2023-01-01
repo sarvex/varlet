@@ -33,7 +33,7 @@ import{_ as c,p as e,f as d,h,M as a,q as l,S as n,P as s,aq as r}from"./vue-rou
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-tabs"),s(`
     `),a("span",{class:"hljs-attr"},"elevation"),s(`
-    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"#2979ff"'),s(`
+    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"var(--color-primary)"'),s(`
     `),a("span",{class:"hljs-attr"},"active-color"),s("="),a("span",{class:"hljs-string"},'"#fff"'),s(`
     `),a("span",{class:"hljs-attr"},"inactive-color"),s("="),a("span",{class:"hljs-string"},'"hsla(0, 0%, 100%, .6)"'),s(`
     `),a("span",{class:"hljs-attr"},"v-model:active"),s("="),a("span",{class:"hljs-string"},'"active"'),s(`
@@ -52,7 +52,7 @@ import{_ as c,p as e,f as d,h,M as a,q as l,S as n,P as s,aq as r}from"./vue-rou
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-tabs"),s(`
     `),a("span",{class:"hljs-attr"},"elevation"),s(`
-    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"#2979ff"'),s(`
+    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"var(--color-primary)"'),s(`
     `),a("span",{class:"hljs-attr"},"active-color"),s("="),a("span",{class:"hljs-string"},'"#fff"'),s(`
     `),a("span",{class:"hljs-attr"},"inactive-color"),s("="),a("span",{class:"hljs-string"},'"hsla(0, 0%, 100%, .6)"'),s(`
     `),a("span",{class:"hljs-attr"},"disabled-color"),s("="),a("span",{class:"hljs-string"},'"#aaa"'),s(`
@@ -72,7 +72,7 @@ import{_ as c,p as e,f as d,h,M as a,q as l,S as n,P as s,aq as r}from"./vue-rou
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-tabs"),s(`
     `),a("span",{class:"hljs-attr"},"elevation"),s(`
-    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"#2979ff"'),s(`
+    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"var(--color-primary)"'),s(`
     `),a("span",{class:"hljs-attr"},"active-color"),s("="),a("span",{class:"hljs-string"},'"#fff"'),s(`
     `),a("span",{class:"hljs-attr"},"inactive-color"),s("="),a("span",{class:"hljs-string"},'"hsla(0, 0%, 100%, .6)"'),s(`
     `),a("span",{class:"hljs-attr"},"v-model:active"),s("="),a("span",{class:"hljs-string"},'"active"'),s(`
@@ -97,7 +97,7 @@ import{_ as c,p as e,f as d,h,M as a,q as l,S as n,P as s,aq as r}from"./vue-rou
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-tabs"),s(`
     `),a("span",{class:"hljs-attr"},"elevation"),s(`
     `),a("span",{class:"hljs-attr"},"item-direction"),s("="),a("span",{class:"hljs-string"},'"vertical"'),s(`
-    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"#2979ff"'),s(`
+    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"var(--color-primary)"'),s(`
     `),a("span",{class:"hljs-attr"},"active-color"),s("="),a("span",{class:"hljs-string"},'"#fff"'),s(`
     `),a("span",{class:"hljs-attr"},"inactive-color"),s("="),a("span",{class:"hljs-string"},'"hsla(0, 0%, 100%, .6)"'),s(`
     `),a("span",{class:"hljs-attr"},"v-model:active"),s("="),a("span",{class:"hljs-string"},'"active"'),s(`
@@ -133,7 +133,7 @@ import{_ as c,p as e,f as d,h,M as a,q as l,S as n,P as s,aq as r}from"./vue-rou
     `),a("span",{class:"hljs-attr"},"class"),s("="),a("span",{class:"hljs-string"},'"tabs-example-vertical"'),s(`
     `),a("span",{class:"hljs-attr"},"elevation"),s(`
     `),a("span",{class:"hljs-attr"},"layout-direction"),s("="),a("span",{class:"hljs-string"},'"vertical"'),s(`
-    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"#2979ff"'),s(`
+    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"var(--color-primary)"'),s(`
     `),a("span",{class:"hljs-attr"},"active-color"),s("="),a("span",{class:"hljs-string"},'"#fff"'),s(`
     `),a("span",{class:"hljs-attr"},"inactive-color"),s("="),a("span",{class:"hljs-string"},'"hsla(0, 0%, 100%, .6)"'),s(`
     `),a("span",{class:"hljs-attr"},"v-model:active"),s("="),a("span",{class:"hljs-string"},'"active"'),s(`
@@ -159,7 +159,7 @@ import{_ as c,p as e,f as d,h,M as a,q as l,S as n,P as s,aq as r}from"./vue-rou
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-tabs"),s(`
     `),a("span",{class:"hljs-attr"},"elevation"),s(`
-    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"#2979ff"'),s(`
+    `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"var(--color-primary)"'),s(`
     `),a("span",{class:"hljs-attr"},"active-color"),s("="),a("span",{class:"hljs-string"},'"#fff"'),s(`
     `),a("span",{class:"hljs-attr"},"inactive-color"),s("="),a("span",{class:"hljs-string"},'"hsla(0, 0%, 100%, .6)"'),s(`
     `),a("span",{class:"hljs-attr"},"v-model:active"),s("="),a("span",{class:"hljs-string"},'"active"'),s(`
@@ -194,7 +194,7 @@ import{_ as c,p as e,f as d,h,M as a,q as l,S as n,P as s,aq as r}from"./vue-rou
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-tabs"),s(`
       `),a("span",{class:"hljs-attr"},"sticky"),s(`
       `),a("span",{class:"hljs-attr"},"elevation"),s(`
-      `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"#2979ff"'),s(`
+      `),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"var(--color-primary)"'),s(`
       `),a("span",{class:"hljs-attr"},"active-color"),s("="),a("span",{class:"hljs-string"},'"#fff"'),s(`
       `),a("span",{class:"hljs-attr"},"inactive-color"),s("="),a("span",{class:"hljs-string"},'"hsla(0, 0%, 100%, .6)"'),s(`
       `),a("span",{class:"hljs-attr"},"v-model:active"),s("="),a("span",{class:"hljs-string"},'"active"'),s(`
