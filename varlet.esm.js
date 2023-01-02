@@ -7431,13 +7431,21 @@ const Zn = _({
       }, 300);
     }, o = /* @__PURE__ */ function() {
       var d = Ec(function* () {
-        var v, f = yield Promise.all(a.map((S) => {
+        var v = yield Promise.all(a.map((T) => {
           var {
-            validate: T
-          } = S;
-          return T();
-        })), [c, h] = vu(f, (S) => S === !1, e.scrollToError), y = (v = a[h].instance.proxy) == null ? void 0 : v.$el;
-        return i(h, y), !!c;
+            validate: $
+          } = T;
+          return $();
+        }));
+        if (e.scrollToError) {
+          var [f, c] = vu(v, (T) => T === !1, e.scrollToError), h = c > -1;
+          if (h) {
+            var y, S = (y = a[c].instance.proxy) == null ? void 0 : y.$el;
+            i(c, S);
+          }
+          return !h;
+        }
+        return v.every((T) => T === !0);
       });
       return function() {
         return d.apply(this, arguments);
