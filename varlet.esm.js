@@ -7422,7 +7422,7 @@ const Zn = _({
       formItems: a,
       bindFormItems: t
     } = dv(), i = (d, v) => {
-      d === -1 || !e.scrollToError || setTimeout(() => {
+      setTimeout(() => {
         var f = Or(v), c = f === window ? 0 : co(f), h = co(v) - c - De(e.scrollToErrorOffsetY);
         Ga(f, {
           top: h,
