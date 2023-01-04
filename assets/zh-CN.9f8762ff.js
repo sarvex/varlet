@@ -79,7 +79,7 @@ import{_ as c,p as e,f as d,h,M as a,q as t,S as n,P as s,aq as p}from"./vue-rou
     `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-menu"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),x={class:"card"},M=a("h3",null,"\u4E0E\u89E6\u53D1\u5143\u7D20\u540C\u5BBD",-1),S=a("p",null,[s("\u901A\u8FC7 "),a("code",null,"same-width"),s(" \u4F7F\u5F39\u51FA\u83DC\u5355\u548C\u89E6\u53D1\u5668\u7684\u5BBD\u5EA6\u76F8\u540C\u3002")],-1),N=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),x={class:"card"},M=a("h3",null,"\u4E0E\u89E6\u53D1\u5143\u7D20\u540C\u5BBD",-1),S=a("p",null,[s("\u901A\u8FC7 "),a("code",null,"same-width"),s(" \u4F7F\u5F39\u51FA\u7684\u83DC\u5355\u548C\u89E6\u53D1\u5143\u7D20\u7684\u5BBD\u5EA6\u76F8\u540C\u3002")],-1),N=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-menu"),s(),a("span",{class:"hljs-attr"},"same-width"),s(">")]),s(`
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-button"),s(),a("span",{class:"hljs-attr"},"type"),s("="),a("span",{class:"hljs-string"},'"primary"'),s(">")]),s("\u4E0E\u89E6\u53D1\u5143\u7D20\u540C\u5BBD"),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-button"),s(">")]),s(`
     
