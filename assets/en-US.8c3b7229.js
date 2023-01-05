@@ -1,8 +1,8 @@
 import{_ as n,p as c,f as d,h as r,M as t,q as l,S as e,P as s,aq as o}from"./vue-router.esm-bundler.0e2db2be.js";const h={components:{}},i={class:"varlet-site-doc"},p=t("h1",null,"PullRefresh",-1),j=t("div",{class:"card"},[t("h3",null,"Intro"),t("p",null,"Provides a drop-down refresh interaction.")],-1),u={class:"card"},f=t("h3",null,"Basic Usage",-1),m=t("p",null,[s("The refresh event will be Emitted when pull refresh, you should set "),t("code",null,"v-model"),s(" to "),t("code",null,"true"),s(" at the beginning of the event indicates that loading is under way, and setting "),t("code",null,"v-model"),s(" to "),t("code",null,"false"),s(" after completion indicates that loading is over.")],-1),g=t("pre",{class:"hljs"},[t("code",null,[t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"script"),s(),t("span",{class:"hljs-attr"},"setup"),s(">")]),t("span",{class:"javascript"},[s(`
 `),t("span",{class:"hljs-keyword"},"import"),s(" { ref } "),t("span",{class:"hljs-keyword"},"from"),s(),t("span",{class:"hljs-string"},"'vue'"),s(`
 
-`),t("span",{class:"hljs-keyword"},"const"),s(" data1 = "),t("span",{class:"hljs-built_in"},"Array"),s("("),t("span",{class:"hljs-number"},"10"),s(").fill("),t("span",{class:"hljs-string"},"'List Item'"),s(`)
-`),t("span",{class:"hljs-keyword"},"const"),s(" data2 = "),t("span",{class:"hljs-built_in"},"Array"),s("("),t("span",{class:"hljs-number"},"10"),s(").fill("),t("span",{class:"hljs-string"},"'This is new List Item'"),s(`)
+`),t("span",{class:"hljs-keyword"},"const"),s(" data1 = "),t("span",{class:"hljs-built_in"},"Array"),s("("),t("span",{class:"hljs-number"},"30"),s(").fill("),t("span",{class:"hljs-string"},"'List Item'"),s(`)
+`),t("span",{class:"hljs-keyword"},"const"),s(" data2 = "),t("span",{class:"hljs-built_in"},"Array"),s("("),t("span",{class:"hljs-number"},"30"),s(").fill("),t("span",{class:"hljs-string"},"'This is new List Item'"),s(`)
 
 `),t("span",{class:"hljs-keyword"},"const"),s(" isRefresh = ref("),t("span",{class:"hljs-literal"},"false"),s(`)
 `),t("span",{class:"hljs-keyword"},"const"),s(` data = ref(data1)
