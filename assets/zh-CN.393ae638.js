@@ -84,15 +84,15 @@ import{_ as c,p as e,f as d,h as o,M as a,q as l,S as n,aq as r,P as s}from"./vu
 `)])],-1),I={class:"card"},M=a("h3",null,"\u6CE8\u518C\u4E8B\u4EF6",-1),D=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { Snackbar } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'@varlet/ui'"),s(`
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleClick = "),a("span",{class:"hljs-function"},"() =>"),s(` {
+`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleClick"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   Snackbar.success(`),a("span",{class:"hljs-string"},"'\u70B9\u51FB\u6210\u529F'"),s(`)
 }
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleTouchstart = "),a("span",{class:"hljs-function"},"() =>"),s(` {
+`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleTouchstart"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   Snackbar.success(`),a("span",{class:"hljs-string"},"'\u89E6\u6478\u6210\u529F'"),s(`)
 }
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleAutoLoadingClick = "),a("span",{class:"hljs-function"},"() =>"),s(` {   
+`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleAutoLoadingClick"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{   
   `),a("span",{class:"hljs-keyword"},"return"),s(),a("span",{class:"hljs-keyword"},"new"),s(),a("span",{class:"hljs-built_in"},"Promise"),s("("),a("span",{class:"hljs-function"},[s("("),a("span",{class:"hljs-params"},"resolve"),s(") =>")]),s(` {
     `),a("span",{class:"hljs-built_in"},"setTimeout"),s("(resolve, "),a("span",{class:"hljs-number"},"2000"),s(`)
   })
