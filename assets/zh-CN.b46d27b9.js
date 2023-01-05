@@ -71,7 +71,7 @@ import{_ as d,p as n,f as c,h as o,M as s,q as e,S as l,P as t,aq as r}from"./vu
 
 `),s("span",{class:"hljs-keyword"},"const"),t(" value = ref("),s("span",{class:"hljs-number"},"0"),t(`)
 
-`),s("span",{class:"hljs-function"},[s("span",{class:"hljs-keyword"},"function"),t(),s("span",{class:"hljs-title"},"handleBeforeChange"),t("("),s("span",{class:"hljs-params"},"value, change"),t(")  ")]),t(`{
+`),s("span",{class:"hljs-function"},[s("span",{class:"hljs-keyword"},"function"),t(),s("span",{class:"hljs-title"},"handleBeforeChange"),t("("),s("span",{class:"hljs-params"},"value, change"),t(") ")]),t(`{
   `),s("span",{class:"hljs-built_in"},"setTimeout"),t("("),s("span",{class:"hljs-function"},"() =>"),t(" change(value), "),s("span",{class:"hljs-number"},"500"),t(`)
 }
 `)]),s("span",{class:"hljs-tag"},[t("</"),s("span",{class:"hljs-name"},"script"),t(">")]),t(`
