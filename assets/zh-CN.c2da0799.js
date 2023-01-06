@@ -61,7 +61,7 @@ import{_ as c,p as e,f as d,h,M as a,q as l,S as n,P as s,aq as p}from"./vue-rou
 
 `),a("span",{class:"hljs-keyword"},"const"),s(" countdown = ref("),a("span",{class:"hljs-literal"},"null"),s(`)
 
-`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"end"),s("("),a("span",{class:"hljs-params"}),s(")  ")]),s(`{
+`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"end"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   Snackbar.info(`),a("span",{class:"hljs-string"},"'end!'"),s(`)
 }
 
