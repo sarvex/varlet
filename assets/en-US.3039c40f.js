@@ -1,7 +1,7 @@
 import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vue-router.esm-bundler.0e2db2be.js";const h={components:{}},p={class:"varlet-site-doc"},i=c('<h1>ActionSheet</h1><div class="card"><h3>Intro</h3><p>An action sheet pops up to give the user the ability to select options. <code>ActionSheet</code> Functional and component use methods are provided, and there is no essential difference between the two effects and parameters. The function returns a <code>Promise</code>\uFF0Con selection return <code>action</code>\uFF0CClick modal close to return <code>close</code>.</p></div><h2>Functional</h2>',3),j={class:"card"},m=a("h3",null,"Basic Use",-1),g=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { Snackbar, ActionSheet } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'@varlet/ui'"),s(`
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" createBasic = "),a("span",{class:"hljs-keyword"},"async"),s(` () => {
+`),a("span",{class:"hljs-keyword"},"async"),s(),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"createBasic"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   `),a("span",{class:"hljs-keyword"},"const"),s(" action = "),a("span",{class:"hljs-keyword"},"await"),s(` ActionSheet({ 
     `),a("span",{class:"hljs-attr"},"actions"),s(`: [
       {
@@ -29,7 +29,7 @@ import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vu
 `)])],-1),u={class:"card"},k=a("h3",null,"Modify Title",-1),y=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { Snackbar, ActionSheet } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'@varlet/ui'"),s(`
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleSelect = "),a("span",{class:"hljs-keyword"},"async"),s(` () => {
+`),a("span",{class:"hljs-keyword"},"async"),s(),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleSelect"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   `),a("span",{class:"hljs-keyword"},"const"),s(" action = "),a("span",{class:"hljs-keyword"},"await"),s(` ActionSheet({ 
     `),a("span",{class:"hljs-attr"},"actions"),s(`: [
       {
@@ -58,7 +58,7 @@ import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vu
 `)])],-1),b={class:"card"},v=a("h3",null,"Action Disabled",-1),w=a("p",null,[s("The option is passed "),a("code",null,"disabled"),s(" to leave the action in the disabled state.")],-1),f=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { Snackbar, ActionSheet } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'@varlet/ui'"),s(`
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleSelect = "),a("span",{class:"hljs-keyword"},"async"),s(` () => {
+`),a("span",{class:"hljs-keyword"},"async"),s(),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleSelect"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   `),a("span",{class:"hljs-keyword"},"const"),s(" action = "),a("span",{class:"hljs-keyword"},"await"),s(` ActionSheet({
     `),a("span",{class:"hljs-attr"},"actions"),s(`: [
       {
@@ -87,7 +87,7 @@ import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vu
 `)])],-1),_={class:"card"},S=a("h3",null,"Disable Close On Click Action",-1),A=a("p",null,[s("Passing in "),a("code",null,"CloseOnClickAction"),s(" disallows the action of "),a("code",null,"ActionSheet"),s(" closing automatically when the option is selected. The user can select the action multiple times. Because "),a("code",null,"Promise"),s(" is only resolved once, it is recommended to use "),a("code",null,"onSelect"),s(" to listen for the action of the user.")],-1),I=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { Snackbar, ActionSheet } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'@varlet/ui'"),s(`
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleSelect = "),a("span",{class:"hljs-keyword"},"async"),s(` () => {
+`),a("span",{class:"hljs-keyword"},"async"),s(),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleSelect"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   `),a("span",{class:"hljs-keyword"},"await"),s(` ActionSheet({ 
     `),a("span",{class:"hljs-attr"},"actions"),s(`: [
       {
@@ -115,7 +115,7 @@ import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vu
 `)])],-1),C={class:"card"},D=a("h3",null,"Custom Action Styles",-1),T=a("p",null,[s("Options provide parameters to configure the style. See the "),a("code",null,"Action"),s(" data structure for options.")],-1),x=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { Snackbar, ActionSheet } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'@varlet/ui'"),s(`
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleSelect = "),a("span",{class:"hljs-keyword"},"async"),s(` () => {
+`),a("span",{class:"hljs-keyword"},"async"),s(),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleSelect"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   `),a("span",{class:"hljs-keyword"},"const"),s(" action = "),a("span",{class:"hljs-keyword"},"await"),s(` ActionSheet({ 
     `),a("span",{class:"hljs-attr"},"actions"),s(`: [
       {
@@ -163,7 +163,7 @@ import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vu
   },
 ])
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleSelect = "),a("span",{class:"hljs-function"},[s("("),a("span",{class:"hljs-params"},"action"),s(") =>")]),s(` {
+`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleSelect"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   Snackbar(`),a("span",{class:"hljs-string"},[s("`"),a("span",{class:"hljs-subst"},"${action.name}"),s("`")]),s(`)
 }
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
@@ -196,7 +196,7 @@ import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vu
   },
 ])
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleSelect = "),a("span",{class:"hljs-function"},[s("("),a("span",{class:"hljs-params"},"action"),s(") =>")]),s(` {
+`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleSelect"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   Snackbar(`),a("span",{class:"hljs-string"},[s("`"),a("span",{class:"hljs-subst"},"${action.name}"),s("`")]),s(`)
 }
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
@@ -231,7 +231,7 @@ import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vu
   },
 ])
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleSelect = "),a("span",{class:"hljs-function"},[s("("),a("span",{class:"hljs-params"},"action"),s(") =>")]),s(` {
+`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleSelect"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   Snackbar(`),a("span",{class:"hljs-string"},[s("`"),a("span",{class:"hljs-subst"},"${action.name}"),s("`")]),s(`)
 }
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
@@ -264,7 +264,7 @@ import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vu
   },
 ])
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleSelect = "),a("span",{class:"hljs-function"},[s("("),a("span",{class:"hljs-params"},"action"),s(") =>")]),s(` {
+`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleSelect"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   Snackbar(`),a("span",{class:"hljs-string"},[s("`"),a("span",{class:"hljs-subst"},"${action.name}"),s("`")]),s(`)
 }
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
@@ -301,7 +301,7 @@ import{_ as e,p as o,f as d,h as r,M as a,q as n,S as l,aq as c,P as s}from"./vu
   },
 ])
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" handleSelect = "),a("span",{class:"hljs-function"},[s("("),a("span",{class:"hljs-params"},"action"),s(") =>")]),s(` {
+`),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleSelect"),s("("),a("span",{class:"hljs-params"}),s(") ")]),s(`{
   Snackbar(`),a("span",{class:"hljs-string"},[s("`"),a("span",{class:"hljs-subst"},"${action.name}"),s("`")]),s(`)
 }
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
