@@ -21,7 +21,7 @@ import{_ as e,p as c,f as h,h as d,M as a,q as l,S as n,P as s,aq as p}from"./vu
     `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"tbody"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-table"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),u={class:"card"},f=a("h3",null,"Footer Slots",-1),_=a("p",null,[s("You can insert something in the tail slot, the most common is to insert a "),a("code",null,"Pagination"),s(".")],-1),y=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(">")]),a("span",{class:"javascript"},[s(`
+`)])],-1),u={class:"card"},f=a("h3",null,"Footer Slots",-1),_=a("p",null,[s("You can insert something in the tail slot, the most common is to insert a "),a("code",null,"Pagination"),s(".")],-1),y=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
 
 `),a("span",{class:"hljs-keyword"},"const"),s(" gen = "),a("span",{class:"hljs-function"},[s("("),a("span",{class:"hljs-params"},"current, size"),s(") =>")]),s(` {
