@@ -12667,9 +12667,10 @@ const oa = _({
     }, C = (I) => {
       v = I.touches[0].clientY, f = 0;
     }, E = (I) => {
-      var B = Pt(n), p = B === 0, w = I.touches[0];
-      if (f = w.clientY - v, p && f >= 0 && I.preventDefault(), !(B > 0 || !h.value)) {
-        u.value !== "pulling" && (u.value = "pulling", o.value = I.touches[0].clientY), p && l.value > a.value && y("add");
+      var B = Pt(n), p = B === 0;
+      if (!(B > 0 || !h.value)) {
+        var w = I.touches[0];
+        f = w.clientY - v, p && f >= 0 && I.preventDefault(), u.value !== "pulling" && (u.value = "pulling", o.value = I.touches[0].clientY), p && l.value > a.value && y("add");
         var L = (I.touches[0].clientY - o.value) / 2 + a.value;
         l.value = L >= g.value ? g.value : L, l.value >= g.value * 0.2 ? (c.value = !1, s.value = "refresh", r = $()) : s.value = "arrow-down";
       }
