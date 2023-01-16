@@ -8277,11 +8277,11 @@ const Jn = _({
         l.value = E(te), I(), ce !== l.value && O(X, l.value);
       }
     }, G = () => {
-      o.value = !0, r.value = e.vertical ? n.value.offsetHeight : n.value.offsetWidth, t.value = r.value * d.value, i.value = l.value * -r.value, s.forEach((N) => {
+      n.value && (o.value = !0, r.value = e.vertical ? n.value.offsetHeight : n.value.offsetWidth, t.value = r.value * d.value, i.value = l.value * -r.value, s.forEach((N) => {
         N.setTranslate(0);
       }), I(), setTimeout(() => {
         o.value = !1;
-      });
+      }));
     }, R = () => {
       if (!(d.value <= 1)) {
         var {
