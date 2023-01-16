@@ -14452,6 +14452,10 @@ ca.install = function(e) {
 function fy(e) {
   return ["always", "normal", "never"].includes(e);
 }
+var Ie;
+(function(e) {
+  e.First = "1", e.Second = "2";
+})(Ie || (Ie = {}));
 var cy = {
   // 当前进度百分比
   modelValue: {
@@ -14521,11 +14525,7 @@ var cy = {
 }, {
   n: cl,
   classes: my
-} = ee("slider"), Ie;
-(function(e) {
-  e.First = "1", e.Second = "2";
-})(Ie || (Ie = {}));
-var py = ["onTouchstart", "onTouchmove", "onTouchend", "onTouchcancel"];
+} = ee("slider"), py = ["onTouchstart", "onTouchmove", "onTouchend", "onTouchcancel"];
 function hy(e, n) {
   var r = oe("var-form-details");
   return b(), V(
