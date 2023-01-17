@@ -8313,11 +8313,13 @@ const Jn = _({
     }, W = (N, X) => {
       if (!(d.value <= 1 || N === l.value)) {
         N = N < 0 ? 0 : N, N = N >= d.value ? d.value : N;
-        var j = N > l.value ? R : Q;
+        var j = N > l.value ? R : Q, Z = Math.abs(N - l.value);
         Array.from({
-          length: Math.abs(N - l.value)
-        }).forEach(() => {
-          j(X);
+          length: Z
+        }).forEach((ae, te) => {
+          j({
+            event: te === Z - 1 ? X == null ? void 0 : X.event : !1
+          });
         });
       }
     }, J = {
