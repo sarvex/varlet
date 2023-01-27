@@ -15,10 +15,10 @@ pnpm add unplugin-vue-components unplugin-auto-import -D
 `),s("span",{class:"hljs-keyword"},"import"),n(" { defineNuxtConfig } "),s("span",{class:"hljs-keyword"},"from"),n(),s("span",{class:"hljs-string"},"'nuxt/config'"),n(`
 
 `),s("span",{class:"hljs-keyword"},"export"),n(),s("span",{class:"hljs-keyword"},"default"),n(` defineNuxtConfig({
-  `),s("span",{class:"hljs-attr"},"build"),n(`: {
-    `),s("span",{class:"hljs-attr"},"transpile"),n(": ["),s("span",{class:"hljs-string"},"'@varlet/ui/es'"),n(`],
-  },
   `),s("span",{class:"hljs-attr"},"vite"),n(`: {
+    `),s("span",{class:"hljs-attr"},"ssr"),n(`: {
+      `),s("span",{class:"hljs-attr"},"noExternal"),n(": ["),s("span",{class:"hljs-string"},"'@varlet/ui'"),n(`]
+    },
     `),s("span",{class:"hljs-attr"},"plugins"),n(`: [
       components({
         `),s("span",{class:"hljs-attr"},"resolvers"),n(`: [VarletUIResolver()]
