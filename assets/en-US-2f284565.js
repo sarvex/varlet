@@ -83,7 +83,7 @@ import{_ as l,p as n,f as c,h as r,M as t,q as e,S as d,aq as o,P as s}from"./vu
       `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-button"),s(),t("span",{class:"hljs-attr"},"text"),s(),t("span",{class:"hljs-attr"},"type"),s("="),t("span",{class:"hljs-string"},'"warning"'),s(">")]),s("ACTION 2"),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"var-button"),s(">")]),s(`
     `),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
 
-    `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(" #"),t("span",{class:"hljs-attr"},"content"),s(">")]),s(`
+    `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"template"),s(" #"),t("span",{class:"hljs-attr"},"floating-content"),s(">")]),s(`
       `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-divider"),s(),t("span",{class:"hljs-attr"},"dashed"),s(" />")]),s(`
 
       `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"div"),s(),t("span",{class:"hljs-attr"},"class"),s("="),t("span",{class:"hljs-string"},'"card-example-text"'),s(">")]),s(`
