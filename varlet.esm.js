@@ -4208,7 +4208,7 @@ var $s = x({
         time: c,
         onEnd: h,
         autoStart: C
-      } = e, g = Date.now();
+      } = e, g = performance.now();
       n.value || (n.value = g + z(c));
       var $ = n.value - g;
       if ($ < 0 && ($ = 0), o.value = $, s($), $ === 0) {
