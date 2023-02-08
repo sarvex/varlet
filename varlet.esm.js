@@ -15290,28 +15290,28 @@ var fi = ["loading", "success", "warning", "info", "error"], Sl = 0, Ro = !1, sd
 }, db = {
   setup() {
     return () => {
-      var e = hn.map((r) => {
+      var e = hn.map((n) => {
         var {
-          id: a,
-          reactiveSnackOptions: t,
-          _update: o
-        } = r, i = document.querySelector(".var-transition-group");
-        t.forbidClick || t.type === "loading" ? i.classList.add("var-pointer-auto") : i.classList.remove("var-pointer-auto"), Da && (t.position = "top");
-        var l = Da ? "relative" : "absolute", s = Ja({
-          position: l
-        }, hb(t.position));
-        return re(id, Ve(t, {
-          key: a,
-          style: s,
-          "data-id": a,
-          _update: o,
-          show: t.show,
-          "onUpdate:show": (u) => t.show = u
+          id: r,
+          reactiveSnackOptions: a,
+          _update: t
+        } = n, o = document.querySelector(".var-transition-group");
+        a.forbidClick || a.type === "loading" ? o.classList.add("var-pointer-auto") : o.classList.remove("var-pointer-auto"), Da && (a.position = "top");
+        var i = Da ? "relative" : "absolute", l = Ja({
+          position: i
+        }, hb(a.position));
+        return re(id, Ve(a, {
+          key: r,
+          style: l,
+          "data-id": r,
+          _update: t,
+          show: a.show,
+          "onUpdate:show": (s) => a.show = s
         }), null);
-      }), n = sn.zIndex;
+      });
       return re(Hd, Ve(ub, {
         style: {
-          zIndex: n
+          zIndex: sn.zIndex
         },
         onAfterEnter: vb,
         onAfterLeave: fb
