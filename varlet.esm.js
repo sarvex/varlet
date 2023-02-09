@@ -2894,18 +2894,16 @@ var cs = x({
       }, e.floatingDuration);
     }, A = () => {
       P(e["onUpdate:floating"], !1);
+    }, M = (I) => {
+      P(e.onClick, I);
     };
-    ie(() => e.floating, (I) => {
+    return ie(() => e.floating, (I) => {
       c.value || Ee(() => {
         I ? O() : k();
       });
     }, {
       immediate: !0
-    });
-    var M = () => {
-      P(e.onClick, !1);
-    };
-    return {
+    }), {
       n: Bf,
       classes: Nf,
       toSizeUnit: we,
