@@ -3866,14 +3866,12 @@ var $s = x({
       } else
         Number(d) >= 0 && v.push(at("--span-" + u + "-" + d));
       return v;
-    };
-    ie([() => e.span, () => e.offset], () => {
-      t == null || t.computePadding();
-    }), $(o, i);
-    var s = (u) => {
+    }, s = (u) => {
       $(e.onClick, u);
     };
-    return {
+    return ie([() => e.span, () => e.offset], () => {
+      t == null || t.computePadding();
+    }), $(o, i), {
       n: at,
       classes: cc,
       padding: n,
@@ -13875,18 +13873,16 @@ var ed = x({
           right: t.value
         });
       });
-    }, i = {
+    }, i = (s) => {
+      $(e.onClick, s);
+    }, l = {
       computePadding: o
     };
-    ie(() => a.value, o), ie(() => e.gutter, o), r(i);
-    var l = (s) => {
-      $(e.onClick, s);
-    };
-    return {
+    return ie(() => a.value, o), ie(() => e.gutter, o), r(l), {
       n: L0,
       classes: R0,
       average: t,
-      handleClick: l
+      handleClick: i
     };
   }
 });
