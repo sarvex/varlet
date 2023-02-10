@@ -12040,7 +12040,7 @@ function Cy(e, n) {
   return Se((h(), V(
     "div",
     {
-      class: m(e.classes(e.n(), e.n("$-elevation--" + e.elevation), [e.onClick, e.n("--cursor")], [e.round, e.n("--round")], [e.inline, e.n("$--inline-flex")])),
+      class: m(e.classes(e.n(), e.n("$--box"), e.n("$-elevation--" + e.elevation), [e.onClick, e.n("--cursor")], [e.round, e.n("--round")], [e.inline, e.n("$--inline-flex")])),
       style: q({
         width: e.toSizeUnit(e.width),
         height: e.toSizeUnit(e.height),
