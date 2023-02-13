@@ -1,22 +1,27 @@
 <template>
   <button
     v-ripple="{ disabled: disabled || !ripple }"
+    ref="buttonEl"
     :class="
       classes(
         n(),
         n('$--box'),
-        n(`--${size}`),
+        n(`--${getStyles.size}`),
         [block, `${n('$--flex')} ${n('--block')}`, n('$--inline-flex')],
         [disabled, n('--disabled')],
-        [text, `${n(`--text-${type}`)} ${n('--text')}`, `${n(`--${type}`)} ${n('$-elevation--2')}`],
-        [text && disabled, n('--text-disabled')],
+        [
+          getStyles.text,
+          `${n(`--text-${getStyles.type}`)} ${n('--text')}`,
+          `${n(`--${getStyles.type}`)} ${n(`$-elevation--${getStyles.elevation}`)}`,
+        ],
+        [getStyles.text && disabled, n('--text-disabled')],
         [round, n('--round')],
-        [outline, n('--outline')]
+        [getStyles.outline, n('--outline')]
       )
     "
     :style="{
       color: textColor,
-      background: color,
+      background: getStyles.color,
     }"
     :type="nativeType"
     :disabled="disabled"
@@ -41,9 +46,10 @@
 <script lang="ts">
 import Ripple from '../ripple'
 import VarLoading from '../loading'
-import { defineComponent, ref, type Ref } from 'vue'
+import { computed, defineComponent, ref, type Ref } from 'vue'
 import { props } from './props'
 import { call, createNamespace } from '../utils/components'
+import { useButtonGroup } from './provide'
 import { isArray } from '@varlet/shared'
 
 const { n, classes } = createNamespace('button')
@@ -57,6 +63,24 @@ export default defineComponent({
   props,
   setup(props) {
     const pending: Ref<boolean> = ref(false)
+    const { buttonGroup } = useButtonGroup()
+    const defaultStyles = {
+      elevation: 2,
+      type: 'default',
+      size: 'normal',
+    }
+
+    const getStyles = computed(() => {
+      const modeArray = ['text', 'outline']
+      return {
+        elevation: (buttonGroup || {}).elevation ? 0 : defaultStyles.elevation,
+        type: props.type || (buttonGroup || {}).type || defaultStyles.type,
+        size: props.size || (buttonGroup || {}).size || defaultStyles.size,
+        color: props.color || (buttonGroup || {}).color,
+        text: props.text || modeArray.includes((buttonGroup || {}).mode || ''),
+        outline: props.outline || (buttonGroup || {}).mode === 'outline',
+      }
+    })
 
     const attemptAutoLoading = (result: any) => {
       if (props.autoLoading) {
@@ -98,6 +122,7 @@ export default defineComponent({
       n,
       classes,
       pending,
+      getStyles,
       handleClick,
       handleTouchstart,
     }
