@@ -1770,7 +1770,7 @@ function mf(e, n) {
     "div",
     {
       ref: "avatarElement",
-      class: m(e.classes(e.n(), [e.internalSizeValidator(e.size), e.n("--" + e.size)], [e.round, e.n("--round")], [e.bordered, e.n("--bordered")])),
+      class: m(e.classes(e.n(), e.n("$--box"), [e.internalSizeValidator(e.size), e.n("--" + e.size)], [e.round, e.n("--round")], [e.bordered, e.n("--bordered")])),
       style: j({
         width: e.internalSizeValidator(e.size) ? void 0 : e.toSizeUnit(e.size),
         height: e.internalSizeValidator(e.size) ? void 0 : e.toSizeUnit(e.size),
