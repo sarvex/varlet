@@ -1602,6 +1602,9 @@ function xv(e, n) {
         height: e.internalSizeValidator(e.size) ? void 0 : e.toSizeUnit(e.size),
         borderColor: e.borderColor,
         backgroundColor: e.color
+      }),
+      onClick: n[3] || (n[3] = function() {
+        return e.handleClick && e.handleClick(...arguments);
       })
     },
     [e.src ? (h(), P(
@@ -1619,15 +1622,9 @@ function xv(e, n) {
             objectFit: e.fit
           }),
           "lazy-loading": e.loading,
-          "lazy-error": e.loading,
+          "lazy-error": e.error,
           onLoad: n[0] || (n[0] = function() {
             return e.handleLoad && e.handleLoad(...arguments);
-          }),
-          onError: n[1] || (n[1] = function() {
-            return e.handleError && e.handleError(...arguments);
-          }),
-          onClick: n[2] || (n[2] = function() {
-            return e.handleClick && e.handleClick(...arguments);
           })
         },
         null,
@@ -1642,14 +1639,11 @@ function xv(e, n) {
           style: j({
             objectFit: e.fit
           }),
-          onLoad: n[3] || (n[3] = function() {
+          onLoad: n[1] || (n[1] = function() {
             return e.handleLoad && e.handleLoad(...arguments);
           }),
-          onError: n[4] || (n[4] = function() {
+          onError: n[2] || (n[2] = function() {
             return e.handleError && e.handleError(...arguments);
-          }),
-          onClick: n[5] || (n[5] = function() {
-            return e.handleClick && e.handleClick(...arguments);
           })
         },
         null,
@@ -1696,11 +1690,7 @@ var us = x({
       } = e;
       d ? (u._lazy.state === "success" && $(v, s), u._lazy.state === "error" && $(f, s)) : $(v, s);
     }, i = (s) => {
-      var {
-        lazy: u,
-        onError: d
-      } = e;
-      !u && $(d, s);
+      $(e.onError, s);
     }, l = (s) => {
       $(e.onClick, s);
     };
@@ -3232,9 +3222,7 @@ var gC = Or, oc = {
     type: Boolean,
     default: !1
   },
-  onClick: {
-    type: U
-  }
+  onClick: U
 }, {
   n: ic,
   classes: lc
@@ -17459,8 +17447,8 @@ const X1 = {
 }, Tw = {
   "--breadcrumb-inactive-color": "#aaa"
 }, Pw = {
-  "--avatar-default-background-color": "#424245",
-  "--avatar-default-border-color": "#18181c"
+  "--avatar-background-color": "#303030",
+  "--avatar-border": "2px solid #1e1e1e"
 };
 function qo() {
   return qo = Object.assign ? Object.assign.bind() : function(e) {
