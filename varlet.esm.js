@@ -12588,7 +12588,7 @@ function eb(e, n) {
   return Se((h(), P(
     "div",
     {
-      class: m(e.classes(e.n(), e.n("$--box"), e.n("$-elevation--" + e.elevation), [e.onClick, e.n("--cursor")], [e.round, e.n("--round")], [e.inline, e.n("$--inline-flex")])),
+      class: m(e.classes(e.n(), e.n("$--box"), [e.elevation != null, e.n("$-elevation--" + e.elevation)], [e.onClick, e.n("--cursor")], [e.round, e.n("--round")], [e.inline, e.n("$--inline-flex")])),
       style: j({
         width: e.toSizeUnit(e.width),
         height: e.toSizeUnit(e.height),
