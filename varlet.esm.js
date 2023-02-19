@@ -2249,7 +2249,7 @@ function Yf(e, n) {
       ref: "buttonEl",
       class: m(e.classes(e.n(), e.n("$--box"), e.n("--" + e.states.size), [e.block, e.n("$--flex") + " " + e.n("--block"), e.n("$--inline-flex")], [e.disabled, e.n("--disabled")], [e.states.text, e.n("--text-" + e.states.type) + " " + e.n("--text"), e.n("--" + e.states.type) + " " + e.n("$-elevation--" + e.states.elevation)], [e.states.text && e.disabled, e.n("--text-disabled")], [e.round, e.n("--round")], [e.states.outline, e.n("--outline")])),
       style: j({
-        color: e.textColor,
+        color: e.states.textColor,
         background: e.states.color
       }),
       type: e.nativeType,
@@ -2310,21 +2310,24 @@ var ws = x({
           size: e.size != null ? e.size : "normal",
           color: e.color,
           text: e.text,
+          textColor: e.textColor,
           outline: e.outline
         };
       var {
         type: l,
         size: s,
         color: u,
-        mode: d
+        textColor: d,
+        mode: v
       } = r;
       return {
         elevation: 0,
         type: e.type != null ? e.type : l.value,
         size: e.size != null ? e.size : s.value,
         color: e.color != null ? e.color : u.value,
-        text: d.value !== "normal",
-        outline: d.value === "outline"
+        textColor: e.textColor != null ? e.textColor : d.value,
+        text: v.value !== "normal",
+        outline: v.value === "outline"
       };
     }), t = (l) => {
       e.autoLoading && (n.value = !0, l = we(l) ? l : [l], Promise.all(l).then(() => {
@@ -3116,6 +3119,9 @@ var Cc = {
   color: {
     type: String
   },
+  textColor: {
+    type: String
+  },
   mode: {
     type: String,
     default: "normal",
@@ -3155,6 +3161,7 @@ var Bs = x({
       type: U(() => e.type),
       size: U(() => e.size),
       color: U(() => e.color),
+      textColor: U(() => e.textColor),
       mode: U(() => e.mode)
     };
     return n(r), {
