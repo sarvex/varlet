@@ -1833,7 +1833,7 @@ function yf(e, n) {
         ref: "textElement",
         class: m(e.n("text")),
         style: j({
-          scale: e.scale
+          transform: "scale(" + e.scale + ")"
         })
       },
       [F(e.$slots, "default")],
@@ -3532,7 +3532,7 @@ var NC = Vr, Ic = {
     type: Boolean,
     default: !1
   },
-  onClick: Y
+  onClick: Y()
 }, {
   n: Nc,
   classes: Dc
