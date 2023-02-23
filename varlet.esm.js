@@ -11591,7 +11591,7 @@ var nd = x({
       var K = N.target, {
         value: L
       } = K;
-      e.type === "number" && (L = R(L).toString(), $(e["onUpdate:modelValue"], L)), L = S(E(L)), K.value = L, $(e.onChange, L, N), f("onChange");
+      L = S(E(L)), K.value = L, $(e.onChange, L, N), f("onChange");
     }, P = () => {
       var {
         disabled: N,
