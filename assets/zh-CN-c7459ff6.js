@@ -41,7 +41,7 @@ import{_ as e,p as c,f as p,h as r,M as s,q as n,S as t,P as a}from"./vue-router
   `),s("span",{class:"hljs-attribute"},"position"),a(`: relative;
   `),s("span",{class:"hljs-attribute"},"overflow"),a(`: hidden;
   `),s("span",{class:"hljs-attribute"},"cursor"),a(`: pointer;
-  `),s("span",{class:"hljs-attribute"},"border-radius"),a(": "),s("span",{class:"hljs-number"},"10px"),a(`;
+  `),s("span",{class:"hljs-attribute"},"border-radius"),a(": "),s("span",{class:"hljs-number"},"6px"),a(`;
 }
 
 `),s("span",{class:"hljs-selector-class"},".image-mask"),a(` {
