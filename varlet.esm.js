@@ -11489,7 +11489,6 @@ function Yy(e, n) {
             class: m(e.n("clear-icon")),
             "var-input-cover": "",
             name: "close-circle",
-            size: "14px",
             onClick: e.handleClear
           },
           null,
