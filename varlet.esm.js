@@ -4897,25 +4897,26 @@ var au = x({
     }, d = () => {
       var {
         time: p,
-        onEnd: y,
-        autoStart: g
-      } = e, V = performance.now();
-      if (a || (a = V + L(p)), l = a - V, l < 0 && (l = 0), u(l), l === 0) {
+        onEnd: y
+      } = e, g = performance.now();
+      if (a || (a = g + L(p)), l = a - g, l < 0 && (l = 0), console.log(l), u(l), l === 0) {
         $(y);
         return;
       }
-      (g || t) && (o = On(d));
-    }, v = () => {
-      t = !0, a = performance.now() + (l || L(e.time)), d();
+      t && (o = On(d));
+    }, v = function(p) {
+      p === void 0 && (p = !1), !(t && !p) && (t = !0, a = performance.now() + (l || L(e.time)), d());
     }, f = () => {
       t = !1, Ui(o);
     }, m = () => {
       a = 0, t = !1, Ui(o), d();
     };
-    return le(() => e.time, m, {
+    return le(() => e.time, () => {
+      m(), e.autoStart && v();
+    }, {
       immediate: !0
     }), Ha(() => {
-      i != null && (t = i, t === !0 && v());
+      i != null && (t = i, t === !0 && v(!0));
     }), pr(() => {
       i = t, f();
     }), $a(f), {
