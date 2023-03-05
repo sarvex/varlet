@@ -4876,7 +4876,7 @@ var au = x({
       minutes: 0,
       seconds: 0,
       milliseconds: 0
-    }), i = !1, s = (p, y) => {
+    }), i, s = (p, y) => {
       var g = Object.values(y), V = ["DD", "HH", "mm", "ss"], T = [24, 60, 60, 1e3];
       if (V.forEach((C, I) => {
         p.includes(C) ? p = p.replace(C, ga("" + g[I], 2, "0")) : g[I + 1] += g[I] * T[I];
@@ -4917,7 +4917,7 @@ var au = x({
     return le(() => e.time, m, {
       immediate: !0
     }), Ha(() => {
-      r.value = i, r.value === !0 && d();
+      i != null && (r.value = i, r.value === !0 && d());
     }), pr(() => {
       i = r.value, f();
     }), $a(f), {
