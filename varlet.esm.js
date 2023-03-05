@@ -4899,7 +4899,7 @@ var au = x({
         time: p,
         onEnd: y
       } = e, g = performance.now();
-      if (a || (a = g + L(p)), l = a - g, l < 0 && (l = 0), console.log(l), u(l), l === 0) {
+      if (a || (a = g + L(p)), l = a - g, l < 0 && (l = 0), u(l), l === 0) {
         $(y);
         return;
       }
