@@ -1,12 +1,12 @@
-import{_ as c,p as e,f as h,h as o,M as s,q as l,S as t,P as a,aq as r}from"./vue-router.esm-bundler-c0c92185.js";const p={components:{}},d={class:"varlet-site-doc"},i=s("h1",null,"图标",-1),j=s("div",{class:"card"},[s("h3",null,"介绍"),s("p",null,[a("基于字体的图标库，也支持网络图片。 字体图标来自 "),s("a",{href:"https://materialdesignicons.com/"},"Material Design Icon")])],-1),m={class:"card"},g=s("h3",null,"图标尺寸",-1),_=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
+import{_ as c,p as e,f as o,h as r,M as s,q as n,S as t,P as a,aq as h}from"./vue-router.esm-bundler-c0c92185.js";const p={components:{}},d={class:"varlet-site-doc"},i=s("h1",null,"图标",-1),j=s("div",{class:"card"},[s("h3",null,"介绍"),s("p",null,[a("基于字体的图标库，也支持网络图片。 字体图标来自 "),s("a",{href:"https://materialdesignicons.com/"},"Material Design Icon")])],-1),m={class:"card"},g=s("h3",null,"图标尺寸",-1),_=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
   `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(),s("span",{class:"hljs-attr"},"name"),a("="),s("span",{class:"hljs-string"},'"checkbox-marked-circle"'),a(" />")]),a(`
   `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(),s("span",{class:"hljs-attr"},"name"),a("="),s("span",{class:"hljs-string"},'"checkbox-marked-circle"'),a(),s("span",{class:"hljs-attr"},":size"),a("="),s("span",{class:"hljs-string"},'"26"'),a("/>")]),a(`
 `),s("span",{class:"hljs-tag"},[a("</"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
-`)])],-1),u={class:"card"},f=s("h3",null,"图标颜色",-1),v=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
-  `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(),s("span",{class:"hljs-attr"},"name"),a("="),s("span",{class:"hljs-string"},'"checkbox-marked-circle"'),a(),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"#2979ff"'),a(" />")]),a(`
-  `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(),s("span",{class:"hljs-attr"},"name"),a("="),s("span",{class:"hljs-string"},'"checkbox-marked-circle"'),a(),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"#2979ff"'),a(),s("span",{class:"hljs-attr"},":size"),a("="),s("span",{class:"hljs-string"},'"26"'),a("/>")]),a(`
+`)])],-1),u={class:"card"},v=s("h3",null,"图标颜色",-1),y=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
+  `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(),s("span",{class:"hljs-attr"},"name"),a("="),s("span",{class:"hljs-string"},'"checkbox-marked-circle"'),a(),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"var(--color-primary)"'),a(" />")]),a(`
+  `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(),s("span",{class:"hljs-attr"},"name"),a("="),s("span",{class:"hljs-string"},'"checkbox-marked-circle"'),a(),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"var(--color-primary)"'),a(),s("span",{class:"hljs-attr"},":size"),a("="),s("span",{class:"hljs-string"},'"26"'),a("/>")]),a(`
 `),s("span",{class:"hljs-tag"},[a("</"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
-`)])],-1),y={class:"card"},b=s("h3",null,"使用图片",-1),k=s("p",null,[a("当传入的 "),s("code",null,"name"),a(" 是一个网络地址时,将会使用 "),s("code",null,"img"),a(" 标签以 "),s("code",null,"cover"),a(" 模式显示。"),s("code",null,"size"),a(" 为图片的宽高。")],-1),x=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
+`)])],-1),f={class:"card"},b=s("h3",null,"使用图片",-1),k=s("p",null,[a("当传入的 "),s("code",null,"name"),a(" 是一个网络地址时,将会使用 "),s("code",null,"img"),a(" 标签以 "),s("code",null,"cover"),a(" 模式显示。"),s("code",null,"size"),a(" 为图片的宽高。")],-1),x=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
   `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(),s("span",{class:"hljs-attr"},"name"),a("="),s("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),a(),s("span",{class:"hljs-attr"},":size"),a("="),s("span",{class:"hljs-string"},'"32"'),a(" />")]),a(`
 `),s("span",{class:"hljs-tag"},[a("</"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
 `)])],-1),z={class:"card"},w=s("h3",null,"注册事件",-1),N=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"script"),a(),s("span",{class:"hljs-attr"},"setup"),a(">")]),s("span",{class:"javascript"},[a(`
@@ -16,7 +16,7 @@ import{_ as c,p as e,f as h,h as o,M as s,q as l,S as t,P as a,aq as r}from"./vu
 `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
   `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(` 
     `),s("span",{class:"hljs-attr"},"name"),a("="),s("span",{class:"hljs-string"},'"checkbox-marked-circle"'),a(`
-    `),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"#2979ff"'),a(`
+    `),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"var(--color-primary)"'),a(`
     @`),s("span",{class:"hljs-attr"},"click"),a("="),s("span",{class:"hljs-string"},`"() => Snackbar.success('点击成功')"`),a(`
   />`)]),a(`
 `),s("span",{class:"hljs-tag"},[a("</"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
@@ -34,21 +34,22 @@ import{_ as c,p as e,f as h,h as o,M as s,q as l,S as t,P as a,aq as r}from"./vu
 
 `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
   `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(` 
-    `),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"#2979ff"'),a(` 
+    `),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"var(--color-primary)"'),a(` 
     `),s("span",{class:"hljs-attr"},":name"),a("="),s("span",{class:"hljs-string"},'"name"'),a(` 
     `),s("span",{class:"hljs-attr"},":transition"),a("="),s("span",{class:"hljs-string"},'"300"'),a(` 
     `),s("span",{class:"hljs-attr"},":size"),a("="),s("span",{class:"hljs-string"},'"30"'),a(` 
     @`),s("span",{class:"hljs-attr"},"click"),a("="),s("span",{class:"hljs-string"},'"toggle"'),a(`
   />`)]),a(`
+
+  `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(`
+    `),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"var(--color-primary)"'),a(`
+    `),s("span",{class:"hljs-attr"},"animation-class"),a("="),s("span",{class:"hljs-string"},'"fade"'),a(`
+    `),s("span",{class:"hljs-attr"},":name"),a("="),s("span",{class:"hljs-string"},'"iconName"'),a(`
+    `),s("span",{class:"hljs-attr"},":transition"),a("="),s("span",{class:"hljs-string"},'"300"'),a(`
+    `),s("span",{class:"hljs-attr"},":size"),a("="),s("span",{class:"hljs-string"},'"30"'),a(`
+    @`),s("span",{class:"hljs-attr"},"click"),a("="),s("span",{class:"hljs-string"},'"toggle"'),a(`
+  />`)]),a(`
 `),s("span",{class:"hljs-tag"},[a("</"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
-`),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(`
-  `),s("span",{class:"hljs-attr"},"color"),a("="),s("span",{class:"hljs-string"},'"#2979ff"'),a(`
-  `),s("span",{class:"hljs-attr"},"animation-class"),a("="),s("span",{class:"hljs-string"},'"fade"'),a(`
-  `),s("span",{class:"hljs-attr"},":name"),a("="),s("span",{class:"hljs-string"},'"iconName"'),a(`
-  `),s("span",{class:"hljs-attr"},":transition"),a("="),s("span",{class:"hljs-string"},'"300"'),a(`
-  `),s("span",{class:"hljs-attr"},":size"),a("="),s("span",{class:"hljs-string"},'"30"'),a(`
-  @`),s("span",{class:"hljs-attr"},"click"),a("="),s("span",{class:"hljs-string"},'"toggle"'),a(`
-/>`)]),a(`
 
 `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"style"),a(">")]),s("span",{class:"css"},[a(`
 `),s("span",{class:"hljs-selector-class"},".fade"),a(` {
@@ -79,4 +80,4 @@ import{_ as c,p as e,f as h,h as o,M as s,q as l,S as t,P as a,aq as r}from"./vu
 `)])],-1),I=s("p",null,[a("到这里你就成功的扩展了自己的图标库，"),s("code",null,"my-icon"),a(" 就是你的字体 "),s("code",null,"命名空间(namespace)"),a("，您可以这样使用。")],-1),M=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
   `),s("span",{class:"hljs-tag"},[a("<"),s("span",{class:"hljs-name"},"var-icon"),a(),s("span",{class:"hljs-attr"},"namespace"),a("="),s("span",{class:"hljs-string"},'"my-icon"'),a(),s("span",{class:"hljs-attr"},"name"),a("="),s("span",{class:"hljs-string"},'"hot"'),a(" />")]),a(`
 `),s("span",{class:"hljs-tag"},[a("</"),s("span",{class:"hljs-name"},"template"),a(">")]),a(`
-`)])],-1),A=r('<h2>API</h2><div class="card"><h3>属性</h3><table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td><code>name</code></td><td>图标名称</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>size</code></td><td>尺寸</td><td><em>string | number</em></td><td><code>-</code></td></tr><tr><td><code>color</code></td><td>图标颜色, 只适用于字体图标</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>namespace</code></td><td>图标的命名空间, 可扩展自定义图标库</td><td><em>string</em></td><td><code>var-icon</code></td></tr><tr><td><code>animation-class</code></td><td>过渡动画类名</td><td><em>string</em></td><td><code>var-icon--shrinking</code></td></tr><tr><td><code>transition</code></td><td>过渡动画时间（ms）</td><td><em>string | number</em></td><td><code>0</code></td></tr></tbody></table></div><div class="card"><h3>事件</h3><table><thead><tr><th>事件名</th><th>说明</th><th>参数</th></tr></thead><tbody><tr><td><code>click</code></td><td>点击图标时触发</td><td><code>event: Event</code></td></tr></tbody></table></div><div class="card"><h3>样式变量</h3><p>以下为组件使用的 css 变量，可以使用 <a href="#/zh-CN/style-provider">StyleProvider 组件</a> 进行样式定制。</p><table><thead><tr><th>变量名</th><th>默认值</th></tr></thead><tbody><tr><td><code>--icon-size</code></td><td><code>20px</code></td></tr></tbody></table></div>',4);function D(F,T,G,H,J,K){const n=e("var-site-code-example");return h(),o("div",d,[i,j,s("div",m,[g,l(n,null,{default:t(()=>[_]),_:1})]),s("div",u,[f,l(n,null,{default:t(()=>[v]),_:1})]),s("div",y,[b,k,l(n,null,{default:t(()=>[x]),_:1})]),s("div",z,[w,l(n,null,{default:t(()=>[N]),_:1})]),s("div",S,[C,V,l(n,null,{default:t(()=>[$]),_:1})]),s("div",B,[P,q,l(n,{"playground-ignore":""},{default:t(()=>[E]),_:1}),I,l(n,{"playground-ignore":""},{default:t(()=>[M]),_:1})]),A])}const O=c(p,[["render",D]]);export{O as default};
+`)])],-1),A=h('<h2>API</h2><div class="card"><h3>属性</h3><table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td><code>name</code></td><td>图标名称</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>size</code></td><td>尺寸</td><td><em>string | number</em></td><td><code>-</code></td></tr><tr><td><code>color</code></td><td>图标颜色, 只适用于字体图标</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>namespace</code></td><td>图标的命名空间, 可扩展自定义图标库</td><td><em>string</em></td><td><code>var-icon</code></td></tr><tr><td><code>animation-class</code></td><td>过渡动画类名</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>transition</code></td><td>过渡动画时间（ms）</td><td><em>string | number</em></td><td><code>0</code></td></tr></tbody></table></div><div class="card"><h3>事件</h3><table><thead><tr><th>事件名</th><th>说明</th><th>参数</th></tr></thead><tbody><tr><td><code>click</code></td><td>点击图标时触发</td><td><code>event: Event</code></td></tr></tbody></table></div><div class="card"><h3>样式变量</h3><p>以下为组件使用的 css 变量，可以使用 <a href="#/zh-CN/style-provider">StyleProvider 组件</a> 进行样式定制。</p><table><thead><tr><th>变量名</th><th>默认值</th></tr></thead><tbody><tr><td><code>--icon-size</code></td><td><code>20px</code></td></tr></tbody></table></div>',4);function D(F,T,G,H,J,K){const l=e("var-site-code-example");return o(),r("div",d,[i,j,s("div",m,[g,n(l,null,{default:t(()=>[_]),_:1})]),s("div",u,[v,n(l,null,{default:t(()=>[y]),_:1})]),s("div",f,[b,k,n(l,null,{default:t(()=>[x]),_:1})]),s("div",z,[w,n(l,null,{default:t(()=>[N]),_:1})]),s("div",S,[C,V,n(l,null,{default:t(()=>[$]),_:1})]),s("div",B,[P,q,n(l,{"playground-ignore":""},{default:t(()=>[E]),_:1}),I,n(l,{"playground-ignore":""},{default:t(()=>[M]),_:1})]),A])}const O=c(p,[["render",D]]);export{O as default};
