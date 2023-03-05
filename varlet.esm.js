@@ -1,10 +1,10 @@
-import { reactive as Me, onMounted as lt, nextTick as Ve, onActivated as Ha, isRef as pv, watch as le, onBeforeUnmount as Rt, onDeactivated as pr, unref as fo, ref as B, createApp as hv, getCurrentInstance as ja, provide as Gl, computed as R, inject as ql, onUnmounted as $a, h as Kl, isVNode as Ut, onBeforeMount as gv, defineComponent as x, createVNode as re, Teleport as Wa, Transition as De, withDirectives as Se, vShow as Ga, mergeProps as Ee, openBlock as h, createBlock as me, resolveDynamicComponent as qa, normalizeClass as c, normalizeStyle as q, resolveComponent as ie, resolveDirective as Ye, withCtx as ve, createElementVNode as A, renderSlot as W, toDisplayString as ne, createElementBlock as T, Fragment as Pe, renderList as Ie, createCommentVNode as _, onUpdated as Yt, createTextVNode as be, pushScopeId as Ta, popScopeId as Oa, withModifiers as Vn, normalizeProps as ai, guardReactiveProps as Xl, vModelText as yv, toRefs as bv, withKeys as Bi, toRaw as Ii, TransitionGroup as wv, Comment as Cv } from "vue";
+import { reactive as Me, onMounted as lt, nextTick as Ve, onActivated as Ha, isRef as pv, watch as le, onBeforeUnmount as Rt, onDeactivated as pr, unref as fo, ref as B, createApp as hv, getCurrentInstance as ja, provide as Gl, computed as R, inject as ql, onUnmounted as $a, h as Kl, isVNode as Ut, onBeforeMount as gv, defineComponent as x, createVNode as re, Teleport as Wa, Transition as De, withDirectives as Se, vShow as Ga, mergeProps as Ee, openBlock as h, createBlock as me, resolveDynamicComponent as qa, normalizeClass as c, normalizeStyle as q, resolveComponent as ie, resolveDirective as Ye, withCtx as ve, createElementVNode as A, renderSlot as W, toDisplayString as ne, createElementBlock as T, Fragment as Pe, renderList as Ie, createCommentVNode as _, onUpdated as Yt, createTextVNode as be, pushScopeId as Ta, popScopeId as Oa, withModifiers as Vn, normalizeProps as ai, guardReactiveProps as Xl, vModelText as yv, toRefs as bv, withKeys as Bi, toRaw as Ii, TransitionGroup as Cv, Comment as wv } from "vue";
 var Zl = {
   locks: {},
   zIndex: 2e3,
   touchmoveForbid: !0
-}, YC = Me(Zl);
-const dn = Me(Zl), Ge = (e) => typeof e == "string", co = (e) => typeof e == "boolean", _e = (e) => typeof e == "number", ti = (e) => Object.prototype.toString.call(e) === "[object Object]", Sv = (e) => typeof e == "object" && e !== null, oi = (e) => typeof e == "function", we = (e) => Array.isArray(e), kv = (e) => e ? /^(http)|(\.*\/)/.test(e) : !1, Nn = (e) => e == null || e === "" || Array.isArray(e) && !e.length, L = (e) => e == null ? 0 : Ge(e) ? (e = parseFloat(e), e = Number.isNaN(e) ? 0 : e, e) : co(e) ? Number(e) : e, Ft = (e, n) => {
+}, Yw = Me(Zl);
+const dn = Me(Zl), Ge = (e) => typeof e == "string", co = (e) => typeof e == "boolean", _e = (e) => typeof e == "number", ti = (e) => Object.prototype.toString.call(e) === "[object Object]", Sv = (e) => typeof e == "object" && e !== null, oi = (e) => typeof e == "function", Ce = (e) => Array.isArray(e), kv = (e) => e ? /^(http)|(\.*\/)/.test(e) : !1, Nn = (e) => e == null || e === "" || Array.isArray(e) && !e.length, L = (e) => e == null ? 0 : Ge(e) ? (e = parseFloat(e), e = Number.isNaN(e) ? 0 : e, e) : co(e) ? Number(e) : e, Ft = (e, n) => {
   if (e.length) {
     const r = e.indexOf(n);
     if (r > -1)
@@ -438,7 +438,7 @@ function ts(e) {
 function bn() {
   var e = B(""), n = /* @__PURE__ */ function() {
     var t = Fi(function* (o, l, i) {
-      if (!we(o) || !o.length)
+      if (!Ce(o) || !o.length)
         return !0;
       var s = yield Promise.all(o.map((u) => u(l, i)));
       return !s.some((u) => u !== !0 ? (e.value = String(u), !0) : !1);
@@ -481,7 +481,7 @@ function ee(e) {
     for (var o = arguments.length, l = new Array(o), i = 0; i < o; i++)
       l[i] = arguments[i];
     return l.map((s) => {
-      if (we(s)) {
+      if (Ce(s)) {
         var [u, d, v = null] = s;
         return u ? d : v;
       }
@@ -496,7 +496,7 @@ function ee(e) {
 function $(e) {
   for (var n = arguments.length, r = new Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++)
     r[a - 1] = arguments[a];
-  if (we(e))
+  if (Ce(e))
     return e.map((t) => t(...r));
   if (e)
     return e(...r);
@@ -624,7 +624,7 @@ var ss = {
   install(e) {
     e.directive("ripple", this);
   }
-}, FC = ss;
+}, Fw = ss;
 const Ae = ss;
 function Xv(e) {
   return ["top", "bottom", "right", "left", "center"].includes(e);
@@ -816,7 +816,7 @@ const hn = x({
 hn.install = function(e) {
   e.component(hn.name, hn);
 };
-var HC = hn, ds = {
+var Hw = hn, ds = {
   name: {
     type: String
   },
@@ -833,6 +833,9 @@ var HC = hn, ds = {
   transition: {
     type: [Number, String],
     default: 0
+  },
+  animationClass: {
+    type: String
   },
   onClick: Y()
 };
@@ -868,10 +871,10 @@ function xv(e, n) {
   return h(), me(
     qa(e.isURL(e.name) ? "img" : "i"),
     {
-      class: c(e.classes(e.n(), [e.namespace !== e.n(), e.namespace], e.namespace + "--set", [e.isURL(e.name), e.n("image"), e.namespace + "-" + e.nextName], [e.shrinking, e.n("--shrinking")])),
+      class: c(e.classes(e.n(), [e.namespace !== e.n(), e.namespace], e.namespace + "--set", [e.isURL(e.name), e.n("image"), e.namespace + "-" + e.nextName], [e.animateInProgress, e.animationClass == null ? e.n("--shrinking") : e.animationClass])),
       style: q({
         color: e.color,
-        transition: "transform " + e.toNumber(e.transition) + "ms",
+        "transition-duration": e.toNumber(e.transition) + "ms",
         width: e.isURL(e.name) ? e.toSizeUnit(e.size) : null,
         height: e.isURL(e.name) ? e.toSizeUnit(e.size) : null,
         fontSize: e.toSizeUnit(e.size)
@@ -911,7 +914,7 @@ var vs = x({
       n: Qv,
       classes: _v,
       nextName: n,
-      shrinking: r,
+      animateInProgress: r,
       isURL: kv,
       toNumber: L,
       toSizeUnit: he
@@ -923,7 +926,7 @@ const $e = vs;
 $e.install = function(e) {
   e.component($e.name, $e);
 };
-var jC = $e;
+var jw = $e;
 function yo() {
   return yo = Object.assign ? Object.assign.bind() : function(e) {
     for (var n = 1; n < arguments.length; n++) {
@@ -1211,7 +1214,7 @@ var {
 } = di();
 vi("zh-CN", ui);
 fi("zh-CN");
-var WC = {
+var Ww = {
   zhCN: ui,
   enUS: fs,
   packs: cs,
@@ -1221,7 +1224,7 @@ var WC = {
   merge: ms,
   useLocale: di
 };
-const wo = {
+const Co = {
   zhCN: ui,
   enUS: fs,
   packs: cs,
@@ -1362,19 +1365,19 @@ var ps = x({
 });
 ps.render = tf;
 const rr = ps;
-function Co() {
-  return Co = Object.assign ? Object.assign.bind() : function(e) {
+function wo() {
+  return wo = Object.assign ? Object.assign.bind() : function(e) {
     for (var n = 1; n < arguments.length; n++) {
       var r = arguments[n];
       for (var a in r)
         Object.prototype.hasOwnProperty.call(r, a) && (e[a] = r[a]);
     }
     return e;
-  }, Co.apply(this, arguments);
+  }, wo.apply(this, arguments);
 }
 var Jn, ci = {};
 function of(e) {
-  return e === void 0 && (e = {}), Co({}, ci, e);
+  return e === void 0 && (e = {}), wo({}, ci, e);
 }
 function ba(e) {
   return st() ? new Promise((n) => {
@@ -1429,7 +1432,7 @@ Object.assign(ba, {
   resetDefaultOptions: sf,
   close: uf
 });
-var GC = rr;
+var Gw = rr;
 function df(e) {
   var n = ["left", "center", "right"];
   return n.includes(e);
@@ -1590,7 +1593,7 @@ const br = hs;
 br.install = function(e) {
   e.component(br.name, br);
 };
-var qC = br;
+var qw = br;
 function Wi(e, n, r, a, t, o, l) {
   try {
     var i = e[o](l), s = i.value;
@@ -1638,13 +1641,13 @@ function Kt(e, n) {
 function bf(e) {
   e._lazy.loading && Kt(e, e._lazy.loading), vt();
 }
-function wf(e) {
+function Cf(e) {
   e._lazy.error && Kt(e, e._lazy.error), e._lazy.state = "error", hi(e), vt();
 }
 function ys(e, n) {
   Kt(e, n), e._lazy.state = "success", hi(e), vt();
 }
-function Cf(e) {
+function wf(e) {
   var n;
   Et.includes(e) || (Et.push(e), (n = Re.events) == null || n.forEach((r) => {
     e.addEventListener(r, mi, {
@@ -1679,7 +1682,7 @@ function $f(e, n) {
   r.src = n, e._lazy.preloadImage = r, r.addEventListener("load", () => {
     e._lazy.attemptLock = !1, gs.add(n), ys(e, n);
   }), r.addEventListener("error", () => {
-    e._lazy.attemptLock = !1, e._lazy.currentAttempt >= e._lazy.attempt ? wf(e) : bs(e);
+    e._lazy.attemptLock = !1, e._lazy.currentAttempt >= e._lazy.attempt ? Cf(e) : bs(e);
   });
 }
 function bs(e) {
@@ -1711,7 +1714,7 @@ function Tf(e) {
 }
 function To() {
   return To = qt(function* (e) {
-    !za.includes(e) && za.push(e), Mv(e).forEach(Cf), yield pi(e);
+    !za.includes(e) && za.push(e), Mv(e).forEach(wf), yield pi(e);
   }), To.apply(this, arguments);
 }
 function hi(e) {
@@ -1724,7 +1727,7 @@ function Of(e, n) {
   } = e._lazy;
   return r !== n.value || a !== n.arg;
 }
-function ws(e, n) {
+function Cs(e, n) {
   return Oo.apply(this, arguments);
 }
 function Oo() {
@@ -1741,7 +1744,7 @@ function Po() {
       za.includes(e) && (yield pi(e));
       return;
     }
-    yield ws(e, n);
+    yield Cs(e, n);
   }), Po.apply(this, arguments);
 }
 function Vf(e) {
@@ -1756,15 +1759,15 @@ function Vf(e) {
   } = e;
   Re.events = n ?? Re.events, Re.loading = r ?? Re.loading, Re.error = a ?? Re.error, Re.attempt = t ?? Re.attempt, Re.throttleWait = o ?? Re.throttleWait, Re.filter = l;
 }
-var Cs = {
-  mounted: ws,
+var ws = {
+  mounted: Cs,
   unmounted: hi,
   updated: Pf,
   install(e, n) {
     Vf(n), mi = ii(vt, Re.throttleWait), e.directive("lazy", this);
   }
-}, KC = Cs;
-const nt = Cs;
+}, Kw = ws;
+const nt = ws;
 function Ef(e) {
   return ["fill", "contain", "cover", "none", "scale-down"].includes(e);
 }
@@ -1939,11 +1942,11 @@ var $s = x({
   }
 });
 $s.render = Af;
-const wr = $s;
-wr.install = function(e) {
-  e.component(wr.name, wr);
+const Cr = $s;
+Cr.install = function(e) {
+  e.component(Cr.name, Cr);
 };
-var XC = wr, zf = {
+var Xw = Cr, zf = {
   offset: {
     type: [Number, String]
   },
@@ -1983,11 +1986,11 @@ var Ts = x({
   }
 });
 Ts.render = Uf;
-const Cr = Ts;
-Cr.install = function(e) {
-  e.component(Cr.name, Cr);
+const wr = Ts;
+wr.install = function(e) {
+  e.component(wr.name, wr);
 };
-var ZC = Cr;
+var Zw = wr;
 function Yf(e) {
   return ["circle", "wave", "cube", "rect", "disappear"].includes(e);
 }
@@ -2181,7 +2184,7 @@ const $n = Os;
 $n.install = function(e) {
   e.component($n.name, $n);
 };
-var JC = $n;
+var Jw = $n;
 function Vo() {
   return Vo = Object.assign ? Object.assign.bind() : function(e) {
     for (var n = 1; n < arguments.length; n++) {
@@ -2382,7 +2385,7 @@ var Es = x({
         outline: v.value === "outline"
       };
     }), t = (i) => {
-      e.autoLoading && (n.value = !0, i = we(i) ? i : [i], Promise.all(i).then(() => {
+      e.autoLoading && (n.value = !0, i = Ce(i) ? i : [i], Promise.all(i).then(() => {
         n.value = !1;
       }).catch(() => {
         n.value = !1;
@@ -2417,7 +2420,7 @@ const xe = Es;
 xe.install = function(e) {
   e.component(xe.name, xe);
 };
-var QC = xe, tc = {
+var Qw = xe, tc = {
   visibilityHeight: {
     type: [Number, String],
     default: 200
@@ -2524,7 +2527,7 @@ const Sr = Ms;
 Sr.install = function(e) {
   e.component(Sr.name, Sr);
 };
-var _C = Sr;
+var _w = Sr;
 function sc(e) {
   return ["default", "primary", "info", "success", "warning", "danger"].includes(e);
 }
@@ -2678,7 +2681,7 @@ const ar = Bs;
 ar.install = function(e) {
   e.component(ar.name, ar);
 };
-var xC = ar, mc = {
+var xw = ar, mc = {
   active: {
     type: [Number, String],
     default: 0
@@ -2806,7 +2809,7 @@ var Ds = x({
       t.value !== O && (e.onBeforeChange ? g(O) : V(O));
     }, g = (O) => {
       var z = $(e.onBeforeChange, O);
-      z = we(z) ? z : [z], Promise.all(z).then((M) => {
+      z = Ce(z) ? z : [z], Promise.all(z).then((M) => {
         M.some((b) => !b) || V(O);
       });
     }, V = (O) => {
@@ -2816,12 +2819,12 @@ var Ds = x({
       O.forEach((z) => {
         z.classList.remove(qi, Ki, Xi);
       });
-    }, w = (O) => {
+    }, C = (O) => {
       var z = I(), M = z.length, b = O % 2 === 0;
       z.forEach((k, j) => {
-        C(b, k, j, M);
+        w(b, k, j, M);
       });
-    }, C = (O, z, M, b) => {
+    }, w = (O, z, M, b) => {
       var k = M === b - 1;
       if (!O && k) {
         z.classList.add(Xi);
@@ -2843,9 +2846,9 @@ var Ds = x({
       immediate: !0,
       deep: !0
     }), tn(() => {
-      r.fab && w(s.value);
+      r.fab && C(s.value);
     }), Yt(() => {
-      P(), r.fab && w(s.value);
+      P(), r.fab && C(s.value);
     }), {
       n: hc,
       classes: gc,
@@ -2861,7 +2864,7 @@ const kr = Ds;
 kr.install = function(e) {
   e.component(kr.name, kr);
 };
-var eS = kr, wc = {
+var eS = kr, Cc = {
   name: {
     type: String
   },
@@ -2881,7 +2884,7 @@ var eS = kr, wc = {
   },
   onClick: Y()
 };
-function Cc() {
+function wc() {
   var {
     parentProvider: e,
     bindParent: n
@@ -2975,13 +2978,13 @@ var As = x({
   directives: {
     Ripple: Ae
   },
-  props: wc,
+  props: Cc,
   setup(e) {
     var n = R(() => e.name), r = R(() => e.badge), a = B({}), {
       index: t,
       bottomNavigation: o,
       bindBottomNavigation: l
-    } = Cc(), {
+    } = wc(), {
       active: i,
       activeColor: s,
       inactiveColor: u
@@ -3495,9 +3498,9 @@ var Fs = x({
       zIndex: g
     } = dt(() => e.floating, 1);
     Gt(() => e.floating, () => !m.value);
-    var V = "auto", P = "auto", w = null, C = B(null), I = /* @__PURE__ */ function() {
+    var V = "auto", P = "auto", C = null, w = B(null), I = /* @__PURE__ */ function() {
       var z = Ji(function* () {
-        clearTimeout(C.value), clearTimeout(w), C.value = null, C.value = setTimeout(/* @__PURE__ */ Ji(function* () {
+        clearTimeout(w.value), clearTimeout(C), w.value = null, w.value = setTimeout(/* @__PURE__ */ Ji(function* () {
           var {
             width: M,
             height: b,
@@ -3511,7 +3514,7 @@ var Fs = x({
         return z.apply(this, arguments);
       };
     }(), S = () => {
-      clearTimeout(w), clearTimeout(C.value), C.value = null, o.value = a.value, l.value = t.value, i.value = V, s.value = P, v.value = "0px", f.value = "0", p.value = !1, w = setTimeout(() => {
+      clearTimeout(C), clearTimeout(w.value), w.value = null, o.value = a.value, l.value = t.value, i.value = V, s.value = P, v.value = "0px", f.value = "0", p.value = !1, C = setTimeout(() => {
         a.value = "auto", t.value = "auto", o.value = "100%", l.value = "100%", i.value = "auto", s.value = "auto", V = "auto", P = "auto", d.value = "hidden", u.value = void 0, y.value = !1;
       }, e.floatingDuration);
     }, D = () => {
@@ -3533,7 +3536,7 @@ var Fs = x({
       cardFloater: r,
       holderWidth: a,
       holderHeight: t,
-      floater: C,
+      floater: w,
       floaterWidth: o,
       floaterHeight: l,
       floaterTop: i,
@@ -3880,7 +3883,7 @@ function Mo() {
   }, Mo.apply(this, arguments);
 }
 var qs = Symbol("FORM_BIND_FORM_ITEM_KEY");
-function wn() {
+function Cn() {
   var {
     bindParent: e,
     parentProvider: n
@@ -4003,7 +4006,7 @@ var Ks = x({
     } = im(), {
       form: i,
       bindForm: s
-    } = wn(), {
+    } = Cn(), {
       errorMessage: u,
       validateWithTrigger: d,
       validate: v,
@@ -4048,13 +4051,13 @@ var Ks = x({
       t.value = !1;
     }, P = () => {
       $(e["onUpdate:modelValue"], e.uncheckedValue), f();
-    }, w = (S) => {
+    }, C = (S) => {
       var {
         checkedValue: D,
         uncheckedValue: O
       } = e, z = ![D, O].includes(S);
       z && (S = r.value ? O : D), p(S);
-    }, C = () => v(e.rules, e.modelValue);
+    }, w = () => v(e.rules, e.modelValue);
     le(() => e.modelValue, (S) => {
       n.value = S;
     }, {
@@ -4064,7 +4067,7 @@ var Ks = x({
       checkedValue: a,
       checked: r,
       sync: g,
-      validate: C,
+      validate: w,
       resetValidation: f,
       reset: P,
       resetWithAnimation: V
@@ -4079,9 +4082,9 @@ var Ks = x({
       n: sm,
       classes: um,
       handleClick: y,
-      toggle: w,
+      toggle: C,
       reset: P,
-      validate: C,
+      validate: w,
       resetValidation: f
     };
   }
@@ -4162,7 +4165,7 @@ var Xs = x({
       bindCheckboxes: o
     } = om(), {
       bindForm: l
-    } = wn(), {
+    } = Cn(), {
       errorMessage: i,
       validateWithTrigger: s,
       validate: u,
@@ -4204,7 +4207,7 @@ var Xs = x({
         return M.value;
       }), O = Ni(D);
       return V(), $(e["onUpdate:modelValue"], O), O;
-    }, w = () => {
+    }, C = () => {
       var D = t.filter((z) => {
         var {
           checked: M
@@ -4217,7 +4220,7 @@ var Xs = x({
         return M.value;
       }), O = Ni(D);
       return V(), $(e["onUpdate:modelValue"], O), O;
-    }, C = () => {
+    }, w = () => {
       $(e["onUpdate:modelValue"], []), d();
     }, I = () => u(e.rules, e.modelValue);
     le(() => e.modelValue, g, {
@@ -4230,7 +4233,7 @@ var Xs = x({
       onUnchecked: y,
       validate: I,
       resetValidation: d,
-      reset: C,
+      reset: w,
       errorMessage: v
     };
     return o(S), $(l, S), {
@@ -4238,8 +4241,8 @@ var Xs = x({
       n: cm,
       classes: mm,
       checkAll: P,
-      inverseAll: w,
-      reset: C,
+      inverseAll: C,
+      reset: w,
       validate: I,
       resetValidation: d
     };
@@ -4296,7 +4299,7 @@ var ym = {
   n: Gn,
   classes: bm
 } = ee("chip");
-function wm(e, n) {
+function Cm(e, n) {
   var r = ie("var-icon");
   return h(), me(
     De,
@@ -4391,13 +4394,13 @@ var Zs = x({
     };
   }
 });
-Zs.render = wm;
+Zs.render = Cm;
 const ir = Zs;
 ir.install = function(e) {
   e.component(ir.name, ir);
 };
 var dS = ir;
-function Cm(e) {
+function wm(e) {
   return ["row", "column"].includes(e);
 }
 function Sm(e) {
@@ -4418,7 +4421,7 @@ var $m = {
   direction: {
     type: String,
     default: "row",
-    validator: Cm
+    validator: wm
   },
   justify: {
     type: String,
@@ -4597,7 +4600,7 @@ var nu = x({
       length: n,
       collapseItem: r,
       bindCollapseItem: a
-    } = Em(), t = R(() => e.modelValue), o = R(() => e.offset), l = () => !e.accordion && !we(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be an Array'), !1) : e.accordion && we(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be a String or Number'), !1) : !0, i = (m, p) => l() ? p ? e.accordion ? m : [...e.modelValue, m] : e.accordion ? null : e.modelValue.filter((y) => y !== m) : null, s = (m, p) => {
+    } = Em(), t = R(() => e.modelValue), o = R(() => e.offset), l = () => !e.accordion && !Ce(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be an Array'), !1) : e.accordion && Ce(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be a String or Number'), !1) : !0, i = (m, p) => l() ? p ? e.accordion ? m : [...e.modelValue, m] : e.accordion ? null : e.modelValue.filter((y) => y !== m) : null, s = (m, p) => {
       var y = i(m, p);
       $(e["onUpdate:modelValue"], y), $(e.onChange, y);
     }, u = () => {
@@ -4780,17 +4783,17 @@ var ru = x({
       active: s,
       offset: u,
       updateItem: d
-    } = r, v = R(() => e.name), f = (w, C) => {
-      s.value === void 0 || w && we(s.value) || C === i.value || (i.value = C, m(!0));
-    }, m = (w) => {
-      e.disabled || w || d(e.name || n.value, !i.value);
+    } = r, v = R(() => e.name), f = (C, w) => {
+      s.value === void 0 || C && Ce(s.value) || w === i.value || (i.value = w, m(!0));
+    }, m = (C) => {
+      e.disabled || C || d(e.name || n.value, !i.value);
     }, p = () => {
       o.value && (o.value.style.height = "", l.value = !0, Ve(() => {
         var {
-          offsetHeight: w
+          offsetHeight: C
         } = o.value;
         o.value.style.height = 0 + "px", On(() => {
-          o.value.style.height = w + "px", t && Wt(() => {
+          o.value.style.height = C + "px", t && Wt(() => {
             t && V();
           });
         });
@@ -4800,9 +4803,9 @@ var ru = x({
     }, g = () => {
       if (o.value) {
         var {
-          offsetHeight: w
+          offsetHeight: C
         } = o.value;
-        o.value.style.height = w + "px", On(() => {
+        o.value.style.height = C + "px", On(() => {
           o.value.style.height = 0 + "px";
         });
       }
@@ -4813,8 +4816,8 @@ var ru = x({
       name: v,
       init: f
     };
-    return a(P), le(i, (w) => {
-      w ? p() : g();
+    return a(P), le(i, (C) => {
+      C ? p() : g();
     }), {
       n: Am,
       start: y,
@@ -4878,22 +4881,22 @@ var au = x({
       milliseconds: 0
     }), a = 0, t = !1, o = 0, l = 0, i, s = (p, y) => {
       var g = Object.values(y), V = ["DD", "HH", "mm", "ss"], P = [24, 60, 60, 1e3];
-      if (V.forEach((C, I) => {
-        p.includes(C) ? p = p.replace(C, ga("" + g[I], 2, "0")) : g[I + 1] += g[I] * P[I];
+      if (V.forEach((w, I) => {
+        p.includes(w) ? p = p.replace(w, ga("" + g[I], 2, "0")) : g[I + 1] += g[I] * P[I];
       }), p.includes("S")) {
-        var w = ga("" + g[g.length - 1], 3, "0");
-        p.includes("SSS") ? p = p.replace("SSS", w) : p.includes("SS") ? p = p.replace("SS", w.slice(0, 2)) : p = p.replace("S", w.slice(0, 1));
+        var C = ga("" + g[g.length - 1], 3, "0");
+        p.includes("SSS") ? p = p.replace("SSS", C) : p.includes("SS") ? p = p.replace("SS", C.slice(0, 2)) : p = p.replace("S", C.slice(0, 1));
       }
       return p;
     }, u = (p) => {
-      var y = Math.floor(p / Qi), g = Math.floor(p % Qi / No), V = Math.floor(p % No / Io), P = Math.floor(p % Io / Bo), w = Math.floor(p % Bo), C = {
+      var y = Math.floor(p / Qi), g = Math.floor(p % Qi / No), V = Math.floor(p % No / Io), P = Math.floor(p % Io / Bo), C = Math.floor(p % Bo), w = {
         days: y,
         hours: g,
         minutes: V,
         seconds: P,
-        milliseconds: w
+        milliseconds: C
       };
-      r.value = C, $(e.onChange, r.value), n.value = s(e.format, C);
+      r.value = w, $(e.onChange, r.value), n.value = s(e.format, w);
     }, d = () => {
       var {
         time: p,
@@ -5443,7 +5446,7 @@ function rt(e, n, r, a) {
     --n;
   return --n < 0 ? (n += de, t = 0) : (t = Math.ceil((n + 1) / de), n %= de), o = Ue(10, de - n), i = e[t] % o | 0, a == null ? n < 3 ? (n == 0 ? i = i / 100 | 0 : n == 1 && (i = i / 10 | 0), l = r < 4 && i == 99999 || r > 3 && i == 49999 || i == 5e4 || i == 0) : l = (r < 4 && i + 1 == o || r > 3 && i + 1 == o / 2) && (e[t + 1] / o / 100 | 0) == Ue(10, n - 2) - 1 || (i == o / 2 || i == 0) && (e[t + 1] / o / 100 | 0) == 0 : n < 4 ? (n == 0 ? i = i / 1e3 | 0 : n == 1 ? i = i / 100 | 0 : n == 2 && (i = i / 10 | 0), l = (a || r < 4) && i == 9999 || !a && r > 3 && i == 4999) : l = ((a || r < 4) && i + 1 == o || !a && r > 3 && i + 1 == o / 2) && (e[t + 1] / o / 1e3 | 0) == Ue(10, n - 3) - 1, l;
 }
-function Ct(e, n, r) {
+function wt(e, n, r) {
   for (var a, t = [0], o, l = 0, i = e.length; l < i; ) {
     for (o = t.length; o--; )
       t[o] *= n;
@@ -5489,7 +5492,7 @@ var Oe = function() {
       a.shift();
   }
   return function(a, t, o, l, i, s) {
-    var u, d, v, f, m, p, y, g, V, P, w, C, I, S, D, O, z, M, b, k, j = a.constructor, Q = a.s == t.s ? 1 : -1, F = a.d, E = t.d;
+    var u, d, v, f, m, p, y, g, V, P, C, w, I, S, D, O, z, M, b, k, j = a.constructor, Q = a.s == t.s ? 1 : -1, F = a.d, E = t.d;
     if (!F || !F[0] || !E || !E[0])
       return new j(
         // Return NaN if either NaN, or both Infinity or 0.
@@ -5508,13 +5511,13 @@ var Oe = function() {
           D = f * s + (F[v] || 0), P[v] = D / E | 0, f = D % E | 0;
         p = f || v < z;
       } else {
-        for (f = s / (E[0] + 1) | 0, f > 1 && (E = e(E, f, s), F = e(F, f, s), b = E.length, z = F.length), O = b, w = F.slice(0, b), C = w.length; C < b; )
-          w[C++] = 0;
+        for (f = s / (E[0] + 1) | 0, f > 1 && (E = e(E, f, s), F = e(F, f, s), b = E.length, z = F.length), O = b, C = F.slice(0, b), w = C.length; w < b; )
+          C[w++] = 0;
         k = E.slice(), k.unshift(0), M = E[0], E[1] >= s / 2 && ++M;
         do
-          f = 0, u = n(E, w, b, C), u < 0 ? (I = w[0], b != C && (I = I * s + (w[1] || 0)), f = I / M | 0, f > 1 ? (f >= s && (f = s - 1), y = e(E, f, s), g = y.length, C = w.length, u = n(y, w, g, C), u == 1 && (f--, r(y, b < g ? k : E, g, s))) : (f == 0 && (u = f = 1), y = E.slice()), g = y.length, g < C && y.unshift(0), r(w, y, C, s), u == -1 && (C = w.length, u = n(E, w, b, C), u < 1 && (f++, r(w, b < C ? k : E, C, s))), C = w.length) : u === 0 && (f++, w = [0]), P[v++] = f, u && w[0] ? w[C++] = F[O] || 0 : (w = [F[O]], C = 1);
-        while ((O++ < z || w[0] !== void 0) && S--);
-        p = w[0] !== void 0;
+          f = 0, u = n(E, C, b, w), u < 0 ? (I = C[0], b != w && (I = I * s + (C[1] || 0)), f = I / M | 0, f > 1 ? (f >= s && (f = s - 1), y = e(E, f, s), g = y.length, w = C.length, u = n(y, C, g, w), u == 1 && (f--, r(y, b < g ? k : E, g, s))) : (f == 0 && (u = f = 1), y = E.slice()), g = y.length, g < w && y.unshift(0), r(C, y, w, s), u == -1 && (w = C.length, u = n(E, C, b, w), u < 1 && (f++, r(C, b < w ? k : E, w, s))), w = C.length) : u === 0 && (f++, C = [0]), P[v++] = f, u && C[0] ? C[w++] = F[O] || 0 : (C = [F[O]], w = 1);
+        while ((O++ < z || C[0] !== void 0) && S--);
+        p = C[0] !== void 0;
       }
       P[0] || P.shift();
     }
@@ -5654,24 +5657,24 @@ function Lo(e, n) {
   }
 }
 function er(e, n) {
-  var r, a, t, o, l, i, s, u, d, v, f, m = 1, p = 10, y = e, g = y.d, V = y.constructor, P = V.rounding, w = V.precision;
+  var r, a, t, o, l, i, s, u, d, v, f, m = 1, p = 10, y = e, g = y.d, V = y.constructor, P = V.rounding, C = V.precision;
   if (y.s < 0 || !g || !g[0] || !y.e && g[0] == 1 && g.length == 1)
     return new V(g && !g[0] ? -1 / 0 : y.s != 1 ? NaN : g ? 0 : y);
-  if (n == null ? (fe = !1, d = w) : d = n, V.precision = d += p, r = We(g), a = r.charAt(0), Math.abs(o = y.e) < 15e14) {
+  if (n == null ? (fe = !1, d = C) : d = n, V.precision = d += p, r = We(g), a = r.charAt(0), Math.abs(o = y.e) < 15e14) {
     for (; a < 7 && a != 1 || a == 1 && r.charAt(1) > 3; )
       y = y.times(e), r = We(y.d), a = r.charAt(0), m++;
     o = y.e, a > 1 ? (y = new V("0." + r), o++) : y = new V(a + "." + r.slice(1));
   } else
-    return u = It(V, d + 2, w).times(o + ""), y = er(new V(a + "." + r.slice(1)), d - p).plus(u), V.precision = w, n == null ? ue(y, w, P, fe = !0) : y;
+    return u = It(V, d + 2, C).times(o + ""), y = er(new V(a + "." + r.slice(1)), d - p).plus(u), V.precision = C, n == null ? ue(y, C, P, fe = !0) : y;
   for (v = y, s = l = y = Oe(y.minus(1), y.plus(1), d, 1), f = ue(y.times(y), d, 1), t = 3; ; ) {
     if (l = ue(l.times(f), d, 1), u = s.plus(Oe(l, new V(t), d, 1)), We(u.d).slice(0, d) === We(s.d).slice(0, d))
-      if (s = s.times(2), o !== 0 && (s = s.plus(It(V, d + 2, w).times(o + ""))), s = Oe(s, new V(m), d, 1), n == null)
+      if (s = s.times(2), o !== 0 && (s = s.plus(It(V, d + 2, C).times(o + ""))), s = Oe(s, new V(m), d, 1), n == null)
         if (rt(s.d, d - p, P, i))
           V.precision = d += p, u = l = y = Oe(v.minus(1), v.plus(1), d, 1), f = ue(y.times(y), d, 1), t = i = 1;
         else
-          return ue(s, V.precision = w, P, fe = !0);
+          return ue(s, V.precision = C, P, fe = !0);
       else
-        return V.precision = w, s;
+        return V.precision = C, s;
     s = u, t += 2;
   }
 }
@@ -5713,7 +5716,7 @@ function Km(e, n) {
     r = 8;
   else
     throw Error(cr + n);
-  for (o = n.search(/p/i), o > 0 ? (s = +n.slice(o + 1), n = n.substring(2, o)) : n = n.slice(2), o = n.indexOf("."), l = o >= 0, a = e.constructor, l && (n = n.replace(".", ""), i = n.length, o = i - o, t = du(a, new a(r), o, o * 2)), u = Ct(n, r, Tn), d = u.length - 1, o = d; u[o] === 0; --o)
+  for (o = n.search(/p/i), o > 0 ? (s = +n.slice(o + 1), n = n.substring(2, o)) : n = n.slice(2), o = n.indexOf("."), l = o >= 0, a = e.constructor, l && (n = n.replace(".", ""), i = n.length, o = i - o, t = du(a, new a(r), o, o * 2)), u = wt(n, r, Tn), d = u.length - 1, o = d; u[o] === 0; --o)
     u.pop();
   return o < 0 ? new a(e.s * 0) : (e.e = Jt(u, d), e.d = u, fe = !1, l && (e = Oe(e, t, i * 4)), s && (e = e.times(Math.abs(s) < 54 ? Ue(2, s) : nr.pow(2, s))), fe = !0, e);
 }
@@ -5762,7 +5765,7 @@ function gi(e, n, r, a) {
   if (p ? (an(r, 1, hr), a === void 0 ? a = m.rounding : an(a, 0, 8)) : (r = m.precision, a = m.rounding), !e.isFinite())
     d = fu(e);
   else {
-    for (d = Mn(e), l = d.indexOf("."), p ? (t = 2, n == 16 ? r = r * 4 - 3 : n == 8 && (r = r * 3 - 2)) : t = n, l >= 0 && (d = d.replace(".", ""), f = new m(1), f.e = d.length - l, f.d = Ct(Mn(f), 10, t), f.e = f.d.length), v = Ct(d, 10, t), o = s = v.length; v[--s] == 0; )
+    for (d = Mn(e), l = d.indexOf("."), p ? (t = 2, n == 16 ? r = r * 4 - 3 : n == 8 && (r = r * 3 - 2)) : t = n, l >= 0 && (d = d.replace(".", ""), f = new m(1), f.e = d.length - l, f.d = wt(Mn(f), 10, t), f.e = f.d.length), v = wt(d, 10, t), o = s = v.length; v[--s] == 0; )
       v.pop();
     if (!v[0])
       d = p ? "0p+0" : "0";
@@ -5779,7 +5782,7 @@ function gi(e, n, r, a) {
           if (n == 16 || n == 8) {
             for (l = n == 16 ? 4 : 3, --s; s % l; s++)
               d += "0";
-            for (v = Ct(d, t, n), s = v.length; !v[s - 1]; --s)
+            for (v = wt(d, t, n), s = v.length; !v[s - 1]; --s)
               ;
             for (l = 1, d = "1."; l < s; l++)
               d += Do.charAt(v[l]);
@@ -5922,7 +5925,7 @@ function mu(e) {
       throw Error(cr + o);
     return (i = o.charCodeAt(0)) === 45 ? (o = o.slice(1), u.s = -1) : (i === 43 && (o = o.slice(1)), u.s = 1), su.test(o) ? Ro(u, o) : Km(u, o);
   }
-  if (t.prototype = K, t.ROUND_UP = 0, t.ROUND_DOWN = 1, t.ROUND_CEIL = 2, t.ROUND_FLOOR = 3, t.ROUND_HALF_UP = 4, t.ROUND_HALF_DOWN = 5, t.ROUND_HALF_EVEN = 6, t.ROUND_HALF_CEIL = 7, t.ROUND_HALF_FLOOR = 8, t.EUCLID = 9, t.config = t.set = lp, t.clone = mu, t.isDecimal = el, t.abs = Zm, t.acos = Jm, t.acosh = Qm, t.add = _m, t.asin = xm, t.asinh = ep, t.atan = np, t.atanh = rp, t.atan2 = ap, t.cbrt = tp, t.ceil = op, t.clamp = ip, t.cos = sp, t.cosh = up, t.div = dp, t.exp = vp, t.floor = fp, t.hypot = cp, t.ln = mp, t.log = pp, t.log10 = gp, t.log2 = hp, t.max = yp, t.min = bp, t.mod = wp, t.mul = Cp, t.pow = Sp, t.random = kp, t.round = $p, t.sign = Tp, t.sin = Op, t.sinh = Pp, t.sqrt = Vp, t.sub = Ep, t.sum = Mp, t.tan = Bp, t.tanh = Ip, t.trunc = Np, e === void 0 && (e = {}), e && e.defaults !== !0)
+  if (t.prototype = K, t.ROUND_UP = 0, t.ROUND_DOWN = 1, t.ROUND_CEIL = 2, t.ROUND_FLOOR = 3, t.ROUND_HALF_UP = 4, t.ROUND_HALF_DOWN = 5, t.ROUND_HALF_EVEN = 6, t.ROUND_HALF_CEIL = 7, t.ROUND_HALF_FLOOR = 8, t.EUCLID = 9, t.config = t.set = lp, t.clone = mu, t.isDecimal = el, t.abs = Zm, t.acos = Jm, t.acosh = Qm, t.add = _m, t.asin = xm, t.asinh = ep, t.atan = np, t.atanh = rp, t.atan2 = ap, t.cbrt = tp, t.ceil = op, t.clamp = ip, t.cos = sp, t.cosh = up, t.div = dp, t.exp = vp, t.floor = fp, t.hypot = cp, t.ln = mp, t.log = pp, t.log10 = gp, t.log2 = hp, t.max = yp, t.min = bp, t.mod = Cp, t.mul = wp, t.pow = Sp, t.random = kp, t.round = $p, t.sign = Tp, t.sin = Op, t.sinh = Pp, t.sqrt = Vp, t.sub = Ep, t.sum = Mp, t.tan = Bp, t.tanh = Ip, t.trunc = Np, e === void 0 && (e = {}), e && e.defaults !== !0)
     for (a = ["precision", "rounding", "toExpNeg", "toExpPos", "maxE", "minE", "modulo", "crypto"], n = 0; n < a.length; )
       e.hasOwnProperty(r = a[n++]) || (e[r] = this[r]);
   return t.config(e), t;
@@ -5969,10 +5972,10 @@ function yp() {
 function bp() {
   return vu(this, arguments, "gt");
 }
-function wp(e, n) {
+function Cp(e, n) {
   return new this(e).mod(n);
 }
-function Cp(e, n) {
+function wp(e, n) {
   return new this(e).mul(n);
 }
 function Sp(e, n) {
@@ -6235,7 +6238,7 @@ var pu = x({
     var n = B(""), r, a, t, o, {
       bindForm: l,
       form: i
-    } = wn(), {
+    } = Cn(), {
       errorMessage: s,
       validateWithTrigger: u,
       validate: d,
@@ -6268,13 +6271,13 @@ var pu = x({
         modelValue: H
       } = e;
       return E != null && L(H) >= L(E);
-    }), w = R(() => {
+    }), C = R(() => {
       var {
         min: E,
         modelValue: H
       } = e;
       return E != null && L(H) <= L(E);
-    }), C = (E) => {
+    }), w = (E) => {
       var {
         decimalLength: H,
         max: U,
@@ -6287,7 +6290,7 @@ var pu = x({
         onBeforeChange: U
       } = e, {
         value: X
-      } = E.target, N = C(X);
+      } = E.target, N = w(X);
       H ? $(U, L(N), F) : Q(N), y("onInputChange");
     }, S = () => {
       var {
@@ -6301,8 +6304,8 @@ var pu = x({
         onDecrement: J,
         onBeforeChange: ae
       } = e;
-      if (!(m != null && m.value || f != null && f.value || E || H || U || !X) && !w.value) {
-        var oe = new nr(L(G)).minus(new nr(L(Z))).toString(), ge = C(oe), pe = L(ge);
+      if (!(m != null && m.value || f != null && f.value || E || H || U || !X) && !C.value) {
+        var oe = new nr(L(G)).minus(new nr(L(Z))).toString(), ge = w(oe), pe = L(ge);
         $(J, pe), N ? $(ae, pe, F) : (Q(ge), y("onDecrement"));
       }
     }, D = () => {
@@ -6318,7 +6321,7 @@ var pu = x({
         onBeforeChange: ae
       } = e;
       if (!(m != null && m.value || f != null && f.value || E || H || U || !X) && !P.value) {
-        var oe = new nr(L(G)).plus(new nr(L(Z))).toString(), ge = C(oe), pe = L(ge);
+        var oe = new nr(L(G)).plus(new nr(L(Z))).toString(), ge = w(oe), pe = L(ge);
         $(J, pe), N ? $(ae, pe, F) : (Q(ge), y("onIncrement"));
       }
     }, O = () => {
@@ -6354,11 +6357,11 @@ var pu = x({
       var H = L(E);
       $(e["onUpdate:modelValue"], H);
     }, F = (E) => {
-      Q(C(String(E))), y("onLazyChange");
+      Q(w(String(E))), y("onLazyChange");
     };
     return $(l, V), le(() => e.modelValue, (E) => {
-      Q(C(String(E))), $(e.onChange, L(E));
-    }), Q(C(String(e.modelValue))), {
+      Q(w(String(E))), $(e.onChange, L(E));
+    }), Q(w(String(e.modelValue))), {
       n: Ap,
       classes: zp,
       inputValue: n,
@@ -6366,7 +6369,7 @@ var pu = x({
       formDisabled: m,
       formReadonly: f,
       isMax: P,
-      isMin: w,
+      isMin: C,
       validate: p,
       reset: g,
       resetValidation: v,
@@ -6512,14 +6515,14 @@ var xp = function(n) {
     return this.$d.getTime();
   }, n.startOf = function(a, t) {
     var o = this, l = Te.u(t) ? !0 : t, i = Te.p(a), s = function(V, P) {
-      var w = Te.w(o.$u ? Date.UTC(o.$y, P, V) : new Date(o.$y, P, V), o);
-      return l ? w : w.endOf(Xn);
+      var C = Te.w(o.$u ? Date.UTC(o.$y, P, V) : new Date(o.$y, P, V), o);
+      return l ? C : C.endOf(Xn);
     }, u = function(V, P) {
-      var w = [0, 0, 0, 0], C = [23, 59, 59, 999];
+      var C = [0, 0, 0, 0], w = [23, 59, 59, 999];
       return Te.w(o.toDate()[V].apply(
         // eslint-disable-line prefer-spread
         o.toDate("s"),
-        (l ? w : C).slice(P)
+        (l ? C : w).slice(P)
       ), o);
     }, d = this.$W, v = this.$M, f = this.$D, m = "set" + (this.$u ? "UTC" : "");
     switch (i) {
@@ -6580,13 +6583,13 @@ var xp = function(n) {
     var t = this, o = this.$locale();
     if (!this.isValid())
       return o.invalidDate || tl;
-    var l = a || Hp, i = Te.z(this), s = this.$H, u = this.$m, d = this.$M, v = o.weekdays, f = o.months, m = o.meridiem, p = function(w, C, I, S) {
-      return w && (w[C] || w(t, l)) || I[C].slice(0, S);
-    }, y = function(w) {
-      return Te.s(s % 12 || 12, w, "0");
-    }, g = m || function(P, w, C) {
+    var l = a || Hp, i = Te.z(this), s = this.$H, u = this.$m, d = this.$M, v = o.weekdays, f = o.months, m = o.meridiem, p = function(C, w, I, S) {
+      return C && (C[w] || C(t, l)) || I[w].slice(0, S);
+    }, y = function(C) {
+      return Te.s(s % 12 || 12, C, "0");
+    }, g = m || function(P, C, w) {
       var I = P < 12 ? "AM" : "PM";
-      return C ? I.toLowerCase() : I;
+      return w ? I.toLowerCase() : I;
     }, V = {
       YY: String(this.$y).slice(-2),
       YYYY: this.$y,
@@ -6614,8 +6617,8 @@ var xp = function(n) {
       Z: i
       // 'ZZ' logic below
     };
-    return l.replace(Wp, function(P, w) {
-      return w || V[P] || i.replace(":", "");
+    return l.replace(Wp, function(P, C) {
+      return C || V[P] || i.replace(":", "");
     });
   }, n.utcOffset = function() {
     return -Math.round(this.$d.getTimezoneOffset() / 15) * 15;
@@ -6642,10 +6645,10 @@ var xp = function(n) {
   }, n.toString = function() {
     return this.$d.toUTCString();
   }, e;
-}(), wu = _t.prototype;
-te.prototype = wu;
+}(), Cu = _t.prototype;
+te.prototype = Cu;
 [["$ms", yi], ["$s", Ba], ["$m", Ia], ["$H", Na], ["$W", Xn], ["$M", Sn], ["$y", Zn], ["$D", Da]].forEach(function(e) {
-  wu[e[1]] = function(n) {
+  Cu[e[1]] = function(n) {
     return this.$g(n, e[0], e[1]);
   };
 });
@@ -6660,7 +6663,7 @@ te.unix = function(e) {
 te.en = Ar[Qa];
 te.Ls = Ar;
 te.p = {};
-const Cu = function(e, n) {
+const wu = function(e, n) {
   n.prototype.isSameOrBefore = function(r, a) {
     return this.isSame(r, a) || this.isBefore(r, a);
   };
@@ -6910,7 +6913,7 @@ function Yo() {
     return e;
   }, Yo.apply(this, arguments);
 }
-te.extend(Cu);
+te.extend(wu);
 te.extend(Su);
 var {
   n: pt,
@@ -7029,24 +7032,24 @@ var Tu = x({
       left: !1,
       right: !1
     }), u = R(() => e.choose.chooseYear === e.preview.previewYear), d = R(() => e.preview.previewYear === a), v = (P) => {
-      var w, C;
-      return (w = (C = He.value.datePickerMonthDict) == null ? void 0 : C[P].abbr) != null ? w : "";
+      var C, w;
+      return (C = (w = He.value.datePickerMonthDict) == null ? void 0 : w[P].abbr) != null ? C : "";
     }, f = (P) => {
       var {
         preview: {
-          previewYear: w
+          previewYear: C
         },
         componentProps: {
-          min: C,
+          min: w,
           max: I
         }
-      } = e, S = !0, D = !0, O = w + "-" + P;
-      return I && (S = te(O).isSameOrBefore(te(I), "month")), C && (D = te(O).isSameOrAfter(te(C), "month")), S && D;
+      } = e, S = !0, D = !0, O = C + "-" + P;
+      return I && (S = te(O).isSameOrBefore(te(I), "month")), w && (D = te(O).isSameOrAfter(te(w), "month")), S && D;
     }, m = (P) => {
       var {
         choose: {
-          chooseMonths: w,
-          chooseDays: C,
+          chooseMonths: C,
+          chooseDays: w,
           chooseRangeMonth: I
         },
         componentProps: {
@@ -7060,14 +7063,14 @@ var Tu = x({
         var O = te(P).isSameOrBefore(te(I[1]), "month"), z = te(P).isSameOrAfter(te(I[0]), "month");
         return O && z;
       }
-      return S === "month" ? w.includes(P) : C.some((M) => M.includes(P));
+      return S === "month" ? C.includes(P) : w.some((M) => M.includes(P));
     }, p = (P) => {
       var {
         choose: {
-          chooseMonth: w
+          chooseMonth: C
         },
         preview: {
-          previewYear: C
+          previewYear: w
         },
         componentProps: {
           allowedDates: I,
@@ -7075,7 +7078,7 @@ var Tu = x({
           multiple: D,
           range: O
         }
-      } = e, z = C + "-" + P, M = () => O || D ? m(z) : (w == null ? void 0 : w.index) === P && u.value, b = () => f(P) ? I ? !I(z) : !1 : !0, k = b(), j = () => k ? !0 : O || D ? !m(z) : !u.value || (w == null ? void 0 : w.index) !== P, Q = () => d.value && t === P && e.componentProps.showCurrent ? (O || D || u.value) && k ? !0 : O || D ? !m(z) : u.value ? (w == null ? void 0 : w.index) !== t : !0 : !1, F = () => k ? "" : Q() ? S ?? "" : M() ? "" : ht() + "-color-cover", E = F().startsWith(ht());
+      } = e, z = w + "-" + P, M = () => O || D ? m(z) : (C == null ? void 0 : C.index) === P && u.value, b = () => f(P) ? I ? !I(z) : !1 : !0, k = b(), j = () => k ? !0 : O || D ? !m(z) : !u.value || (C == null ? void 0 : C.index) !== P, Q = () => d.value && t === P && e.componentProps.showCurrent ? (O || D || u.value) && k ? !0 : O || D ? !m(z) : u.value ? (C == null ? void 0 : C.index) !== t : !0 : !1, F = () => k ? "" : Q() ? S ?? "" : M() ? "" : ht() + "-color-cover", E = F().startsWith(ht());
       return {
         outline: Q(),
         text: j(),
@@ -7084,9 +7087,9 @@ var Tu = x({
         [ht() + "-color-cover"]: E,
         class: th(pt("button"), [k, pt("button--disabled")])
       };
-    }, y = (P, w) => {
-      var C = w.currentTarget;
-      C.classList.contains(pt("button--disabled")) || r("choose-month", P);
+    }, y = (P, C) => {
+      var w = C.currentTarget;
+      w.classList.contains(pt("button--disabled")) || r("choose-month", P);
     }, g = (P) => {
       o.value = P === "prev", l.value += P === "prev" ? -1 : 1, r("check-preview", "year", P);
     }, V = (P) => {
@@ -7095,11 +7098,11 @@ var Tu = x({
     return le(() => e.preview.previewYear, (P) => {
       var {
         componentProps: {
-          min: w,
-          max: C
+          min: C,
+          max: w
         }
       } = e;
-      C && (s.right = !te("" + (L(P) + 1)).isSameOrBefore(te(C), "year")), w && (s.left = !te("" + (L(P) - 1)).isSameOrAfter(te(w), "year"));
+      w && (s.right = !te("" + (L(P) + 1)).isSameOrBefore(te(w), "year")), C && (s.left = !te("" + (L(P) - 1)).isSameOrAfter(te(C), "year"));
     }, {
       immediate: !0
     }), {
@@ -7223,7 +7226,7 @@ function Fo() {
     return e;
   }, Fo.apply(this, arguments);
 }
-te.extend(Cu);
+te.extend(wu);
 te.extend(Su);
 var {
   n: Ea,
@@ -7420,7 +7423,7 @@ var Pu = x({
         }
       } = e, j = !0, Q = !0, F = z + "-" + M.index + "-" + O;
       return k && (j = te(F).isSameOrBefore(te(k), "day")), b && (Q = te(F).isSameOrAfter(te(b), "day")), j && Q;
-    }, w = (O) => {
+    }, C = (O) => {
       var {
         choose: {
           chooseDays: z,
@@ -7437,7 +7440,7 @@ var Pu = x({
         return k && j;
       }
       return z.includes(O);
-    }, C = (O) => {
+    }, w = (O) => {
       if (O < 0)
         return {
           text: !0,
@@ -7459,7 +7462,7 @@ var Pu = x({
           multiple: Q,
           range: F
         }
-      } = e, E = M + "-" + b.index + "-" + O, H = () => F || Q ? w(E) : L(z) === O && f.value, U = () => P(O) ? k ? !k(E) : !1 : !0, X = U(), N = () => X ? !0 : F || Q ? !w(E) : !f.value || L(z) !== O, Z = () => v.value && L(o) === O && e.componentProps.showCurrent ? (F || Q || f.value) && X ? !0 : F || Q ? !w(E) : f.value ? z !== o : !0 : !1, G = () => X ? "" : Z() ? j ?? "" : H() ? "" : gt() + "-color-cover", J = G().startsWith(gt());
+      } = e, E = M + "-" + b.index + "-" + O, H = () => F || Q ? C(E) : L(z) === O && f.value, U = () => P(O) ? k ? !k(E) : !1 : !0, X = U(), N = () => X ? !0 : F || Q ? !C(E) : !f.value || L(z) !== O, Z = () => v.value && L(o) === O && e.componentProps.showCurrent ? (F || Q || f.value) && X ? !0 : F || Q ? !C(E) : f.value ? z !== o : !0 : !1, G = () => X ? "" : Z() ? j ?? "" : H() ? "" : gt() + "-color-cover", J = G().startsWith(gt());
       return {
         text: N(),
         outline: Z(),
@@ -7493,7 +7496,7 @@ var Pu = x({
       getDayAbbr: p,
       checkDate: I,
       chooseDay: S,
-      buttonProps: C
+      buttonProps: w
     };
   }
 });
@@ -7692,7 +7695,7 @@ var Vu = x({
   },
   props: nh,
   setup(e) {
-    var n = 0, r = 0, a = "", t, o = te().format("YYYY-MM-D"), [l, i] = o.split("-"), s = kt.find((se) => se.index === i), u = B(!1), d = B(!1), v = B(!0), f = B(), m = B(), p = B(), y = B(s), g = B(l), V = B(!1), P = B([]), w = B([]), C = B([]), I = B([]), S = B(null), D = B(null), O = Me({
+    var n = 0, r = 0, a = "", t, o = te().format("YYYY-MM-D"), [l, i] = o.split("-"), s = kt.find((se) => se.index === i), u = B(!1), d = B(!1), v = B(!0), f = B(), m = B(), p = B(), y = B(s), g = B(l), V = B(!1), P = B([]), C = B([]), w = B([]), I = B([]), S = B(null), D = B(null), O = Me({
       allowedDates: e.allowedDates,
       type: e.type,
       color: e.color,
@@ -7707,8 +7710,8 @@ var Vu = x({
       chooseYear: m.value,
       chooseDay: p.value,
       chooseMonths: P.value,
-      chooseDays: w.value,
-      chooseRangeMonth: C.value,
+      chooseDays: C.value,
+      chooseRangeMonth: w.value,
       chooseRangeDay: I.value
     })), M = R(() => ({
       previewMonth: y.value,
@@ -7719,15 +7722,15 @@ var Vu = x({
         range: ye
       } = e;
       if (ye)
-        return C.value.length ? C.value[0] + " ~ " + C.value[1] : "";
+        return w.value.length ? w.value[0] + " ~ " + w.value[1] : "";
       var ce = "";
       if (f.value) {
-        var Ce, ke;
-        ce = (Ce = (ke = He.value.datePickerMonthDict) == null ? void 0 : ke[f.value.index].name) != null ? Ce : "";
+        var we, ke;
+        ce = (we = (ke = He.value.datePickerMonthDict) == null ? void 0 : ke[f.value.index].name) != null ? we : "";
       }
       return se ? "" + P.value.length + He.value.datePickerSelected : ce;
     }), k = R(() => {
-      var se, ye, ce, Ce, {
+      var se, ye, ce, we, {
         multiple: ke,
         range: Le
       } = e;
@@ -7736,17 +7739,17 @@ var Vu = x({
         return Ze.length ? Ze[0] + " ~ " + Ze[1] : "";
       }
       if (ke)
-        return "" + w.value.length + He.value.datePickerSelected;
+        return "" + C.value.length + He.value.datePickerSelected;
       if (!m.value || !f.value || !p.value)
         return "";
-      var mn = te(m.value + "-" + f.value.index + "-" + p.value).day(), Va = Ja.find((ao) => ao.index === "" + mn), Mi = (se = (ye = He.value.datePickerWeekDict) == null ? void 0 : ye[Va.index].name) != null ? se : "", cv = (ce = (Ce = He.value.datePickerMonthDict) == null ? void 0 : Ce[f.value.index].name) != null ? ce : "", mv = ga(p.value, 2, "0");
+      var mn = te(m.value + "-" + f.value.index + "-" + p.value).day(), Va = Ja.find((ao) => ao.index === "" + mn), Mi = (se = (ye = He.value.datePickerWeekDict) == null ? void 0 : ye[Va.index].name) != null ? se : "", cv = (ce = (we = He.value.datePickerMonthDict) == null ? void 0 : we[f.value.index].name) != null ? ce : "", mv = ga(p.value, 2, "0");
       return He.value.lang === "zh-CN" ? f.value.index + "-" + mv + " " + Mi.slice(0, 3) : Mi.slice(0, 3) + ", " + cv.slice(0, 3) + " " + p.value;
     }), j = R(() => u.value ? "year" : e.type === "month" || d.value ? "month" : e.type === "date" ? "date" : ""), Q = R(() => !e.touchable || ["", "year"].includes(j.value)), F = R(() => {
-      var se, ye, ce, Ce, ke = te(m.value + "-" + ((se = f.value) == null ? void 0 : se.index) + "-" + p.value).day(), Le = p.value ? ga(p.value, 2, "0") : "";
+      var se, ye, ce, we, ke = te(m.value + "-" + ((se = f.value) == null ? void 0 : se.index) + "-" + p.value).day(), Le = p.value ? ga(p.value, 2, "0") : "";
       return {
         week: "" + ke,
         year: (ye = m.value) != null ? ye : "",
-        month: (ce = (Ce = f.value) == null ? void 0 : Ce.index) != null ? ce : "",
+        month: (ce = (we = f.value) == null ? void 0 : we.index) != null ? ce : "",
         date: Le
       };
     }), E = R(() => z.value.chooseRangeDay.map((se) => te(se).format("YYYY-MM-DD"))), H = R(() => m.value === g.value), U = R(() => {
@@ -7767,8 +7770,8 @@ var Vu = x({
         var {
           clientX: ye,
           clientY: ce
-        } = se.touches[0], Ce = ye - n, ke = ce - r;
-        t = Z(Math.abs(Ce), Math.abs(ke)), a = Ce > 0 ? "prev" : "next";
+        } = se.touches[0], we = ye - n, ke = ce - r;
+        t = Z(Math.abs(we), Math.abs(ke)), a = we > 0 ? "prev" : "next";
       }
     }, J = () => {
       if (!(Q.value || t !== "x")) {
@@ -7778,32 +7781,32 @@ var Vu = x({
         });
       }
     }, ae = (se, ye) => {
-      var ce = ye === "month" ? C : I;
+      var ce = ye === "month" ? w : I;
       if (ce.value = v.value ? [se, se] : [ce.value[0], se], v.value = !v.value, v.value) {
-        var Ce = te(ce.value[0]).isAfter(ce.value[1]), ke = Ce ? [ce.value[1], ce.value[0]] : [...ce.value];
+        var we = te(ce.value[0]).isAfter(ce.value[1]), ke = we ? [ce.value[1], ce.value[0]] : [...ce.value];
         $(e["onUpdate:modelValue"], ke), $(e.onChange, ke);
       }
     }, oe = (se, ye) => {
-      var ce = ye === "month" ? P : w, Ce = ye === "month" ? "YYYY-MM" : "YYYY-MM-DD", ke = ce.value.map((Ze) => te(Ze).format(Ce)), Le = ke.findIndex((Ze) => Ze === se);
+      var ce = ye === "month" ? P : C, we = ye === "month" ? "YYYY-MM" : "YYYY-MM-DD", ke = ce.value.map((Ze) => te(Ze).format(we)), Le = ke.findIndex((Ze) => Ze === se);
       Le === -1 ? ke.push(se) : ke.splice(Le, 1), $(e["onUpdate:modelValue"], ke), $(e.onChange, ke);
     }, ge = (se, ye) => !m.value || !f.value ? !1 : H.value ? se === "month" ? ye.index < f.value.index : U.value ? ye < L(p.value) : f.value.index > y.value.index : m.value > g.value, pe = (se) => {
       var {
         readonly: ye,
         range: ce,
-        multiple: Ce,
+        multiple: we,
         onChange: ke,
         "onUpdate:modelValue": Le
       } = e;
       if (!(se < 0 || ye)) {
         V.value = ge("day", se);
         var Ze = g.value + "-" + y.value.index + "-" + se, mn = te(Ze).format("YYYY-MM-DD");
-        ce ? ae(mn, "day") : Ce ? oe(mn, "day") : ($(Le, mn), $(ke, mn));
+        ce ? ae(mn, "day") : we ? oe(mn, "day") : ($(Le, mn), $(ke, mn));
       }
     }, Fe = (se) => {
       var {
         type: ye,
         readonly: ce,
-        range: Ce,
+        range: we,
         multiple: ke,
         onChange: Le,
         onPreview: Ze,
@@ -7811,7 +7814,7 @@ var Vu = x({
       } = e;
       if (V.value = ge("month", se), ye === "month" && !ce) {
         var Va = g.value + "-" + se.index;
-        Ce ? ae(Va, "month") : ke ? oe(Va, "month") : ($(mn, Va), $(Le, Va));
+        we ? ae(Va, "month") : ke ? oe(Va, "month") : ($(mn, Va), $(Le, Va));
       } else
         y.value = se, $(Ze, L(g.value), L(y.value.index));
       d.value = !1;
@@ -7822,24 +7825,24 @@ var Vu = x({
       if (se === "year")
         g.value = "" + (L(g.value) + ce);
       else {
-        var Ce = L(y.value.index) + ce;
-        Ce < 1 && (g.value = "" + (L(g.value) - 1), Ce = 12), Ce > 12 && (g.value = "" + (L(g.value) + 1), Ce = 1), y.value = kt.find((ke) => L(ke.index) === Ce);
+        var we = L(y.value.index) + ce;
+        we < 1 && (g.value = "" + (L(g.value) - 1), we = 12), we > 12 && (g.value = "" + (L(g.value) + 1), we = 1), y.value = kt.find((ke) => L(ke.index) === we);
       }
       $(e.onPreview, L(g.value), L(y.value.index));
-    }, ze = () => (e.multiple || e.range) && !we(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be an Array'), !1) : !e.multiple && !e.range && we(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be a String'), !1) : !0, cn = (se) => we(se) ? !1 : se === "Invalid Date" ? (console.error('[Varlet] DatePicker: "modelValue" is an Invalid Date'), !0) : !1, dv = (se, ye) => {
-      var ce = ye === "month" ? C : I, Ce = ye === "month" ? "YYYY-MM" : "YYYY-MM-D", ke = se.map((mn) => te(mn).format(Ce)).slice(0, 2), Le = ce.value.some((mn) => cn(mn));
+    }, ze = () => (e.multiple || e.range) && !Ce(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be an Array'), !1) : !e.multiple && !e.range && Ce(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be a String'), !1) : !0, cn = (se) => Ce(se) ? !1 : se === "Invalid Date" ? (console.error('[Varlet] DatePicker: "modelValue" is an Invalid Date'), !0) : !1, dv = (se, ye) => {
+      var ce = ye === "month" ? w : I, we = ye === "month" ? "YYYY-MM" : "YYYY-MM-D", ke = se.map((mn) => te(mn).format(we)).slice(0, 2), Le = ce.value.some((mn) => cn(mn));
       if (!Le) {
         ce.value = ke;
         var Ze = te(ce.value[0]).isAfter(ce.value[1]);
         ce.value.length === 2 && Ze && (ce.value = [ce.value[1], ce.value[0]]);
       }
     }, vv = (se, ye) => {
-      var ce = ye === "month" ? P : w, Ce = ye === "month" ? "YYYY-MM" : "YYYY-MM-D", ke = Array.from(new Set(se.map((Le) => te(Le).format(Ce))));
+      var ce = ye === "month" ? P : C, we = ye === "month" ? "YYYY-MM" : "YYYY-MM-D", ke = Array.from(new Set(se.map((Le) => te(Le).format(we))));
       ce.value = ke.filter((Le) => Le !== "Invalid Date");
     }, fv = (se) => {
       var ye = te(se).format("YYYY-MM-D");
       if (!cn(ye)) {
-        var [ce, Ce, ke] = ye.split("-"), Le = kt.find((Ze) => Ze.index === Ce);
+        var [ce, we, ke] = ye.split("-"), Le = kt.find((Ze) => Ze.index === we);
         f.value = Le, m.value = ce, p.value = ke, y.value = Le, g.value = ce;
       }
     }, Ei = () => {
@@ -7848,11 +7851,11 @@ var Vu = x({
     return le(() => e.modelValue, (se) => {
       if (!(!ze() || cn(se) || !se))
         if (e.range) {
-          if (!we(se))
+          if (!Ce(se))
             return;
           v.value = se.length !== 1, dv(se, e.type);
         } else if (e.multiple) {
-          if (!we(se))
+          if (!Ce(se))
             return;
           vv(se, e.type);
         } else
@@ -7992,9 +7995,9 @@ function jo() {
 }
 var {
   n: bh,
-  classes: wh
+  classes: Ch
 } = ee("dialog");
-function Ch(e, n) {
+function wh(e, n) {
   var r = ie("var-button"), a = ie("var-popup");
   return h(), me(
     a,
@@ -8171,7 +8174,7 @@ var Eu = x({
       immediate: !0
     }), {
       n: bh,
-      classes: wh,
+      classes: Ch,
       pack: He,
       dt: Ht,
       popupShow: n,
@@ -8183,7 +8186,7 @@ var Eu = x({
     };
   }
 });
-Eu.render = Ch;
+Eu.render = wh;
 const lr = Eu;
 function Dt() {
   return Dt = Object.assign ? Object.assign.bind() : function(e) {
@@ -8201,9 +8204,9 @@ function Sh(e) {
     message: e
   }) : Dt({}, At, e);
 }
-function wa(e) {
+function Ca(e) {
   return st() ? new Promise((n) => {
-    wa.close();
+    Ca.close();
     var r = Sh(e), a = Me(r);
     a.teleport = "body", Qn = a;
     var {
@@ -8245,7 +8248,7 @@ function Th() {
     });
   }
 }
-Object.assign(wa, {
+Object.assign(Ca, {
   setDefaultOptions: kh,
   resetDefaultOptions: $h,
   close: Th
@@ -8253,10 +8256,10 @@ Object.assign(wa, {
 lr.install = function(e) {
   e.component(lr.name, lr);
 };
-wa.install = function(e) {
+Ca.install = function(e) {
   e.component(lr.name, lr);
 };
-wa.Component = lr;
+Ca.Component = lr;
 var gS = lr, Oh = {
   inset: {
     type: [Boolean, Number, String],
@@ -8373,7 +8376,7 @@ function $t(e) {
     return Mh[n];
   });
 }
-var An = "top", mr = "bottom", Ca = "right", sr = "left", xt = "auto", eo = [An, mr, Ca, sr], no = "start", at = "end", Bh = "clippingParents", Bu = "viewport", Xa = "popper", Ih = "reference", il = /* @__PURE__ */ eo.reduce(function(e, n) {
+var An = "top", mr = "bottom", wa = "right", sr = "left", xt = "auto", eo = [An, mr, wa, sr], no = "start", at = "end", Bh = "clippingParents", Bu = "viewport", Xa = "popper", Ih = "reference", il = /* @__PURE__ */ eo.reduce(function(e, n) {
   return e.concat([n + "-" + no, n + "-" + at]);
 }, []), Iu = /* @__PURE__ */ [].concat(eo, [xt]).reduce(function(e, n) {
   return e.concat([n, n + "-" + no, n + "-" + at]);
@@ -8390,7 +8393,7 @@ function ll(e) {
     return Hh[n];
   });
 }
-function Cn(e) {
+function wn(e) {
   if (e == null)
     return window;
   if (e.toString() !== "[object Window]") {
@@ -8400,17 +8403,17 @@ function Cn(e) {
   return e;
 }
 function Sa(e) {
-  var n = Cn(e).Element;
+  var n = wn(e).Element;
   return e instanceof n || e instanceof Element;
 }
 function gn(e) {
-  var n = Cn(e).HTMLElement;
+  var n = wn(e).HTMLElement;
   return e instanceof n || e instanceof HTMLElement;
 }
-function wi(e) {
+function Ci(e) {
   if (typeof ShadowRoot > "u")
     return !1;
-  var n = Cn(e).ShadowRoot;
+  var n = wn(e).ShadowRoot;
   return e instanceof n || e instanceof ShadowRoot;
 }
 function gr(e) {
@@ -8433,7 +8436,7 @@ function Ya(e, n, r) {
   n === void 0 && (n = !1), r === void 0 && (r = !1);
   var a = e.getBoundingClientRect(), t = 1, o = 1;
   n && gn(e) && (t = e.offsetWidth > 0 && Ua(a.width) / e.offsetWidth || 1, o = e.offsetHeight > 0 && Ua(a.height) / e.offsetHeight || 1);
-  var l = Sa(e) ? Cn(e) : window, i = l.visualViewport, s = !Nu() && r, u = (a.left + (s && i ? i.offsetLeft : 0)) / t, d = (a.top + (s && i ? i.offsetTop : 0)) / o, v = a.width / t, f = a.height / o;
+  var l = Sa(e) ? wn(e) : window, i = l.visualViewport, s = !Nu() && r, u = (a.left + (s && i ? i.offsetLeft : 0)) / t, d = (a.top + (s && i ? i.offsetTop : 0)) / o, v = a.width / t, f = a.height / o;
   return {
     width: v,
     height: f,
@@ -8445,18 +8448,18 @@ function Ya(e, n, r) {
     y: d
   };
 }
-function Ci(e) {
-  var n = Cn(e), r = n.pageXOffset, a = n.pageYOffset;
+function wi(e) {
+  var n = wn(e), r = n.pageXOffset, a = n.pageYOffset;
   return {
     scrollLeft: r,
     scrollTop: a
   };
 }
 function Si(e) {
-  return Ya(gr(e)).left + Ci(e).scrollLeft;
+  return Ya(gr(e)).left + wi(e).scrollLeft;
 }
 function jh(e, n) {
-  var r = Cn(e), a = gr(e), t = r.visualViewport, o = a.clientWidth, l = a.clientHeight, i = 0, s = 0;
+  var r = wn(e), a = gr(e), t = r.visualViewport, o = a.clientWidth, l = a.clientHeight, i = 0, s = 0;
   if (t) {
     o = t.width, l = t.height;
     var u = Nu();
@@ -8470,10 +8473,10 @@ function jh(e, n) {
   };
 }
 function Pn(e) {
-  return Cn(e).getComputedStyle(e);
+  return wn(e).getComputedStyle(e);
 }
 function Wh(e) {
-  var n, r = gr(e), a = Ci(e), t = (n = e.ownerDocument) == null ? void 0 : n.body, o = _a(r.scrollWidth, r.clientWidth, t ? t.scrollWidth : 0, t ? t.clientWidth : 0), l = _a(r.scrollHeight, r.clientHeight, t ? t.scrollHeight : 0, t ? t.clientHeight : 0), i = -a.scrollLeft + Si(e), s = -a.scrollTop;
+  var n, r = gr(e), a = wi(e), t = (n = e.ownerDocument) == null ? void 0 : n.body, o = _a(r.scrollWidth, r.clientWidth, t ? t.scrollWidth : 0, t ? t.clientWidth : 0), l = _a(r.scrollHeight, r.clientHeight, t ? t.scrollHeight : 0, t ? t.clientHeight : 0), i = -a.scrollLeft + Si(e), s = -a.scrollTop;
   return Pn(t || r).direction === "rtl" && (i += _a(r.clientWidth, t ? t.clientWidth : 0) - o), {
     width: o,
     height: l,
@@ -8491,7 +8494,7 @@ function ro(e) {
     // $FlowFixMe[prop-missing]
     e.assignedSlot || // step into the shadow DOM of the parent of a slotted node
     e.parentNode || // DOM Element detected
-    (wi(e) ? e.host : null) || // ShadowRoot detected
+    (Ci(e) ? e.host : null) || // ShadowRoot detected
     // $FlowFixMe[incompatible-call]: HTMLElement is a Node
     gr(e)
   );
@@ -8506,7 +8509,7 @@ function Du(e) {
 function xa(e, n) {
   var r;
   n === void 0 && (n = []);
-  var a = Du(e), t = a === ((r = e.ownerDocument) == null ? void 0 : r.body), o = Cn(a), l = t ? [o].concat(o.visualViewport || [], ki(a) ? a : []) : a, i = n.concat(l);
+  var a = Du(e), t = a === ((r = e.ownerDocument) == null ? void 0 : r.body), o = wn(a), l = t ? [o].concat(o.visualViewport || [], ki(a) ? a : []) : a, i = n.concat(l);
   return t ? i : (
     // $FlowFixMe[incompatible-call]: isBody tells us target will be an HTMLElement here
     i.concat(xa(ro(l)))
@@ -8527,7 +8530,7 @@ function qh(e) {
       return null;
   }
   var t = ro(e);
-  for (wi(t) && (t = t.host); gn(t) && ["html", "body"].indexOf(Bn(t)) < 0; ) {
+  for (Ci(t) && (t = t.host); gn(t) && ["html", "body"].indexOf(Bn(t)) < 0; ) {
     var o = Pn(t);
     if (o.transform !== "none" || o.perspective !== "none" || o.contain === "paint" || ["transform", "perspective"].indexOf(o.willChange) !== -1 || n && o.willChange === "filter" || n && o.filter && o.filter !== "none")
       return t;
@@ -8536,7 +8539,7 @@ function qh(e) {
   return null;
 }
 function $i(e) {
-  for (var n = Cn(e), r = ul(e); r && Gh(r) && Pn(r).position === "static"; )
+  for (var n = wn(e), r = ul(e); r && Gh(r) && Pn(r).position === "static"; )
     r = ul(r);
   return r && (Bn(r) === "html" || Bn(r) === "body" && Pn(r).position === "static") ? n : r || qh(e) || n;
 }
@@ -8544,7 +8547,7 @@ function Kh(e, n) {
   var r = n.getRootNode && n.getRootNode();
   if (e.contains(n))
     return !0;
-  if (r && wi(r)) {
+  if (r && Ci(r)) {
     var a = n;
     do {
       if (a && e.isSameNode(a))
@@ -8603,7 +8606,7 @@ function Au(e) {
         y: n.y + n.height
       };
       break;
-    case Ca:
+    case wa:
       s = {
         x: n.x + n.width,
         y: i
@@ -8653,12 +8656,12 @@ function eg(e, n) {
 }
 function zu(e, n) {
   n === void 0 && (n = {});
-  var r = n, a = r.placement, t = a === void 0 ? e.placement : a, o = r.strategy, l = o === void 0 ? e.strategy : o, i = r.boundary, s = i === void 0 ? Bh : i, u = r.rootBoundary, d = u === void 0 ? Bu : u, v = r.elementContext, f = v === void 0 ? Xa : v, m = r.altBoundary, p = m === void 0 ? !1 : m, y = r.padding, g = y === void 0 ? 0 : y, V = xh(typeof g != "number" ? g : eg(g, eo)), P = f === Xa ? Ih : Xa, w = e.rects.popper, C = e.elements[p ? P : f], I = Jh(Sa(C) ? C : C.contextElement || gr(e.elements.popper), s, d, l), S = Ya(e.elements.reference), D = Au({
+  var r = n, a = r.placement, t = a === void 0 ? e.placement : a, o = r.strategy, l = o === void 0 ? e.strategy : o, i = r.boundary, s = i === void 0 ? Bh : i, u = r.rootBoundary, d = u === void 0 ? Bu : u, v = r.elementContext, f = v === void 0 ? Xa : v, m = r.altBoundary, p = m === void 0 ? !1 : m, y = r.padding, g = y === void 0 ? 0 : y, V = xh(typeof g != "number" ? g : eg(g, eo)), P = f === Xa ? Ih : Xa, C = e.rects.popper, w = e.elements[p ? P : f], I = Jh(Sa(w) ? w : w.contextElement || gr(e.elements.popper), s, d, l), S = Ya(e.elements.reference), D = Au({
     reference: S,
-    element: w,
+    element: C,
     strategy: "absolute",
     placement: t
-  }), O = qo(Object.assign({}, w, D)), z = f === Xa ? O : S, M = {
+  }), O = qo(Object.assign({}, C, D)), z = f === Xa ? O : S, M = {
     top: I.top - z.top + V.top,
     bottom: z.bottom - I.bottom + V.bottom,
     left: I.left - z.left + V.left,
@@ -8667,7 +8670,7 @@ function zu(e, n) {
   if (f === Xa && b) {
     var k = b[t];
     Object.keys(M).forEach(function(j) {
-      var Q = [Ca, mr].indexOf(j) >= 0 ? 1 : -1, F = [An, mr].indexOf(j) >= 0 ? "y" : "x";
+      var Q = [wa, mr].indexOf(j) >= 0 ? 1 : -1, F = [An, mr].indexOf(j) >= 0 ? "y" : "x";
       M[j] += k[F] * Q;
     });
   }
@@ -8702,7 +8705,7 @@ function rg(e) {
 function ag(e) {
   var n = e.state, r = e.options, a = e.name;
   if (!n.modifiersData[a]._skip) {
-    for (var t = r.mainAxis, o = t === void 0 ? !0 : t, l = r.altAxis, i = l === void 0 ? !0 : l, s = r.fallbackPlacements, u = r.padding, d = r.boundary, v = r.rootBoundary, f = r.altBoundary, m = r.flipVariations, p = m === void 0 ? !0 : m, y = r.allowedAutoPlacements, g = n.options.placement, V = zn(g), P = V === g, w = s || (P || !p ? [$t(g)] : rg(g)), C = [g].concat(w).reduce(function(ae, oe) {
+    for (var t = r.mainAxis, o = t === void 0 ? !0 : t, l = r.altAxis, i = l === void 0 ? !0 : l, s = r.fallbackPlacements, u = r.padding, d = r.boundary, v = r.rootBoundary, f = r.altBoundary, m = r.flipVariations, p = m === void 0 ? !0 : m, y = r.allowedAutoPlacements, g = n.options.placement, V = zn(g), P = V === g, C = s || (P || !p ? [$t(g)] : rg(g)), w = [g].concat(C).reduce(function(ae, oe) {
       return ae.concat(zn(oe) === xt ? ng(n, {
         placement: oe,
         boundary: d,
@@ -8711,14 +8714,14 @@ function ag(e) {
         flipVariations: p,
         allowedAutoPlacements: y
       }) : oe);
-    }, []), I = n.rects.reference, S = n.rects.popper, D = /* @__PURE__ */ new Map(), O = !0, z = C[0], M = 0; M < C.length; M++) {
-      var b = C[M], k = zn(b), j = tt(b) === no, Q = [An, mr].indexOf(k) >= 0, F = Q ? "width" : "height", E = zu(n, {
+    }, []), I = n.rects.reference, S = n.rects.popper, D = /* @__PURE__ */ new Map(), O = !0, z = w[0], M = 0; M < w.length; M++) {
+      var b = w[M], k = zn(b), j = tt(b) === no, Q = [An, mr].indexOf(k) >= 0, F = Q ? "width" : "height", E = zu(n, {
         placement: b,
         boundary: d,
         rootBoundary: v,
         altBoundary: f,
         padding: u
-      }), H = Q ? j ? Ca : sr : j ? mr : An;
+      }), H = Q ? j ? wa : sr : j ? mr : An;
       I[F] > S[F] && (H = $t(H));
       var U = $t(H), X = [];
       if (o && X.push(E[k] <= 0), i && X.push(E[H] <= 0, E[U] <= 0), X.every(function(ae) {
@@ -8731,7 +8734,7 @@ function ag(e) {
     }
     if (O)
       for (var N = p ? 3 : 1, Z = function(oe) {
-        var ge = C.find(function(pe) {
+        var ge = w.find(function(pe) {
           var Fe = D.get(pe);
           if (Fe)
             return Fe.slice(0, oe).every(function(en) {
@@ -8762,7 +8765,7 @@ function og(e, n, r) {
   var a = zn(e), t = [sr, An].indexOf(a) >= 0 ? -1 : 1, o = typeof r == "function" ? r(Object.assign({}, n, {
     placement: e
   })) : r, l = o[0], i = o[1];
-  return l = l || 0, i = (i || 0) * t, [sr, Ca].indexOf(a) >= 0 ? {
+  return l = l || 0, i = (i || 0) * t, [sr, wa].indexOf(a) >= 0 ? {
     x: i,
     y: l
   } : {
@@ -8790,7 +8793,7 @@ function sg(e) {
   };
 }
 function ug(e) {
-  return e === Cn(e) || !gn(e) ? Ci(e) : sg(e);
+  return e === wn(e) || !gn(e) ? wi(e) : sg(e);
 }
 function dg(e) {
   var n = e.getBoundingClientRect(), r = Ua(n.width) / e.offsetWidth || 1, a = Ua(n.height) / e.offsetHeight || 1;
@@ -8930,7 +8933,7 @@ function bg(e) {
     return n[r];
   });
 }
-var fl = "Popper: Invalid reference or popper argument provided. They must be either a DOM element or virtual element.", wg = "Popper: An infinite loop in the modifiers cycle has been detected! The cycle has been interrupted to prevent a browser crash.", cl = {
+var fl = "Popper: Invalid reference or popper argument provided. They must be either a DOM element or virtual element.", Cg = "Popper: An infinite loop in the modifiers cycle has been detected! The cycle has been interrupted to prevent a browser crash.", cl = {
   placement: "bottom",
   modifiers: [],
   strategy: "absolute"
@@ -8942,7 +8945,7 @@ function ml() {
     return !(a && typeof a.getBoundingClientRect == "function");
   });
 }
-function Cg(e) {
+function wg(e) {
   e === void 0 && (e = {});
   var n = e, r = n.defaultModifiers, a = r === void 0 ? [] : r, t = n.defaultOptions, o = t === void 0 ? cl : t;
   return function(i, s, u) {
@@ -8966,15 +8969,15 @@ function Cg(e) {
           reference: Sa(i) ? xa(i) : i.contextElement ? xa(i.contextElement) : [],
           popper: xa(s)
         };
-        var w = mg(bg([].concat(a, d.options.modifiers)));
-        if (d.orderedModifiers = w.filter(function(b) {
+        var C = mg(bg([].concat(a, d.options.modifiers)));
+        if (d.orderedModifiers = C.filter(function(b) {
           return b.enabled;
         }), process.env.NODE_ENV !== "production") {
-          var C = yg([].concat(w, d.options.modifiers), function(b) {
+          var w = yg([].concat(C, d.options.modifiers), function(b) {
             var k = b.name;
             return k;
           });
-          if (gg(C), zn(d.options.placement) === xt) {
+          if (gg(w), zn(d.options.placement) === xt) {
             var I = d.orderedModifiers.find(function(b) {
               var k = b.name;
               return k === "flip";
@@ -8995,20 +8998,20 @@ function Cg(e) {
       // prefer the async Popper#update method
       forceUpdate: function() {
         if (!f) {
-          var V = d.elements, P = V.reference, w = V.popper;
-          if (!ml(P, w)) {
+          var V = d.elements, P = V.reference, C = V.popper;
+          if (!ml(P, C)) {
             process.env.NODE_ENV !== "production" && console.error(fl);
             return;
           }
           d.rects = {
-            reference: vg(P, $i(w), d.options.strategy === "fixed"),
-            popper: fg(w)
+            reference: vg(P, $i(C), d.options.strategy === "fixed"),
+            popper: fg(C)
           }, d.reset = !1, d.placement = d.options.placement, d.orderedModifiers.forEach(function(b) {
             return d.modifiersData[b.name] = Object.assign({}, b.data);
           });
-          for (var C = 0, I = 0; I < d.orderedModifiers.length; I++) {
-            if (process.env.NODE_ENV !== "production" && (C += 1, C > 100)) {
-              console.error(wg);
+          for (var w = 0, I = 0; I < d.orderedModifiers.length; I++) {
+            if (process.env.NODE_ENV !== "production" && (w += 1, w > 100)) {
+              console.error(Cg);
               break;
             }
             if (d.reset === !0) {
@@ -9043,13 +9046,13 @@ function Cg(e) {
     });
     function p() {
       d.orderedModifiers.forEach(function(g) {
-        var V = g.name, P = g.options, w = P === void 0 ? {} : P, C = g.effect;
-        if (typeof C == "function") {
-          var I = C({
+        var V = g.name, P = g.options, C = P === void 0 ? {} : P, w = g.effect;
+        if (typeof w == "function") {
+          var I = w({
             state: d,
             name: V,
             instance: m,
-            options: w
+            options: C
           }), S = function() {
           };
           v.push(I || S);
@@ -9068,7 +9071,7 @@ var yt = {
   passive: !0
 };
 function Sg(e) {
-  var n = e.state, r = e.instance, a = e.options, t = a.scroll, o = t === void 0 ? !0 : t, l = a.resize, i = l === void 0 ? !0 : l, s = Cn(n.elements.popper), u = [].concat(n.scrollParents.reference, n.scrollParents.popper);
+  var n = e.state, r = e.instance, a = e.options, t = a.scroll, o = t === void 0 ? !0 : t, l = a.resize, i = l === void 0 ? !0 : l, s = wn(n.elements.popper), u = [].concat(n.scrollParents.reference, n.scrollParents.popper);
   return o && u.forEach(function(d) {
     d.addEventListener("scroll", r.update, yt);
   }), i && s.addEventListener("resize", r.update, yt), function() {
@@ -9124,11 +9127,11 @@ function pl(e) {
     y
   };
   m = g.x, y = g.y;
-  var V = l.hasOwnProperty("x"), P = l.hasOwnProperty("y"), w = sr, C = An, I = window;
+  var V = l.hasOwnProperty("x"), P = l.hasOwnProperty("y"), C = sr, w = An, I = window;
   if (u) {
     var S = $i(r), D = "clientHeight", O = "clientWidth";
-    if (S === Cn(r) && (S = gr(r), Pn(S).position !== "static" && i === "absolute" && (D = "scrollHeight", O = "scrollWidth")), S = S, t === An || (t === sr || t === Ca) && o === at) {
-      C = mr;
+    if (S === wn(r) && (S = gr(r), Pn(S).position !== "static" && i === "absolute" && (D = "scrollHeight", O = "scrollWidth")), S = S, t === An || (t === sr || t === wa) && o === at) {
+      w = mr;
       var z = v && S === I && I.visualViewport ? I.visualViewport.height : (
         // $FlowFixMe[prop-missing]
         S[D]
@@ -9136,7 +9139,7 @@ function pl(e) {
       y -= z - a.height, y *= s ? 1 : -1;
     }
     if (t === sr || (t === An || t === mr) && o === at) {
-      w = Ca;
+      C = wa;
       var M = v && S === I && I.visualViewport ? I.visualViewport.width : (
         // $FlowFixMe[prop-missing]
         S[O]
@@ -9155,9 +9158,9 @@ function pl(e) {
   };
   if (m = k.x, y = k.y, s) {
     var j;
-    return Object.assign({}, b, (j = {}, j[C] = P ? "0" : "", j[w] = V ? "0" : "", j.transform = (I.devicePixelRatio || 1) <= 1 ? "translate(" + m + "px, " + y + "px)" : "translate3d(" + m + "px, " + y + "px, 0)", j));
+    return Object.assign({}, b, (j = {}, j[w] = P ? "0" : "", j[C] = V ? "0" : "", j.transform = (I.devicePixelRatio || 1) <= 1 ? "translate(" + m + "px, " + y + "px)" : "translate3d(" + m + "px, " + y + "px, 0)", j));
   }
-  return Object.assign({}, b, (n = {}, n[C] = P ? y + "px" : "", n[w] = V ? m + "px" : "", n.transform = "", n));
+  return Object.assign({}, b, (n = {}, n[w] = P ? y + "px" : "", n[C] = V ? m + "px" : "", n.transform = "", n));
 }
 function Vg(e) {
   var n = e.state, r = e.options, a = r.gpuAcceleration, t = a === void 0 ? !0 : a, o = r.adaptive, l = o === void 0 ? !0 : o, i = r.roundOffsets, s = i === void 0 ? !0 : i;
@@ -9242,7 +9245,7 @@ const Ig = {
   effect: Bg,
   requires: ["computeStyles"]
 };
-var Ng = [kg, Tg, Eg, Ig], Dg = /* @__PURE__ */ Cg({
+var Ng = [kg, Tg, Eg, Ig], Dg = /* @__PURE__ */ wg({
   defaultModifiers: Ng
 });
 function zt() {
@@ -9295,7 +9298,7 @@ function Lu(e) {
       height: Ne(D)
     };
   }, d = () => {
-    e.trigger === "hover" && (s = !0, C());
+    e.trigger === "hover" && (s = !0, w());
   }, v = /* @__PURE__ */ function() {
     var S = gl(function* () {
       e.trigger === "hover" && (s = !1, yield En(), !i && I());
@@ -9313,7 +9316,7 @@ function Lu(e) {
       return S.apply(this, arguments);
     };
   }(), p = () => {
-    C();
+    w();
   }, y = () => {
     a.value = !1, $(e["onUpdate:show"], !1);
   }, g = () => {
@@ -9422,9 +9425,9 @@ function Lu(e) {
       placement: S,
       modifiers: z
     };
-  }, w = () => {
-    l.setOptions(P());
   }, C = () => {
+    l.setOptions(P());
+  }, w = () => {
     var {
       disabled: S
     } = e;
@@ -9436,8 +9439,8 @@ function Lu(e) {
     a.value = S ?? !1;
   }, {
     immediate: !0
-  }), le(() => e.offsetX, w), le(() => e.offsetY, w), le(() => e.placement, w), le(() => a.value, (S) => {
-    S ? (w(), $(e.onOpen)) : $(e.onClose);
+  }), le(() => e.offsetX, C), le(() => e.offsetY, C), le(() => e.placement, C), le(() => a.value, (S) => {
+    S ? (C(), $(e.onOpen)) : $(e.onClose);
   }), le(() => e.disabled, I), lt(() => {
     l = Dg(n.value, r.value, P());
   }), $a(() => {
@@ -9454,8 +9457,8 @@ function Lu(e) {
     handlePopoverClose: y,
     handlePopoverMouseenter: f,
     handlePopoverMouseleave: m,
-    resize: w,
-    open: C,
+    resize: C,
+    open: w,
     close: I
   };
 }
@@ -9755,7 +9758,7 @@ const Rr = Uu;
 Rr.install = function(e) {
   e.component(Rr.name, Rr);
 };
-var wS = Rr;
+var CS = Rr;
 function Xg(e) {
   return ["start", "end"].includes(e);
 }
@@ -9879,8 +9882,8 @@ Ln.install = function(e) {
   e.component(Ln.name, Ln);
 };
 Ln.useValidation = bn;
-Ln.useForm = wn;
-var CS = Ln;
+Ln.useForm = Cn;
+var wS = Ln;
 function Fu(e) {
   if (!e)
     return !1;
@@ -10281,9 +10284,9 @@ var _u = x({
         index: G
       } = Z;
       return G.value === N;
-    }), w = () => {
+    }), C = () => {
       e.loop && (o.value >= 0 && P(d.value - 1).setTranslate(-t.value), o.value <= -(t.value - r.value) && P(0).setTranslate(t.value), o.value > -(t.value - r.value) && o.value < 0 && (P(d.value - 1).setTranslate(0), P(0).setTranslate(0)));
-    }, C = (N) => {
+    }, w = (N) => {
       var Z = _e(N) ? N : Math.floor((o.value - r.value / 2) / -r.value), {
         loop: G
       } = e;
@@ -10342,7 +10345,7 @@ var _u = x({
         if (pe === Fe) {
           N.preventDefault();
           var en = g !== void 0 ? J - g : 0, sn = V !== void 0 ? ae - V : 0;
-          g = J, V = ae, o.value += G ? sn : en, w();
+          g = J, V = ae, o.value += G ? sn : en, C();
         }
       }
     }, Q = () => {
@@ -10350,7 +10353,7 @@ var _u = x({
         var {
           vertical: N,
           onChange: Z
-        } = e, G = N ? V < p : g < m, J = Math.abs(N ? p - V : m - g), ae = performance.now() - y <= my && J >= py, oe = ae ? C(G ? i.value + 1 : i.value - 1) : C();
+        } = e, G = N ? V < p : g < m, J = Math.abs(N ? p - V : m - g), ae = performance.now() - y <= my && J >= py, oe = ae ? w(G ? i.value + 1 : i.value - 1) : w();
         v = !1, l.value = !1, g = void 0, V = void 0, o.value = oe * -r.value;
         var ge = i.value;
         i.value = I(oe), z(), ge !== i.value && $(Z, i.value);
@@ -10433,7 +10436,7 @@ Rn.install = function(e) {
   e.component(Rn.name, Rn);
 };
 var $S = Rn;
-function wy() {
+function Cy() {
   var {
     bindParent: e,
     parentProvider: n
@@ -10449,7 +10452,7 @@ function wy() {
   };
 }
 var {
-  n: Cy
+  n: wy
 } = ee("swipe-item");
 function Sy(e, n) {
   return h(), T(
@@ -10474,7 +10477,7 @@ var xu = x({
       swipe: n,
       bindSwipe: r,
       index: a
-    } = wy(), {
+    } = Cy(), {
       size: t,
       vertical: o
     } = n, l = (s) => {
@@ -10484,7 +10487,7 @@ var xu = x({
       setTranslate: l
     };
     return r(i), {
-      n: Cy,
+      n: wy,
       size: t,
       vertical: o,
       translate: e
@@ -10538,9 +10541,9 @@ var ky = Zo({
   // internal for function call closes the dialog
   "onRouteChange"
 ])), {
-  n: wl,
+  n: Cl,
   classes: $y
-} = ee("image-preview"), Cl = 12, Sl = 200, Ty = 350, kl = 200, Oy = ["src", "alt"];
+} = ee("image-preview"), wl = 12, Sl = 200, Ty = 350, kl = 200, Oy = ["src", "alt"];
 function Py(e, n) {
   var r = ie("var-swipe-item"), a = ie("var-swipe"), t = ie("var-icon"), o = ie("var-popup");
   return h(), me(
@@ -10715,11 +10718,11 @@ var ed = x({
       }, kl);
     }, y = () => {
       a.value = 1, t.value = 0, o.value = 0, s.value = !0, d = null, l.value = void 0, i.value = void 0;
-    }, g = (M) => d ? f(d, M) <= Cl && M.timestamp - d.timestamp <= Sl && d.target === M.target : !1, V = (M) => !M || !u || !d ? !1 : f(u, d) <= Cl && Date.now() - d.timestamp < Ty && (M === u.target || M.parentNode === u.target), P = (M) => {
+    }, g = (M) => d ? f(d, M) <= wl && M.timestamp - d.timestamp <= Sl && d.target === M.target : !1, V = (M) => !M || !u || !d ? !1 : f(u, d) <= wl && Date.now() - d.timestamp < Ty && (M === u.target || M.parentNode === u.target), P = (M) => {
       v = window.setTimeout(() => {
         V(M.target) && z(), u = null;
       }, Sl);
-    }, w = (M) => {
+    }, C = (M) => {
       v && window.clearTimeout(v);
       var {
         touches: b
@@ -10729,14 +10732,14 @@ var ed = x({
         return;
       }
       d = k;
-    }, C = (M) => {
+    }, w = (M) => {
       var {
         offsetWidth: b,
         offsetHeight: k
       } = M, {
         naturalWidth: j,
         naturalHeight: Q
-      } = M.querySelector("." + wl("image"));
+      } = M.querySelector("." + Cl("image"));
       return {
         width: b,
         height: k,
@@ -10751,7 +10754,7 @@ var ed = x({
         rootRadio: j,
         width: Q,
         height: F
-      } = C(M);
+      } = w(M);
       if (!k)
         return 0;
       var E = k > j ? F / k : Q;
@@ -10763,7 +10766,7 @@ var ed = x({
         rootRadio: j,
         width: Q,
         height: F
-      } = C(M);
+      } = w(M);
       if (!k)
         return 0;
       var E = k > j ? F : Q * k;
@@ -10791,7 +10794,7 @@ var ed = x({
     }, {
       immediate: !0
     }), {
-      n: wl,
+      n: Cl,
       classes: $y,
       initialIndex: r,
       popupShow: n,
@@ -10801,7 +10804,7 @@ var ed = x({
       canSwipe: s,
       transitionTimingFunction: l,
       transitionDuration: i,
-      handleTouchstart: w,
+      handleTouchstart: C,
       handleTouchmove: O,
       handleTouchend: P,
       close: z
@@ -10816,7 +10819,7 @@ function Hn(e) {
     Hn.close();
     var n = Ge(e) ? {
       images: [e]
-    } : we(e) ? {
+    } : Ce(e) ? {
       images: e
     } : e, r = Me(n);
     r.teleport = "body", _n = r;
@@ -10940,10 +10943,10 @@ var nd = x({
   setup(e) {
     var n = B(null), r = B(null), a = B(!1), t = B("0px"), o = B("0px"), l = B("auto"), i = B("auto"), s = B("auto"), u = B("auto"), d = R(() => !e.disabled && e.cssMode), v = R(() => !e.disabled && !e.cssMode && a.value), f = R(() => Ne(e.offsetTop)), m, p = () => {
       var {
-        cssMode: w,
-        disabled: C
+        cssMode: C,
+        disabled: w
       } = e;
-      if (!C) {
+      if (!w) {
         var I = 0;
         if (m !== window) {
           var {
@@ -10955,7 +10958,7 @@ var nd = x({
           top: z,
           left: M
         } = O.getBoundingClientRect(), b = z - I;
-        return b <= f.value ? (w || (l.value = O.offsetWidth + "px", i.value = O.offsetHeight + "px", t.value = I + f.value + "px", o.value = M + "px", s.value = D.offsetWidth + "px", u.value = D.offsetHeight + "px", a.value = !0), {
+        return b <= f.value ? (C || (l.value = O.offsetWidth + "px", i.value = O.offsetHeight + "px", t.value = I + f.value + "px", o.value = M + "px", s.value = D.offsetWidth + "px", u.value = D.offsetHeight + "px", a.value = !0), {
           offsetTop: f.value,
           isFixed: !0
         }) : (a.value = !1, {
@@ -10965,22 +10968,22 @@ var nd = x({
       }
     }, y = () => {
       if (m) {
-        var w = p();
-        w && $(e.onScroll, w.offsetTop, w.isFixed);
+        var C = p();
+        C && $(e.onScroll, C.offsetTop, C.isFixed);
       }
     }, g = /* @__PURE__ */ function() {
-      var w = Tl(function* () {
+      var C = Tl(function* () {
         a.value = !1, yield Av(), p();
       });
       return function() {
-        return w.apply(this, arguments);
+        return C.apply(this, arguments);
       };
     }(), V = /* @__PURE__ */ function() {
-      var w = Tl(function* () {
+      var C = Tl(function* () {
         yield En(), m = Pa(n.value), m !== window && m.addEventListener("scroll", y), y();
       });
       return function() {
-        return w.apply(this, arguments);
+        return C.apply(this, arguments);
       };
     }(), P = () => {
       m !== window && m.removeEventListener("scroll", y);
@@ -11305,9 +11308,9 @@ var od = x({
       return function() {
         return S.apply(this, arguments);
       };
-    }(), w = () => {
+    }(), C = () => {
       f.addEventListener("scroll", g);
-    }, C = () => {
+    }, w = () => {
       f.removeEventListener("scroll", g);
     }, I = (S, D) => {
       On(() => V({
@@ -11324,8 +11327,8 @@ var od = x({
         D.value && l.value.push(D.value), O();
       });
     })), tn(/* @__PURE__ */ bt(function* () {
-      yield P(), w();
-    })), Rt(C), pr(C), {
+      yield P(), C();
+    })), Rt(w), pr(w), {
       n: Ry,
       classes: Uy,
       barEl: o,
@@ -11646,7 +11649,7 @@ var id = x({
     }), {
       bindForm: l,
       form: i
-    } = wn(), {
+    } = Cn(), {
       errorMessage: s,
       validateWithTrigger: u,
       validate: d,
@@ -11686,7 +11689,7 @@ var id = x({
     }, P = (E) => {
       var H = E.target;
       H.composing && (H.composing = !1, H.dispatchEvent(new Event("input")));
-    }, w = (E) => {
+    }, C = (E) => {
       var {
         composing: H
       } = E.target;
@@ -11694,7 +11697,7 @@ var id = x({
         var U = g(E);
         $(e["onUpdate:modelValue"], U), $(e.onInput, U, E), f("onInput");
       }
-    }, C = (E) => {
+    }, w = (E) => {
       var H = g(E);
       $(e.onChange, H, E), f("onChange");
     }, I = () => {
@@ -11749,8 +11752,8 @@ var id = x({
       computePlaceholderState: m,
       handleFocus: p,
       handleBlur: y,
-      handleInput: w,
-      handleChange: C,
+      handleInput: C,
+      handleChange: w,
       handleClear: I,
       handleClick: S,
       handleTouchstart: M,
@@ -12201,9 +12204,9 @@ var yb = {
   "onUpdate:show": Y()
 }, {
   n: bb,
-  classes: wb
+  classes: Cb
 } = ee("menu");
-function Cb(e, n) {
+function wb(e, n) {
   return h(), T(
     "div",
     {
@@ -12298,7 +12301,7 @@ var fd = x({
       zIndex: o,
       toSizeUnit: he,
       n: bb,
-      classes: wb,
+      classes: Cb,
       handleHostClick: l,
       handleHostMouseenter: i,
       handleHostMouseleave: s,
@@ -12311,7 +12314,7 @@ var fd = x({
     };
   }
 });
-fd.render = Cb;
+fd.render = wb;
 const Fn = fd;
 Fn.install = function(e) {
   e.component(Fn.name, Fn);
@@ -12801,29 +12804,29 @@ var hd = x({
   props: Mb,
   setup(e) {
     var n = B(!1), r = B(""), a = B("1"), t = B(!1), o = B(!1), l = B(L(e.current) || 1), i = B(L(e.size) || 10), s = B([]), u = R(() => Math.ceil(e.maxPagerCount / 2)), d = R(() => Math.ceil(L(e.total) / L(i.value))), v = R(() => {
-      var C = i.value * (l.value - 1) + 1, I = Math.min(i.value * l.value, L(e.total));
-      return [C, I];
-    }), f = R(() => e.showTotal ? e.showTotal(L(e.total), v.value) : ""), m = (C, I) => _e(C) ? !1 : I === 1 ? t.value : o.value, p = (C, I) => _e(C) ? "basic" : I === 1 ? "head" : "tail", y = (C, I) => {
-      C === l.value || e.disabled || (_e(C) ? l.value = C : C === "prev" ? l.value > 1 && (l.value -= 1) : C === "next" ? l.value < d.value && (l.value += 1) : C === "..." && (I === 1 ? l.value = Math.max(l.value - e.maxPagerCount, 1) : l.value = Math.min(l.value + e.maxPagerCount, d.value)));
+      var w = i.value * (l.value - 1) + 1, I = Math.min(i.value * l.value, L(e.total));
+      return [w, I];
+    }), f = R(() => e.showTotal ? e.showTotal(L(e.total), v.value) : ""), m = (w, I) => _e(w) ? !1 : I === 1 ? t.value : o.value, p = (w, I) => _e(w) ? "basic" : I === 1 ? "head" : "tail", y = (w, I) => {
+      w === l.value || e.disabled || (_e(w) ? l.value = w : w === "prev" ? l.value > 1 && (l.value -= 1) : w === "next" ? l.value < d.value && (l.value += 1) : w === "..." && (I === 1 ? l.value = Math.max(l.value - e.maxPagerCount, 1) : l.value = Math.min(l.value + e.maxPagerCount, d.value)));
     }, g = () => {
       e.disabled || (n.value = !0);
-    }, V = (C) => {
-      i.value = C, n.value = !1;
-    }, P = (C) => {
+    }, V = (w) => {
+      i.value = w, n.value = !1;
+    }, P = (w) => {
       var I = /^[1-9][0-9]*$/;
-      return I.test(C);
-    }, w = (C, I, S) => {
+      return I.test(w);
+    }, C = (w, I, S) => {
       if (S.target.blur(), P(I)) {
         var D = L(I);
         D > d.value && (D = d.value, a.value = "" + D), D !== l.value && (l.value = D);
       }
-      C === "quick" && (r.value = ""), C === "simple" && !P(I) && (a.value = "" + l.value);
+      w === "quick" && (r.value = ""), w === "simple" && !P(I) && (a.value = "" + l.value);
     };
-    return le([() => e.current, () => e.size], (C) => {
-      var [I, S] = C;
+    return le([() => e.current, () => e.size], (w) => {
+      var [I, S] = w;
       l.value = L(I) || 1, i.value = L(S || 10);
-    }), le([l, i, d], (C, I) => {
-      var [S, D, O] = C, [z, M] = I, b = [], {
+    }), le([l, i, d], (w, I) => {
+      var [S, D, O] = w, [z, M] = I, b = [], {
         maxPagerCount: k,
         total: j,
         onChange: Q
@@ -12874,7 +12877,7 @@ var hd = x({
       clickItem: y,
       showMenu: g,
       clickSize: V,
-      setPage: w,
+      setPage: C,
       toNumber: L
     };
   }
@@ -13271,8 +13274,8 @@ var yd = x({
       F && p(k, j, Q), k.index = v(k), m(k, k.index, F ? 1e3 : 200);
     }, P = (b) => {
       b.scrolling = !1, D(b);
-    }, w = (b) => b.map((k, j) => {
-      var Q, F = we(k) ? {
+    }, C = (b) => b.map((k, j) => {
+      var Q, F = Ce(k) ? {
         texts: k
       } : k, E = {
         id: Il++,
@@ -13289,11 +13292,11 @@ var yd = x({
         scrolling: !1
       };
       return m(E, E.index, 0, !0), E;
-    }), C = (b) => {
+    }), w = (b) => {
       var k = [];
       return I(k, b, 0, !0), k;
     }, I = function(b, k, j, Q) {
-      if (Q === void 0 && (Q = !1), we(k) && k.length) {
+      if (Q === void 0 && (Q = !1), Ce(k) && k.length) {
         var F, E = Q && (F = e.cascadeInitialIndexes[b.length]) != null ? F : 0, H = {
           id: Il++,
           prevY: void 0,
@@ -13353,7 +13356,7 @@ var yd = x({
       l = [...k], $(e.onCancel, b, k);
     };
     return le(() => e.columns, (b) => {
-      n.value = e.cascade ? C(Ii(b)) : w(Ii(b));
+      n.value = e.cascade ? w(Ii(b)) : C(Ii(b));
       var {
         indexes: k
       } = f();
@@ -13389,7 +13392,7 @@ var nn;
 function ka(e) {
   return new Promise((n) => {
     ka.close();
-    var r = we(e) ? {
+    var r = Ce(e) ? {
       columns: e
     } : e, a = Me(r);
     a.dynamic = !0, a.teleport = "body", nn = a;
@@ -13786,7 +13789,7 @@ function a0(e, n) {
     /* CLASS, HYDRATE_EVENTS */
   );
 }
-var wd = x({
+var Cd = x({
   name: "VarPullRefresh",
   components: {
     VarIcon: $e
@@ -13802,25 +13805,25 @@ var wd = x({
       window.setTimeout(() => {
         m.value = !0, M();
       }, Al);
-    }), w = (M) => {
+    }), C = (M) => {
       var b = "classList" in n ? n : document.body;
       b.classList[M](Dl() + "--lock");
-    }, C = (M) => {
+    }, w = (M) => {
       v = M.touches[0].clientY, f = 0;
     }, I = (M) => {
       if (p.value) {
         var b = jt(n);
         if (!(b > 0)) {
           var k = b === 0, j = M.touches[0];
-          f = j.clientY - v, k && f >= 0 && M.preventDefault(), u.value !== "pulling" && (u.value = "pulling", l.value = M.touches[0].clientY), k && i.value > a.value && w("add");
+          f = j.clientY - v, k && f >= 0 && M.preventDefault(), u.value !== "pulling" && (u.value = "pulling", l.value = M.touches[0].clientY), k && i.value > a.value && C("add");
           var Q = (M.touches[0].clientY - l.value) / 2 + a.value;
           i.value = Q >= g.value ? g.value : Q, i.value >= g.value * 0.2 ? (m.value = !1, s.value = "refresh", r = P()) : s.value = "arrow-down";
         }
       }
     }, S = /* @__PURE__ */ function() {
       var M = n0(function* () {
-        p.value && (d.value = !0, i.value >= g.value * 0.2 ? (yield r, u.value = "loading", i.value = g.value * 0.3, $(e["onUpdate:modelValue"], !0), $(e.onRefresh), w("remove")) : (u.value = "loosing", s.value = "arrow-down", i.value = a.value, setTimeout(() => {
-          d.value = !1, w("remove");
+        p.value && (d.value = !0, i.value >= g.value * 0.2 ? (yield r, u.value = "loading", i.value = g.value * 0.3, $(e["onUpdate:modelValue"], !0), $(e.onRefresh), C("remove")) : (u.value = "loosing", s.value = "arrow-down", i.value = a.value, setTimeout(() => {
+          d.value = !1, C("remove");
         }, L(e.animationDuration))));
       });
       return function() {
@@ -13852,7 +13855,7 @@ var wd = x({
       refreshStatus: u,
       freshNode: t,
       controlNode: o,
-      touchStart: C,
+      touchStart: w,
       touchMove: I,
       touchEnd: S,
       iconName: s,
@@ -13861,8 +13864,8 @@ var wd = x({
     };
   }
 });
-wd.render = a0;
-const Zr = wd;
+Cd.render = a0;
+const Zr = Cd;
 Zr.install = function(e) {
   e.component(Zr.name, Zr);
 };
@@ -13910,12 +13913,12 @@ var FS = Zr, t0 = {
   onClick: Y(),
   onChange: Y(),
   "onUpdate:modelValue": Y()
-}, Cd = Symbol("RADIO_GROUP_BIND_RADIO_KEY"), Sd = Symbol("RADIO_GROUP_COUNT_RADIO_KEY");
+}, wd = Symbol("RADIO_GROUP_BIND_RADIO_KEY"), Sd = Symbol("RADIO_GROUP_COUNT_RADIO_KEY");
 function o0() {
   var {
     bindChildren: e,
     childProviders: n
-  } = on(Cd), {
+  } = on(wd), {
     length: r
   } = vn(Sd);
   return {
@@ -13928,7 +13931,7 @@ function i0() {
   var {
     bindParent: e,
     parentProvider: n
-  } = ln(Cd), {
+  } = ln(wd), {
     index: r
   } = fn(Sd);
   return {
@@ -14037,28 +14040,28 @@ var kd = x({
     } = i0(), {
       form: l,
       bindForm: i
-    } = wn(), {
+    } = Cn(), {
       errorMessage: s,
       validateWithTrigger: u,
       validate: d,
       // expose
       resetValidation: v
-    } = bn(), f = (C) => {
+    } = bn(), f = (w) => {
       Ve(() => {
         var {
           validateTrigger: I,
           rules: S,
           modelValue: D
         } = e;
-        u(I, C, S, D);
+        u(I, w, S, D);
       });
-    }, m = (C) => {
+    }, m = (w) => {
       var {
         checkedValue: I,
         onChange: S
       } = e;
-      t && n.value === I || (n.value = C, $(e["onUpdate:modelValue"], n.value), $(S, n.value), t == null || t.onToggle(I), f("onChange"));
-    }, p = (C) => {
+      t && n.value === I || (n.value = w, $(e["onUpdate:modelValue"], n.value), $(S, n.value), t == null || t.onToggle(I), f("onChange"));
+    }, p = (w) => {
       var {
         disabled: I,
         readonly: S,
@@ -14066,34 +14069,34 @@ var kd = x({
         checkedValue: O,
         onClick: z
       } = e;
-      l != null && l.disabled.value || I || ($(z, C), !(l != null && l.readonly.value || S) && (a.value = !0, m(r.value ? D : O)));
-    }, y = (C) => {
+      l != null && l.disabled.value || I || ($(z, w), !(l != null && l.readonly.value || S) && (a.value = !0, m(r.value ? D : O)));
+    }, y = (w) => {
       var {
         checkedValue: I,
         uncheckedValue: S
       } = e;
-      n.value = C === I ? I : S;
+      n.value = w === I ? I : S;
     }, g = () => {
       $(e["onUpdate:modelValue"], e.uncheckedValue), v();
-    }, V = () => d(e.rules, e.modelValue), P = (C) => {
+    }, V = () => d(e.rules, e.modelValue), P = (w) => {
       var {
         uncheckedValue: I,
         checkedValue: S
-      } = e, D = ![I, S].includes(C);
-      D && (C = r.value ? I : S), m(C);
+      } = e, D = ![I, S].includes(w);
+      D && (w = r.value ? I : S), m(w);
     };
-    le(() => e.modelValue, (C) => {
-      n.value = C;
+    le(() => e.modelValue, (w) => {
+      n.value = w;
     }, {
       immediate: !0
     });
-    var w = {
+    var C = {
       sync: y,
       validate: V,
       resetValidation: v,
       reset: g
     };
-    return $(o, w), $(i, w), {
+    return $(o, C), $(i, C), {
       withAnimation: a,
       checked: r,
       errorMessage: s,
@@ -14183,7 +14186,7 @@ var $d = x({
       bindRadios: a
     } = o0(), {
       bindForm: t
-    } = wn(), {
+    } = Cn(), {
       errorMessage: o,
       validateWithTrigger: l,
       validate: i,
@@ -14194,9 +14197,9 @@ var $d = x({
         var {
           validateTrigger: V,
           rules: P,
-          modelValue: w
+          modelValue: C
         } = e;
-        l(V, g, P, w);
+        l(V, g, P, C);
       });
     }, v = () => r.forEach((g) => {
       var {
@@ -14370,7 +14373,7 @@ var Td = x({
     var {
       form: n,
       bindForm: r
-    } = wn(), {
+    } = Cn(), {
       errorMessage: a,
       validateWithTrigger: t,
       validate: o,
@@ -14399,22 +14402,22 @@ var Td = x({
       var {
         modelValue: V,
         disabled: P,
-        disabledColor: w,
-        color: C,
+        disabledColor: C,
+        color: w,
         half: I,
         emptyColor: S,
         icon: D,
         halfIcon: O,
         emptyIcon: z
-      } = e, M = C;
-      return (P || n != null && n.disabled.value) && (M = w), g <= L(V) ? {
+      } = e, M = w;
+      return (P || n != null && n.disabled.value) && (M = C), g <= L(V) ? {
         color: M,
         name: D
       } : I && g <= L(V) + 0.5 ? {
         color: M,
         name: O
       } : {
-        color: P || n != null && n.disabled.value ? w : S,
+        color: P || n != null && n.disabled.value ? C : S,
         name: z
       };
     }, d = (g, V) => {
@@ -14428,10 +14431,10 @@ var Td = x({
     }, v = () => o(e.rules, L(e.modelValue)), f = () => Ve(() => t(["onChange"], "onChange", e.rules, e.modelValue)), m = (g, V) => {
       var {
         readonly: P,
-        disabled: w,
-        onChange: C
+        disabled: C,
+        onChange: w
       } = e;
-      P || w || n != null && n.disabled.value || n != null && n.readonly.value || (d(g, V), $(C, g), f());
+      P || C || n != null && n.disabled.value || n != null && n.readonly.value || (d(g, V), $(w, g), f());
     }, p = () => {
       $(e["onUpdate:modelValue"], 0), l();
     }, y = {
@@ -14484,10 +14487,10 @@ var b0 = {
     type: Boolean,
     default: !0
   }
-}, w0 = (e) => (Ta(""), e = e(), Oa(), e), C0 = {
+}, C0 = (e) => (Ta(""), e = e(), Oa(), e), w0 = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "2 3.6 20 20"
-}, S0 = /* @__PURE__ */ w0(() => /* @__PURE__ */ A(
+}, S0 = /* @__PURE__ */ C0(() => /* @__PURE__ */ A(
   "path",
   {
     d: "M11,9H13V7H11M11,20H13V11H11V20Z"
@@ -14497,7 +14500,7 @@ var b0 = {
   /* HOISTED */
 )), k0 = [S0];
 function $0(e, n) {
-  return h(), T("svg", C0, k0);
+  return h(), T("svg", w0, k0);
 }
 var Od = x({});
 Od.render = $0;
@@ -15194,7 +15197,7 @@ var Dd = x({
     var n = B(null), r = B(!1), a = R(() => e.multiple), t = R(() => e.focusColor), o = B(""), l = B([]), i = R(() => Nn(e.modelValue)), s = B("0px"), u = B(0), {
       bindForm: d,
       form: v
-    } = wn(), {
+    } = Cn(), {
       length: f,
       options: m,
       bindOptions: p
@@ -15204,7 +15207,7 @@ var Dd = x({
       validate: V,
       // expose
       resetValidation: P
-    } = bn(), w = B(null), C = () => {
+    } = bn(), C = B(null), w = () => {
       var {
         multiple: G,
         modelValue: J
@@ -15328,7 +15331,7 @@ var Dd = x({
         m.forEach((oe) => oe.sync(ae.includes(S(oe))));
       } else
         m.forEach((oe) => oe.sync(J === S(oe)));
-      C();
+      w();
     }, H = () => {
       s.value = z(), u.value = Ne(e.offsetY), r.value = !0;
     }, U = () => {
@@ -15341,7 +15344,7 @@ var Dd = x({
         multiple: G,
         modelValue: J
       } = e;
-      if (G && !we(J))
+      if (G && !Ce(J))
         throw Error("The modelValue must be an array when multiple is true");
     }), le(() => e.modelValue, E, {
       deep: !0
@@ -15365,7 +15368,7 @@ var Dd = x({
       label: o,
       labels: l,
       isEmptyModelValue: i,
-      menuEl: w,
+      menuEl: C,
       n: so,
       classes: v1,
       computePlaceholderState: O,
@@ -15680,8 +15683,8 @@ var b1 = {
   "onUpdate:modelValue": Y()
 }, {
   n: zl,
-  classes: w1
-} = ee("slider"), C1 = ["onTouchstart", "onTouchmove", "onTouchend", "onTouchcancel"];
+  classes: C1
+} = ee("slider"), w1 = ["onTouchstart", "onTouchmove", "onTouchend", "onTouchcancel"];
 function S1(e, n) {
   var r = ie("var-form-details");
   return h(), T(
@@ -15790,7 +15793,7 @@ function S1(e, n) {
             /* CLASS, STYLE */
           )])],
           46,
-          C1
+          w1
         ))),
         128
         /* KEYED_FRAGMENT */
@@ -15822,7 +15825,7 @@ var zd = x({
     var {
       bindForm: n,
       form: r
-    } = wn(), {
+    } = Cn(), {
       errorMessage: a,
       validateWithTrigger: t,
       validate: o,
@@ -15840,7 +15843,7 @@ var zd = x({
         modelValue: U,
         range: X
       } = e, N = [];
-      return X && we(U) ? N = [{
+      return X && Ce(U) ? N = [{
         value: I(U[0]),
         enumValue: Be.First,
         text: S(U[0])
@@ -15858,13 +15861,13 @@ var zd = x({
         activeColor: U,
         range: X,
         modelValue: N
-      } = e, Z = X && we(N) ? I(Math.min(N[0], N[1])) : 0, G = X && we(N) ? I(Math.max(N[0], N[1])) - Z : I(N);
+      } = e, Z = X && Ce(N) ? I(Math.min(N[0], N[1])) : 0, G = X && Ce(N) ? I(Math.max(N[0], N[1])) - Z : I(N);
       return {
         width: G + "%",
         left: Z + "%",
         background: U
       };
-    }), P = R(() => e.disabled || (r == null ? void 0 : r.disabled.value)), w = R(() => e.readonly || (r == null ? void 0 : r.readonly.value)), C = (U) => e.labelVisible === "always" ? !0 : e.labelVisible === "never" ? !1 : m[U].active, I = (U) => {
+    }), P = R(() => e.disabled || (r == null ? void 0 : r.disabled.value)), C = R(() => e.readonly || (r == null ? void 0 : r.readonly.value)), w = (U) => e.labelVisible === "always" ? !0 : e.labelVisible === "never" ? !1 : m[U].active, I = (U) => {
       var {
         min: X,
         max: N
@@ -15885,7 +15888,7 @@ var zd = x({
         onChange: ae,
         min: oe
       } = e, ge = L(Z), pe = Math.round(U / y.value), Fe = pe * ge + L(oe), en = m[X].percentValue * ge + L(oe);
-      if (m[X].percentValue = pe, G && we(J) && (N = X === Be.First ? [Fe, J[1]] : [J[0], Fe]), en !== Fe) {
+      if (m[X].percentValue = pe, G && Ce(J) && (N = X === Be.First ? [Fe, J[1]] : [J[0], Fe]), en !== Fe) {
         var sn = G ? N.map((ze) => S(ze)) : S(Fe);
         $(ae, sn), $(e["onUpdate:modelValue"], sn), u();
       }
@@ -15895,9 +15898,9 @@ var zd = x({
       var X = m[Be.First].percentValue * y.value, N = m[Be.Second].percentValue * y.value, Z = Math.abs(U - X), G = Math.abs(U - N);
       return Z <= G ? Be.First : Be.Second;
     }, z = (U, X) => {
-      v.value || (v.value = d.value.offsetWidth), !(P.value || w.value) && ($(e.onStart), f.value = !0, m[X].startPosition = U.touches[0].clientX);
+      v.value || (v.value = d.value.offsetWidth), !(P.value || C.value) && ($(e.onStart), f.value = !0, m[X].startPosition = U.touches[0].clientX);
     }, M = (U, X) => {
-      if (!(P.value || w.value || !f.value)) {
+      if (!(P.value || C.value || !f.value)) {
         var N = U.touches[0].clientX - m[X].startPosition + m[X].currentLeft;
         m[X].active = !0, N <= 0 ? N = 0 : N >= v.value && (N = v.value), D(N, X);
       }
@@ -15909,14 +15912,14 @@ var zd = x({
         step: G,
         min: J
       } = e;
-      if (!(P.value || w.value)) {
+      if (!(P.value || C.value)) {
         var ae = [];
         m[U].currentLeft = m[U].percentValue * y.value, m[U].active = !1;
         var oe = m[U].percentValue * L(G) + L(J);
-        X && we(N) && (ae = U === Be.First ? [oe, N[1]] : [N[0], oe]), $(Z, X ? ae : oe), f.value = !1;
+        X && Ce(N) && (ae = U === Be.First ? [oe, N[1]] : [N[0], oe]), $(Z, X ? ae : oe), f.value = !1;
       }
     }, k = (U) => {
-      if (!(P.value || w.value) && !U.target.closest("." + zl("thumb"))) {
+      if (!(P.value || C.value) && !U.target.closest("." + zl("thumb"))) {
         var X = U.clientX - Vv(U.currentTarget), N = O(X);
         D(X, N), b(N);
       }
@@ -15928,7 +15931,7 @@ var zd = x({
         range: U,
         modelValue: X
       } = e;
-      return U && !we(X) ? (console.error('[Varlet] Slider: "modelValue" should be an Array'), !1) : !U && we(X) ? (console.error('[Varlet] Slider: "modelValue" should be a Number'), !1) : U && we(X) && X.length < 2 ? (console.error('[Varlet] Slider: "modelValue" should have two value'), !1) : !0;
+      return U && !Ce(X) ? (console.error('[Varlet] Slider: "modelValue" should be an Array'), !1) : !U && Ce(X) ? (console.error('[Varlet] Slider: "modelValue" should be a Number'), !1) : U && Ce(X) && X.length < 2 ? (console.error('[Varlet] Slider: "modelValue" should have two value'), !1) : !0;
     }, F = function(U, X) {
       U === void 0 && (U = e.modelValue), X === void 0 && (X = L(e.step));
       var N = (Z) => {
@@ -15938,7 +15941,7 @@ var zd = x({
         } = e;
         return Z < L(G) ? 0 : Z > L(J) ? p.value / X : (Z - L(G)) / X;
       };
-      e.range && we(U) ? (m[Be.First].percentValue = N(U[0]), m[Be.First].currentLeft = m[Be.First].percentValue * y.value, m[Be.Second].percentValue = N(U[1]), m[Be.Second].currentLeft = m[Be.Second].percentValue * y.value) : _e(U) && (m[Be.First].currentLeft = N(U) * y.value);
+      e.range && Ce(U) ? (m[Be.First].percentValue = N(U[0]), m[Be.First].currentLeft = m[Be.First].percentValue * y.value, m[Be.Second].percentValue = N(U[1]), m[Be.Second].currentLeft = m[Be.Second].percentValue * y.value) : _e(U) && (m[Be.First].currentLeft = N(U) * y.value);
     }, E = () => {
       var U = e.range ? [0, 0] : 0;
       $(e["onUpdate:modelValue"], U), l();
@@ -15954,7 +15957,7 @@ var zd = x({
       !j() || !Q() || (v.value = d.value.offsetWidth);
     }), {
       n: zl,
-      classes: w1,
+      classes: C1,
       Thumbs: Be,
       sliderEl: d,
       getFillStyle: V,
@@ -15964,7 +15967,7 @@ var zd = x({
       thumbList: g,
       multiplySizeUnit: Je,
       toNumber: L,
-      showLabel: C,
+      showLabel: w,
       start: z,
       move: M,
       end: b,
@@ -16299,7 +16302,7 @@ var Oi = ["loading", "success", "warning", "info", "error"], Ll = 0, xo = !1, Fd
           "onUpdate:show": (s) => a.show = s
         }), null);
       });
-      return re(wv, Ee(I1, {
+      return re(Cv, Ee(I1, {
         style: {
           zIndex: dn.zIndex
         },
@@ -16392,7 +16395,7 @@ ta.install = function(e) {
 };
 var JS = ta;
 const ei = jn;
-var jd = (e) => ["mini", "small", "normal", "large"].includes(e), Y1 = (e) => jd(e) || we(e) || _e(e) || Ge(e), F1 = (e) => ["start", "end", "center", "space-around", "space-between", "flex-start", "flex-end"].includes(e), H1 = (e) => ["stretch", "center", "start", "end", "baseline", "flex-start", "flex-end"].includes(e), j1 = {
+var jd = (e) => ["mini", "small", "normal", "large"].includes(e), Y1 = (e) => jd(e) || Ce(e) || _e(e) || Ge(e), F1 = (e) => ["start", "end", "center", "space-around", "space-between", "flex-start", "flex-end"].includes(e), H1 = (e) => ["stretch", "center", "start", "end", "baseline", "flex-start", "flex-end"].includes(e), j1 = {
   size: {
     type: [String, Number, Array],
     default: "normal",
@@ -16442,7 +16445,7 @@ const oa = x({
   setup(e, n) {
     var {
       slots: r
-    } = n, a = (t, o) => o ? ["var(--space-size-" + t + "-y)", "var(--space-size-" + t + "-x)"] : we(t) ? t.map(he) : [he(t), he(t)];
+    } = n, a = (t, o) => o ? ["var(--space-size-" + t + "-y)", "var(--space-size-" + t + "-x)"] : Ce(t) ? t.map(he) : [he(t), he(t)];
     return () => {
       var t, {
         inline: o,
@@ -16452,30 +16455,30 @@ const oa = x({
         direction: u,
         size: d
       } = e, v = (t = $(r.default)) != null ? t : [], f = jd(d), [m, p] = a(d, f), y = (P) => {
-        var w = [];
-        return P.forEach((C) => {
-          if (C.type !== Cv) {
-            if (C.type === Pe && we(C.children)) {
-              C.children.forEach((I) => {
-                w.push(I);
+        var C = [];
+        return P.forEach((w) => {
+          if (w.type !== wv) {
+            if (w.type === Pe && Ce(w.children)) {
+              w.children.forEach((I) => {
+                C.push(I);
               });
               return;
             }
-            w.push(C);
+            C.push(w);
           }
-        }), w;
+        }), C;
       };
       v = y(v);
-      var g = v.length - 1, V = v.map((P, w) => {
-        var C = W1(m, p, {
+      var g = v.length - 1, V = v.map((P, C) => {
+        var w = W1(m, p, {
           direction: u,
           justify: l,
-          index: w,
+          index: C,
           lastIndex: g
         });
         return re("div", {
           style: {
-            margin: C
+            margin: w
           }
         }, [P]);
       });
@@ -16700,7 +16703,7 @@ var _S = ia;
 function x1(e) {
   return ["horizontal", "vertical"].includes(e);
 }
-var ew = {
+var eC = {
   active: {
     type: [String, Number],
     default: 0
@@ -16718,9 +16721,9 @@ var ew = {
   },
   onClickStep: Y()
 }, {
-  n: nw
+  n: nC
 } = ee("steps");
-function rw(e, n) {
+function rC(e, n) {
   return h(), T(
     "div",
     {
@@ -16736,7 +16739,7 @@ function rw(e, n) {
 }
 var Kd = x({
   name: "VarSteps",
-  props: ew,
+  props: eC,
   setup(e) {
     var n = R(() => e.active), r = R(() => e.activeColor), a = R(() => e.inactiveColor), t = R(() => e.direction), {
       length: o,
@@ -16752,16 +16755,16 @@ var Kd = x({
       clickStep: i
     };
     return l(s), {
-      n: nw
+      n: nC
     };
   }
 });
-Kd.render = rw;
+Kd.render = rC;
 const la = Kd;
 la.install = function(e) {
   e.component(la.name, la);
 };
-var xS = la, aw = {
+var xS = la, aC = {
   styleVars: {
     type: Object,
     default: () => ({})
@@ -16771,21 +16774,21 @@ var xS = la, aw = {
     default: "div"
   }
 }, {
-  n: tw
-} = ee("style-provider"), ow = x({
+  n: tC
+} = ee("style-provider"), oC = x({
   name: "VarStyleProvider",
-  props: aw,
+  props: aC,
   setup(e, n) {
     var {
       slots: r
     } = n;
     return () => Kl(e.tag, {
-      class: tw(),
+      class: tC(),
       style: as(e.styleVars)
     }, $(r.default));
   }
 });
-const sa = ow;
+const sa = oC;
 var vo = [];
 function it(e) {
   vo.forEach((r) => document.documentElement.style.removeProperty(r)), vo.length = 0;
@@ -16802,7 +16805,7 @@ sa.install = function(e) {
 it.install = function(e) {
   e.component(sa.name, sa);
 };
-var ek = sa, iw = {
+var ek = sa, iC = {
   modelValue: {
     default: !1
   },
@@ -16847,10 +16850,10 @@ var ek = sa, iw = {
   onChange: Y(),
   "onUpdate:modelValue": Y()
 }, {
-  n: lw,
-  classes: sw
+  n: lC,
+  classes: sC
 } = ee("switch");
-function uw(e, n) {
+function uC(e, n) {
   var r = ie("var-loading"), a = ie("var-form-details"), t = Ye("ripple");
   return h(), T(
     "div",
@@ -16930,12 +16933,12 @@ var Xd = x({
   directives: {
     Ripple: Ae
   },
-  props: iw,
+  props: iC,
   setup(e) {
     var {
       bindForm: n,
       form: r
-    } = wn(), {
+    } = Cn(), {
       errorMessage: a,
       validateWithTrigger: t,
       validate: o,
@@ -16947,18 +16950,18 @@ var Xd = x({
         color: g,
         closeColor: V,
         loadingColor: P,
-        activeValue: w
+        activeValue: C
       } = e;
       return {
         handle: {
           width: Je(p),
           height: Je(p),
-          backgroundColor: y === w ? g : V,
+          backgroundColor: y === C ? g : V,
           color: P
         },
         ripple: {
-          left: y === w ? Je(p, 0.5) : "-" + Je(p, 0.5),
-          color: y === w ? g : V || "#999",
+          left: y === C ? Je(p, 0.5) : "-" + Je(p, 0.5),
+          color: y === C ? g : V || "#999",
           width: Je(p, 2),
           height: Je(p, 2)
         },
@@ -16966,8 +16969,8 @@ var Xd = x({
           height: Je(p, 0.72),
           width: Je(p, 1.9),
           borderRadius: Je(p, 2 / 3),
-          filter: y === w || a != null && a.value ? void 0 : "brightness(.6)",
-          backgroundColor: y === w ? g : V
+          filter: y === C || a != null && a.value ? void 0 : "brightness(.6)",
+          backgroundColor: y === C ? g : V
         },
         switch: {
           height: Je(p, 1.2),
@@ -16985,14 +16988,14 @@ var Xd = x({
         onChange: g,
         disabled: V,
         loading: P,
-        readonly: w,
-        modelValue: C,
+        readonly: C,
+        modelValue: w,
         activeValue: I,
         inactiveValue: S,
         "onUpdate:modelValue": D
       } = e;
-      if ($(y, p), !(V || P || w || r != null && r.disabled.value || r != null && r.readonly.value)) {
-        var O = C === I ? S : I;
+      if ($(y, p), !(V || P || C || r != null && r.disabled.value || r != null && r.readonly.value)) {
+        var O = w === I ? S : I;
         $(g, O), $(D, O), s();
       }
     }, f = () => {
@@ -17003,8 +17006,8 @@ var Xd = x({
       resetValidation: l
     };
     return $(n, m), {
-      n: lw,
-      classes: sw,
+      n: lC,
+      classes: sC,
       switchActive: v,
       radius: d,
       styleComputed: u,
@@ -17014,12 +17017,12 @@ var Xd = x({
     };
   }
 });
-Xd.render = uw;
+Xd.render = uC;
 const ua = Xd;
 ua.install = function(e) {
   e.component(ua.name, ua);
 };
-var nk = ua, dw = {
+var nk = ua, dC = {
   name: {
     type: [String, Number]
   },
@@ -17029,7 +17032,7 @@ var nk = ua, dw = {
   },
   onClick: Y()
 }, Zd = Symbol("TABS_BIND_TAB_KEY"), Jd = Symbol("TABS_COUNT_TAB_KEY");
-function vw() {
+function vC() {
   var {
     childProviders: e,
     bindChildren: n
@@ -17042,7 +17045,7 @@ function vw() {
     bindTabList: n
   };
 }
-function fw() {
+function fC() {
   var {
     parentProvider: e,
     bindParent: n
@@ -17058,10 +17061,10 @@ function fw() {
   };
 }
 var {
-  n: wt,
-  classes: cw
+  n: Ct,
+  classes: cC
 } = ee("tab");
-function mw(e, n) {
+function mC(e, n) {
   var r = Ye("ripple");
   return Se((h(), T(
     "div",
@@ -17087,13 +17090,13 @@ var Qd = x({
   directives: {
     Ripple: Ae
   },
-  props: dw,
+  props: dC,
   setup(e) {
     var n = B(null), r = R(() => e.name), a = R(() => e.disabled), t = R(() => n.value), {
       index: o,
       tabs: l,
       bindTabs: i
-    } = fw(), {
+    } = fC(), {
       onTabClick: s,
       active: u,
       activeColor: d,
@@ -17110,27 +17113,27 @@ var Qd = x({
     i(y);
     var g = () => {
       var {
-        disabled: w,
-        name: C
+        disabled: C,
+        name: w
       } = e;
-      return w ? f.value : u.value === C || u.value === (o == null ? void 0 : o.value) ? d.value : v.value;
+      return C ? f.value : u.value === w || u.value === (o == null ? void 0 : o.value) ? d.value : v.value;
     }, V = () => {
       var {
-        disabled: w,
-        name: C
-      } = e;
-      return w ? wt("$-tab--disabled") : u.value === C || u.value === (o == null ? void 0 : o.value) ? wt("$-tab--active") : wt("$-tab--inactive");
-    }, P = (w) => {
-      var {
         disabled: C,
+        name: w
+      } = e;
+      return C ? Ct("$-tab--disabled") : u.value === w || u.value === (o == null ? void 0 : o.value) ? Ct("$-tab--active") : Ct("$-tab--inactive");
+    }, P = (C) => {
+      var {
+        disabled: w,
         name: I,
         onClick: S
       } = e;
-      C || ($(S, I ?? o.value, w), s(y));
+      w || ($(S, I ?? o.value, C), s(y));
     };
     return le(() => e.name, p), le(() => e.disabled, p), {
-      n: wt,
-      classes: cw,
+      n: Ct,
+      classes: cC,
       tabEl: n,
       active: u,
       activeColor: d,
@@ -17142,13 +17145,13 @@ var Qd = x({
     };
   }
 });
-Qd.render = mw;
+Qd.render = mC;
 const da = Qd;
 da.install = function(e) {
   e.component(da.name, da);
 };
 var rk = da, _d = Symbol("TABS_ITEMS_BIND_TAB_ITEM_KEY"), xd = Symbol("TABS_ITEMS_COUNT_TAB_ITEM_KEY");
-function pw() {
+function pC() {
   var {
     bindChildren: e,
     childProviders: n
@@ -17161,7 +17164,7 @@ function pw() {
     bindTabItem: e
   };
 }
-function hw() {
+function hC() {
   var {
     parentProvider: e,
     bindParent: n
@@ -17176,15 +17179,15 @@ function hw() {
     bindTabsItems: n
   };
 }
-var gw = {
+var gC = {
   name: {
     type: [String, Number]
   }
 }, {
-  n: yw,
-  classes: bw
+  n: yC,
+  classes: bC
 } = ee("tab-item");
-function ww(e, n) {
+function CC(e, n) {
   var r = ie("var-swipe-item");
   return h(), me(
     r,
@@ -17208,12 +17211,12 @@ var ev = x({
   components: {
     VarSwipeItem: Un
   },
-  props: gw,
+  props: gC,
   setup(e) {
     var n = B(!1), r = B(!1), a = R(() => e.name), {
       index: t,
       bindTabsItems: o
-    } = hw(), l = (s) => {
+    } = hC(), l = (s) => {
       !r.value && s && (r.value = !0), n.value = s;
     }, i = {
       index: t,
@@ -17221,28 +17224,28 @@ var ev = x({
       setCurrent: l
     };
     return o(i), {
-      n: yw,
-      classes: bw,
+      n: yC,
+      classes: bC,
       current: n,
       initSlot: r
     };
   }
 });
-ev.render = ww;
+ev.render = CC;
 const va = ev;
 va.install = function(e) {
   e.component(va.name, va);
 };
-var ak = va, Cw = {
+var ak = va, wC = {
   fullWidth: {
     type: [Number, String],
     default: "100%"
   }
 }, {
-  n: Sw,
-  classes: kw
+  n: SC,
+  classes: kC
 } = ee("table");
-function $w(e, n) {
+function $C(e, n) {
   return h(), T(
     "div",
     {
@@ -17283,16 +17286,16 @@ function $w(e, n) {
 }
 var nv = x({
   name: "VarTable",
-  props: Cw,
+  props: wC,
   setup() {
     return {
       toSizeUnit: he,
-      n: Sw,
-      classes: kw
+      n: SC,
+      classes: kC
     };
   }
 });
-nv.render = $w;
+nv.render = $C;
 const fa = nv;
 fa.install = function(e) {
   e.component(fa.name, fa);
@@ -17301,7 +17304,7 @@ var tk = fa;
 function Rl(e) {
   return ["horizontal", "vertical"].includes(e);
 }
-var Tw = {
+var TC = {
   active: {
     type: [String, Number],
     default: 0
@@ -17382,10 +17385,10 @@ function Yl(e) {
   };
 }
 var {
-  n: Ow,
-  classes: Pw
+  n: OC,
+  classes: PC
 } = ee("tabs");
-function Vw(e, n) {
+function VC(e, n) {
   return h(), me(
     qa(e.sticky ? e.n("$-sticky") : e.Transition),
     {
@@ -17443,13 +17446,13 @@ var rv = x({
     VarSticky: Yn
   },
   inheritAttrs: !1,
-  props: Tw,
+  props: TC,
   setup(e) {
     var n = B("0px"), r = B("0px"), a = B("0px"), t = B("0px"), o = B(!1), l = B(null), i = R(() => e.active), s = R(() => e.activeColor), u = R(() => e.inactiveColor), d = R(() => e.disabledColor), v = R(() => e.itemDirection), f = B(null), {
       tabList: m,
       bindTabList: p,
       length: y
-    } = vw(), g = (M) => {
+    } = vC(), g = (M) => {
       var b, k = (b = M.name.value) != null ? b : M.index.value, {
         active: j,
         onChange: Q,
@@ -17466,7 +17469,7 @@ var rv = x({
         index: k
       } = b;
       return (M ?? e.active) === k.value;
-    }), w = () => {
+    }), C = () => {
       if (y.value !== 0) {
         var {
           active: M
@@ -17476,7 +17479,7 @@ var rv = x({
           return $(e["onUpdate:active"], b), P(b);
         }
       }
-    }, C = () => {
+    }, w = () => {
       o.value = m.length >= 5;
     }, I = (M) => {
       var {
@@ -17504,8 +17507,8 @@ var rv = x({
         }
       }
     }, D = () => {
-      var M = V() || P() || w();
-      !M || M.disabled.value || (C(), I(M), S(M));
+      var M = V() || P() || C();
+      !M || M.disabled.value || (w(), I(M), S(M));
     }, O = /* @__PURE__ */ function() {
       var M = Yl(function* () {
         e.sticky && f.value && (yield f.value.resize());
@@ -17534,19 +17537,19 @@ var rv = x({
       scrollerEl: l,
       Transition: De,
       toSizeUnit: he,
-      n: Ow,
-      classes: Pw,
+      n: OC,
+      classes: PC,
       resize: D,
       resizeSticky: O
     };
   }
 });
-rv.render = Vw;
+rv.render = VC;
 const ca = rv;
 ca.install = function(e) {
   e.component(ca.name, ca);
 };
-var ok = ca, Ew = {
+var ok = ca, EC = {
   active: {
     type: [String, Number],
     default: 0
@@ -17570,7 +17573,7 @@ function Fl(e, n, r, a, t, o, l) {
   }
   i.done ? n(s) : Promise.resolve(s).then(a, t);
 }
-function Mw(e) {
+function MC(e) {
   return function() {
     var n = this, r = arguments;
     return new Promise(function(a, t) {
@@ -17586,9 +17589,9 @@ function Mw(e) {
   };
 }
 var {
-  n: Bw
+  n: BC
 } = ee("tabs-items");
-function Iw(e, n) {
+function IC(e, n) {
   var r = ie("var-swipe");
   return h(), me(
     r,
@@ -17614,13 +17617,13 @@ var av = x({
   components: {
     VarSwipe: Rn
   },
-  props: Ew,
+  props: EC,
   setup(e) {
     var n = B(null), {
       tabItemList: r,
       bindTabItem: a,
       length: t
-    } = pw(), o = (f) => r.find((m) => {
+    } = pC(), o = (f) => r.find((m) => {
       var {
         name: p
       } = m;
@@ -17647,78 +17650,78 @@ var av = x({
       }), y = (m = p.name.value) != null ? m : p.index.value;
       $(e["onUpdate:active"], y);
     }, d = () => n.value, v = {};
-    return a(v), le(() => e.active, s), le(() => t.value, /* @__PURE__ */ Mw(function* () {
+    return a(v), le(() => e.active, s), le(() => t.value, /* @__PURE__ */ MC(function* () {
       yield En(), s(e.active);
     })), {
       swipe: n,
-      n: Bw,
+      n: BC,
       handleSwipeChange: u,
       getSwipe: d
     };
   }
 });
-av.render = Iw;
+av.render = IC;
 const ma = av;
 ma.install = function(e) {
   e.component(ma.name, ma);
 };
 var ik = ma;
-const Nw = {
+const NC = {
   "--action-sheet-background": "#1e1e1e",
   "--action-sheet-title-color": "#aaa",
   "--action-sheet-action-item-color": "#fff"
-}, Dw = {
+}, DC = {
   "--badge-default-color": "#555"
-}, Aw = {
+}, AC = {
   "--button-default-color": "#303030"
-}, zw = {
+}, zC = {
   "--card-background": "#303030",
   "--card-title-color": "#ffffff",
   "--card-outline-color": "rgba(255, 255, 255, 0.2)",
   "--card-subtitle-color": "#aaaaaa",
   "--card-description-color": "#aaaaaa"
-}, Lw = {
+}, LC = {
   "--cell-description-color": "#aaa",
   "--cell-border-color": "#545454"
-}, Rw = {
+}, RC = {
   "--checkbox-unchecked-color": "#fff"
-}, Uw = {
+}, UC = {
   "--chip-default-color": "#555"
-}, Yw = {
+}, YC = {
   "--collapse-background": "#303030",
   "--collapse-text-color": "#fff",
   "--collapse-border-top": "thin solid rgba(255, 255, 255, 0.12)"
-}, Fw = {
+}, FC = {
   "--date-picker-main-color": "#fff",
   "--date-picker-body-background-color": "#303030",
   "--day-picker-head-item-color": "#aaaaaa"
-}, Hw = {
+}, HC = {
   "--dialog-background": "#1e1e1e",
   "--dialog-message-color": "#bbb"
-}, jw = {
+}, jC = {
   "--divider-color": "rgba(255, 255, 255, 0.2)",
   "--divider-text-color": "#aaa"
-}, Ww = {
+}, WC = {
   "--input-input-text-color": "#fff",
   "--input-blur-color": "rgb(255, 255, 255, .7)"
-}, Gw = {
+}, GC = {
   "--pagination-list-bg-color": "#303030",
   "--pagination-hover-bg-color": "#25293a",
   "--pagination-list-active-bg-color": "#25293a",
   "--pagination-list-active-color": "#4a7afe",
   "--pagination-item-background": "#303030"
-}, qw = {
+}, qC = {
   "--picker-background": "#1e1e1e",
   "--picker-cancel-button-text-color": "#aaa",
   "--picker-picked-border": "1px solid rgba(255, 255, 255, 0.12)",
   "--picker-mask-background-image": "linear-gradient(180deg, hsla(0, 0%, 12%, 0.9), hsla(0, 0%, 12%, 0.4)), linear-gradient(0deg, hsla(0, 0%, 12%, 0.9), hsla(0, 0%, 12%, 0.4))"
-}, Kw = {
+}, KC = {
   "--popup-content-background-color": "#1e1e1e"
-}, Xw = {
+}, XC = {
   "--pull-refresh-background": "#303030"
-}, Zw = {
+}, ZC = {
   "--radio-unchecked-color": "#fff"
-}, Jw = {
+}, JC = {
   "--result-background": "#303030",
   "--result-title-color": "#ffffff",
   "--result-description-color": "#aaaaaa",
@@ -17726,59 +17729,59 @@ const Nw = {
   "--result-question-border-color": "rgba(151,194,216,0.3)",
   "--result-empty-color": "#adadad",
   "--result-empty-border-color": "rgba(232,229,229,0.3)"
-}, Qw = {
+}, QC = {
   "--select-select-text-color": "#fff",
   "--select-blur-color": "rgb(255, 255, 255, .7)",
   "--select-scroller-background": "#303030"
-}, _w = {
+}, _C = {
   "--skeleton-card-background-color": "hsla(0,0%,100%,.12)",
   "--skeleton-animation-background": `linear-gradient(
         90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.05),hsla(0,0%,100%,0))
       `,
   "--skeleton-avatar-background-color": "hsla(0,0%,100%,.12)",
   "--skeleton-title-background-color": "hsla(0,0%,100%,.12)"
-}, xw = {
+}, xC = {
   "--step-content-color": "rgba(255, 255, 255, .38)",
   "--step-content-active-color": "#fff",
   "--step-line-background": "#fff"
-}, eC = {
+}, ew = {
   "--switch-track-background": "#727272",
   "--switch-handle-background": "#727272"
-}, nC = {
+}, nw = {
   "--tab-inactive-color": "rgba(255, 255, 255, .65)"
-}, rC = {
+}, rw = {
   "--table-background": "#303030",
   "--table-thead-th-text-color": "rgba(255, 255, 255, 0.6)",
   "--table-tbody-tr-hover-background": "#4c4b4b",
   "--table-thead-border-bottom": "thin solid rgba(255, 255, 255, 0.12)",
   "--table-tbody-tr-border-bottom": "thin solid rgba(255, 255, 255, 0.12)",
   "--table-footer-border-top": "thin solid rgba(255, 255, 255, 0.12)"
-}, aC = {
+}, aw = {
   "--time-picker-clock-container-background": "#545454",
   "--time-picker-body-background": "#303030",
   "--time-picker-clock-item-disable-color": "#aaaaaa"
-}, tC = {
+}, tw = {
   "--uploader-action-background": "#303030",
   "--uploader-action-icon-color": "#fff",
   "--uploader-file-name-background": "#303030",
   "--uploader-file-name-color": "#aaa",
   "--uploader-file-cover-background": "#303030"
-}, oC = {
+}, ow = {
   "--tabs-background": "#1e1e1e"
-}, iC = {
+}, iw = {
   "--app-bar-color": "#272727"
-}, lC = {
+}, lw = {
   "--bottom-navigation-background-color": "#272727",
   "--bottom-navigation-border-color": "#444"
-}, sC = {
+}, sw = {
   "--bottom-navigation-item-active-background-color": "#272727"
-}, uC = {
+}, uw = {
   "--menu-background-color": "#272727"
-}, dC = {
+}, dw = {
   "--breadcrumb-inactive-color": "#aaa"
-}, vC = {
+}, vw = {
   "--paper-background": "#303030"
-}, fC = {
+}, fw = {
   "--avatar-background-color": "#303030",
   "--avatar-border": "2px solid #1e1e1e"
 };
@@ -17792,7 +17795,7 @@ function ni() {
     return e;
   }, ni.apply(this, arguments);
 }
-const cC = ni({
+const cw = ni({
   // common
   "--color-body": "#1e1e1e",
   "--color-text": "#fff",
@@ -17803,16 +17806,16 @@ const cC = ni({
   "--color-danger": "#ef5350",
   "--color-disabled": "#404040",
   "--color-text-disabled": "#757575"
-}, Aw, Lw, zw, aC, Fw, _w, oC, nC, Kw, Hw, Nw, Uw, Dw, tC, Yw, Xw, eC, xw, Gw, rC, Ww, Qw, Zw, Rw, jw, qw, iC, lC, sC, uC, Jw, dC, vC, fC);
-var mC = {
-  dark: cC
+}, AC, LC, zC, aw, FC, _C, ow, nw, KC, HC, NC, UC, DC, tw, YC, XC, ew, xC, GC, rw, WC, QC, ZC, RC, jC, qC, iw, lw, sw, uw, JC, dw, vw, fw);
+var mw = {
+  dark: cw
 }, lk = null;
-const ri = mC;
+const ri = mw;
 var pn = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], Qe = ["00", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"], Hl = ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"];
-function pC(e) {
+function pw(e) {
   return ["ampm", "24hr"].includes(e);
 }
-var hC = {
+var hw = {
   modelValue: {
     type: String
   },
@@ -17829,7 +17832,7 @@ var hC = {
   format: {
     type: String,
     default: "ampm",
-    validator: pC
+    validator: pw
   },
   allowedTime: {
     type: Object
@@ -17895,12 +17898,12 @@ var hC = {
   if (i && s) {
     var {
       hour: P,
-      minute: w
+      minute: C
     } = rn(i), {
-      hour: C,
+      hour: w,
       minute: I
     } = rn(s);
-    f = C === v && a < I || P === v && a > w;
+    f = w === v && a < I || P === v && a > C;
   }
   return (n = e.allowedTime) != null && n.minutes && (m = (r = e.allowedTime) == null ? void 0 : r.minutes(a)), f || m;
 }, iv = (e) => {
@@ -17930,10 +17933,10 @@ var hC = {
   if (!s && u) {
     var {
       hour: P,
-      minute: w,
-      second: C
+      minute: C,
+      second: w
     } = rn(u);
-    m = P === f && w > i || w === i && a > C;
+    m = P === f && C > i || C === i && a > w;
   }
   if (s && u) {
     var {
@@ -17949,10 +17952,10 @@ var hC = {
   }
   return (n = e.allowedTime) != null && n.seconds && (p = (r = e.allowedTime) == null ? void 0 : r.seconds(a)), m || p;
 }, {
-  n: gC,
-  classes: yC
+  n: gw,
+  classes: yw
 } = ee("time-picker");
-function bC(e, n) {
+function bw(e, n) {
   return h(), T(
     "div",
     {
@@ -18078,7 +18081,7 @@ var lv = x({
     }), s = R(() => e.type === "hour" ? pn : Hl), u = (g, V) => {
       var P;
       g = (P = g) != null ? P : e.type === "minute" ? e.time.minute : e.time.second;
-      var w = e.type === "minute" ? ov : iv, C = {
+      var C = e.type === "minute" ? ov : iv, w = {
         time: L(g),
         format: e.format,
         ampm: e.ampm,
@@ -18089,7 +18092,7 @@ var lv = x({
         allowedTime: e.allowedTime,
         disableHour: t.value
       };
-      return V && e.type === "minute" && Reflect.deleteProperty(C, "minute"), w(C);
+      return V && e.type === "minute" && Reflect.deleteProperty(w, "minute"), C(w);
     }, d = () => {
       if (i.value === void 0)
         return e.color;
@@ -18104,7 +18107,7 @@ var lv = x({
       }
       return u(g, !0);
     }, m = (g, V, P) => {
-      var w = 2 * Math.PI / 12 * g - Math.PI / 2, C = 50 * (1 + Math.cos(w)), I = 50 * (1 + Math.sin(w)), S = () => v(g, P) ? f(V) ? {
+      var C = 2 * Math.PI / 12 * g - Math.PI / 2, w = 50 * (1 + Math.cos(C)), I = 50 * (1 + Math.sin(C)), S = () => v(g, P) ? f(V) ? {
         backgroundColor: "#bdbdbd",
         color: "#fff"
       } : {
@@ -18118,7 +18121,7 @@ var lv = x({
         color: O
       } = S();
       return {
-        left: C + "%",
+        left: w + "%",
         top: I + "%",
         backgroundColor: D,
         color: O
@@ -18139,35 +18142,35 @@ var lv = x({
       }
     };
     return le([i, () => e.isInner], (g, V) => {
-      var [P, w] = g, [C, I] = V, S = P === C && w === I;
+      var [P, C] = g, [w, I] = V, S = P === w && C === I;
       if (!(S || e.type !== "hour" || i.value === void 0)) {
-        var D = w ? Qe[i.value] : y(), O = e.useSeconds ? ":" + e.time.second : "", z = D + ":" + e.time.minute + O;
+        var D = C ? Qe[i.value] : y(), O = e.useSeconds ? ":" + e.time.second : "", z = D + ":" + e.time.minute + O;
         e.preventNextUpdate || r("update", z), r("change-prevent-update");
       }
     }), le(() => e.rad, (g, V) => {
       if (!(e.type === "hour" || g === void 0 || V === void 0)) {
-        var P = g / 6 >= 0 ? g / 6 : g / 6 + 60, w = V / 6 >= 0 ? V / 6 : V / 6 + 60;
-        if (P !== w) {
-          var C, {
+        var P = g / 6 >= 0 ? g / 6 : g / 6 + 60, C = V / 6 >= 0 ? V / 6 : V / 6 + 60;
+        if (P !== C) {
+          var w, {
             hourStr: I
           } = Vi(e.format, e.ampm, e.time.hour);
           if (e.type === "minute") {
             var S = te().minute(P).format("mm"), D = e.useSeconds ? ":" + e.time.second : "";
-            C = I + ":" + S + D;
+            w = I + ":" + S + D;
           }
           if (e.type === "second") {
             var O = te().second(P).format("ss"), z = e.useSeconds ? ":" + O : "";
-            C = I + ":" + e.time.minute + z;
+            w = I + ":" + e.time.minute + z;
           }
-          r("update", C);
+          r("update", w);
         }
       }
     }), le([() => e.max, () => e.min, () => e.allowedTime], (g) => {
-      var [V, P, w] = g;
+      var [V, P, C] = g;
       if (t.value = [], V && !P) {
         var {
-          hour: C
-        } = rn(V), I = pn.filter((H) => L(H) > C), S = Qe.filter((H) => L(H) > C);
+          hour: w
+        } = rn(V), I = pn.filter((H) => L(H) > w), S = Qe.filter((H) => L(H) > w);
         t.value = [...I, ...S];
       }
       if (!V && P) {
@@ -18184,18 +18187,18 @@ var lv = x({
         } = rn(P), k = pn.filter((H) => L(H) < b || L(H) > M), j = Qe.filter((H) => L(H) < b || L(H) > M);
         t.value = [...k, ...j];
       }
-      if (w != null && w.hours) {
+      if (C != null && C.hours) {
         var {
           hours: Q
-        } = w, F = pn.filter((H) => !Q(L(H))), E = Qe.filter((H) => !Q(L(H)));
+        } = C, F = pn.filter((H) => !Q(L(H))), E = Qe.filter((H) => !Q(L(H)));
         t.value = [.../* @__PURE__ */ new Set([...t.value, ...F, ...E])];
       }
       o.value = t.value.map((H) => Qe.findIndex((U) => H === U)).filter((H) => H >= 0);
     }, {
       immediate: !0
     }), {
-      n: gC,
-      classes: yC,
+      n: gw,
+      classes: yw,
       hours24: Qe,
       timeScales: s,
       inner: a,
@@ -18209,21 +18212,21 @@ var lv = x({
     };
   }
 });
-lv.render = bC;
-const wC = lv;
+lv.render = bw;
+const Cw = lv;
 var {
-  n: CC,
-  classes: SC
-} = ee("time-picker"), kC = (e) => (Ta(""), e = e(), Oa(), e), $C = /* @__PURE__ */ kC(() => /* @__PURE__ */ A(
+  n: ww,
+  classes: Sw
+} = ee("time-picker"), kw = (e) => (Ta(""), e = e(), Oa(), e), $w = /* @__PURE__ */ kw(() => /* @__PURE__ */ A(
   "span",
   null,
   ":",
   -1
   /* HOISTED */
-)), TC = {
+)), Tw = {
   key: 0
 };
-function OC(e, n) {
+function Ow(e, n) {
   var r = ie("clock");
   return h(), T(
     "div",
@@ -18253,7 +18256,7 @@ function OC(e, n) {
           ne(e.time.hour),
           3
           /* TEXT, CLASS */
-        ), $C, A(
+        ), $w, A(
           "div",
           {
             class: c(e.classes(e.n("title-btn"), [e.type === "minute", e.n("title-btn--active")])),
@@ -18262,7 +18265,7 @@ function OC(e, n) {
           ne(e.time.minute),
           3
           /* TEXT, CLASS */
-        ), e.useSeconds ? (h(), T("span", TC, ":")) : _("v-if", !0), e.useSeconds ? (h(), T(
+        ), e.useSeconds ? (h(), T("span", Tw, ":")) : _("v-if", !0), e.useSeconds ? (h(), T(
           "div",
           {
             key: 1,
@@ -18374,9 +18377,9 @@ function OC(e, n) {
 var sv = x({
   name: "VarTimePicker",
   components: {
-    Clock: wC
+    Clock: Cw
   },
-  props: hC,
+  props: hw,
   setup(e) {
     var n = B(null), r = B(null), a = B(null), t = B(!1), o = B(!1), l = B(!1), i = B(!1), s = B(!1), u = B(void 0), d = B(0), v = B(0), f = B("hour"), m = B("am"), p = B(!1), y = B(!1), g = B({
       hour: "00",
@@ -18388,7 +18391,7 @@ var sv = x({
     }), P = Me({
       x: [],
       y: []
-    }), w = R(() => f.value === "hour" ? u.value : f.value === "minute" ? d.value : v.value), C = (N) => {
+    }), C = R(() => f.value === "hour" ? u.value : f.value === "minute" ? d.value : v.value), w = (N) => {
       $(e["onUpdate:modelValue"], N), $(e.onChange, N);
     }, I = (N) => N * 57.29577951308232, S = (N) => {
       i.value = !1, y.value = !1, f.value = N;
@@ -18403,7 +18406,7 @@ var sv = x({
         var Z = D(N);
         if (Z) {
           var G = e.useSeconds ? ":" + g.value.second : "", J = ga(Z, 2, "0") + ":" + g.value.minute + G;
-          C(J);
+          w(J);
         }
       }
     }, z = (N, Z) => {
@@ -18521,9 +18524,9 @@ var sv = x({
     }, {
       immediate: !0
     }), {
-      n: CC,
-      classes: SC,
-      getRad: w,
+      n: ww,
+      classes: Sw,
+      getRad: C,
       time: g,
       container: n,
       inner: a,
@@ -18536,17 +18539,17 @@ var sv = x({
       checkPanel: S,
       checkAmpm: O,
       end: U,
-      update: C,
+      update: w,
       changePreventUpdate: X
     };
   }
 });
-sv.render = OC;
+sv.render = Ow;
 const pa = sv;
 pa.install = function(e) {
   e.component(pa.name, pa);
 };
-var sk = pa, PC = {
+var sk = pa, Pw = {
   modelValue: {
     type: Array,
     default: () => []
@@ -18632,10 +18635,10 @@ function Wl(e) {
   };
 }
 var {
-  n: VC,
-  classes: EC
-} = ee("uploader"), MC = 0, BC = ["onClick"], IC = ["onClick"], NC = ["src", "alt"], DC = ["multiple", "accept", "capture", "disabled"], AC = ["src"];
-function zC(e, n) {
+  n: Vw,
+  classes: Ew
+} = ee("uploader"), Mw = 0, Bw = ["onClick"], Iw = ["onClick"], Nw = ["src", "alt"], Dw = ["multiple", "accept", "capture", "disabled"], Aw = ["src"];
+function zw(e, n) {
   var r = ie("var-icon"), a = ie("var-form-details"), t = ie("var-popup"), o = Ye("ripple");
   return h(), T(
     "div",
@@ -18684,7 +18687,7 @@ function zC(e, n) {
               ["class"]
             )],
             10,
-            IC
+            Iw
           )) : _("v-if", !0), l.cover ? (h(), T(
             "img",
             {
@@ -18698,7 +18701,7 @@ function zC(e, n) {
             },
             null,
             14,
-            NC
+            Nw
           )) : _("v-if", !0), A(
             "div",
             {
@@ -18709,7 +18712,7 @@ function zC(e, n) {
             /* CLASS */
           )],
           10,
-          BC
+          Bw
         )), [[o, {
           disabled: e.disabled || e.formDisabled || e.readonly || e.formReadonly || !e.ripple
         }]])),
@@ -18740,7 +18743,7 @@ function zC(e, n) {
           },
           null,
           42,
-          DC
+          Dw
         ), W(e.$slots, "default", {}, () => [re(
           r,
           {
@@ -18796,7 +18799,7 @@ function zC(e, n) {
             },
             null,
             10,
-            AC
+            Aw
           )) : _("v-if", !0)];
         }),
         _: 1
@@ -18819,7 +18822,7 @@ var uv = x({
     VarPopup: hn,
     VarFormDetails: je
   },
-  props: PC,
+  props: Pw,
   setup(e) {
     var n = B(null), r = B(!1), a = B(null), t = R(() => {
       var {
@@ -18832,7 +18835,7 @@ var uv = x({
     }), {
       form: o,
       bindForm: l
-    } = wn(), {
+    } = Cn(), {
       errorMessage: i,
       validateWithTrigger: s,
       validate: u,
@@ -18861,7 +18864,7 @@ var uv = x({
         Ge(X) && Ai(X) && (a.value = F, r.value = !0);
       }
     }, m = (F) => ({
-      id: MC++,
+      id: Mw++,
       url: "",
       cover: "",
       name: F.name,
@@ -18887,7 +18890,7 @@ var uv = x({
           varFile: H
         });
         var X = $(E, Me(H));
-        X = we(X) ? X : [X], Promise.all(X).then((N) => {
+        X = Ce(X) ? X : [X], Promise.all(X).then((N) => {
           U({
             valid: !N.some((Z) => !Z),
             varFile: H
@@ -18928,7 +18931,7 @@ var uv = x({
       return function(H) {
         return F.apply(this, arguments);
       };
-    }(), w = /* @__PURE__ */ function() {
+    }(), C = /* @__PURE__ */ function() {
       var F = Wl(function* (E) {
         var {
           disabled: H,
@@ -18940,7 +18943,7 @@ var uv = x({
         if (!(o != null && o.disabled.value || o != null && o.readonly.value || H || U)) {
           if (N) {
             var G = $(N, Me(E));
-            if (G = we(G) ? G : [G], (yield Promise.all(G)).some((ae) => !ae))
+            if (G = Ce(G) ? G : [G], (yield Promise.all(G)).some((ae) => !ae))
               return;
           }
           var J = X.filter((ae) => ae !== E);
@@ -18950,12 +18953,12 @@ var uv = x({
       return function(H) {
         return F.apply(this, arguments);
       };
-    }(), C = () => e.modelValue.filter((F) => F.state === "success"), I = () => e.modelValue.filter((F) => F.state === "error"), S = () => e.modelValue.filter((F) => F.state === "loading"), D = () => {
+    }(), w = () => e.modelValue.filter((F) => F.state === "success"), I = () => e.modelValue.filter((F) => F.state === "error"), S = () => e.modelValue.filter((F) => F.state === "loading"), D = () => {
       n.value.click();
     }, O = () => {
       a.value = null, r.value = !1, Hn.close();
     }, z = {
-      getSuccess: C,
+      getSuccess: w,
       getError: I,
       getLoading: S
     }, M = (F) => {
@@ -18979,8 +18982,8 @@ var uv = x({
     }, {
       deep: !0
     }), {
-      n: VC,
-      classes: EC,
+      n: Vw,
+      classes: Ew,
       input: n,
       files: v,
       showPreview: r,
@@ -18993,8 +18996,8 @@ var uv = x({
       formReadonly: o == null ? void 0 : o.readonly,
       preview: f,
       handleChange: P,
-      handleRemove: w,
-      getSuccess: C,
+      handleRemove: C,
+      getSuccess: w,
       getError: I,
       getLoading: S,
       validate: k,
@@ -19005,23 +19008,23 @@ var uv = x({
     };
   }
 });
-uv.render = zC;
+uv.render = zw;
 const ha = uv;
 ha.install = function(e) {
   e.component(ha.name, ha);
 };
 var uk = ha;
-const LC = "2.8.6";
-function RC(e) {
-  ba.install && e.use(ba), br.install && e.use(br), wr.install && e.use(wr), Cr.install && e.use(Cr), Sr.install && e.use(Sr), ar.install && e.use(ar), kr.install && e.use(kr), $r.install && e.use($r), Tr.install && e.use(Tr), Or.install && e.use(Or), xe.install && e.use(xe), Pr.install && e.use(Pr), Vr.install && e.use(Vr), tr.install && e.use(tr), or.install && e.use(or), Er.install && e.use(Er), ir.install && e.use(ir), Mr.install && e.use(Mr), Br.install && e.use(Br), Ir.install && e.use(Ir), dn.install && e.use(dn), Nr.install && e.use(Nr), Dr.install && e.use(Dr), zr.install && e.use(zr), wa.install && e.use(wa), Lr.install && e.use(Lr), Rr.install && e.use(Rr), Ln.install && e.use(Ln), je.install && e.use(je), Xo.install && e.use(Xo), $e.install && e.use($e), Ur.install && e.use(Ur), Hn.install && e.use(Hn), Yr.install && e.use(Yr), Fr.install && e.use(Fr), vr.install && e.use(vr), nt.install && e.use(nt), Hr.install && e.use(Hr), jr.install && e.use(jr), $n.install && e.use($n), Jo.install && e.use(Jo), wo.install && e.use(wo), Fn.install && e.use(Fn), Wr.install && e.use(Wr), Gr.install && e.use(Gr), qr.install && e.use(qr), Kr.install && e.use(Kr), ka.install && e.use(ka), hn.install && e.use(hn), Xr.install && e.use(Xr), Zr.install && e.use(Zr), Jr.install && e.use(Jr), Qr.install && e.use(Qr), _r.install && e.use(_r), xr.install && e.use(xr), Ae.install && e.use(Ae), ea.install && e.use(ea), na.install && e.use(na), ra.install && e.use(ra), aa.install && e.use(aa), ei.install && e.use(ei), oa.install && e.use(oa), ia.install && e.use(ia), la.install && e.use(la), Yn.install && e.use(Yn), it.install && e.use(it), Rn.install && e.use(Rn), Un.install && e.use(Un), ua.install && e.use(ua), da.install && e.use(da), va.install && e.use(va), fa.install && e.use(fa), ca.install && e.use(ca), ma.install && e.use(ma), ri.install && e.use(ri), pa.install && e.use(pa), ur.install && e.use(ur), ha.install && e.use(ha);
+const Lw = "2.8.6";
+function Rw(e) {
+  ba.install && e.use(ba), br.install && e.use(br), Cr.install && e.use(Cr), wr.install && e.use(wr), Sr.install && e.use(Sr), ar.install && e.use(ar), kr.install && e.use(kr), $r.install && e.use($r), Tr.install && e.use(Tr), Or.install && e.use(Or), xe.install && e.use(xe), Pr.install && e.use(Pr), Vr.install && e.use(Vr), tr.install && e.use(tr), or.install && e.use(or), Er.install && e.use(Er), ir.install && e.use(ir), Mr.install && e.use(Mr), Br.install && e.use(Br), Ir.install && e.use(Ir), dn.install && e.use(dn), Nr.install && e.use(Nr), Dr.install && e.use(Dr), zr.install && e.use(zr), Ca.install && e.use(Ca), Lr.install && e.use(Lr), Rr.install && e.use(Rr), Ln.install && e.use(Ln), je.install && e.use(je), Xo.install && e.use(Xo), $e.install && e.use($e), Ur.install && e.use(Ur), Hn.install && e.use(Hn), Yr.install && e.use(Yr), Fr.install && e.use(Fr), vr.install && e.use(vr), nt.install && e.use(nt), Hr.install && e.use(Hr), jr.install && e.use(jr), $n.install && e.use($n), Jo.install && e.use(Jo), Co.install && e.use(Co), Fn.install && e.use(Fn), Wr.install && e.use(Wr), Gr.install && e.use(Gr), qr.install && e.use(qr), Kr.install && e.use(Kr), ka.install && e.use(ka), hn.install && e.use(hn), Xr.install && e.use(Xr), Zr.install && e.use(Zr), Jr.install && e.use(Jr), Qr.install && e.use(Qr), _r.install && e.use(_r), xr.install && e.use(xr), Ae.install && e.use(Ae), ea.install && e.use(ea), na.install && e.use(na), ra.install && e.use(ra), aa.install && e.use(aa), ei.install && e.use(ei), oa.install && e.use(oa), ia.install && e.use(ia), la.install && e.use(la), Yn.install && e.use(Yn), it.install && e.use(it), Rn.install && e.use(Rn), Un.install && e.use(Un), ua.install && e.use(ua), da.install && e.use(da), va.install && e.use(va), fa.install && e.use(fa), ca.install && e.use(ca), ma.install && e.use(ma), ri.install && e.use(ri), pa.install && e.use(pa), ur.install && e.use(ur), ha.install && e.use(ha);
 }
 const dk = {
-  version: LC,
-  install: RC,
+  version: Lw,
+  install: Rw,
   ActionSheet: ba,
   AppBar: br,
-  Avatar: wr,
-  AvatarGroup: Cr,
+  Avatar: Cr,
+  AvatarGroup: wr,
   BackTop: Sr,
   Badge: ar,
   BottomNavigation: kr,
@@ -19042,7 +19045,7 @@ const dk = {
   Countdown: Nr,
   Counter: Dr,
   DatePicker: zr,
-  Dialog: wa,
+  Dialog: Ca,
   Divider: Lr,
   Ellipsis: Rr,
   Form: Ln,
@@ -19059,7 +19062,7 @@ const dk = {
   List: jr,
   Loading: $n,
   LoadingBar: Jo,
-  Locale: wo,
+  Locale: Co,
   Menu: Fn,
   Option: Wr,
   Overlay: Gr,
@@ -19100,8 +19103,8 @@ const dk = {
 export {
   ba as ActionSheet,
   br as AppBar,
-  wr as Avatar,
-  Cr as AvatarGroup,
+  Cr as Avatar,
+  wr as AvatarGroup,
   Sr as BackTop,
   ar as Badge,
   kr as BottomNavigation,
@@ -19122,7 +19125,7 @@ export {
   Nr as Countdown,
   Dr as Counter,
   zr as DatePicker,
-  wa as Dialog,
+  Ca as Dialog,
   Lr as Divider,
   Rr as Ellipsis,
   Ln as Form,
@@ -19139,7 +19142,7 @@ export {
   jr as List,
   $n as Loading,
   Jo as LoadingBar,
-  wo as Locale,
+  Co as Locale,
   Fn as Menu,
   Wr as Option,
   Gr as Overlay,
@@ -19178,17 +19181,17 @@ export {
   pa as TimePicker,
   ur as Tooltip,
   ha as Uploader,
-  GC as _ActionSheetComponent,
-  qC as _AppBarComponent,
-  XC as _AvatarComponent,
-  ZC as _AvatarGroupComponent,
-  _C as _BackTopComponent,
-  xC as _BadgeComponent,
+  Gw as _ActionSheetComponent,
+  qw as _AppBarComponent,
+  Xw as _AvatarComponent,
+  Zw as _AvatarGroupComponent,
+  _w as _BackTopComponent,
+  xw as _BadgeComponent,
   eS as _BottomNavigationComponent,
   nS as _BottomNavigationItemComponent,
   rS as _BreadcrumbComponent,
   aS as _BreadcrumbsComponent,
-  QC as _ButtonComponent,
+  Qw as _ButtonComponent,
   tS as _ButtonGroupComponent,
   oS as _CardComponent,
   iS as _CellComponent,
@@ -19198,42 +19201,42 @@ export {
   vS as _ColComponent,
   fS as _CollapseComponent,
   cS as _CollapseItemComponent,
-  YC as _ContextComponent,
+  Yw as _ContextComponent,
   mS as _CountdownComponent,
   pS as _CounterComponent,
   hS as _DatePickerComponent,
   gS as _DialogComponent,
   yS as _DividerComponent,
-  wS as _EllipsisComponent,
-  CS as _FormComponent,
+  CS as _EllipsisComponent,
+  wS as _FormComponent,
   lS as _FormDetailsComponent,
   SS as _HoverComponent,
-  jC as _IconComponent,
+  jw as _IconComponent,
   kS as _ImageComponent,
   OS as _ImagePreviewComponent,
   VS as _IndexAnchorComponent,
   ES as _IndexBarComponent,
   MS as _InputComponent,
-  KC as _LazyComponent,
+  Kw as _LazyComponent,
   BS as _LinkComponent,
   IS as _ListComponent,
   NS as _LoadingBarComponent,
-  JC as _LoadingComponent,
-  WC as _LocaleComponent,
+  Jw as _LoadingComponent,
+  Ww as _LocaleComponent,
   DS as _MenuComponent,
   AS as _OptionComponent,
   zS as _OverlayComponent,
   LS as _PaginationComponent,
   RS as _PaperComponent,
   US as _PickerComponent,
-  HC as _PopupComponent,
+  Hw as _PopupComponent,
   YS as _ProgressComponent,
   FS as _PullRefreshComponent,
   HS as _RadioComponent,
   jS as _RadioGroupComponent,
   WS as _RateComponent,
   GS as _ResultComponent,
-  FC as _RippleComponent,
+  Fw as _RippleComponent,
   qS as _RowComponent,
   KS as _SelectComponent,
   XS as _SkeletonComponent,
@@ -19263,7 +19266,7 @@ export {
   Mf as avatarProps,
   tc as backTopProps,
   dc as badgeProps,
-  wc as bottomNavigationItemProps,
+  Cc as bottomNavigationItemProps,
   mc as bottomNavigationProps,
   Oc as breadcrumbProps,
   Ic as breadcrumbsProps,
@@ -19293,7 +19296,7 @@ export {
   Ny as indexAnchorProps,
   Ly as indexBarProps,
   jy as inputProps,
-  RC as install,
+  Rw as install,
   Qy as linkProps,
   nb as listProps,
   ib as loadingBarProps,
@@ -19321,21 +19324,21 @@ export {
   Ld as snackbarProps,
   j1 as spaceProps,
   q1 as stepProps,
-  ew as stepsProps,
+  eC as stepsProps,
   Tt as stickyProps,
-  aw as styleProviderProps,
+  aC as styleProviderProps,
   Qu as swipeProps,
-  iw as switchProps,
-  gw as tabItemProps,
-  dw as tabProps,
-  Cw as tableProps,
-  Ew as tabsItemsProps,
-  Tw as tabsProps,
-  hC as timePickerProps,
+  iC as switchProps,
+  gC as tabItemProps,
+  dC as tabProps,
+  wC as tableProps,
+  EC as tabsItemsProps,
+  TC as tabsProps,
+  hw as timePickerProps,
   Rg as tooltipProps,
-  PC as uploaderProps,
+  Pw as uploaderProps,
   fi as use,
   di as useLocale,
-  LC as version,
+  Lw as version,
   ui as zhCN
 };
