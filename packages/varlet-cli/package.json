@@ -63,7 +63,7 @@
     "markdown-it": "^12.2.3",
     "nanospinner": "^1.1.0",
     "picocolors": "^1.0.0",
-    "semver": "^7.3.5",
+    "semver": "^7.5.2",
     "sharp": "0.31.1",
     "slash": "^3.0.0",
     "typescript": "^5.1.5",
