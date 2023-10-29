@@ -31,7 +31,7 @@
     "@varlet/cli": "workspace: *",
     "@types/file-saver": "^2.0.5",
     "@types/node": "*",
-    "vite": "4.3.5",
+    "vite": "4.5.0",
     "live-server": "^1.2.1",
     "typescript": "^5.1.5"  }
 }
