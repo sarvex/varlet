@@ -68,7 +68,7 @@
     "slash": "^3.0.0",
     "typescript": "^5.1.5",
     "vite": "4.3.5",
-    "vue": "3.3.4",
+    "vue": "3.4.5",
     "webfont": "^9.0.0"
   },
   "devDependencies": {
@@ -100,7 +100,7 @@
     "clipboard": "^2.0.6",
     "live-server": "^1.2.1",
     "lodash-es": "^4.17.21",
-    "vue": "3.3.4",
+    "vue": "3.4.5",
     "vue-router": "4.2.0"
   }
 }
